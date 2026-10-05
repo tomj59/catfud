@@ -21,6 +21,8 @@ class ProductController extends Controller
             'kind' => ['nullable', Rule::in(ProductKind::values())],
             'barcode' => ['nullable', Rule::in(['missing', 'present'])],
             'audit' => ['nullable', Rule::in(AuditStatus::values())],
+            'form' => ['nullable', 'string', 'max:100'],
+            'per_page' => ['nullable', 'integer', 'min:1', 'max:50'],
         ]);
 
         $query = Product::query()->orderBy('brand')->orderBy('line')->orderBy('name');
@@ -36,6 +38,9 @@ class ProductController extends Controller
         if ($audit = $request->query('audit')) {
             $query->where('audit_status', $audit);
         }
+        if ($form = $request->query('form')) {
+            $query->whereRaw('lower(form) = ?', [strtolower($form)]); // wet / dry / freeze-dried; omit for everything
+        }
         if ($species = $request->query('species')) {
             $query->where('species', $species);
         }
@@ -43,7 +48,7 @@ class ProductController extends Controller
             $query->where('kind', $kind);
         }
 
-        return response()->json($query->paginate(25));
+        return response()->json($query->paginate((int) $request->query('per_page', 25)));
     }
 
     public function show(Request $request, Product $product): JsonResponse

@@ -28,12 +28,13 @@ class MealSuggester
      * @param  list<int>  $excludeProductIds  products the user already passed on this round ("not that one")
      * @return array<string,mixed>
      */
-    public function suggest(Pet $pet, bool $shuffle = false, array $excludeProductIds = [], ?int $seed = null): array
+    public function suggest(Pet $pet, bool $shuffle = false, array $excludeProductIds = [], ?int $seed = null, ?string $form = null): array
     {
         $items = $pet->user->inventoryItems()
             ->whereIn('status', [InventoryStatus::Stocked->value, InventoryStatus::Low->value])
             ->with('product')->get()
-            ->filter(fn ($i) => $i->product && $i->product->species === $pet->species);
+            ->filter(fn ($i) => $i->product && $i->product->species === $pet->species)
+            ->filter(fn ($i) => $form === null || strtolower((string) $i->product->form) === strtolower($form)); // wet / dry
 
         $offers = $pet->mealOffers()->orderByDesc('offered_at')->orderByDesc('id')->get();
         $lastOfferedProductId = $offers->first()?->product_id;

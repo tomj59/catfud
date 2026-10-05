@@ -157,4 +157,32 @@ class CatalogueAuditTest extends TestCase
         $this->assertArrayHasKey('protein_pct', $tiki->nutrition);
         $this->assertSame('Tiki Cat', $tiki->meta['sheet']);
     }
+
+    public function test_wet_dry_filter_and_per_page_cap_apply_to_the_product_search(): void
+    {
+        Sanctum::actingAs(User::factory()->create());
+        foreach (range(1, 8) as $i) {
+            app(ProductImporter::class)->import([$this->seedRow(['import_key' => "k{$i}", 'name' => "Wet {$i}", 'form' => 'wet'])], 's');
+        }
+        app(ProductImporter::class)->import([$this->seedRow(['import_key' => 'kd', 'name' => 'Crunchy', 'form' => 'dry'])], 's');
+
+        $this->getJson('/api/products?form=dry')->assertOk()->assertJsonCount(1, 'data');
+        $this->getJson('/api/products?form=WET&per_page=5')->assertOk()->assertJsonCount(5, 'data')->assertJsonPath('total', 8);
+        $this->getJson('/api/products?per_page=500')->assertStatus(422);
+    }
+
+    public function test_wet_dry_filter_applies_to_inventory_and_suggestions(): void
+    {
+        $user = User::factory()->create();
+        Sanctum::actingAs($user);
+        $pet = $user->pets()->create(['name' => 'Mo', 'species' => 'cat']);
+        $wet = Product::create(['gtin' => '0036000291452', 'brand' => 'A', 'name' => 'Wet one', 'species' => 'cat', 'kind' => 'food', 'form' => 'wet', 'source' => 't']);
+        $dry = Product::create(['gtin' => '4006381333931', 'brand' => 'B', 'name' => 'Dry one', 'species' => 'cat', 'kind' => 'food', 'form' => 'dry', 'source' => 't']);
+        $user->inventoryItems()->create(['product_id' => $wet->id, 'quantity' => 1, 'status' => 'stocked']);
+        $user->inventoryItems()->create(['product_id' => $dry->id, 'quantity' => 1, 'status' => 'stocked']);
+
+        $this->getJson('/api/inventory')->assertOk()->assertJsonCount(2, 'items');
+        $this->getJson('/api/inventory?form=dry')->assertOk()->assertJsonCount(1, 'items')->assertJsonPath('items.0.product.name', 'Dry one');
+        $this->getJson("/api/pets/{$pet->id}/suggestions?form=wet")->assertOk()->assertJsonPath('suggestion.product.name', 'Wet one');
+    }
 }

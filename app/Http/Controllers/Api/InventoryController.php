@@ -12,13 +12,14 @@ use Illuminate\Validation\Rule;
 
 class InventoryController extends Controller
 {
-    /** The user's own inventory only. ?status=low|out|stocked filters. */
+    /** The user's own inventory only. ?status=low|out|stocked and ?form=wet|dry filter. */
     public function index(Request $request): JsonResponse
     {
-        $request->validate(['status' => ['nullable', Rule::in(InventoryStatus::values())]]);
+        $request->validate(['status' => ['nullable', Rule::in(InventoryStatus::values())], 'form' => ['nullable', 'string', 'max:100']]);
 
         $items = $request->user()->inventoryItems()->with('product')
             ->when($request->query('status'), fn ($q, $s) => $q->where('status', $s))
+            ->when($request->query('form'), fn ($q, $f) => $q->whereHas('product', fn ($p) => $p->whereRaw('lower(form) = ?', [strtolower($f)])))
             ->latest('updated_at')->get();
 
         return response()->json(['items' => $items]);

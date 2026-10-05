@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class SuggestionController extends Controller
 {
     /**
-     * GET /pets/{id}/suggestions?shuffle=1&exclude[]=3&exclude[]=7&seed=42
+     * GET /pets/{id}/suggestions?shuffle=1&exclude[]=3&exclude[]=7&seed=42&form=wet
      * The pick and the evidence behind it. `exclude` = products the user already passed on; `seed` makes shuffle repeatable.
      */
     public function show(Request $request, int $id, MealSuggester $suggester): JsonResponse
@@ -22,6 +22,7 @@ class SuggestionController extends Controller
             'exclude' => ['nullable', 'array', 'max:100'],
             'exclude.*' => ['integer'],
             'seed' => ['nullable', 'integer'],
+            'form' => ['nullable', 'string', 'max:100'],
         ]);
 
         return response()->json($suggester->suggest(
@@ -29,6 +30,7 @@ class SuggestionController extends Controller
             (bool) ($data['shuffle'] ?? false),
             array_map('intval', $data['exclude'] ?? []),
             isset($data['seed']) ? (int) $data['seed'] : null,
+            $data['form'] ?? null,
         ));
     }
 }

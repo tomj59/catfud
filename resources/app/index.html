@@ -60,6 +60,7 @@
   #camstatus { position:absolute; left:8px; right:8px; bottom:8px; color:#fff; font-size:13px; text-shadow:0 1px 2px #000; }
   .tabs { display:flex; gap:8px; margin:8px 0; } .tabs button { flex:1; }
   .seg { display:flex; gap:6px; flex-wrap:wrap; }
+  .formtoggle button { flex:1; } .formtoggle { margin:6px 0 2px; }
   .sug-name { font-size:21px; font-weight:700; line-height:1.2; margin:2px 0; }
 </style>
 </head>
@@ -112,7 +113,7 @@
   var AUDIT = { unreviewed: ['Unreviewed', 'trial'], reviewed: ['Reviewed', 'ok'], needs_changes: ['Needs changes', 'low'] };
 
   // ---------- state + api ----------
-  var state = { token: store('cf_token'), user: null, pets: [], petId: Number(store('cf_pet')) || null, tab: 'tonight', notices: null, camera: null };
+  var state = { form: store('cf_form') || 'wet', token: store('cf_token'), user: null, pets: [], petId: Number(store('cf_pet')) || null, tab: 'tonight', notices: null, camera: null };
   var app = document.getElementById('app'), nav = document.getElementById('nav'), tools = document.getElementById('headerTools');
 
   async function api(path, opts) {
@@ -260,6 +261,23 @@
     }));
   }
 
+  // ---------- wet / dry toggle (the owner always knows which it is, so it is the first thing asked) ----------
+  var FORMS = [['wet', 'Wet'], ['dry', 'Dry'], ['all', 'All']];
+  function formParam() { return state.form === 'all' ? '' : state.form; }
+  function formToggle(onChange) {
+    var box = h('div', { class: 'seg formtoggle', role: 'group', 'aria-label': 'Wet or dry food' });
+    FORMS.forEach(function (f) {
+      var b = h('button', { class: state.form === f[0] ? 'on' : '' }, f[1]);
+      b.addEventListener('click', function () {
+        state.form = f[0]; store('cf_form', f[0]);
+        [].forEach.call(box.children, function (c) { c.className = c === b ? 'on' : ''; });
+        onChange();
+      });
+      box.append(b);
+    });
+    return box;
+  }
+
   // ---------- catalogue helpers (shared by Scan and Catalogue) ----------
   function productLabel(p) {
     return p.brand + (p.line ? ' · ' + p.line : '') + ' — ' + p.name + (p.texture ? ' (' + p.texture + ')' : '');
@@ -379,6 +397,7 @@
     var pet = currentPet(), root = h('div');
     if (tonight.petId !== pet.id) { tonight = { data: null, excluded: [], offer: null, stage: 'idle', petId: pet.id }; }
     if (tonight.stage === 'suggested') { tonight = { data: null, excluded: [], offer: null, stage: 'idle', petId: pet.id }; } // pantry may have changed; never show a stale pick
+    root.append(formToggle(function () { tonight = { data: null, excluded: [], offer: null, stage: 'idle', petId: pet.id }; render(); }));
     var box = h('div'); root.append(box);
     var recent = h('div'); root.append(recent);
 
@@ -404,6 +423,7 @@
       var q = [];
       if (shuffle) q.push('shuffle=1');
       tonight.excluded.forEach(function (id) { q.push('exclude[]=' + id); });
+      if (formParam()) q.push('form=' + formParam());
       var r = await api('/pets/' + pet.id + '/suggestions' + (q.length ? '?' + q.join('&') : ''));
       if (!r.ok) { box.append(h('div', { class: 'err' }, errText(r))); return; }
       tonight.data = r.data; tonight.stage = 'suggested'; draw();
@@ -523,7 +543,11 @@
         if (state.attachTarget) result.append(h('div', { class: 'banner' }, 'That barcode already belongs to this product, so nothing was attached to ' + productLabel(state.attachTarget) + '.'));
         return result.append(productCard(r.data));
       }
-      if (r.status === 404) return result.append(state.attachTarget ? confirmAttach(r.data.gtin, r.data.upc_a, state.attachTarget) : wireUp(r.data.gtin, r.data.upc_a));
+      if (r.status === 404) {
+        result.append(state.attachTarget ? confirmAttach(r.data.gtin, r.data.upc_a, state.attachTarget) : wireUp(r.data.gtin, r.data.upc_a));
+        result.scrollIntoView({ behavior: 'smooth', block: 'start' }); // bring the picker up past the camera
+        return;
+      }
       result.append(h('div', { class: 'err' }, (r.data && r.data.message) || errText(r)));
     }
 
@@ -551,17 +575,21 @@
           h('button', { class: 'ghost', onClick: function () { state.attachTarget = null; render(); } }, 'Cancel')));
     }
 
-    // Scan first, product second: search the seeded products that still have no barcode and pick the one in your hand.
+    // Scan first, product second. The list starts EMPTY and only fills as you type, capped at five, with
+    // "add as new" sitting above it so it can never be buried under weak matches.
     function wireUp(gtin, upca) {
-      var q = h('input', { type: 'search', placeholder: 'Search: brand, line or name (e.g. “tiki beef”)', autocomplete: 'off' });
-      var list = h('div'), note = h('p', { class: 'small muted' }), msg = h('div'), timer = null;
+      var q = h('input', { type: 'search', placeholder: 'Type a few letters: brand or name (e.g. “tiki beef”)', autocomplete: 'off', enterkeyhint: 'search' });
+      var list = h('div'), note = h('p', { class: 'small muted' }, 'Start typing to see matches.'), msg = h('div'), timer = null, seq = 0;
       async function search() {
-        var term = q.value.trim();
-        var r = await api('/products?barcode=missing&q=' + encodeURIComponent(term));
+        var term = q.value.trim(), mine = ++seq;
         clear(list);
+        if (!term) { note.textContent = 'Start typing to see matches.'; return; }
+        var r = await api('/products?barcode=missing&per_page=5&q=' + encodeURIComponent(term) + (formParam() ? '&form=' + formParam() : ''));
+        if (mine !== seq) return; // a newer keystroke already replaced this search
         if (!r.ok) { list.append(h('div', { class: 'err' }, errText(r))); return; }
         var rows = r.data.data;
-        note.textContent = rows.length === 0 ? 'No products without a barcode match that.' : (r.data.total > rows.length ? 'Showing ' + rows.length + ' of ' + r.data.total + '. Type more to narrow it.' : rows.length + ' without a barcode.');
+        note.textContent = rows.length === 0 ? 'No ' + (formParam() || '') + ' products without a barcode match that. Try fewer letters, switch Wet/Dry, or add it as new.'
+          : (r.data.total > rows.length ? 'Top ' + rows.length + ' of ' + r.data.total + '. Keep typing to narrow it.' : rows.length + (rows.length === 1 ? ' match.' : ' matches.'));
         rows.forEach(function (p) {
           var btn = h('button', { class: 'sm primary' }, 'This one'), revert = null;
           btn.addEventListener('click', function () {
@@ -573,12 +601,12 @@
             h('div', { class: 'small muted' }, p.brand + (p.line ? ' · ' + p.line : '') + (p.form ? ' · ' + p.form : ''))), btn));
         });
       }
-      q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(search, 250); });
-      search();
+      q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(search, 200); });
       return h('div', { class: 'card accent' }, h('h3', null, 'New barcode ' + (upca || gtin)),
-        h('p', { class: 'small' }, 'It is not attached to a product yet. Pick the product you are holding and the barcode is wired up for good.'),
-        q, note, msg, list,
-        h('div', { class: 'row', style: 'margin-top:10px' }, h('button', { class: 'ghost sm', onClick: function () { clear(result); result.append(addProductForm(gtin, upca)); } }, 'It is not in the list — add as new product')));
+        h('p', { class: 'small' }, 'Not attached to a product yet. Wet or dry first, then type to find the product you are holding.'),
+        formToggle(function () { search(); }), q,
+        h('div', { class: 'row', style: 'margin:10px 0 2px' }, h('button', { class: 'sm', onClick: function () { clear(result); result.append(addProductForm(gtin, upca, q.value.trim())); } }, 'Not listed: add as new product')),
+        note, msg, list);
     }
 
     function productCard(d) {
@@ -605,11 +633,11 @@
       return out;
     }
 
-    function addProductForm(gtin, upca) {
+    function addProductForm(gtin, upca, prefillName) {
       var pet = currentPet(), err = h('div', { class: 'err' });
       var f = {
-        brand: h('input'), name: h('input'), kind: h('select', null, h('option', { value: 'food' }, 'Food'), h('option', { value: 'treat' }, 'Treat')),
-        form: h('input', { placeholder: 'wet, dry, freeze-dried…' }), species: h('input', { value: pet ? pet.species : 'cat' }),
+        brand: h('input'), name: h('input', { value: prefillName || '' }), kind: h('select', null, h('option', { value: 'food' }, 'Food'), h('option', { value: 'treat' }, 'Treat')),
+        form: h('select', null, [['wet', 'Wet'], ['dry', 'Dry'], ['freeze-dried', 'Freeze-dried']].map(function (o) { return h('option', { value: o[0], selected: (state.form === 'dry' ? 'dry' : 'wet') === o[0] }, o[1]); })), species: h('input', { value: pet ? pet.species : 'cat' }),
         ingredients: h('textarea', { rows: 2 }),
         n_protein: h('input', { inputmode: 'decimal' }), n_fat: h('input', { inputmode: 'decimal' }), n_fiber: h('input', { inputmode: 'decimal' }), n_moisture: h('input', { inputmode: 'decimal' }), n_kcal: h('input', { inputmode: 'decimal' })
       };
@@ -626,7 +654,7 @@
           var nutrition = {};
           [['crude_protein_min_pct', f.n_protein], ['crude_fat_min_pct', f.n_fat], ['crude_fiber_max_pct', f.n_fiber], ['moisture_max_pct', f.n_moisture], ['kcal_per_unit', f.n_kcal]].forEach(function (x) { if (x[1].value.trim()) nutrition[x[0]] = x[1].value.trim(); });
           var body = { gtin: gtin, brand: f.brand.value, name: f.name.value, kind: f.kind.value, species: f.species.value.trim().toLowerCase() || 'cat' };
-          if (f.form.value.trim()) body.form = f.form.value.trim();
+          body.form = f.form.value;
           if (f.ingredients.value.trim()) body.ingredients = f.ingredients.value.trim();
           if (Object.keys(nutrition).length) body.nutrition = nutrition;
           var r = await api('/products', { method: 'POST', body: body });
@@ -658,6 +686,7 @@
     function params(page) {
       var a = [];
       if (f === 'nobarcode') a.push('barcode=missing'); else if (f !== 'all') a.push('audit=' + f);
+      if (formParam()) a.push('form=' + formParam());
       if (q.value.trim()) a.push('q=' + encodeURIComponent(q.value.trim()));
       a.push('page=' + page);
       return a.join('&');
@@ -705,7 +734,7 @@
     function reload() { state.catFilter = f; state.catQ = q.value; load(1); }
     q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(reload, 250); });
 
-    root.append(h('h2', null, 'Catalogue'), summary,
+    root.append(h('h2', null, 'Catalogue'), formToggle(render), summary,
       h('div', { class: 'seg', style: 'margin:8px 0' }, filters.map(function (x) {
         return h('button', { class: 'sm ' + (f === x[0] ? 'on' : ''), onClick: function () { f = x[0]; state.catFilter = f; render(); } }, x[1]);
       })), q, list, more);
@@ -717,12 +746,12 @@
   function pantryView() {
     var root = h('div'), list = h('div'), filter = state.pantryFilter || '';
     var pet = currentPet();
-    root.append(h('h2', null, 'Pantry'),
+    root.append(h('h2', null, 'Pantry'), formToggle(render),
       h('div', { class: 'seg' }, [['', 'All'], ['low', 'Running low'], ['out', 'Out']].map(function (f) {
         return h('button', { class: filter === f[0] ? 'on' : '', onClick: function () { state.pantryFilter = f[0]; render(); } }, f[1]);
       })), list);
 
-    Promise.all([api('/inventory' + (filter ? '?status=' + filter : '')), api('/ratings?pet_id=' + pet.id), api('/advisories')]).then(function (rs) {
+    Promise.all([api('/inventory?' + [filter ? 'status=' + filter : '', formParam() ? 'form=' + formParam() : ''].filter(Boolean).join('&')), api('/ratings?pet_id=' + pet.id), api('/advisories')]).then(function (rs) {
       var inv = rs[0], rat = rs[1], adv = rs[2];
       if (!inv.ok) return list.append(h('div', { class: 'err' }, errText(inv)));
       var ratings = {}; if (rat.ok) rat.data.ratings.forEach(function (x) { ratings[x.product_id] = x.rating; });
