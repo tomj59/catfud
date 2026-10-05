@@ -1,0 +1,45 @@
+<?php
+
+use App\Http\Controllers\Api\AdvisoryController;
+use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\InventoryController;
+use App\Http\Controllers\Api\MealOfferController;
+use App\Http\Controllers\Api\PetController;
+use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\RatingController;
+use App\Http\Controllers\Api\SuggestionController;
+use Illuminate\Support\Facades\Route;
+
+// Public
+Route::post('/register', [AuthController::class, 'register'])->middleware('throttle:10,1');
+Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:10,1');
+
+// Authenticated (Sanctum bearer token)
+Route::middleware('auth:sanctum')->group(function () {
+    Route::get('/me', [AuthController::class, 'me']);
+    Route::post('/logout', [AuthController::class, 'logout']);
+
+    // Shared product catalogue (global)
+    Route::get('/products', [ProductController::class, 'index']);
+    Route::get('/products/lookup/{code}', [ProductController::class, 'lookup'])->where('code', '[0-9\-\s]+');
+    Route::get('/products/audit-summary', [ProductController::class, 'auditSummary']);
+    Route::get('/products/{product}', [ProductController::class, 'show'])->whereNumber('product');
+    Route::patch('/products/{product}', [ProductController::class, 'update'])->whereNumber('product');
+    Route::put('/products/{product}/barcode', [ProductController::class, 'attachBarcode'])->whereNumber('product');
+    Route::post('/products', [ProductController::class, 'store']);
+
+    // Public Advisories: attributed third-party information, plus each user's own confirm/dismiss
+    Route::get('/advisories', [AdvisoryController::class, 'index']);
+    Route::put('/advisory-matches/{id}/review', [AdvisoryController::class, 'review'])->whereNumber('id');
+
+    // Personal data (private to each user)
+    Route::apiResource('pets', PetController::class)->except('show');
+    Route::get('/pets/{id}/suggestions', [SuggestionController::class, 'show'])->whereNumber('id');
+    Route::apiResource('inventory', InventoryController::class)->except('show');
+    Route::get('/ratings', [RatingController::class, 'index']);
+    Route::post('/ratings', [RatingController::class, 'store']);
+    Route::delete('/ratings/{id}', [RatingController::class, 'destroy']);
+    Route::get('/meal-offers', [MealOfferController::class, 'index']);
+    Route::post('/meal-offers', [MealOfferController::class, 'store']);
+    Route::patch('/meal-offers/{id}', [MealOfferController::class, 'update']);
+});

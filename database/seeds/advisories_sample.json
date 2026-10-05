@@ -1,0 +1,27 @@
+[
+  {
+    "source_name": "Example Pet Forum (SAMPLE, not a real source)",
+    "source_url": "https://example.com/sample-advisory-1",
+    "published_at": "2026-09-15",
+    "topic": "Sample: texture complaints",
+    "source_text": "SAMPLE TEXT. Several posters in a forum thread reported that one lot of a canned pâté had a different texture than usual. No cause was given. This entry exists only to show how a Public Advisory appears in the app.",
+    "matches": [
+      {
+        "gtin": "0200000000011",
+        "lot_code": "SAMPLE-LOT-123"
+      }
+    ]
+  },
+  {
+    "source_name": "Example Shelter Newsletter (SAMPLE, not a real source)",
+    "source_url": "https://example.com/sample-advisory-2",
+    "published_at": "2026-10-01",
+    "topic": "Sample: reader discussion",
+    "source_text": "SAMPLE TEXT. A newsletter mentioned that readers were discussing crunchy cat treats. The newsletter did not say the products were unsafe. This entry exists only to show a lower-confidence, free-text match that you can confirm or dismiss.",
+    "matches": [
+      {
+        "free_text": "Crunchy"
+      }
+    ]
+  }
+]

@@ -1,0 +1,796 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Cat Füd">
+<title>Cat Füd</title>
+<style>
+  :root { --bg:#fafaf7; --fg:#1d1d1b; --muted:#6b6b66; --line:#dcdcd4; --accent:#c2410c; --accent-soft:#fdeee4;
+          --ok:#15803d; --bad:#b91c1c; --warn:#a16207; --card:#fff; --note:#f3f1e8; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#161614; --fg:#f0f0ea; --muted:#9a9a92; --line:#33332f; --accent:#fb923c; --accent-soft:#2a1d14;
+            --ok:#4ade80; --bad:#f87171; --warn:#facc15; --card:#1f1f1c; --note:#252522; }
+  }
+  * { box-sizing:border-box; }
+  html, body { margin:0; }
+  body { background:var(--bg); color:var(--fg); font:16px/1.45 -apple-system, system-ui, sans-serif;
+         padding:0 16px calc(84px + env(safe-area-inset-bottom)); max-width:560px; margin-inline:auto; }
+  header { display:flex; align-items:center; gap:8px; padding:14px 0 8px; position:sticky; top:0; background:var(--bg); z-index:5; }
+  header h1 { font-size:19px; margin:0; flex:1; }
+  h2 { font-size:17px; margin:18px 0 8px; }
+  h3 { font-size:15px; margin:0 0 4px; }
+  p { margin:6px 0; }
+  .muted { color:var(--muted); } .small { font-size:13px; } .ok { color:var(--ok); } .bad { color:var(--bad); } .warn { color:var(--warn); }
+  .card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:14px; margin:10px 0; }
+  .card.accent { border-color:var(--accent); background:var(--accent-soft); }
+  .row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .grow { flex:1; min-width:0; }
+  button, select, input, textarea { font:inherit; color:var(--fg); background:var(--card); border:1px solid var(--line);
+         border-radius:10px; padding:10px 12px; }
+  input, textarea, select { width:100%; }
+  button { cursor:pointer; width:auto; }
+  button.primary { background:var(--accent); border-color:var(--accent); color:#fff; font-weight:600; }
+  button.ghost { background:transparent; }
+  button.on { border-color:var(--accent); background:var(--accent-soft); font-weight:600; }
+  button.sm { padding:6px 10px; font-size:14px; border-radius:8px; }
+  button:disabled { opacity:.5; }
+  label { display:block; font-size:13px; color:var(--muted); margin:10px 0 4px; }
+  .pill { display:inline-block; font-size:12px; padding:1px 8px; border-radius:99px; border:1px solid var(--line); color:var(--muted); }
+  .pill.low { color:var(--warn); border-color:var(--warn); } .pill.out { color:var(--bad); border-color:var(--bad); }
+  .pill.trial { color:var(--accent); border-color:var(--accent); } .pill.ok { color:var(--ok); border-color:var(--ok); }
+  .pick { display:flex; gap:8px; align-items:center; padding:8px 0; border-bottom:1px solid var(--line); } .pick:last-child { border-bottom:0; }
+  a { color:var(--accent); }
+  .quote { background:var(--note); border-radius:10px; padding:10px 12px; margin:8px 0; font-size:14px; white-space:pre-wrap; }
+  .basis { background:var(--note); border-radius:10px; padding:8px 10px; margin-top:8px; font-size:13px; }
+  .banner { background:var(--note); border-radius:10px; padding:10px 12px; font-size:13px; color:var(--muted); margin:10px 0; }
+  .err { color:var(--bad); font-size:14px; margin:8px 0; }
+  table { width:100%; border-collapse:collapse; font-size:14px; }
+  td { padding:5px 0; border-bottom:1px solid var(--line); } td:last-child { text-align:right; }
+  nav { position:fixed; left:0; right:0; bottom:0; display:flex; background:var(--card); border-top:1px solid var(--line);
+        padding-bottom:env(safe-area-inset-bottom); z-index:10; max-width:560px; margin-inline:auto; }
+  nav button { flex:1; border:0; border-radius:0; background:transparent; padding:14px 4px; font-size:14px; color:var(--muted); position:relative; }
+  nav button.active { color:var(--accent); font-weight:700; }
+  nav .count { position:absolute; top:6px; margin-left:4px; background:var(--accent); color:#fff; font-size:11px; border-radius:99px; padding:0 6px; }
+  #stage { position:relative; width:100%; aspect-ratio:4/3; background:#000; border-radius:12px; overflow:hidden; margin:8px 0; }
+  #video { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+  #reticle { position:absolute; left:10%; right:10%; top:35%; bottom:35%; border:2px solid rgba(255,255,255,.85); border-radius:8px;
+             box-shadow:0 0 0 9999px rgba(0,0,0,.25); pointer-events:none; }
+  #camstatus { position:absolute; left:8px; right:8px; bottom:8px; color:#fff; font-size:13px; text-shadow:0 1px 2px #000; }
+  .tabs { display:flex; gap:8px; margin:8px 0; } .tabs button { flex:1; }
+  .seg { display:flex; gap:6px; flex-wrap:wrap; }
+  .sug-name { font-size:21px; font-weight:700; line-height:1.2; margin:2px 0; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Cat Füd</h1>
+  <div id="headerTools"></div>
+</header>
+<main id="app"></main>
+<nav id="nav" hidden></nav>
+
+<script src="https://cdn.jsdelivr.net/npm/@zxing/library@0.21.3/umd/index.min.js"></script>
+<script>
+(function () {
+  'use strict';
+
+  // ---------- tiny helpers ----------
+  function h(tag, props) {
+    var el = document.createElement(tag);
+    Object.keys(props || {}).forEach(function (k) {
+      var v = props[k];
+      if (k === 'class') el.className = v;
+      else if (k.slice(0, 2) === 'on') el.addEventListener(k.slice(2).toLowerCase(), v);
+      else if (v === true) el.setAttribute(k, '');
+      else if (v !== false && v != null) el.setAttribute(k, v);
+    });
+    for (var i = 2; i < arguments.length; i++) {
+      [].concat(arguments[i]).forEach(function (kid) {
+        if (kid == null || kid === false) return;
+        el.append(kid.nodeType ? kid : document.createTextNode(String(kid)));
+      });
+    }
+    return el;
+  }
+  function put(el) { for (var i = 1; i < arguments.length; i++) { if (arguments[i] != null && arguments[i] !== false) el.append(arguments[i]); } return el; }
+  function clear(el) { while (el.firstChild) el.removeChild(el.firstChild); return el; }
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { return mem[k] || null; } }
+  var mem = {};
+
+  var OUTCOME = { ate_all: 'Ate all', ate_some: 'Ate some', refused: 'Refused' };
+  var RATING = { liked: 'Liked', neutral: 'Neutral', refused: 'Refused' };
+  var STATUS = { stocked: 'Stocked', low: 'Running low', out: 'Out' };
+  var NUTRI = {
+    crude_protein_min_pct: ['Crude protein (min)', '%'], crude_fat_min_pct: ['Crude fat (min)', '%'],
+    crude_fiber_max_pct: ['Crude fiber (max)', '%'], moisture_max_pct: ['Moisture (max)', '%'],
+    kcal_per_unit: ['Calories per unit', ''],
+    protein_pct: ['Protein', '%'], fat_pct: ['Fat', '%'], carb_pct: ['Carbohydrate', '%'], fiber_pct: ['Fiber', '%'], moisture_pct: ['Moisture', '%'],
+    kcal_per_can: ['Calories per can', ''], kcal_per_oz: ['Calories per oz', ''], kcal_per_cup: ['Calories per cup', '']
+  };
+  var AUDIT = { unreviewed: ['Unreviewed', 'trial'], reviewed: ['Reviewed', 'ok'], needs_changes: ['Needs changes', 'low'] };
+
+  // ---------- state + api ----------
+  var state = { token: store('cf_token'), user: null, pets: [], petId: Number(store('cf_pet')) || null, tab: 'tonight', notices: null, camera: null };
+  var app = document.getElementById('app'), nav = document.getElementById('nav'), tools = document.getElementById('headerTools');
+
+  async function api(path, opts) {
+    opts = opts || {};
+    var url = '/api' + path;
+    var headers = { Accept: 'application/json' };
+    if (opts.body) headers['Content-Type'] = 'application/json';
+    if (state.token) headers.Authorization = 'Bearer ' + state.token;
+    var res;
+    try {
+      res = await fetch(url, { method: opts.method || 'GET', headers: headers, body: opts.body ? JSON.stringify(opts.body) : undefined });
+    } catch (e) { return { ok: false, status: 0, data: { message: 'Could not reach the server. Check your connection.' } }; }
+    var data = null;
+    try { data = await res.json(); } catch (e) {}
+    if (res.status === 401 && state.token) { signOut(); }
+    return { ok: res.ok, status: res.status, data: data };
+  }
+  function errText(r) {
+    var d = r.data || {};
+    if (d.errors) return Object.keys(d.errors).map(function (k) { return d.errors[k].join(' '); }).join(' ');
+    return d.message || 'Something went wrong.';
+  }
+  function currentPet() { return state.pets.filter(function (p) { return p.id === state.petId; })[0] || state.pets[0] || null; }
+
+  // ---------- shell ----------
+  function signOut() {
+    stopCamera(); state.authMode = 'login'; state.tab = 'tonight'; state.addingPet = false; store('cf_token', null); state.token = null; state.user = null; state.pets = []; state.notices = null; boot();
+  }
+
+  function renderHeader() {
+    clear(tools);
+    if (!state.user) return;
+    var pet = currentPet();
+    if (state.pets.length) {
+      var sel = h('select', { 'aria-label': 'Pet', style: 'width:auto;padding:6px 10px', onChange: function (e) {
+        if (e.target.value === 'new') { state.addingPet = true; render(); return; }
+        state.petId = Number(e.target.value); store('cf_pet', String(state.petId)); render();
+      } }, state.pets.map(function (p) { return h('option', { value: p.id, selected: pet && p.id === pet.id }, p.name); }),
+        h('option', { value: 'new' }, '+ Add pet'));
+      tools.append(h('div', { class: 'row' }, sel, h('button', { class: 'ghost sm', onClick: signOut }, 'Sign out')));
+    } else {
+      tools.append(h('button', { class: 'ghost sm', onClick: signOut }, 'Sign out'));
+    }
+  }
+
+  function renderNav() {
+    clear(nav);
+    if (!state.user) { nav.hidden = true; return; }
+    nav.hidden = false;
+    [['tonight', 'Tonight'], ['scan', 'Scan'], ['pantry', 'Pantry'], ['catalogue', 'Catalogue'], ['notices', 'Notices']].forEach(function (t) {
+      var b = h('button', { class: state.tab === t[0] ? 'active' : '', onClick: function () { go(t[0]); } }, t[1]);
+      if (t[0] === 'notices' && state.noticeCount > 0) b.append(h('span', { class: 'count' }, state.noticeCount));
+      nav.append(b);
+    });
+  }
+
+  function go(tab) { if (tab !== 'scan') state.attachTarget = null; state.tab = tab; state.scanned = null; render(); }
+
+  async function refreshNotices() {
+    var r = await api('/advisories');
+    if (r.ok) {
+      state.notices = r.data;
+      var n = 0;
+      r.data.advisories.forEach(function (a) { a.matches.forEach(function (m) { if (m.review.status === 'new') n++; }); });
+      state.noticeCount = n;
+      renderNav();
+    }
+  }
+
+  async function boot() {
+    stopCamera();
+    if (!state.token) { state.user = null; render(); return; }
+    var me = await api('/me');
+    if (!me.ok) { state.token = null; store('cf_token', null); state.user = null; render(); return; }
+    state.user = me.data.user;
+    var pets = await api('/pets');
+    state.pets = pets.ok ? pets.data.pets : [];
+    if (state.pets.length && !state.pets.some(function (p) { return p.id === state.petId; })) state.petId = state.pets[0].id;
+    await refreshNotices();
+    render();
+  }
+
+  function render() {
+    stopCamera();
+    renderHeader(); renderNav(); clear(app);
+    if (!state.user) return app.append(authView());
+    if (!state.pets.length || state.addingPet) return app.append(petForm());
+    var views = { tonight: tonightView, scan: scanView, pantry: pantryView, catalogue: catalogueView, notices: noticesView };
+    app.append(views[state.tab]());
+  }
+
+  // ---------- auth ----------
+  function authView() {
+    var mode = state.authMode || 'login';
+    var err = h('div', { class: 'err' });
+    var f = { name: h('input', { autocomplete: 'name' }), email: h('input', { type: 'email', autocomplete: 'email' }),
+              password: h('input', { type: 'password', autocomplete: mode === 'login' ? 'current-password' : 'new-password' }) };
+    var btn = h('button', { class: 'primary', onClick: async function () {
+      btn.disabled = true; err.textContent = '';
+      var body = { email: f.email.value, password: f.password.value, device_name: 'web' };
+      if (mode === 'register') body.name = f.name.value;
+      var r = await api(mode === 'login' ? '/login' : '/register', { method: 'POST', body: body });
+      btn.disabled = false;
+      if (!r.ok) { err.textContent = errText(r); return; }
+      state.token = r.data.token; store('cf_token', state.token); boot();
+    } }, mode === 'login' ? 'Sign in' : 'Create account');
+    return h('div', null,
+      h('div', { class: 'tabs' },
+        h('button', { class: mode === 'login' ? 'on' : '', onClick: function () { state.authMode = 'login'; render(); } }, 'Sign in'),
+        h('button', { class: mode === 'register' ? 'on' : '', onClick: function () { state.authMode = 'register'; render(); } }, 'Create account')),
+      h('div', { class: 'card' },
+        mode === 'register' ? [h('label', null, 'Your name'), f.name] : null,
+        h('label', null, 'Email'), f.email, h('label', null, 'Password' + (mode === 'register' ? ' (8+ characters)' : '')), f.password, err,
+        h('div', { class: 'row', style: 'margin-top:12px' }, btn)),
+      h('p', { class: 'muted small' }, 'Pilot build. What you record here stays private to your account.'));
+  }
+
+  // ---------- pet form ----------
+  function petForm() {
+    var err = h('div', { class: 'err' });
+    var name = h('input', { placeholder: 'e.g. Miso' });
+    var species = h('input', { value: 'cat', list: 'species' });
+    var first = !state.pets.length;
+    return h('div', null,
+      h('h2', null, first ? 'Who are we feeding?' : 'Add a pet'),
+      h('div', { class: 'card' },
+        h('label', null, 'Name'), name,
+        h('label', null, 'Species'), species, h('datalist', { id: 'species' }, h('option', { value: 'cat' }), h('option', { value: 'dog' })),
+        err,
+        h('div', { class: 'row', style: 'margin-top:12px' },
+          h('button', { class: 'primary', onClick: async function () {
+            var r = await api('/pets', { method: 'POST', body: { name: name.value, species: species.value.trim().toLowerCase() || 'cat' } });
+            if (!r.ok) { err.textContent = errText(r); return; }
+            state.pets.push(r.data.pet); state.petId = r.data.pet.id; store('cf_pet', String(state.petId)); state.addingPet = false; render();
+          } }, 'Save'),
+          first ? null : h('button', { class: 'ghost', onClick: function () { state.addingPet = false; render(); } }, 'Cancel'))));
+  }
+
+  // ---------- shared bits ----------
+  function productTitle(p) { return h('div', null, h('div', { class: 'sug-name' }, p.name), h('div', { class: 'muted' }, p.brand + (p.form ? ' · ' + p.form : '') + (p.kind === 'treat' ? ' · treat' : ''))); }
+
+  function outcomeButtons(onPick, current) {
+    return h('div', { class: 'seg' }, Object.keys(OUTCOME).map(function (k) {
+      return h('button', { class: current === k ? 'on' : '', onClick: function () { onPick(k); } }, OUTCOME[k]);
+    }));
+  }
+
+  // ---------- catalogue helpers (shared by Scan and Catalogue) ----------
+  function productLabel(p) {
+    return p.brand + (p.line ? ' · ' + p.line : '') + ' — ' + p.name + (p.texture ? ' (' + p.texture + ')' : '');
+  }
+
+  function editForm(p, onSaved, onCancel) {
+    var f = {
+      brand: h('input', { value: p.brand || '' }), name: h('input', { value: p.name || '' }), line: h('input', { value: p.line || '' }),
+      texture: h('input', { value: p.texture || '' }), form: h('input', { value: p.form || '' }),
+      ingredients: h('textarea', { rows: 3 }), image_url: h('input', { type: 'url', value: p.image_url || '', placeholder: 'https://…' }),
+      source_url: h('input', { type: 'url', value: p.source_url || '' })
+    };
+    f.ingredients.value = p.ingredients || '';
+    var err = h('div', { class: 'err' });
+    function field(label, el) { return [h('label', null, label), el]; }
+    function val(el) { var v = el.value.trim(); return v === '' ? null : v; }
+    return h('div', null, h('h3', null, 'Edit details'),
+      field('Brand', f.brand), field('Product line', f.line), field('Name', f.name), field('Texture', f.texture), field('Form', f.form),
+      field('Ingredients', f.ingredients), field('Image URL', f.image_url), field('Source page URL', f.source_url), err,
+      h('div', { class: 'row', style: 'margin-top:10px' },
+        h('button', { class: 'primary sm', onClick: async function () {
+          var body = { brand: f.brand.value.trim(), name: f.name.value.trim(), line: val(f.line), texture: val(f.texture), form: val(f.form),
+            ingredients: val(f.ingredients), image_url: val(f.image_url), source_url: val(f.source_url) };
+          var r = await api('/products/' + p.id, { method: 'PATCH', body: body });
+          if (r.ok) onSaved(r.data.product); else err.textContent = errText(r);
+        } }, 'Save'),
+        h('button', { class: 'ghost sm', onClick: onCancel }, 'Cancel')));
+  }
+
+  // Status, import flags, and the "looks right / needs changes" controls for the audit pass.
+  function auditPanel(p, onChange) {
+    var box = h('div', { class: 'basis' }), editing = false, msg = h('div', { class: 'small' });
+    var notes = h('input', { placeholder: 'Audit note (optional)', value: p.audit_notes || '' });
+    async function setStatus(status) {
+      var r = await api('/products/' + p.id, { method: 'PATCH', body: { audit_status: status, audit_notes: notes.value.trim() || null } });
+      if (r.ok) { p = r.data.product; if (onChange) onChange(p); draw(); } else { msg.className = 'small bad'; msg.textContent = errText(r); }
+    }
+    function draw() {
+      clear(box);
+      if (editing) {
+        box.append(editForm(p, function (np) { p = np; editing = false; if (onChange) onChange(p); draw(); }, function () { editing = false; draw(); }));
+        return;
+      }
+      var flags = (p.meta && p.meta.flags) || [], a = AUDIT[p.audit_status] || AUDIT.unreviewed;
+      notes.value = p.audit_notes || '';
+      put(box,
+        h('div', { class: 'row' }, h('span', { class: 'pill ' + a[1] }, a[0]),
+          p.gtin ? null : h('span', { class: 'pill out' }, 'no barcode'),
+          p.image_url ? null : h('span', { class: 'pill' }, 'no image'),
+          p.source_url ? h('a', { class: 'small', href: p.source_url, target: '_blank', rel: 'noopener' }, 'Source page') : null),
+        flags.length ? h('div', { class: 'small warn', style: 'margin-top:6px' }, 'Check: ' + flags.join(' · ')) : null,
+        notes, msg,
+        h('div', { class: 'row', style: 'margin-top:8px' },
+          h('button', { class: 'sm ' + (p.audit_status === 'reviewed' ? 'on' : ''), onClick: function () { setStatus('reviewed'); } }, 'Looks right'),
+          h('button', { class: 'sm ' + (p.audit_status === 'needs_changes' ? 'on' : ''), onClick: function () { setStatus('needs_changes'); } }, 'Needs changes'),
+          h('button', { class: 'sm ghost', onClick: function () { editing = true; draw(); } }, 'Edit')));
+    }
+    draw();
+    return box;
+  }
+
+  function nutritionTable(n) {
+    if (!n || !Object.keys(n).length) return null;
+    return h('div', null, h('h3', null, n.basis ? 'Nutrition (imported, not yet checked against a label)' : 'Nutrition, as printed on the label'),
+      h('table', null, Object.keys(n).filter(function (k) { return k !== 'basis'; }).map(function (k) {
+        var meta = NUTRI[k] || [k.replace(/_/g, ' '), ''];
+        return h('tr', null, h('td', null, meta[0]), h('td', null, n[k] + (meta[1] || '')));
+      })), n.basis ? h('p', { class: 'small muted' }, n.basis) : null);
+  }
+
+  function basisText(m) {
+    if (m.match_basis === 'upc') return 'Matched by barcode.';
+    if (m.match_basis === 'lot_code') return 'Matched by barcode or brand plus lot code' + (m.match_detail ? ' ' + m.match_detail : '') + '.';
+    if (m.match_basis === 'brand') return 'Matched by brand only.';
+    return 'Matched because the product name contains “' + (m.match_detail || '') + '”.';
+  }
+
+  // A match is only a suggestion: the user confirms or dismisses it. The advisory itself is never changed.
+  function matchBlock(m, showProduct) {
+    var status = h('span', { class: 'pill' }, m.review.status === 'new' ? 'Not reviewed' : m.review.status === 'confirmed' ? 'You marked: applies to mine' : 'You dismissed this');
+    var note = h('input', { placeholder: 'Optional note for yourself', value: m.review.note || '' });
+    var box = h('div', { class: 'basis' });
+    function set(s) {
+      api('/advisory-matches/' + m.id + '/review', { method: 'PUT', body: { status: s, note: note.value || null } }).then(function (r) {
+        if (!r.ok) return;
+        m.review = r.data.match.review;
+        status.textContent = m.review.status === 'new' ? 'Not reviewed' : m.review.status === 'confirmed' ? 'You marked: applies to mine' : 'You dismissed this';
+        refreshNotices();
+      });
+    }
+    box.append(
+      showProduct && m.product ? h('div', null, h('strong', null, m.product.brand + ' ' + m.product.name)) : null,
+      h('div', null, basisText(m) + ' Confidence: ' + m.confidence + '. This is a suggestion; check your package.'),
+      h('div', { class: 'row', style: 'margin:6px 0' }, status),
+      note,
+      h('div', { class: 'row', style: 'margin-top:6px' },
+        h('button', { class: 'sm', onClick: function () { set('confirmed'); } }, 'Applies to mine'),
+        h('button', { class: 'sm', onClick: function () { set('dismissed'); } }, 'Dismiss'),
+        h('button', { class: 'sm ghost', onClick: function () { set('new'); } }, 'Reset')));
+    return box;
+  }
+
+  function advisoryCard(a, matches, showProduct) {
+    return h('div', { class: 'card' },
+      h('div', { class: 'small muted' }, 'Public advisory'),
+      h('h3', null, a.attribution),
+      a.topic ? h('div', { class: 'small muted' }, a.topic) : null,
+      h('div', { class: 'quote' }, a.source_text),
+      h('a', { href: a.source_url, target: '_blank', rel: 'noopener noreferrer' }, 'Read it at the source'),
+      matches.map(function (m) { return matchBlock(m, showProduct); }));
+  }
+
+  // ---------- TONIGHT ----------
+  var tonight = { data: null, excluded: [], offer: null, stage: 'idle', petId: null };
+
+  function tonightView() {
+    var pet = currentPet(), root = h('div');
+    if (tonight.petId !== pet.id) { tonight = { data: null, excluded: [], offer: null, stage: 'idle', petId: pet.id }; }
+    if (tonight.stage === 'suggested') { tonight = { data: null, excluded: [], offer: null, stage: 'idle', petId: pet.id }; } // pantry may have changed; never show a stale pick
+    var box = h('div'); root.append(box);
+    var recent = h('div'); root.append(recent);
+
+    function recentMeals() {
+      return api('/meal-offers?pet_id=' + pet.id).then(function (r) {
+        clear(recent);
+        if (!r.ok || !r.data.meal_offers.length) return;
+        if (r.data.meal_offers.length === 1 && tonight.stage === 'offered') return;
+        recent.append(h('h2', null, 'Recent meals'));
+        r.data.meal_offers.filter(function (o) { return !(tonight.stage === 'offered' && tonight.offer && o.id === tonight.offer.id); }).slice(0, 6).forEach(function (o) {
+          var line = h('div', { class: 'card' }, h('div', { class: 'row' },
+            h('div', { class: 'grow' }, h('strong', null, o.product.name), h('div', { class: 'small muted' }, new Date(o.offered_at).toLocaleString([], { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }) + (o.suggested_by_app ? ' · suggested' : ''))),
+            o.outcome ? h('span', { class: 'pill' }, OUTCOME[o.outcome]) : null));
+          if (!o.outcome) line.append(h('div', { class: 'small muted', style: 'margin-top:8px' }, 'How did it go?'), outcomeButtons(function (k) {
+            api('/meal-offers/' + o.id, { method: 'PATCH', body: { outcome: k } }).then(recentMeals);
+          }));
+          recent.append(line);
+        });
+      });
+    }
+
+    async function suggest(shuffle) {
+      var q = [];
+      if (shuffle) q.push('shuffle=1');
+      tonight.excluded.forEach(function (id) { q.push('exclude[]=' + id); });
+      var r = await api('/pets/' + pet.id + '/suggestions' + (q.length ? '?' + q.join('&') : ''));
+      if (!r.ok) { box.append(h('div', { class: 'err' }, errText(r))); return; }
+      tonight.data = r.data; tonight.stage = 'suggested'; draw();
+    }
+
+    function draw() {
+      clear(box);
+      var d = tonight.data;
+      if (tonight.stage === 'idle' || !d) {
+        box.append(h('h2', null, 'What should ' + pet.name + ' try tonight?'),
+          h('div', { class: 'card' },
+            h('p', { class: 'muted' }, 'Picks from what is in your pantry, using only what you have recorded about ' + pet.name + '.'),
+            h('button', { class: 'primary', onClick: function () { tonight.excluded = []; suggest(false); } }, 'Suggest something')));
+        return;
+      }
+      if (tonight.stage === 'offered') {
+        var p = tonight.offer.product;
+        box.append(h('h2', null, 'Offered'), h('div', { class: 'card accent' }, productTitle(p),
+          h('p', { class: 'muted' }, 'How did it go?'),
+          outcomeButtons(async function (k) {
+            await api('/meal-offers/' + tonight.offer.id, { method: 'PATCH', body: { outcome: k } });
+            tonight.stage = 'rate'; tonight.outcome = k; draw(); recentMeals();
+          }),
+          h('div', { class: 'row', style: 'margin-top:10px' }, h('button', { class: 'ghost sm', onClick: function () { tonight = { data: null, excluded: [], offer: null, stage: 'idle', petId: pet.id }; draw(); recentMeals(); } }, 'Decide later'))));
+        return;
+      }
+      if (tonight.stage === 'rate') {
+        var p2 = tonight.offer.product;
+        box.append(h('h2', null, 'Noted'), h('div', { class: 'card' },
+          h('p', null, OUTCOME[tonight.outcome] + ' recorded for ' + pet.name + '.'),
+          h('div', { class: 'small muted' }, 'Add to the scorecard? (optional)'),
+          h('div', { class: 'seg', style: 'margin-top:6px' }, Object.keys(RATING).map(function (k) {
+            return h('button', { onClick: async function (e) {
+              await api('/ratings', { method: 'POST', body: { pet_id: pet.id, product_id: p2.id, rating: k } });
+              e.target.className = 'on';
+            } }, RATING[k]);
+          })),
+          h('div', { class: 'row', style: 'margin-top:12px' }, h('button', { class: 'primary', onClick: function () { tonight = { data: null, excluded: [], offer: null, stage: 'idle', petId: pet.id }; draw(); } }, 'Done'))));
+        return;
+      }
+      // stage: suggested
+      var s = d.suggestion;
+      if (!s) {
+        box.append(h('h2', null, 'Nothing to suggest'), h('div', { class: 'card' },
+          h('p', null, d.none_reason === 'all_passed' ? 'You have passed on everything in the pantry for now.' : 'No ' + pet.species + ' food is marked in stock. Scan something to add it to the pantry.'),
+          h('div', { class: 'row' },
+            d.none_reason === 'all_passed' ? h('button', { onClick: function () { tonight.excluded = []; suggest(false); } }, 'Start over') : h('button', { class: 'primary', onClick: function () { go('scan'); } }, 'Scan something'))));
+        return;
+      }
+      box.append(h('h2', null, 'Try this'),
+        h('div', { class: 'card accent' },
+          h('div', { class: 'row' }, s.trial ? h('span', { class: 'pill trial' }, 'Trial: not tried yet') : null, s.inventory_status === 'low' ? h('span', { class: 'pill low' }, 'Running low') : null),
+          productTitle(s.product),
+          h('p', { style: 'margin-top:8px' }, s.statement),
+          h('p', { class: 'small muted' }, d.basis),
+          h('div', { class: 'row', style: 'margin-top:12px' },
+            h('button', { class: 'primary', onClick: async function () {
+              var r = await api('/meal-offers', { method: 'POST', body: { pet_id: pet.id, product_id: s.product.id, suggested_by_app: true } });
+              if (!r.ok) return;
+              tonight.offer = r.data.meal_offer; tonight.stage = 'offered'; draw(); recentMeals();
+            } }, 'Offer this'),
+            h('button', { onClick: function () { suggest(true); } }, 'Shuffle'),
+            h('button', { class: 'ghost', onClick: function () { tonight.excluded.push(s.product.id); suggest(false); } }, 'Not this one'))));
+      if (d.alternatives.length) {
+        box.append(h('h2', null, 'Other options in your pantry'));
+        d.alternatives.forEach(function (c) {
+          box.append(h('div', { class: 'card' }, h('strong', null, c.product.name), h('div', { class: 'small muted' }, c.product.brand),
+            h('div', { class: 'small', style: 'margin-top:4px' }, c.statement)));
+        });
+      }
+    }
+
+    draw(); recentMeals();
+    return root;
+  }
+
+  // ---------- SCAN ----------
+  function stopCamera() {
+    if (state.camera) { try { state.camera.reset(); } catch (e) {} state.camera = null; }
+  }
+
+  function scanView() {
+    var root = h('div'), result = h('div');
+    var status = h('div', { id: 'camstatus' }, 'Camera off');
+    var video = h('video', { id: 'video', playsinline: true, muted: true, autoplay: true });
+    var manual = h('input', { type: 'text', inputmode: 'numeric', placeholder: 'Type the digits under the barcode', autocomplete: 'off' });
+
+    async function startCamera() {
+      stopCamera();
+      if (!window.isSecureContext) { status.textContent = 'The camera needs HTTPS. Use the manual box below.'; return; }
+      if (!window.ZXing) { status.textContent = 'Scanner library did not load. Use the manual box below.'; return; }
+      var hints = new Map();
+      hints.set(ZXing.DecodeHintType.POSSIBLE_FORMATS, [ZXing.BarcodeFormat.EAN_13, ZXing.BarcodeFormat.UPC_A, ZXing.BarcodeFormat.UPC_E, ZXing.BarcodeFormat.EAN_8]);
+      var reader = new ZXing.BrowserMultiFormatReader(hints, 150);
+      state.camera = reader;
+      status.textContent = 'Starting camera…';
+      try {
+        await reader.decodeFromConstraints({ audio: false, video: { facingMode: { ideal: 'environment' } } }, video, function (res) {
+          if (!res) return;
+          var code = res.getText();
+          if (navigator.vibrate) navigator.vibrate(30);
+          stopCamera(); status.textContent = 'Scanned ' + code;
+          lookup(code);
+        });
+        status.textContent = 'Point at a barcode';
+      } catch (e) {
+        status.textContent = 'Could not start the camera (' + (e && e.name ? e.name : 'error') + '). Check camera permission, or use the manual box.';
+        stopCamera();
+      }
+    }
+
+    async function lookup(code) {
+      clear(result); result.append(h('p', { class: 'muted' }, 'Looking up ' + code + '…'));
+      var r = await api('/products/lookup/' + encodeURIComponent(code.replace(/[\s-]/g, '')));
+      clear(result);
+      if (r.status === 200) {
+        if (state.attachTarget) result.append(h('div', { class: 'banner' }, 'That barcode already belongs to this product, so nothing was attached to ' + productLabel(state.attachTarget) + '.'));
+        return result.append(productCard(r.data));
+      }
+      if (r.status === 404) return result.append(state.attachTarget ? confirmAttach(r.data.gtin, r.data.upc_a, state.attachTarget) : wireUp(r.data.gtin, r.data.upc_a));
+      result.append(h('div', { class: 'err' }, (r.data && r.data.message) || errText(r)));
+    }
+
+    // Barcode attached: show the product, and make the next scan one tap.
+    function attached(product) {
+      state.attachTarget = null;
+      clear(result);
+      result.append(h('div', { class: 'card accent' }, h('strong', { class: 'ok' }, 'Wired up. '), productLabel(product) + ' now has barcode ' + (product.upc_a || product.gtin) + '.',
+        h('div', { class: 'row', style: 'margin-top:10px' }, h('button', { class: 'primary', onClick: function () { clear(result); startCamera(); } }, 'Scan next'))),
+        productCard({ product: product, advisories: [] }));
+    }
+
+    async function attach(gtin, product, msg) {
+      var r = await api('/products/' + product.id + '/barcode', { method: 'PUT', body: { gtin: gtin } });
+      if (r.ok) return attached(r.data.product);
+      msg.className = 'err'; msg.textContent = errText(r);
+    }
+
+    // Product picked first (from the Catalogue), barcode scanned second: one confirm tap.
+    function confirmAttach(gtin, upca, product) {
+      var msg = h('div');
+      return h('div', { class: 'card accent' }, h('h3', null, 'Attach this barcode?'),
+        h('p', null, 'Barcode ' + (upca || gtin) + ' → ' + productLabel(product)), msg,
+        h('div', { class: 'row' }, h('button', { class: 'primary', onClick: function () { attach(gtin, product, msg); } }, 'Attach'),
+          h('button', { class: 'ghost', onClick: function () { state.attachTarget = null; render(); } }, 'Cancel')));
+    }
+
+    // Scan first, product second: search the seeded products that still have no barcode and pick the one in your hand.
+    function wireUp(gtin, upca) {
+      var q = h('input', { type: 'search', placeholder: 'Search: brand, line or name (e.g. “tiki beef”)', autocomplete: 'off' });
+      var list = h('div'), note = h('p', { class: 'small muted' }), msg = h('div'), timer = null;
+      async function search() {
+        var term = q.value.trim();
+        var r = await api('/products?barcode=missing&q=' + encodeURIComponent(term));
+        clear(list);
+        if (!r.ok) { list.append(h('div', { class: 'err' }, errText(r))); return; }
+        var rows = r.data.data;
+        note.textContent = rows.length === 0 ? 'No products without a barcode match that.' : (r.data.total > rows.length ? 'Showing ' + rows.length + ' of ' + r.data.total + '. Type more to narrow it.' : rows.length + ' without a barcode.');
+        rows.forEach(function (p) {
+          var btn = h('button', { class: 'sm primary' }, 'This one'), revert = null;
+          btn.addEventListener('click', function () {
+            if (btn.dataset.arm) { clearTimeout(revert); attach(gtin, p, msg); return; }
+            btn.dataset.arm = '1'; btn.textContent = 'Tap to confirm';
+            revert = setTimeout(function () { delete btn.dataset.arm; btn.textContent = 'This one'; }, 4000);
+          });
+          list.append(h('div', { class: 'pick' }, h('div', { class: 'grow' }, h('div', null, p.name + (p.texture ? ' (' + p.texture + ')' : '')),
+            h('div', { class: 'small muted' }, p.brand + (p.line ? ' · ' + p.line : '') + (p.form ? ' · ' + p.form : ''))), btn));
+        });
+      }
+      q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(search, 250); });
+      search();
+      return h('div', { class: 'card accent' }, h('h3', null, 'New barcode ' + (upca || gtin)),
+        h('p', { class: 'small' }, 'It is not attached to a product yet. Pick the product you are holding and the barcode is wired up for good.'),
+        q, note, msg, list,
+        h('div', { class: 'row', style: 'margin-top:10px' }, h('button', { class: 'ghost sm', onClick: function () { clear(result); result.append(addProductForm(gtin, upca)); } }, 'It is not in the list — add as new product')));
+    }
+
+    function productCard(d) {
+      var p = d.product, qty = h('input', { type: 'number', min: '1', value: '1', style: 'width:90px' }), msg = h('div', { class: 'small' });
+      var card = h('div', { class: 'card' },
+        productTitle(p),
+        p.description ? h('p', null, p.description) : null,
+        p.ingredients ? h('p', { class: 'small' }, h('strong', null, 'Ingredients: '), p.ingredients) : null,
+        nutritionTable(p.nutrition),
+        h('p', { class: 'small muted' }, 'Barcode ' + (p.upc_a || p.gtin) + ' · source: ' + p.source + (p.last_verified_at ? ' · verified ' + p.last_verified_at.slice(0, 10) : ' · not yet verified')),
+        h('div', { class: 'row', style: 'margin-top:8px' }, h('span', { class: 'small muted' }, 'Qty'), qty,
+          h('button', { class: 'primary', onClick: async function () {
+            var r = await api('/inventory', { method: 'POST', body: { product_id: p.id, quantity: Number(qty.value) || 1 } });
+            msg.className = 'small ' + (r.ok ? 'ok' : 'bad');
+            msg.textContent = r.ok ? 'In your pantry (' + Number(r.data.item.quantity) + ').' : errText(r);
+          } }, 'Add to pantry')), msg);
+      card.append(auditPanel(p));
+      var out = h('div', null, card);
+      if (d.advisories && d.advisories.length) {
+        out.append(h('h2', null, d.advisories.length + ' public ' + (d.advisories.length === 1 ? 'advisory' : 'advisories') + ' may relate to this'),
+          h('div', { class: 'banner' }, d.advisory_disclaimer));
+        d.advisories.forEach(function (a) { out.append(advisoryCard(a, [a.match], false)); });
+      }
+      return out;
+    }
+
+    function addProductForm(gtin, upca) {
+      var pet = currentPet(), err = h('div', { class: 'err' });
+      var f = {
+        brand: h('input'), name: h('input'), kind: h('select', null, h('option', { value: 'food' }, 'Food'), h('option', { value: 'treat' }, 'Treat')),
+        form: h('input', { placeholder: 'wet, dry, freeze-dried…' }), species: h('input', { value: pet ? pet.species : 'cat' }),
+        ingredients: h('textarea', { rows: 2 }),
+        n_protein: h('input', { inputmode: 'decimal' }), n_fat: h('input', { inputmode: 'decimal' }), n_fiber: h('input', { inputmode: 'decimal' }), n_moisture: h('input', { inputmode: 'decimal' }), n_kcal: h('input', { inputmode: 'decimal' })
+      };
+      function field(label, el) { return [h('label', null, label), el]; }
+      return h('div', { class: 'card' },
+        h('h3', null, 'Not in the catalogue yet'),
+        h('p', { class: 'muted small' }, 'Barcode ' + (upca || gtin) + '. Add it so it is found next time. Copy values exactly as printed on the package.'),
+        field('Brand', f.brand), field('Product name', f.name), field('Food or treat', f.kind), field('Form', f.form), field('Species', f.species),
+        field('Ingredients (optional)', f.ingredients),
+        h('h3', { style: 'margin-top:14px' }, 'Label values (optional)'),
+        field('Crude protein, min %', f.n_protein), field('Crude fat, min %', f.n_fat), field('Crude fiber, max %', f.n_fiber), field('Moisture, max %', f.n_moisture), field('Calories per unit, as printed', f.n_kcal),
+        err,
+        h('div', { class: 'row', style: 'margin-top:12px' }, h('button', { class: 'primary', onClick: async function () {
+          var nutrition = {};
+          [['crude_protein_min_pct', f.n_protein], ['crude_fat_min_pct', f.n_fat], ['crude_fiber_max_pct', f.n_fiber], ['moisture_max_pct', f.n_moisture], ['kcal_per_unit', f.n_kcal]].forEach(function (x) { if (x[1].value.trim()) nutrition[x[0]] = x[1].value.trim(); });
+          var body = { gtin: gtin, brand: f.brand.value, name: f.name.value, kind: f.kind.value, species: f.species.value.trim().toLowerCase() || 'cat' };
+          if (f.form.value.trim()) body.form = f.form.value.trim();
+          if (f.ingredients.value.trim()) body.ingredients = f.ingredients.value.trim();
+          if (Object.keys(nutrition).length) body.nutrition = nutrition;
+          var r = await api('/products', { method: 'POST', body: body });
+          if (r.status === 201 || r.status === 409) { clear(result); result.append(productCard({ product: r.data.product, advisories: [] })); return; }
+          err.textContent = errText(r);
+        } }, 'Save product')));
+    }
+
+    put(root, h('h2', null, 'Scan a barcode'),
+      state.attachTarget ? h('div', { class: 'banner' }, h('strong', null, 'Scanning for: '), productLabel(state.attachTarget), ' ',
+        h('button', { class: 'ghost sm', onClick: function () { state.attachTarget = null; render(); } }, 'Cancel')) : null,
+      h('div', { id: 'stage' }, video, h('div', { id: 'reticle' }), status),
+      h('div', { class: 'row' }, h('button', { class: 'primary', onClick: startCamera }, 'Start camera'), h('button', { onClick: function () { stopCamera(); status.textContent = 'Camera off'; } }, 'Stop')),
+      h('h3', { style: 'margin-top:14px' }, 'Or type it'),
+      h('div', { class: 'row' }, h('div', { class: 'grow' }, manual),
+        h('button', { onClick: function () { if (manual.value.trim()) lookup(manual.value.trim()); } }, 'Look up')),
+      result);
+    manual.addEventListener('keydown', function (e) { if (e.key === 'Enter' && manual.value.trim()) lookup(manual.value.trim()); });
+    return root;
+  }
+
+  // ---------- CATALOGUE (seed -> wire up -> audit) ----------
+  function catalogueView() {
+    var root = h('div'), list = h('div'), more = h('div'), summary = h('div', { class: 'small muted' });
+    var filters = [['nobarcode', 'No barcode'], ['unreviewed', 'Unreviewed'], ['needs_changes', 'Needs changes'], ['reviewed', 'Reviewed'], ['all', 'All']];
+    var f = state.catFilter || 'nobarcode';
+    var q = h('input', { type: 'search', placeholder: 'Search brand, line or name', autocomplete: 'off', value: state.catQ || '' }), timer = null;
+
+    function params(page) {
+      var a = [];
+      if (f === 'nobarcode') a.push('barcode=missing'); else if (f !== 'all') a.push('audit=' + f);
+      if (q.value.trim()) a.push('q=' + encodeURIComponent(q.value.trim()));
+      a.push('page=' + page);
+      return a.join('&');
+    }
+
+    async function loadSummary() {
+      var r = await api('/products/audit-summary');
+      if (!r.ok) return;
+      var d = r.data;
+      summary.textContent = d.total + ' products · ' + (d.total - d.without_barcode) + ' with a barcode · ' + d.reviewed + ' reviewed · ' + d.needs_changes + ' need changes · ' + (d.total - d.without_image) + ' with an image';
+    }
+
+    function row(p) {
+      var open = false, box = h('div', { class: 'card' });
+      function draw() {
+        clear(box);
+        var a = AUDIT[p.audit_status] || AUDIT.unreviewed;
+        box.append(h('div', { class: 'row' },
+          h('div', { class: 'grow' }, h('div', null, h('strong', null, p.name + (p.texture ? ' (' + p.texture + ')' : ''))),
+            h('div', { class: 'small muted' }, p.brand + (p.line ? ' · ' + p.line : '') + (p.form ? ' · ' + p.form : ''))),
+          h('span', { class: 'pill ' + a[1] }, a[0])),
+          h('div', { class: 'row', style: 'margin-top:8px' },
+            p.gtin ? h('span', { class: 'small muted' }, 'Barcode ' + (p.upc_a || p.gtin))
+              : h('button', { class: 'sm primary', onClick: function () { state.attachTarget = p; go('scan'); } }, 'Scan to attach barcode'),
+            h('button', { class: 'sm ghost', onClick: function () { open = !open; draw(); } }, open ? 'Hide' : 'Details')));
+        if (open) {
+          put(box, p.ingredients ? h('p', { class: 'small' }, h('strong', null, 'Ingredients: '), p.ingredients) : null, nutritionTable(p.nutrition),
+            auditPanel(p, function (np) { p = np; draw(); loadSummary(); }));
+        }
+      }
+      draw();
+      return box;
+    }
+
+    async function load(page) {
+      var r = await api('/products?' + params(page));
+      if (page === 1) clear(list);
+      clear(more);
+      if (!r.ok) { list.append(h('div', { class: 'err' }, errText(r))); return; }
+      if (page === 1 && !r.data.data.length) list.append(h('p', { class: 'muted' }, 'Nothing here.'));
+      r.data.data.forEach(function (p) { list.append(row(p)); });
+      if (r.data.current_page < r.data.last_page) more.append(h('button', { onClick: function () { load(page + 1); } }, 'Load more (' + (r.data.total - r.data.to) + ' left)'));
+    }
+
+    function reload() { state.catFilter = f; state.catQ = q.value; load(1); }
+    q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(reload, 250); });
+
+    root.append(h('h2', null, 'Catalogue'), summary,
+      h('div', { class: 'seg', style: 'margin:8px 0' }, filters.map(function (x) {
+        return h('button', { class: 'sm ' + (f === x[0] ? 'on' : ''), onClick: function () { f = x[0]; state.catFilter = f; render(); } }, x[1]);
+      })), q, list, more);
+    loadSummary(); load(1);
+    return root;
+  }
+
+  // ---------- PANTRY ----------
+  function pantryView() {
+    var root = h('div'), list = h('div'), filter = state.pantryFilter || '';
+    var pet = currentPet();
+    root.append(h('h2', null, 'Pantry'),
+      h('div', { class: 'seg' }, [['', 'All'], ['low', 'Running low'], ['out', 'Out']].map(function (f) {
+        return h('button', { class: filter === f[0] ? 'on' : '', onClick: function () { state.pantryFilter = f[0]; render(); } }, f[1]);
+      })), list);
+
+    Promise.all([api('/inventory' + (filter ? '?status=' + filter : '')), api('/ratings?pet_id=' + pet.id), api('/advisories')]).then(function (rs) {
+      var inv = rs[0], rat = rs[1], adv = rs[2];
+      if (!inv.ok) return list.append(h('div', { class: 'err' }, errText(inv)));
+      var ratings = {}; if (rat.ok) rat.data.ratings.forEach(function (x) { ratings[x.product_id] = x.rating; });
+      var flagged = {};
+      if (adv.ok) adv.data.advisories.forEach(function (a) { a.matches.forEach(function (m) { if (m.review.status !== 'dismissed' && m.product) flagged[m.product.id] = (flagged[m.product.id] || 0) + 1; }); });
+      if (!inv.data.items.length) return list.append(h('div', { class: 'card muted' }, filter ? 'Nothing here.' : 'Your pantry is empty. Scan something to add it.'));
+      inv.data.items.forEach(function (it) { list.append(itemCard(it, ratings[it.product_id], flagged[it.product_id], pet)); });
+    });
+    return root;
+  }
+
+  function itemCard(it, rating, flaggedCount, pet) {
+    var p = it.product;
+    var card = h('div', { class: 'card' });
+    function draw() {
+      clear(card);
+      card.append(
+        h('div', { class: 'row' }, h('div', { class: 'grow' }, h('strong', null, p.name), h('div', { class: 'small muted' }, p.brand + ' · ' + Number(it.quantity) + ' ' + it.unit)),
+          flaggedCount ? h('button', { class: 'pill', onClick: function () { go('notices'); } }, flaggedCount + ' public advisory') : null),
+        h('div', { class: 'seg', style: 'margin-top:8px' }, Object.keys(STATUS).map(function (k) {
+          return h('button', { class: 'sm ' + (it.status === k ? 'on' : ''), onClick: async function () {
+            var r = await api('/inventory/' + it.id, { method: 'PATCH', body: { status: k } });
+            if (r.ok) { it.status = k; draw(); }
+          } }, STATUS[k]);
+        })),
+        h('div', { class: 'small muted', style: 'margin-top:10px' }, pet.name + "'s scorecard"),
+        h('div', { class: 'seg', style: 'margin-top:4px' }, Object.keys(RATING).map(function (k) {
+          return h('button', { class: 'sm ' + (rating === k ? 'on' : ''), onClick: async function () {
+            var r = await api('/ratings', { method: 'POST', body: { pet_id: pet.id, product_id: p.id, rating: k } });
+            if (r.ok) { rating = k; draw(); }
+          } }, RATING[k]);
+        })),
+        h('div', { class: 'small muted', style: 'margin-top:10px' }, 'Log a meal you just offered'),
+        h('div', { class: 'seg', style: 'margin-top:4px' }, Object.keys(OUTCOME).map(function (k) {
+          return h('button', { class: 'sm', onClick: async function (e) {
+            var r = await api('/meal-offers', { method: 'POST', body: { pet_id: pet.id, product_id: p.id, outcome: k } });
+            if (r.ok) { e.target.textContent = OUTCOME[k] + ' ✓'; }
+          } }, OUTCOME[k]);
+        })),
+        h('div', { class: 'row', style: 'margin-top:10px' },
+          removing ? [h('span', { class: 'small' }, 'Remove from pantry?'), h('button', { class: 'sm', onClick: async function () {
+            var r = await api('/inventory/' + it.id, { method: 'DELETE' }); if (r.ok) card.remove();
+          } }, 'Yes, remove'), h('button', { class: 'sm ghost', onClick: function () { removing = false; draw(); } }, 'Keep')]
+          : h('button', { class: 'sm ghost', onClick: function () { removing = true; draw(); } }, 'Remove')));
+    }
+    var removing = false;
+    draw();
+    return card;
+  }
+
+  // ---------- NOTICES ----------
+  function noticesView() {
+    var root = h('div'), body = h('div'), all = !!state.showAllNotices;
+    root.append(h('h2', null, 'Public advisories'), body);
+    api('/advisories' + (all ? '?all=1' : '')).then(function (r) {
+      if (!r.ok) return body.append(h('div', { class: 'err' }, errText(r)));
+      body.append(h('div', { class: 'banner' }, r.data.disclaimer));
+      if (!r.data.advisories.length) body.append(h('div', { class: 'card muted' }, all ? 'No advisories on file.' : 'No advisories on file for the products in your pantry.'));
+      r.data.advisories.forEach(function (a) { body.append(advisoryCard(a, a.matches, true)); });
+      body.append(h('div', { class: 'row', style: 'margin-top:12px' },
+        h('button', { class: 'ghost', onClick: function () { state.showAllNotices = !all; render(); } }, all ? 'Only show my pantry' : 'Show every advisory on file')));
+      if (!all) { state.notices = r.data; var n = 0; r.data.advisories.forEach(function (a) { a.matches.forEach(function (m) { if (m.review.status === 'new') n++; }); }); state.noticeCount = n; renderNav(); }
+    });
+    return root;
+  }
+
+  boot();
+})();
+</script>
+</body>
+</html>
