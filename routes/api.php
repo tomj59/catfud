@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\PetController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\RatingController;
 use App\Http\Controllers\Api\SuggestionController;
+use App\Http\Middleware\SetRegion;
 use Illuminate\Support\Facades\Route;
 
 // Public
@@ -15,13 +16,15 @@ Route::post('/register', [AuthController::class, 'register'])->middleware('throt
 Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:10,1');
 
 // Authenticated (Sanctum bearer token)
-Route::middleware('auth:sanctum')->group(function () {
+Route::middleware(['auth:sanctum', SetRegion::class])->group(function () {
     Route::get('/me', [AuthController::class, 'me']);
     Route::post('/logout', [AuthController::class, 'logout']);
 
     // Shared product catalogue (global)
     Route::get('/products', [ProductController::class, 'index']);
     Route::get('/products/lookup/{code}', [ProductController::class, 'lookup'])->where('code', '[0-9\-\s]+');
+    Route::get('/tags', [ProductController::class, 'tags']);
+    Route::get('/brand-nodes', [ProductController::class, 'nodes']);
     Route::get('/products/audit-summary', [ProductController::class, 'auditSummary']);
     Route::get('/products/{product}', [ProductController::class, 'show'])->whereNumber('product');
     Route::patch('/products/{product}', [ProductController::class, 'update'])->whereNumber('product');

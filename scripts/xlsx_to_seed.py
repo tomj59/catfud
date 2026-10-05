@@ -24,6 +24,8 @@ import openpyxl
 
 SOURCE = "catfood.xlsx"
 SKIP_NAMES = {"Color Key"}
+# Sheets whose "Variety" column becomes a tree level (see database/seeds/brand_map_us.json), so it is not repeated in the name
+NODE_VARIETY_SHEETS = {"Purina", "Hills"}
 # Sheets whose first four nutrition columns are already percentages (75.4) rather than fractions (0.754)
 PERCENT_SHEETS = {"Weruva"}
 PRICE_DATE = "2024-12"  # file last saved Dec 2024; prices are a snapshot, never current
@@ -248,7 +250,7 @@ def main():
             p["meta"].setdefault("flags", []).append("same name/line appears more than once in the sheet")
         p["import_key"] = key
         p.update({"species": "cat", "kind": "food", "source": SOURCE, "audit_status": "unreviewed"})
-        if variety:
+        if variety and p["meta"]["sheet"] not in NODE_VARIETY_SHEETS:
             p["name"] = f"{p['name']} ({variety})" if p["meta"].get("variety") == variety and p["brand"] != "Weruva" else p["name"]
         notes = list(p["meta"].get("flags", []))
         if p["meta"].get("brand_guessed_from_name"):

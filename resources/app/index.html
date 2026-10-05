@@ -60,6 +60,7 @@
   #camstatus { position:absolute; left:8px; right:8px; bottom:8px; color:#fff; font-size:13px; text-shadow:0 1px 2px #000; }
   .tabs { display:flex; gap:8px; margin:8px 0; } .tabs button { flex:1; }
   .seg { display:flex; gap:6px; flex-wrap:wrap; }
+  .seg button.ex { text-decoration:line-through; border-color:var(--bad); color:var(--bad); }
   .formtoggle button { flex:1; } .formtoggle { margin:6px 0 2px; }
   .sug-name { font-size:21px; font-weight:700; line-height:1.2; margin:2px 0; }
 </style>
@@ -253,7 +254,7 @@
   }
 
   // ---------- shared bits ----------
-  function productTitle(p) { return h('div', null, h('div', { class: 'sug-name' }, p.name), h('div', { class: 'muted' }, p.brand + (p.form ? ' · ' + p.form : '') + (p.kind === 'treat' ? ' · treat' : ''))); }
+  function productTitle(p) { return h('div', null, h('div', { class: 'sug-name' }, p.name), h('div', { class: 'muted' }, (p.path_text || p.brand) + (p.form ? ' · ' + p.form : '') + (p.kind === 'treat' ? ' · treat' : '')), tagPills(p)); }
 
   function outcomeButtons(onPick, current) {
     return h('div', { class: 'seg' }, Object.keys(OUTCOME).map(function (k) {
@@ -278,28 +279,84 @@
     return box;
   }
 
+  // ---------- facets: texture / medium / life stage / diet ----------
+  var TAG_GROUPS = [['texture', 'Texture'], ['medium', 'Served in'], ['life_stage', 'Life stage'], ['diet', 'Diet']];
+  async function loadTags() {
+    if (state.tagVocab) return state.tagVocab;
+    var r = await api('/tags');
+    state.tagVocab = r.ok ? r.data.tags : {};
+    return state.tagVocab;
+  }
+  function tagKeys(p) { return (p.tags || []).map(function (t) { return t.group + ':' + t.slug; }); }
+  function tagPills(p) {
+    var tags = (p.tags || []).filter(function (t) { return t.group === 'texture' || t.group === 'medium' || t.group === 'diet'; });
+    return tags.length ? h('div', { class: 'row', style: 'gap:4px;margin-top:4px' }, tags.map(function (t) { return h('span', { class: 'pill' + (t.group === 'diet' ? ' trial' : '') }, t.label); })) : null;
+  }
+  // Pick-any chips for the edit and add forms. Returns { el, keys() }.
+  function tagPicker(selected, groups) {
+    var chosen = {}; (selected || []).forEach(function (k) { chosen[k] = true; });
+    var box = h('div');
+    loadTags().then(function (vocab) {
+      (groups || TAG_GROUPS).forEach(function (g) {
+        if (!vocab[g[0]]) return;
+        box.append(h('label', null, g[1]), h('div', { class: 'seg' }, vocab[g[0]].map(function (t) {
+          var key = t.group + ':' + t.slug, b = h('button', { class: 'sm ' + (chosen[key] ? 'on' : '') }, t.label);
+          b.addEventListener('click', function () { chosen[key] = !chosen[key]; b.className = 'sm ' + (chosen[key] ? 'on' : ''); });
+          return b;
+        })));
+      });
+    });
+    return { el: box, keys: function () { return Object.keys(chosen).filter(function (k) { return chosen[k]; }); } };
+  }
+
+  // Tap a chip once to include, again to exclude, again to clear. state.tagInc / state.tagExc hold "group:slug" keys.
+  function tagFilters(onChange) {
+    state.tagInc = state.tagInc || []; state.tagExc = state.tagExc || [];
+    var box = h('div');
+    loadTags().then(function (vocab) {
+      [['texture', 'Texture'], ['medium', 'Served in'], ['diet', 'Diet']].forEach(function (g) {
+        if (!vocab[g[0]]) return;
+        box.append(h('div', { class: 'small muted', style: 'margin-top:8px' }, g[1]), h('div', { class: 'seg' }, vocab[g[0]].map(function (t) {
+          var key = t.group + ':' + t.slug;
+          function cls() { return 'sm ' + (state.tagInc.indexOf(key) >= 0 ? 'on' : state.tagExc.indexOf(key) >= 0 ? 'ex' : ''); }
+          var b = h('button', { class: cls() }, t.label);
+          b.addEventListener('click', function () {
+            var inc = state.tagInc.indexOf(key), exc = state.tagExc.indexOf(key);
+            if (inc >= 0) { state.tagInc.splice(inc, 1); state.tagExc.push(key); }
+            else if (exc >= 0) { state.tagExc.splice(exc, 1); }
+            else { state.tagInc.push(key); }
+            b.className = cls(); onChange();
+          });
+          return b;
+        })));
+      });
+    });
+    return box;
+  }
+
   // ---------- catalogue helpers (shared by Scan and Catalogue) ----------
   function productLabel(p) {
-    return p.brand + (p.line ? ' · ' + p.line : '') + ' — ' + p.name + (p.texture ? ' (' + p.texture + ')' : '');
+    return (p.path_text || (p.brand + (p.line ? ' › ' + p.line : ''))) + ' — ' + p.name;
   }
 
   function editForm(p, onSaved, onCancel) {
     var f = {
-      brand: h('input', { value: p.brand || '' }), name: h('input', { value: p.name || '' }), line: h('input', { value: p.line || '' }),
-      texture: h('input', { value: p.texture || '' }), form: h('input', { value: p.form || '' }),
+      path: h('input', { value: p.path_text ? p.path_text.replace(/ › /g, ' > ') : (p.brand || ''), placeholder: 'Purina > Pro Plan > Complete Essentials' }),
+      name: h('input', { value: p.name || '' }), form: h('input', { value: p.form || '' }),
       ingredients: h('textarea', { rows: 3 }), image_url: h('input', { type: 'url', value: p.image_url || '', placeholder: 'https://…' }),
-      source_url: h('input', { type: 'url', value: p.source_url || '' })
+      source_url: h('input', { type: 'url', value: p.source_url || '' }), title: h('input', { value: p.title_as_listed || '' })
     };
     f.ingredients.value = p.ingredients || '';
+    var tags = tagPicker(tagKeys(p));
     var err = h('div', { class: 'err' });
     function field(label, el) { return [h('label', null, label), el]; }
     function val(el) { var v = el.value.trim(); return v === '' ? null : v; }
     return h('div', null, h('h3', null, 'Edit details'),
-      field('Brand', f.brand), field('Product line', f.line), field('Name', f.name), field('Texture', f.texture), field('Form', f.form),
-      field('Ingredients', f.ingredients), field('Image URL', f.image_url), field('Source page URL', f.source_url), err,
+      field('Brand ladder (use > between levels, up to 5)', f.path), field('Product name', f.name), field('Title as listed (verbatim)', f.title), field('Form', f.form),
+      tags.el, field('Ingredients', f.ingredients), field('Image URL', f.image_url), field('Source page URL', f.source_url), err,
       h('div', { class: 'row', style: 'margin-top:10px' },
         h('button', { class: 'primary sm', onClick: async function () {
-          var body = { brand: f.brand.value.trim(), name: f.name.value.trim(), line: val(f.line), texture: val(f.texture), form: val(f.form),
+          var body = { name: f.name.value.trim(), path: val(f.path), form: val(f.form), title_as_listed: val(f.title), tags: tags.keys(),
             ingredients: val(f.ingredients), image_url: val(f.image_url), source_url: val(f.source_url) };
           var r = await api('/products/' + p.id, { method: 'PATCH', body: body });
           if (r.ok) onSaved(r.data.product); else err.textContent = errText(r);
@@ -560,8 +617,9 @@
         productCard({ product: product, advisories: [] }));
     }
 
-    async function attach(gtin, product, msg) {
-      var r = await api('/products/' + product.id + '/barcode', { method: 'PUT', body: { gtin: gtin } });
+    async function attach(gtin, product, msg, packLabel) {
+      var body = { gtin: gtin }; if (packLabel) body.pack_label = packLabel;
+      var r = await api('/products/' + product.id + '/barcode', { method: 'PUT', body: body });
       if (r.ok) return attached(r.data.product);
       msg.className = 'err'; msg.textContent = errText(r);
     }
@@ -575,37 +633,78 @@
           h('button', { class: 'ghost', onClick: function () { state.attachTarget = null; render(); } }, 'Cancel')));
     }
 
-    // Scan first, product second. The list starts EMPTY and only fills as you type, capped at five, with
-    // "add as new" sitting above it so it can never be buried under weak matches.
+    // Scan first, product second. The list starts EMPTY and only fills as you type (or as you browse the brand ladder),
+    // capped at five, with "add as new" above it so it can never be buried under weak matches.
     function wireUp(gtin, upca) {
-      var q = h('input', { type: 'search', placeholder: 'Type a few letters: brand or name (e.g. “tiki beef”)', autocomplete: 'off', enterkeyhint: 'search' });
-      var list = h('div'), note = h('p', { class: 'small muted' }, 'Start typing to see matches.'), msg = h('div'), timer = null, seq = 0;
+      var q = h('input', { type: 'search', placeholder: 'Type a few letters: brand or name (e.g. “pro plan chicken”)', autocomplete: 'off', enterkeyhint: 'search' });
+      var list = h('div'), note = h('p', { class: 'small muted' }, 'Start typing, or browse by brand.'), msg = h('div'), timer = null, seq = 0;
+      var scope = null, browsing = false, includeWired = false;       // scope = a tree node whose branch we are searching
+      var browse = h('div'), pack = h('input', { placeholder: 'Pack label, e.g. 24-can case (optional)' });
+      var packRow = h('div', { hidden: true }, h('label', null, 'This barcode is for another pack of a product already wired up'), pack);
+
+      function params(term) {
+        var a = ['per_page=5'];
+        if (!includeWired) a.push('barcode=missing');
+        if (term) a.push('q=' + encodeURIComponent(term));
+        if (scope) a.push('node=' + scope.id);
+        if (formParam()) a.push('form=' + formParam());
+        return a.join('&');
+      }
       async function search() {
         var term = q.value.trim(), mine = ++seq;
         clear(list);
-        if (!term) { note.textContent = 'Start typing to see matches.'; return; }
-        var r = await api('/products?barcode=missing&per_page=5&q=' + encodeURIComponent(term) + (formParam() ? '&form=' + formParam() : ''));
+        if (!term && !scope) { note.textContent = 'Start typing, or browse by brand.'; return; }
+        var r = await api('/products?' + params(term));
         if (mine !== seq) return; // a newer keystroke already replaced this search
         if (!r.ok) { list.append(h('div', { class: 'err' }, errText(r))); return; }
         var rows = r.data.data;
-        note.textContent = rows.length === 0 ? 'No ' + (formParam() || '') + ' products without a barcode match that. Try fewer letters, switch Wet/Dry, or add it as new.'
+        note.textContent = rows.length === 0 ? 'No ' + (formParam() || '') + ' products match' + (includeWired ? '' : ' (without a barcode)') + '. Try fewer letters, switch Wet/Dry, or add it as new.'
           : (r.data.total > rows.length ? 'Top ' + rows.length + ' of ' + r.data.total + '. Keep typing to narrow it.' : rows.length + (rows.length === 1 ? ' match.' : ' matches.'));
         rows.forEach(function (p) {
-          var btn = h('button', { class: 'sm primary' }, 'This one'), revert = null;
+          var btn = h('button', { class: 'sm primary' }, p.gtin ? 'Add pack' : 'This one'), revert = null, label = btn.textContent;
           btn.addEventListener('click', function () {
-            if (btn.dataset.arm) { clearTimeout(revert); attach(gtin, p, msg); return; }
+            if (btn.dataset.arm) { clearTimeout(revert); attach(gtin, p, msg, p.gtin ? pack.value.trim() : ''); return; }
             btn.dataset.arm = '1'; btn.textContent = 'Tap to confirm';
-            revert = setTimeout(function () { delete btn.dataset.arm; btn.textContent = 'This one'; }, 4000);
+            revert = setTimeout(function () { delete btn.dataset.arm; btn.textContent = label; }, 4000);
           });
-          list.append(h('div', { class: 'pick' }, h('div', { class: 'grow' }, h('div', null, p.name + (p.texture ? ' (' + p.texture + ')' : '')),
-            h('div', { class: 'small muted' }, p.brand + (p.line ? ' · ' + p.line : '') + (p.form ? ' · ' + p.form : ''))), btn));
+          list.append(h('div', { class: 'pick' }, h('div', { class: 'grow' }, h('div', null, p.name),
+            h('div', { class: 'small muted' }, (p.path_text || p.brand) + (p.form ? ' · ' + p.form : '')), tagPills(p)), btn));
         });
       }
+      async function drawBrowse(parentId) {
+        clear(browse);
+        var qs = []; if (!includeWired) qs.push('barcode=missing');
+        if (formParam()) qs.push('form=' + formParam());
+        if (parentId) qs.push('parent=' + parentId);
+        var r = await api('/brand-nodes?' + qs.join('&'));
+        if (!r.ok) { browse.append(h('div', { class: 'err' }, errText(r))); return; }
+        var crumbs = h('div', { class: 'small', style: 'margin:6px 0' }, h('a', { href: '#', onClick: function (e) { e.preventDefault(); scope = null; drawBrowse(null); search(); } }, 'All brands'));
+        ((r.data.parent && r.data.parent.path) || []).forEach(function (n, i, all) {
+          crumbs.append(' › ', i === all.length - 1 ? h('strong', null, n.name) : h('a', { href: '#', onClick: function (e) { e.preventDefault(); scope = n; drawBrowse(n.id); search(); } }, n.name));
+        });
+        browse.append(crumbs);
+        if (r.data.parent && r.data.parent.products_here) browse.append(h('div', { class: 'small muted' }, r.data.parent.products_here + ' product(s) sit directly here.'));
+        var chips = h('div', { class: 'seg' });
+        r.data.nodes.forEach(function (n) {
+          chips.append(h('button', { class: 'sm', onClick: function () { scope = { id: n.id, name: n.name }; drawBrowse(n.id); search(); } }, n.name + ' (' + n.product_count + ')'));
+        });
+        browse.append(chips);
+        if (!r.data.nodes.length) browse.append(h('div', { class: 'small muted' }, 'Nothing further down. Pick from the list below.'));
+      }
       q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(search, 200); });
+      var browseBtn = h('button', { class: 'sm ghost', onClick: function () {
+        browsing = !browsing; browseBtn.textContent = browsing ? 'Hide brand browser' : 'Browse by brand';
+        clear(browse); if (browsing) drawBrowse(scope ? scope.id : null); else { scope = null; search(); }
+      } }, 'Browse by brand');
+      var wiredBox = h('input', { type: 'checkbox', style: 'width:auto' });
+      wiredBox.addEventListener('change', function () { includeWired = wiredBox.checked; packRow.hidden = !includeWired; if (browsing) drawBrowse(scope ? scope.id : null); search(); });
       return h('div', { class: 'card accent' }, h('h3', null, 'New barcode ' + (upca || gtin)),
         h('p', { class: 'small' }, 'Not attached to a product yet. Wet or dry first, then type to find the product you are holding.'),
-        formToggle(function () { search(); }), q,
-        h('div', { class: 'row', style: 'margin:10px 0 2px' }, h('button', { class: 'sm', onClick: function () { clear(result); result.append(addProductForm(gtin, upca, q.value.trim())); } }, 'Not listed: add as new product')),
+        formToggle(function () { if (browsing) drawBrowse(scope ? scope.id : null); search(); }), q,
+        h('div', { class: 'row', style: 'margin:10px 0 2px' },
+          h('button', { class: 'sm', onClick: function () { clear(result); result.append(addProductForm(gtin, upca, q.value.trim())); } }, 'Not listed: add as new product'), browseBtn),
+        browse,
+        h('label', { style: 'display:flex;gap:8px;align-items:center' }, wiredBox, 'Also show products that already have a barcode (another pack size)'), packRow,
         note, msg, list);
     }
 
@@ -636,16 +735,17 @@
     function addProductForm(gtin, upca, prefillName) {
       var pet = currentPet(), err = h('div', { class: 'err' });
       var f = {
-        brand: h('input'), name: h('input', { value: prefillName || '' }), kind: h('select', null, h('option', { value: 'food' }, 'Food'), h('option', { value: 'treat' }, 'Treat')),
+        path: h('input', { placeholder: 'Purina > Pro Plan > Complete Essentials' }), name: h('input', { value: prefillName || '' }), kind: h('select', null, h('option', { value: 'food' }, 'Food'), h('option', { value: 'treat' }, 'Treat')),
         form: h('select', null, [['wet', 'Wet'], ['dry', 'Dry'], ['freeze-dried', 'Freeze-dried']].map(function (o) { return h('option', { value: o[0], selected: (state.form === 'dry' ? 'dry' : 'wet') === o[0] }, o[1]); })), species: h('input', { value: pet ? pet.species : 'cat' }),
         ingredients: h('textarea', { rows: 2 }),
         n_protein: h('input', { inputmode: 'decimal' }), n_fat: h('input', { inputmode: 'decimal' }), n_fiber: h('input', { inputmode: 'decimal' }), n_moisture: h('input', { inputmode: 'decimal' }), n_kcal: h('input', { inputmode: 'decimal' })
       };
+      var tags = tagPicker([], [['texture', 'Texture'], ['medium', 'Served in']]);
       function field(label, el) { return [h('label', null, label), el]; }
       return h('div', { class: 'card' },
         h('h3', null, 'Not in the catalogue yet'),
         h('p', { class: 'muted small' }, 'Barcode ' + (upca || gtin) + '. Add it so it is found next time. Copy values exactly as printed on the package.'),
-        field('Brand', f.brand), field('Product name', f.name), field('Food or treat', f.kind), field('Form', f.form), field('Species', f.species),
+        field('Brand ladder, top to bottom, with > between levels (e.g. Brand > Line, or Maker > Brand > Line)', f.path), field('Product name', f.name), field('Food or treat', f.kind), field('Form', f.form), tags.el, field('Species', f.species),
         field('Ingredients (optional)', f.ingredients),
         h('h3', { style: 'margin-top:14px' }, 'Label values (optional)'),
         field('Crude protein, min %', f.n_protein), field('Crude fat, min %', f.n_fat), field('Crude fiber, max %', f.n_fiber), field('Moisture, max %', f.n_moisture), field('Calories per unit, as printed', f.n_kcal),
@@ -653,7 +753,7 @@
         h('div', { class: 'row', style: 'margin-top:12px' }, h('button', { class: 'primary', onClick: async function () {
           var nutrition = {};
           [['crude_protein_min_pct', f.n_protein], ['crude_fat_min_pct', f.n_fat], ['crude_fiber_max_pct', f.n_fiber], ['moisture_max_pct', f.n_moisture], ['kcal_per_unit', f.n_kcal]].forEach(function (x) { if (x[1].value.trim()) nutrition[x[0]] = x[1].value.trim(); });
-          var body = { gtin: gtin, brand: f.brand.value, name: f.name.value, kind: f.kind.value, species: f.species.value.trim().toLowerCase() || 'cat' };
+          var body = { gtin: gtin, path: f.path.value.trim(), tags: tags.keys(), name: f.name.value, kind: f.kind.value, species: f.species.value.trim().toLowerCase() || 'cat' };
           body.form = f.form.value;
           if (f.ingredients.value.trim()) body.ingredients = f.ingredients.value.trim();
           if (Object.keys(nutrition).length) body.nutrition = nutrition;
@@ -687,6 +787,8 @@
       var a = [];
       if (f === 'nobarcode') a.push('barcode=missing'); else if (f !== 'all') a.push('audit=' + f);
       if (formParam()) a.push('form=' + formParam());
+      (state.tagInc || []).forEach(function (k) { a.push('tag[]=' + encodeURIComponent(k)); });
+      (state.tagExc || []).forEach(function (k) { a.push('exclude_tag[]=' + encodeURIComponent(k)); });
       if (q.value.trim()) a.push('q=' + encodeURIComponent(q.value.trim()));
       a.push('page=' + page);
       return a.join('&');
@@ -705,8 +807,8 @@
         clear(box);
         var a = AUDIT[p.audit_status] || AUDIT.unreviewed;
         box.append(h('div', { class: 'row' },
-          h('div', { class: 'grow' }, h('div', null, h('strong', null, p.name + (p.texture ? ' (' + p.texture + ')' : ''))),
-            h('div', { class: 'small muted' }, p.brand + (p.line ? ' · ' + p.line : '') + (p.form ? ' · ' + p.form : ''))),
+          h('div', { class: 'grow' }, h('div', null, h('strong', null, p.name)),
+            h('div', { class: 'small muted' }, (p.path_text || p.brand) + (p.form ? ' · ' + p.form : '')), tagPills(p)),
           h('span', { class: 'pill ' + a[1] }, a[0])),
           h('div', { class: 'row', style: 'margin-top:8px' },
             p.gtin ? h('span', { class: 'small muted' }, 'Barcode ' + (p.upc_a || p.gtin))
@@ -733,11 +835,16 @@
 
     function reload() { state.catFilter = f; state.catQ = q.value; load(1); }
     q.addEventListener('input', function () { clearTimeout(timer); timer = setTimeout(reload, 250); });
+    var filtersBox = h('div', { hidden: !((state.tagInc || []).length || (state.tagExc || []).length) });
+    filtersBox.append(tagFilters(reload));
 
     root.append(h('h2', null, 'Catalogue'), formToggle(render), summary,
       h('div', { class: 'seg', style: 'margin:8px 0' }, filters.map(function (x) {
         return h('button', { class: 'sm ' + (f === x[0] ? 'on' : ''), onClick: function () { f = x[0]; state.catFilter = f; render(); } }, x[1]);
-      })), q, list, more);
+      })), q,
+      h('div', { class: 'small', style: 'margin-top:8px' }, h('a', { href: '#', onClick: function (e) { e.preventDefault(); filtersBox.hidden = !filtersBox.hidden; } }, 'Texture and diet filters'),
+        h('span', { class: 'muted' }, ' (tap once to include, twice to exclude)')),
+      filtersBox, list, more);
     loadSummary(); load(1);
     return root;
   }

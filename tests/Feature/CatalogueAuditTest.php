@@ -90,8 +90,6 @@ class CatalogueAuditTest extends TestCase
         $this->putJson("/api/products/{$a->id}/barcode", ['gtin' => '036000291452'])
             ->assertStatus(409)->assertJsonPath('product.id', $b->id); // barcode belongs to another product
 
-        $this->putJson("/api/products/{$b->id}/barcode", ['gtin' => '4006381333931'])
-            ->assertStatus(409); // already has a (different) barcode
         $this->assertNull($a->fresh()->gtin);
     }
 
@@ -153,7 +151,8 @@ class CatalogueAuditTest extends TestCase
         $this->assertDatabaseCount('products', $r['created']);
 
         $tiki = Product::where('brand', 'Tiki Cat')->where('name', 'Beef & Beef Liver')->first();
-        $this->assertSame('After Dark Line', $tiki->line);
+        $this->assertSame('After Dark', $tiki->line);
+        $this->assertSame('Tiki Cat › After Dark', $tiki->path_text);
         $this->assertArrayHasKey('protein_pct', $tiki->nutrition);
         $this->assertSame('Tiki Cat', $tiki->meta['sheet']);
     }

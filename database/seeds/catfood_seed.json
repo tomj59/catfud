@@ -1,6 +1,6 @@
 {
  "source": "catfood.xlsx",
- "generated_at": "2026-10-05T22:07:29+00:00",
+ "generated_at": "2026-10-05T23:24:25+00:00",
  "products": [
   {
    "brand": "Tiki Cat",
@@ -2170,7 +2170,7 @@
   },
   {
    "brand": "Purina",
-   "name": "Chicken Recipe (Grain Free)",
+   "name": "Chicken Recipe",
    "line": "Purina ONE",
    "texture": "Pate",
    "form": "wet",
@@ -2206,7 +2206,7 @@
   },
   {
    "brand": "Purina",
-   "name": "Turkey Recipe (Grain Free)",
+   "name": "Turkey Recipe",
    "line": "Purina ONE",
    "texture": "Pate",
    "form": "wet",
@@ -2242,7 +2242,7 @@
   },
   {
    "brand": "Purina",
-   "name": "Whitefish Recipe (Grain Free)",
+   "name": "Whitefish Recipe",
    "line": "Purina ONE",
    "texture": "Pate",
    "form": "wet",
@@ -2278,7 +2278,7 @@
   },
   {
    "brand": "Purina",
-   "name": "Beef Recipe (Grain Free)",
+   "name": "Beef Recipe",
    "line": "Purina ONE",
    "texture": "Pate",
    "form": "wet",
@@ -2314,7 +2314,7 @@
   },
   {
    "brand": "Purina",
-   "name": "TI Chicken Recipe (True Instinct)",
+   "name": "TI Chicken Recipe",
    "line": "Purina ONE",
    "texture": "Gravy",
    "form": "wet",
@@ -2350,7 +2350,7 @@
   },
   {
    "brand": "Purina",
-   "name": "TI Turkey Recipe (True Instinct)",
+   "name": "TI Turkey Recipe",
    "line": "Purina ONE",
    "texture": "Gravy",
    "form": "wet",
@@ -2386,7 +2386,7 @@
   },
   {
    "brand": "Purina",
-   "name": "TI Tuna Recipe (True Instinct)",
+   "name": "TI Tuna Recipe",
    "line": "Purina ONE",
    "texture": "Gravy",
    "form": "wet",
@@ -2422,7 +2422,7 @@
   },
   {
    "brand": "Purina",
-   "name": "TI Salmon & Trout (True Instinct)",
+   "name": "TI Salmon & Trout",
    "line": "Purina ONE",
    "texture": "Gravy",
    "form": "wet",
@@ -2458,7 +2458,7 @@
   },
   {
    "brand": "Purina",
-   "name": "TI Chicken & Turkey (True Instinct)",
+   "name": "TI Chicken & Turkey",
    "line": "Purina ONE",
    "texture": "Gravy",
    "form": "wet",
@@ -2494,7 +2494,7 @@
   },
   {
    "brand": "Purina",
-   "name": "TI Chicken & Salmon (True Instinct)",
+   "name": "TI Chicken & Salmon",
    "line": "Purina ONE",
    "texture": "Gravy",
    "form": "wet",
@@ -2530,7 +2530,7 @@
   },
   {
    "brand": "Purina",
-   "name": "Ocean Whitefish & Rice (Indoor+Hairball)",
+   "name": "Ocean Whitefish & Rice",
    "line": "Purina ONE",
    "texture": "Pate",
    "form": "wet",
@@ -2566,7 +2566,7 @@
   },
   {
    "brand": "Purina",
-   "name": "Beef & Liver Recipe (Urinary Tract)",
+   "name": "Beef & Liver Recipe",
    "line": "Purina ONE",
    "texture": "Pate",
    "form": "wet",
@@ -2602,7 +2602,7 @@
   },
   {
    "brand": "Purina",
-   "name": "Tender Salmon Recipe (Ideal Weight)",
+   "name": "Tender Salmon Recipe",
    "line": "Purina ONE",
    "texture": "Pate",
    "form": "wet",
@@ -2641,7 +2641,7 @@
   },
   {
    "brand": "Purina",
-   "name": "White Meat Chicken (Ideal Weight)",
+   "name": "White Meat Chicken",
    "line": "Purina ONE",
    "texture": "Gravy",
    "form": "wet",
@@ -2677,7 +2677,7 @@
   },
   {
    "brand": "Purina",
-   "name": "Chicken & Oceanfish (Senior 7+)",
+   "name": "Chicken & Oceanfish",
    "line": "Purina ONE",
    "texture": "Pate",
    "form": "wet",
@@ -2713,7 +2713,7 @@
   },
   {
    "brand": "Purina",
-   "name": "Chicken & Salmon (Kitten)",
+   "name": "Chicken & Salmon",
    "line": "Purina ONE",
    "texture": "Pate",
    "form": "wet",
@@ -4016,7 +4016,7 @@
   },
   {
    "brand": "Hill's",
-   "name": "Turkey & Liver (Adult)",
+   "name": "Turkey & Liver",
    "line": "Adult Line",
    "texture": null,
    "form": "wet",
@@ -4058,7 +4058,7 @@
   },
   {
    "brand": "Hill's",
-   "name": "Savory Turkey (Adult)",
+   "name": "Savory Turkey",
    "line": "Adult Line",
    "texture": null,
    "form": "wet",
@@ -4095,7 +4095,7 @@
   },
   {
    "brand": "Hill's",
-   "name": "Liver & Chicken (Adult)",
+   "name": "Liver & Chicken",
    "line": "Adult Line",
    "texture": null,
    "form": "wet",
@@ -4132,7 +4132,7 @@
   },
   {
    "brand": "Hill's",
-   "name": "Savory Salmon (Adult)",
+   "name": "Savory Salmon",
    "line": "Adult Line",
    "texture": null,
    "form": "wet",
@@ -4169,7 +4169,7 @@
   },
   {
    "brand": "Hill's",
-   "name": "Savory Chicken (Adult)",
+   "name": "Savory Chicken",
    "line": "Adult Line",
    "texture": null,
    "form": "wet",
@@ -4206,7 +4206,7 @@
   },
   {
    "brand": "Hill's",
-   "name": "Ocean Fish (Adult)",
+   "name": "Ocean Fish",
    "line": "Adult Line",
    "texture": null,
    "form": "wet",
@@ -4243,7 +4243,7 @@
   },
   {
    "brand": "Hill's",
-   "name": "Savory Chicken (Indoor)",
+   "name": "Savory Chicken",
    "line": "Adult Line",
    "texture": null,
    "form": "wet",
@@ -4280,7 +4280,7 @@
   },
   {
    "brand": "Hill's",
-   "name": "Ocean Fish (Indoor)",
+   "name": "Ocean Fish",
    "line": "Adult Line",
    "texture": null,
    "form": "wet",
@@ -4317,7 +4317,7 @@
   },
   {
    "brand": "Hill's",
-   "name": "Licker & Chicken (Light)",
+   "name": "Licker & Chicken",
    "line": "Adult Line",
    "texture": null,
    "form": "wet",

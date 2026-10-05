@@ -132,7 +132,14 @@ class AdvisoryImporter
         }
 
         if (! empty($spec['brand'])) {
-            $products = Product::whereRaw('lower(brand) = ?', [mb_strtolower((string) $spec['brand'])])->get();
+            // A named brand matches at any level of the ladder, so an advisory about "Purina" covers every Purina brand.
+            $needle = mb_strtolower((string) $spec['brand']);
+            $esc = str_replace(['!', '%', '_'], ['!!', '!%', '!_'], $needle);
+            $products = Product::where(fn ($q) => $q->whereRaw('lower(brand) = ?', [$needle])
+                ->orWhereRaw('lower(path_text) = ?', [$needle])
+                ->orWhereRaw("lower(path_text) like ? escape '!'", [$esc.' › %'])
+                ->orWhereRaw("lower(path_text) like ? escape '!'", ['% › '.$esc.' › %'])
+                ->orWhereRaw("lower(path_text) like ? escape '!'", ['% › '.$esc]))->get();
 
             return $products->isEmpty() ? null : [
                 'products' => $products, 'basis' => $lot ? MatchBasis::LotCode : MatchBasis::Brand,

@@ -1,0 +1,23 @@
+{
+  "region": "US",
+  "note": "Where the flat spreadsheet columns hide a real ladder. Anything not listed becomes brand > line. Parents per purina.com (Fancy Feast, Pro Plan, Purina ONE, Cat Chow are Purina brands). 'Specialty', 'Pouches' and 'Cups' lines are placeholders to audit.",
+  "rules": [
+    {"brand": "Fancy Feast", "prefix": [{"name": "Purina", "kind": "manufacturer"}, {"name": "Fancy Feast", "kind": "brand"}]},
+
+    {"brand": "Purina", "line": "Purina ONE", "variety_as": "line", "use_line": false,
+     "prefix": [{"name": "Purina", "kind": "manufacturer"}, {"name": "Purina ONE", "kind": "brand", "aliases": ["ONE", "Purina One"]}]},
+    {"brand": "Purina", "line": "Purina Beyond", "variety_as": "line", "use_line": false,
+     "prefix": [{"name": "Purina", "kind": "manufacturer"}, {"name": "Beyond", "kind": "brand", "aliases": ["Purina Beyond"]}]},
+    {"brand": "Purina", "line": "Purina Pro Plan", "variety_as": "line", "use_line": false,
+     "prefix": [{"name": "Purina", "kind": "manufacturer"}, {"name": "Pro Plan", "kind": "brand", "aliases": ["Purina Pro Plan"]}]},
+    {"brand": "Purina", "line": null,
+     "prefix": [{"name": "Purina", "kind": "manufacturer"}, {"name": "Purina ONE", "kind": "brand", "aliases": ["ONE", "Purina One"]}]},
+    {"brand": "Purina Cat Chow",
+     "prefix": [{"name": "Purina", "kind": "manufacturer"}, {"name": "Cat Chow", "kind": "brand", "aliases": ["Purina Cat Chow"]}]},
+
+    {"brand": "Hill's", "line": "Prescription Line", "variety_as": "line", "use_line": false,
+     "prefix": [{"name": "Hill's", "kind": "manufacturer", "aliases": ["Hills"]}, {"name": "Prescription Diet", "kind": "brand", "tags": ["diet:clinical"], "aliases": ["Hill's Prescription Diet", "Rx"]}]},
+    {"brand": "Hill's", "variety_as": "subline",
+     "prefix": [{"name": "Hill's", "kind": "manufacturer", "aliases": ["Hills"]}, {"name": "Science Diet", "kind": "brand", "aliases": ["Hill's Science Diet"]}]}
+  ]
+}

@@ -8,4 +8,10 @@ return [
 
     // Wording rule for suggestions: they come from the user\'s own records, never from a health claim.
     'suggestion_basis' => 'Based on what you have recorded. This is not advice about what is good for your pet.',
+
+    // The catalogue forks by region: separate brand tree, products and barcodes per region. Only US exists for now.
+    'default_region' => env('CATFUD_REGION', 'US'),
+
+    // Brand tree depth cap: manufacturer > brand > line > sub-line > sub-sub-line. Vetted against 390 real products.
+    'brand_tree_max_depth' => 5,
 ];

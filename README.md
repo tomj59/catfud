@@ -121,6 +121,29 @@ The Catalogue tab also shows progress (barcodes, reviewed, images) and the audit
 
 Pilot caveat: any signed-in user can edit the shared catalogue. Roles come later.
 
+## Brand ladder, regions, and facets
+
+Real products carry up to five names (Purina > Pro Plan > Complete Essentials > ...), and depth varies by brand. The
+catalogue stores that as a **brand tree** (`brand_nodes`, depth capped at 5, every level optional). A product points at
+the deepest node it belongs to and keeps its own `name`. `brand`, `line`, `path_text` and `search_text` on the product are
+caches derived from the tree; edit the ladder in the app (Catalogue > Details > Edit, "Brand ladder") rather than those columns.
+
+- **Evidence:** `docs/brand-tree-us/` holds 390 real US examples from 60 brands that the depth cap and rules were vetted against.
+- **Placement rules:** `database/seeds/brand_map_us.json` lists where the flat spreadsheet columns hide a ladder (manufacturer
+  above brand, a sub-line in the variety column, a clinical diet). Anything not listed becomes brand > line.
+- **Existing database:** `php artisan migrate`, then `php artisan catalogue:build-tree` (safe to repeat; never touches names,
+  barcodes or audit status). A new import places products automatically. `--force` re-places products that already have a node,
+  except ones whose path a person set by hand.
+- **Facets, not names:** texture (pate, mousse, shreds, chunks, flaked, minced, ...), medium (gravy, broth, sauce, jelly, ...),
+  life stage and diet are tag rows, filterable in or out (Catalogue > Texture and diet filters: tap once to include, twice to
+  exclude). **Clinical** is a deliberate workaround tag for vet-diet variants until we learn how owners of special-needs
+  cats prefer to find them; it labels how the product is sold and makes no health claim.
+- **Region fork:** every catalogue table has a `region` (US only for now, not shown in the UI). A user's requests only see
+  their region's brand tree, products and barcodes; the same barcode can exist in two regions as two different products.
+- **Pack barcodes:** `products.gtin` stays the primary barcode; other packs (multipack, case) go in `product_barcodes`.
+  Scanning any of them finds the product. In the Scan tab, tick "also show products that already have a barcode".
+- **Advisories:** an advisory naming a manufacturer or brand matches every product beneath it in the ladder.
+
 ## Not built yet
 
 - An admin screen to enter advisories and products (use the import commands for now).
@@ -134,4 +157,3 @@ Pilot caveat: any signed-in user can edit the shared catalogue. Roles come later
 - CORS uses Laravel's defaults. Restrict `config/cors.php` to the pilot web app's origin before real use.
 - Registration is open. For a closed pilot, create accounts by hand or put a signup code in front of `/register`.
 - `CLAUDE.md` and `AGENTS.md` come from the Laravel starter kit and can be deleted.
-# catfud

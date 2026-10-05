@@ -19,6 +19,8 @@ use InvalidArgumentException;
  */
 class ProductImporter
 {
+    public function __construct(private BrandTreeMapper $mapper) {}
+
     /**
      * @return array{created:int, updated:int, skipped:int, errors:array<int,array{row:int, gtin:?string, messages:list<string>}>}
      */
@@ -96,6 +98,7 @@ class ProductImporter
                 'source_url' => $data['source_url'] ?? null,
                 'meta' => $data['meta'] ?? null,
                 'audit_notes' => $data['audit_notes'] ?? null,
+                'title_as_listed' => $data['title_as_listed'] ?? null,
             ];
 
             $existing = $gtin !== null ? Product::where('gtin', $gtin)->first() : null;
@@ -111,21 +114,35 @@ class ProductImporter
 
             if (! $dryRun) {
                 if ($existing) {
-                    // Never blank out a barcode the file does not know about.
+                    // Never blank out a barcode the file does not know about. Place the product from the FILE's brand
+                    // and line, not from caches the previous import left behind.
                     $existing->update($gtin !== null ? [...$attributes, 'gtin' => $gtin] : $attributes);
+                    $product = $existing;
                 } else {
-                    Product::create([
+                    $product = Product::create([
                         ...$attributes,
                         'gtin' => $gtin,
                         'audit_status' => $data['audit_status'] ?? AuditStatus::Unreviewed->value,
                     ]);
                 }
+                $this->placeInTree($product, $data);
             }
 
             $existing ? $result['updated']++ : $result['created']++;
         }
 
         return $result;
+    }
+
+    /** Put the product in the brand tree using the file's own brand/line/variety, and set the texture/medium tags. */
+    private function placeInTree(Product $product, array $data): void
+    {
+        $meta = $product->meta ?? [];
+        $meta['source_brand'] = $data['brand'];
+        $meta['source_line'] = $data['line'] ?? null;
+        $product->forceFill(['meta' => $meta])->save();
+
+        $this->mapper->apply($product);
     }
 
     /** @return list<array<string,mixed>> */
