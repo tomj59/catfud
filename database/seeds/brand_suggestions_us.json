@@ -1,0 +1,69 @@
+{
+  "region": "US",
+  "how_to_fill_this_out": [
+    "Each entry is one rung of the ladder. Children go in \"children\", up to 5 levels in all (maker > brand > line > sub-line > sub-sub-line).",
+    "Array order is the order shown in the app's picker, most familiar first. Names you leave out are not lost: anything a person types is saved and appears after these.",
+    "name: spell it exactly as printed on the package. aliases: other spellings people use (\"Purina Pro Plan\"); they also match when a product is imported.",
+    "kind: manufacturer | brand | line | subline. A hint only; the depth, not the label, is what the app relies on.",
+    "species: omit when it is sold for every species. [\"dog\"] hides it from a cat owner's picker, [\"cat\"] hides it from a dog owner's.",
+    "tags: facet tags every product under this node inherits, e.g. [\"diet:clinical\"] on Prescription Diet.",
+    "verify: true marks a guess to check against a package or the maker's site. notes: anything the next editor should know.",
+    "Life stage (Kitten, Adult, Adult 7+, Senior, All Life Stages) is NOT a rung. It is a facet tag that rides with the product, because makers print it inside line names, product names or nowhere. Leave it out of the tree; a line name that is only a life stage is turned into a tag automatically. Use tags: [\"life_stage:adult-7plus\"] on a line that only ever holds one stage (Prime Plus).",
+    "Aliases are the safety net for rebrands and retailer spellings: any alias typed or imported lands on this node instead of creating a duplicate. Renaming a node in the app keeps the old name here automatically.",
+    "Seed it into the database with:  php artisan catalogue:seed-brands   (safe to repeat; fills gaps, never renames or moves anything)."
+  ],
+  "tree": [
+    {"name": "Purina", "kind": "manufacturer", "children": [
+      {"name": "Cat Chow", "kind": "brand", "aliases": ["Purina Cat Chow"]},
+      {"name": "Purina ONE", "kind": "brand", "aliases": ["ONE", "Purina One"]},
+      {"name": "Pro Plan", "kind": "brand", "aliases": ["Purina Pro Plan"], "children": [
+        {"name": "Complete Essentials", "kind": "line"},
+        {"name": "Urinary Tract Health", "kind": "line"},
+        {"name": "Indoor Balance", "kind": "line"},
+        {"name": "Healthy Metabolism", "kind": "line"},
+        {"name": "Weight Management", "kind": "line"},
+        {"name": "Vital Systems", "kind": "line"},
+        {"name": "Focus", "kind": "line"},
+        {"name": "Prime Plus", "kind": "line", "aliases": ["Adult 7+ | Prime Plus", "Prime Plus Adult 7+", "Adult 7+"], "tags": ["life_stage:adult-7plus"],
+          "notes": "Printed on the can as 'ADULT 7+ | PRIME PLUS'. The line is Prime Plus; Adult 7+ is carried as a life-stage tag, and retailers that swap the two still land here."},
+        {"name": "Small Breed", "kind": "line", "species": ["dog"]},
+        {"name": "Large Breed", "kind": "line", "species": ["dog"]},
+        {"name": "High Protein", "kind": "line", "species": ["dog"], "verify": true,
+          "notes": "Marked dog-specific from a first pass; confirm no cat products carry this line name."},
+        {"name": "Savor", "kind": "line", "species": ["dog"], "verify": true,
+          "notes": "Marked dog-specific from a first pass; confirm no cat products carry this line name."}
+      ]},
+      {"name": "Gourmet", "kind": "brand"},
+      {"name": "Friskies", "kind": "brand"},
+      {"name": "Fancy Feast", "kind": "brand"},
+      {"name": "Beyond", "kind": "brand", "aliases": ["Purina Beyond"]}
+    ]},
+    {"name": "Hill's", "kind": "manufacturer", "aliases": ["Hills"], "children": [
+      {"name": "Science Diet", "kind": "brand", "aliases": ["Hill's Science Diet"]},
+      {"name": "Prescription Diet", "kind": "brand", "aliases": ["Hill's Prescription Diet", "Rx"], "tags": ["diet:clinical"]}
+    ]},
+    {"name": "Royal Canin", "kind": "brand"},
+    {"name": "Blue Buffalo", "kind": "brand"},
+    {"name": "Iams", "kind": "brand"},
+    {"name": "Natural Balance", "kind": "brand"},
+    {"name": "Nutro", "kind": "brand"},
+    {"name": "Wellness", "kind": "brand"},
+    {"name": "Tiki Cat", "kind": "brand"},
+    {"name": "Weruva", "kind": "brand"},
+    {"name": "Instinct", "kind": "brand"},
+    {"name": "Nacho", "kind": "brand"},
+    {"name": "Almo Nature", "kind": "brand"},
+    {"name": "California Natural", "kind": "brand"},
+    {"name": "Canidae", "kind": "brand"},
+    {"name": "Diamond", "kind": "brand"},
+    {"name": "Earthborn Holistic", "kind": "brand"},
+    {"name": "Eukanuba", "kind": "brand"},
+    {"name": "Evanger's", "kind": "brand"},
+    {"name": "EVO", "kind": "brand"},
+    {"name": "FirstMate", "kind": "brand"},
+    {"name": "Innova", "kind": "brand"},
+    {"name": "NutriSource", "kind": "brand"},
+    {"name": "Rachael Ray Nutrish", "kind": "brand"},
+    {"name": "Taste of the Wild", "kind": "brand"}
+  ]
+}

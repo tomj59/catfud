@@ -63,9 +63,44 @@
   .seg button.ex { text-decoration:line-through; border-color:var(--bad); color:var(--bad); }
   .formtoggle button { flex:1; } .formtoggle { margin:6px 0 2px; }
   .sug-name { font-size:21px; font-weight:700; line-height:1.2; margin:2px 0; }
+  /* splash: shown once per browser session, tap to skip */
+  #splash { position:fixed; inset:0; z-index:100; display:flex; flex-direction:column; justify-content:flex-end; align-items:center;
+            background:#2b2b30 url(/images/splash.jpg) center 30% / cover no-repeat; color:#fff; cursor:pointer;
+            padding:0 24px calc(48px + env(safe-area-inset-bottom)); transition:opacity .6s ease; }
+  #splash::before { content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0) 45%); }
+  #splash > * { position:relative; animation:splashrise .9s ease both; }
+  #splash h2 { margin:0; font-size:44px; letter-spacing:.5px; text-shadow:0 2px 12px rgba(0,0,0,.5); }
+  #splash p { margin:6px 0 0; font-size:17px; opacity:.92; text-shadow:0 1px 6px rgba(0,0,0,.5); animation-delay:.25s; }
+  #splash.out { opacity:0; pointer-events:none; }
+  @keyframes splashrise { from { opacity:0; transform:translateY(14px); } to { opacity:1; transform:none; } }
+  @media (prefers-reduced-motion: reduce) { #splash, #splash > * { animation:none; transition:none; } }
+  /* brand-ladder picker */
+  .lp { margin:6px 0 10px; }
+  .lp-row { margin:8px 0; }
+  .lp-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(76px, 1fr)); gap:8px; }
+  .lp-tile { height:62px; padding:4px; border:2px solid var(--line); border-radius:12px; background:#fff; color:#1d1d1b; display:flex;
+             align-items:center; justify-content:center; text-align:center; font-size:12px; font-weight:600; line-height:1.15; overflow:hidden; overflow-wrap:anywhere; hyphens:auto; }
+  .lp-tile img { max-width:100%; max-height:100%; object-fit:contain; }
+  .lp-tile.add { border-style:dashed; background:transparent; color:var(--muted); font-weight:500; }
+  .lp-tile.sel { border-color:var(--accent); box-shadow:0 0 0 2px var(--accent); }
+  .lp-row.faded .lp-tile:not(.sel) { opacity:.35; }
+  .lp-more { display:block; margin:6px auto 0; background:none; border:0; color:var(--muted); font-size:13px; letter-spacing:.8px; text-transform:uppercase; }
+  .lp-now { font-size:14px; margin:6px 0; } .lp-now strong { font-weight:700; }
+  .lp-new { display:flex; gap:6px; margin-top:6px; } .lp-new input { flex:1; }
 </style>
 </head>
 <body>
+<div id="splash" role="img" aria-label="A sleepy ginger cat"><h2>Cat Füd</h2><p>What's for dinner?</p></div>
+<script>
+(function () {
+  var el = document.getElementById('splash'), seen = false;
+  try { seen = sessionStorage.getItem('cf_splash') === '1'; sessionStorage.setItem('cf_splash', '1'); } catch (e) {}
+  function done() { el.classList.add('out'); setTimeout(function () { el.remove(); }, 700); }
+  if (seen) { el.remove(); return; }
+  el.addEventListener('click', done);
+  setTimeout(done, 2200);
+})();
+</script>
 <header>
   <h1>Cat Füd</h1>
   <div id="headerTools"></div>
@@ -119,7 +154,7 @@
 
   async function api(path, opts) {
     opts = opts || {};
-    var url = '/api' + path;
+    var url = '/api/v1' + path;
     var headers = { Accept: 'application/json' };
     if (opts.body) headers['Content-Type'] = 'application/json';
     if (state.token) headers.Authorization = 'Bearer ' + state.token;
@@ -254,7 +289,18 @@
   }
 
   // ---------- shared bits ----------
-  function productTitle(p) { return h('div', null, h('div', { class: 'sug-name' }, p.name), h('div', { class: 'muted' }, (p.path_text || p.brand) + (p.form ? ' · ' + p.form : '') + (p.kind === 'treat' ? ' · treat' : '')), tagPills(p)); }
+  // Staff (moderators and admins) maintain the public catalogue; everyone else can only change what they contributed and nobody has approved yet.
+  function isStaff() { return !!state.user && (state.user.role === 'admin' || state.user.role === 'moderator'); }
+  function canEdit(p) { return isStaff() || (!!p.moderation_status && p.moderation_status !== 'approved'); }
+  var MODERATION = { pending: ['Private · awaiting review', 'trial'], needs_changes: ['Private · changes requested', 'trial'], rejected: ['Private · not added to the shared catalogue', 'trial'] };
+  // A contributed product is usable straight away but stays private until a moderator approves it, and says so plainly.
+  function moderationNote(p) {
+    var m = p.moderation_status && MODERATION[p.moderation_status];
+    return [m ? h('div', { class: 'row', style: 'gap:4px;margin-top:4px' }, h('span', { class: 'pill ' + m[1] }, m[0])) : null,
+      p.review_note && m ? h('div', { class: 'small muted' }, p.review_note) : null,
+      p.placed === false ? h('div', { class: 'small muted' }, 'Waiting to be placed' + (p.requested_path ? '. You entered: ' + p.requested_path : '') + '. We will check it and add it to the catalogue.') : null];
+  }
+  function productTitle(p) { return h('div', null, h('div', { class: 'sug-name' }, p.name), h('div', { class: 'muted' }, (p.path_text || p.brand) + (p.form ? ' · ' + p.form : '') + (p.kind === 'treat' ? ' · treat' : '')), tagPills(p), moderationNote(p)); }
 
   function outcomeButtons(onPick, current) {
     return h('div', { class: 'seg' }, Object.keys(OUTCOME).map(function (k) {
@@ -289,7 +335,7 @@
   }
   function tagKeys(p) { return (p.tags || []).map(function (t) { return t.group + ':' + t.slug; }); }
   function tagPills(p) {
-    var tags = (p.tags || []).filter(function (t) { return t.group === 'texture' || t.group === 'medium' || t.group === 'diet'; });
+    var tags = (p.tags || []).filter(function (t) { return t.group === 'life_stage' || t.group === 'texture' || t.group === 'medium' || t.group === 'diet'; });
     return tags.length ? h('div', { class: 'row', style: 'gap:4px;margin-top:4px' }, tags.map(function (t) { return h('span', { class: 'pill' + (t.group === 'diet' ? ' trial' : '') }, t.label); })) : null;
   }
   // Pick-any chips for the edit and add forms. Returns { el, keys() }.
@@ -334,6 +380,68 @@
     return box;
   }
 
+  // ---------- brand-ladder picker ----------
+  // Tap a tile on each rung (logo when we have one, name when not); the next rung opens underneath. Stop whenever the ladder
+  // is deep enough. The returned element has a .value ("Purina > Pro Plan") so forms read it like a text input.
+  var choiceCache = {};
+  function loadChoices(chain) {
+    var pet = currentPet(), sp = pet && pet.species ? pet.species : '', key = chain.join(' > ');
+    var ck = sp + '|' + key;
+    if (!choiceCache[ck]) choiceCache[ck] = api('/brand-choices?path=' + encodeURIComponent(key) + (sp ? '&species=' + encodeURIComponent(sp) : '')).then(function (r) { return r.ok ? r.data : { choices: [], can_go_deeper: false }; });
+    return choiceCache[ck];
+  }
+  function ladderPicker(initial) {
+    choiceCache = {};  // fresh per picker, so a line added a minute ago shows up
+    var chain = String(initial || '').split('>').map(function (x) { return x.trim(); }).filter(Boolean);
+    var root = h('div', { class: 'lp' }), showAll = false, adding = null;
+    Object.defineProperty(root, 'value', { get: function () { return chain.join(' > '); }, set: function (v) { chain = String(v || '').split('>').map(function (x) { return x.trim(); }).filter(Boolean); draw(); } });
+    function tile(c, selected, onTap) {
+      var b = h('button', { type: 'button', class: 'lp-tile' + (selected ? ' sel' : ''), title: c.name, 'aria-pressed': selected ? 'true' : 'false', onClick: onTap },
+        c.logo ? h('img', { src: c.logo, alt: c.name, loading: 'lazy' }) : (c.requested ? c.name + ' (requested)' : c.name));
+      return b;
+    }
+    async function draw() {
+      var rows = [];
+      for (var level = 0; level <= chain.length; level++) {
+        var data = await loadChoices(chain.slice(0, level));
+        if (level > 0 && !data.can_go_deeper) break;
+        var picked = chain[level], list = data.choices.slice();
+        if (picked && !list.some(function (c) { return c.name.toLowerCase() === picked.toLowerCase(); })) list.unshift({ name: picked, logo: null, requested: !isStaff() });
+        if (!list.length && picked === undefined && level > 0) { rows.push({ level: level, list: [], data: data }); break; }
+        rows.push({ level: level, list: list, data: data });
+      }
+      clear(root);
+      var now = h('div', { class: 'lp-now' }, chain.length ? ['Selected: ', h('strong', null, chain.join(' › ')), ' ',
+        h('button', { type: 'button', class: 'ghost sm', onClick: function () { chain = []; adding = null; draw(); } }, 'Clear')] : h('span', { class: 'muted' }, 'Pick a brand below, then narrow it down. You can stop at any level.'));
+      root.append(now);
+      rows.forEach(function (row) {
+        var level = row.level, picked = chain[level], list = row.list;
+        var collapsed = level === 0 && !showAll && list.length > 9;
+        var shown = collapsed ? list.slice(0, 9).concat(list.slice(9).filter(function (c) { return picked && c.name.toLowerCase() === picked.toLowerCase(); })) : list;
+        var grid = h('div', { class: 'lp-grid' });
+        shown.forEach(function (c) {
+          var sel = picked && c.name.toLowerCase() === picked.toLowerCase();
+          grid.append(tile(c, sel, function () { chain = sel ? chain.slice(0, level) : chain.slice(0, level).concat(c.name); adding = null; draw(); }));
+        });
+        if (!collapsed) grid.append(h('button', { type: 'button', class: 'lp-tile add', onClick: function () { adding = level; draw(); } }, isStaff() ? (level === 0 ? '+ Not listed' : '+ Add') : 'Can’t find it?'));
+        var box = h('div', { class: 'lp-row' + (picked !== undefined ? ' faded' : '') }, level > 0 && chain[level - 1] ? h('div', { class: 'small muted', style: 'margin-bottom:4px' }, 'Under ' + chain[level - 1]) : null, grid);
+        if (collapsed || (level === 0 && showAll && list.length > 9)) {
+          box.append(h('button', { type: 'button', class: 'lp-more', onClick: function () { showAll = !showAll; draw(); } }, showAll ? 'Fewer brands ▲' : 'More brands ▼'));
+        }
+        if (adding === level) {
+          var inp = h('input', { placeholder: isStaff() ? (level === 0 ? 'Brand or maker, as printed' : 'Line or sub-line, as printed') : 'What does the package say?', autocapitalize: 'words' });
+          function commit() { var v = inp.value.trim(); if (!v) return; chain = chain.slice(0, level).concat(v); adding = null; draw(); }
+          inp.addEventListener('keydown', function (e) { if (e.key === 'Enter') { e.preventDefault(); commit(); } });
+          box.append(h('div', { class: 'lp-new' }, inp, h('button', { type: 'button', class: 'primary sm', onClick: commit }, 'Add'), h('button', { type: 'button', class: 'ghost sm', onClick: function () { adding = null; draw(); } }, 'Cancel')));
+          setTimeout(function () { inp.focus(); }, 0);
+        }
+        root.append(box);
+      });
+    }
+    draw();
+    return root;
+  }
+
   // ---------- catalogue helpers (shared by Scan and Catalogue) ----------
   function productLabel(p) {
     return (p.path_text || (p.brand + (p.line ? ' › ' + p.line : ''))) + ' — ' + p.name;
@@ -341,10 +449,12 @@
 
   function editForm(p, onSaved, onCancel) {
     var f = {
-      path: h('input', { value: p.path_text ? p.path_text.replace(/ › /g, ' > ') : (p.brand || ''), placeholder: 'Purina > Pro Plan > Complete Essentials' }),
+      path: ladderPicker(p.path_text ? p.path_text.replace(/ › /g, ' > ') : (p.brand || '')),
       name: h('input', { value: p.name || '' }), form: h('input', { value: p.form || '' }),
       ingredients: h('textarea', { rows: 3 }), image_url: h('input', { type: 'url', value: p.image_url || '', placeholder: 'https://…' }),
-      source_url: h('input', { type: 'url', value: p.source_url || '' }), title: h('input', { value: p.title_as_listed || '' })
+      source_url: h('input', { type: 'url', value: p.source_url || '' }), title: h('input', { value: p.title_as_listed || '' }),
+      change: h('select', null, h('option', { value: 'correction' }, 'Fixing a mistake in what is on file'), h('option', { value: 'new_version' }, 'The maker changed the recipe or name (keep the old one as history)')),
+      note: h('input', { placeholder: 'What changed? (optional)' })
     };
     f.ingredients.value = p.ingredients || '';
     var tags = tagPicker(tagKeys(p));
@@ -352,12 +462,12 @@
     function field(label, el) { return [h('label', null, label), el]; }
     function val(el) { var v = el.value.trim(); return v === '' ? null : v; }
     return h('div', null, h('h3', null, 'Edit details'),
-      field('Brand ladder (use > between levels, up to 5)', f.path), field('Product name', f.name), field('Title as listed (verbatim)', f.title), field('Form', f.form),
-      tags.el, field('Ingredients', f.ingredients), field('Image URL', f.image_url), field('Source page URL', f.source_url), err,
+      field('Brand ladder (tap to change, up to 5 levels)', f.path), field('Product name', f.name), field('Title as listed (verbatim)', f.title), field('Form', f.form),
+      tags.el, field('Ingredients', f.ingredients), field('If the name or ingredients changed, this is', f.change), field('Note about the change', f.note), field('Image URL', f.image_url), field('Source page URL', f.source_url), err,
       h('div', { class: 'row', style: 'margin-top:10px' },
         h('button', { class: 'primary sm', onClick: async function () {
           var body = { name: f.name.value.trim(), path: val(f.path), form: val(f.form), title_as_listed: val(f.title), tags: tags.keys(),
-            ingredients: val(f.ingredients), image_url: val(f.image_url), source_url: val(f.source_url) };
+            ingredients: val(f.ingredients), image_url: val(f.image_url), source_url: val(f.source_url), formula_change: f.change.value, version_note: val(f.note) };
           var r = await api('/products/' + p.id, { method: 'PATCH', body: body });
           if (r.ok) onSaved(r.data.product); else err.textContent = errText(r);
         } }, 'Save'),
@@ -366,6 +476,7 @@
 
   // Status, import flags, and the "looks right / needs changes" controls for the audit pass.
   function auditPanel(p, onChange) {
+    if (!canEdit(p)) return null;
     var box = h('div', { class: 'basis' }), editing = false, msg = h('div', { class: 'small' });
     var notes = h('input', { placeholder: 'Audit note (optional)', value: p.audit_notes || '' });
     async function setStatus(status) {
@@ -381,15 +492,15 @@
       var flags = (p.meta && p.meta.flags) || [], a = AUDIT[p.audit_status] || AUDIT.unreviewed;
       notes.value = p.audit_notes || '';
       put(box,
-        h('div', { class: 'row' }, h('span', { class: 'pill ' + a[1] }, a[0]),
+        h('div', { class: 'row' }, isStaff() ? h('span', { class: 'pill ' + a[1] }, a[0]) : null,
           p.gtin ? null : h('span', { class: 'pill out' }, 'no barcode'),
           p.image_url ? null : h('span', { class: 'pill' }, 'no image'),
           p.source_url ? h('a', { class: 'small', href: p.source_url, target: '_blank', rel: 'noopener' }, 'Source page') : null),
-        flags.length ? h('div', { class: 'small warn', style: 'margin-top:6px' }, 'Check: ' + flags.join(' · ')) : null,
-        notes, msg,
+        isStaff() && flags.length ? h('div', { class: 'small warn', style: 'margin-top:6px' }, 'Check: ' + flags.join(' · ')) : null,
+        isStaff() ? notes : null, msg,
         h('div', { class: 'row', style: 'margin-top:8px' },
-          h('button', { class: 'sm ' + (p.audit_status === 'reviewed' ? 'on' : ''), onClick: function () { setStatus('reviewed'); } }, 'Looks right'),
-          h('button', { class: 'sm ' + (p.audit_status === 'needs_changes' ? 'on' : ''), onClick: function () { setStatus('needs_changes'); } }, 'Needs changes'),
+          isStaff() ? h('button', { class: 'sm ' + (p.audit_status === 'reviewed' ? 'on' : ''), onClick: function () { setStatus('reviewed'); } }, 'Looks right') : null,
+          isStaff() ? h('button', { class: 'sm ' + (p.audit_status === 'needs_changes' ? 'on' : ''), onClick: function () { setStatus('needs_changes'); } }, 'Needs changes') : null,
           h('button', { class: 'sm ghost', onClick: function () { editing = true; draw(); } }, 'Edit')));
     }
     draw();
@@ -601,7 +712,8 @@
         return result.append(productCard(r.data));
       }
       if (r.status === 404) {
-        result.append(state.attachTarget ? confirmAttach(r.data.gtin, r.data.upc_a, state.attachTarget) : wireUp(r.data.gtin, r.data.upc_a));
+        // Wiring a barcode to a seeded product is a catalogue-building job for staff; everyone else adds their own product.
+        result.append(state.attachTarget && isStaff() ? confirmAttach(r.data.gtin, r.data.upc_a, state.attachTarget) : isStaff() ? wireUp(r.data.gtin, r.data.upc_a) : addProductForm(r.data.gtin, r.data.upc_a, ''));
         result.scrollIntoView({ behavior: 'smooth', block: 'start' }); // bring the picker up past the camera
         return;
       }
@@ -659,7 +771,7 @@
         if (!r.ok) { list.append(h('div', { class: 'err' }, errText(r))); return; }
         var rows = r.data.data;
         note.textContent = rows.length === 0 ? 'No ' + (formParam() || '') + ' products match' + (includeWired ? '' : ' (without a barcode)') + '. Try fewer letters, switch Wet/Dry, or add it as new.'
-          : (r.data.total > rows.length ? 'Top ' + rows.length + ' of ' + r.data.total + '. Keep typing to narrow it.' : rows.length + (rows.length === 1 ? ' match.' : ' matches.'));
+          : (r.data.meta.total > rows.length ? 'Top ' + rows.length + ' of ' + r.data.meta.total + '. Keep typing to narrow it.' : rows.length + (rows.length === 1 ? ' match.' : ' matches.'));
         rows.forEach(function (p) {
           var btn = h('button', { class: 'sm primary' }, p.gtin ? 'Add pack' : 'This one'), revert = null, label = btn.textContent;
           btn.addEventListener('click', function () {
@@ -708,6 +820,23 @@
         note, msg, list);
     }
 
+    // Makers reformulate and rename, often keeping the barcode. Say so neutrally and keep the earlier recipes one tap away.
+    function recipeNote(p) {
+      if (!p.formula_version || p.formula_version < 2) return null;
+      var box = h('div', { class: 'small' }), list = h('div');
+      box.append('The recipe on file was updated' + (p.formula_changed_at ? ' ' + p.formula_changed_at.slice(0, 10) : '') + ' (version ' + p.formula_version + '). Earlier versions are kept. ',
+        h('a', { href: '#', onClick: async function (e) {
+          e.preventDefault(); clear(list);
+          var r = await api('/products/' + p.id + '/versions');
+          if (!r.ok) { list.append(errText(r)); return; }
+          r.data.versions.forEach(function (v) {
+            list.append(h('div', { class: 'card', style: 'margin:6px 0' }, h('strong', null, 'Version ' + v.version + (v.is_current ? ' (current)' : '')), ' ' + (v.observed_at || '').slice(0, 10),
+              h('div', null, v.name), v.note ? h('div', { class: 'muted' }, v.note) : null, v.ingredients ? h('div', { class: 'muted' }, v.ingredients) : null));
+          });
+        } }, 'See versions'), list);
+      return box;
+    }
+
     function productCard(d) {
       var p = d.product, qty = h('input', { type: 'number', min: '1', value: '1', style: 'width:90px' }), msg = h('div', { class: 'small' });
       var card = h('div', { class: 'card' },
@@ -715,14 +844,15 @@
         p.description ? h('p', null, p.description) : null,
         p.ingredients ? h('p', { class: 'small' }, h('strong', null, 'Ingredients: '), p.ingredients) : null,
         nutritionTable(p.nutrition),
-        h('p', { class: 'small muted' }, 'Barcode ' + (p.upc_a || p.gtin) + ' · source: ' + p.source + (p.last_verified_at ? ' · verified ' + p.last_verified_at.slice(0, 10) : ' · not yet verified')),
+        recipeNote(p),
+        h('p', { class: 'small muted' }, 'Barcode ' + (p.upc_a || p.gtin) + ' · source: ' + (String(p.source).indexOf('user:') === 0 ? 'added by a user' : p.source) + (p.last_verified_at ? ' · verified ' + p.last_verified_at.slice(0, 10) : ' · not yet verified')),
         h('div', { class: 'row', style: 'margin-top:8px' }, h('span', { class: 'small muted' }, 'Qty'), qty,
           h('button', { class: 'primary', onClick: async function () {
             var r = await api('/inventory', { method: 'POST', body: { product_id: p.id, quantity: Number(qty.value) || 1 } });
             msg.className = 'small ' + (r.ok ? 'ok' : 'bad');
             msg.textContent = r.ok ? 'In your pantry (' + Number(r.data.item.quantity) + ').' : errText(r);
           } }, 'Add to pantry')), msg);
-      card.append(auditPanel(p));
+      put(card, auditPanel(p));
       var out = h('div', null, card);
       if (d.advisories && d.advisories.length) {
         out.append(h('h2', null, d.advisories.length + ' public ' + (d.advisories.length === 1 ? 'advisory' : 'advisories') + ' may relate to this'),
@@ -735,17 +865,18 @@
     function addProductForm(gtin, upca, prefillName) {
       var pet = currentPet(), err = h('div', { class: 'err' });
       var f = {
-        path: h('input', { placeholder: 'Purina > Pro Plan > Complete Essentials' }), name: h('input', { value: prefillName || '' }), kind: h('select', null, h('option', { value: 'food' }, 'Food'), h('option', { value: 'treat' }, 'Treat')),
+        path: ladderPicker(''), name: h('input', { value: prefillName || '' }), kind: h('select', null, h('option', { value: 'food' }, 'Food'), h('option', { value: 'treat' }, 'Treat')),
         form: h('select', null, [['wet', 'Wet'], ['dry', 'Dry'], ['freeze-dried', 'Freeze-dried']].map(function (o) { return h('option', { value: o[0], selected: (state.form === 'dry' ? 'dry' : 'wet') === o[0] }, o[1]); })), species: h('input', { value: pet ? pet.species : 'cat' }),
         ingredients: h('textarea', { rows: 2 }),
         n_protein: h('input', { inputmode: 'decimal' }), n_fat: h('input', { inputmode: 'decimal' }), n_fiber: h('input', { inputmode: 'decimal' }), n_moisture: h('input', { inputmode: 'decimal' }), n_kcal: h('input', { inputmode: 'decimal' })
       };
-      var tags = tagPicker([], [['texture', 'Texture'], ['medium', 'Served in']]);
+      var tags = tagPicker([], [['life_stage', 'Life stage'], ['texture', 'Texture'], ['medium', 'Served in']]);
       function field(label, el) { return [h('label', null, label), el]; }
       return h('div', { class: 'card' },
         h('h3', null, 'Not in the catalogue yet'),
         h('p', { class: 'muted small' }, 'Barcode ' + (upca || gtin) + '. Add it so it is found next time. Copy values exactly as printed on the package.'),
-        field('Brand ladder, top to bottom, with > between levels (e.g. Brand > Line, or Maker > Brand > Line)', f.path), field('Product name', f.name), field('Food or treat', f.kind), field('Form', f.form), tags.el, field('Species', f.species),
+        field('Brand ladder', f.path), isStaff() ? null : h('p', { class: 'small muted' }, 'Pick from the list. If your brand or line is not there, tap “Can’t find it?” and type what the package says; we will check it and add it. You can use this product straight away, and it stays private to you until it is reviewed.'),
+        field('Product name', f.name), field('Food or treat', f.kind), field('Form', f.form), tags.el, field('Species', f.species),
         field('Ingredients (optional)', f.ingredients),
         h('h3', { style: 'margin-top:14px' }, 'Label values (optional)'),
         field('Crude protein, min %', f.n_protein), field('Crude fat, min %', f.n_fat), field('Crude fiber, max %', f.n_fiber), field('Moisture, max %', f.n_moisture), field('Calories per unit, as printed', f.n_kcal),
@@ -809,10 +940,10 @@
         box.append(h('div', { class: 'row' },
           h('div', { class: 'grow' }, h('div', null, h('strong', null, p.name)),
             h('div', { class: 'small muted' }, (p.path_text || p.brand) + (p.form ? ' · ' + p.form : '')), tagPills(p)),
-          h('span', { class: 'pill ' + a[1] }, a[0])),
+          isStaff() ? h('span', { class: 'pill ' + a[1] }, a[0]) : null),
           h('div', { class: 'row', style: 'margin-top:8px' },
             p.gtin ? h('span', { class: 'small muted' }, 'Barcode ' + (p.upc_a || p.gtin))
-              : h('button', { class: 'sm primary', onClick: function () { state.attachTarget = p; go('scan'); } }, 'Scan to attach barcode'),
+              : (isStaff() ? h('button', { class: 'sm primary', onClick: function () { state.attachTarget = p; go('scan'); } }, 'Scan to attach barcode') : null),
             h('button', { class: 'sm ghost', onClick: function () { open = !open; draw(); } }, open ? 'Hide' : 'Details')));
         if (open) {
           put(box, p.ingredients ? h('p', { class: 'small' }, h('strong', null, 'Ingredients: '), p.ingredients) : null, nutritionTable(p.nutrition),
@@ -830,7 +961,7 @@
       if (!r.ok) { list.append(h('div', { class: 'err' }, errText(r))); return; }
       if (page === 1 && !r.data.data.length) list.append(h('p', { class: 'muted' }, 'Nothing here.'));
       r.data.data.forEach(function (p) { list.append(row(p)); });
-      if (r.data.current_page < r.data.last_page) more.append(h('button', { onClick: function () { load(page + 1); } }, 'Load more (' + (r.data.total - r.data.to) + ' left)'));
+      if (r.data.meta.current_page < r.data.meta.last_page) more.append(h('button', { onClick: function () { load(page + 1); } }, 'Load more (' + (r.data.meta.total - r.data.meta.to) + ' left)'));
     }
 
     function reload() { state.catFilter = f; state.catQ = q.value; load(1); }

@@ -24,6 +24,19 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
+    public const ROLES = ['user', 'moderator', 'admin'];
+
+    /** Moderators and admins review contributed content; only admins change the brand tree. */
+    public function isStaff(): bool
+    {
+        return in_array($this->role, ['moderator', 'admin'], true);
+    }
+
+    public function isAdmin(): bool
+    {
+        return $this->role === 'admin';
+    }
+
     protected function casts(): array
     {
         return [

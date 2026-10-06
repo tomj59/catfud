@@ -25,9 +25,9 @@ class ProductApiTest extends TestCase
         $this->product();
         Sanctum::actingAs(User::factory()->create());
 
-        $this->getJson('/api/products/lookup/036000291452')->assertOk()
+        $this->getJson('/api/v1/products/lookup/036000291452')->assertOk()
             ->assertJsonPath('product.name', 'Tuna Pâté')->assertJsonPath('product.upc_a', '036000291452');
-        $this->getJson('/api/products/lookup/0036000291452')->assertOk()
+        $this->getJson('/api/v1/products/lookup/0036000291452')->assertOk()
             ->assertJsonPath('product.brand', 'Acme');
     }
 
@@ -35,7 +35,7 @@ class ProductApiTest extends TestCase
     {
         Sanctum::actingAs(User::factory()->create());
 
-        $this->getJson('/api/products/lookup/4006381333931')->assertNotFound()
+        $this->getJson('/api/v1/products/lookup/4006381333931')->assertNotFound()
             ->assertJsonPath('gtin', '4006381333931');
     }
 
@@ -43,8 +43,8 @@ class ProductApiTest extends TestCase
     {
         Sanctum::actingAs(User::factory()->create());
 
-        $this->getJson('/api/products/lookup/036000291453')->assertUnprocessable();
-        $this->getJson('/api/products/lookup/123')->assertUnprocessable();
+        $this->getJson('/api/v1/products/lookup/036000291453')->assertUnprocessable();
+        $this->getJson('/api/v1/products/lookup/123')->assertUnprocessable();
     }
 
     public function test_store_creates_a_product_with_a_normalised_gtin_and_provenance(): void
@@ -52,7 +52,7 @@ class ProductApiTest extends TestCase
         $user = User::factory()->create();
         Sanctum::actingAs($user);
 
-        $this->postJson('/api/products', [
+        $this->postJson('/api/v1/products', [
             'gtin' => '036000291452', 'brand' => 'Acme', 'name' => 'Tuna Pâté',
             'nutrition' => ['crude_protein_min_pct' => '9'],
         ])->assertCreated()
@@ -66,9 +66,9 @@ class ProductApiTest extends TestCase
     {
         Sanctum::actingAs(User::factory()->create());
 
-        $this->postJson('/api/products', ['gtin' => '036000291453', 'brand' => 'A', 'name' => 'B'])
+        $this->postJson('/api/v1/products', ['gtin' => '036000291453', 'brand' => 'A', 'name' => 'B'])
             ->assertUnprocessable();
-        $this->postJson('/api/products', ['gtin' => '036000291452'])
+        $this->postJson('/api/v1/products', ['gtin' => '036000291452'])
             ->assertUnprocessable()->assertJsonValidationErrors(['brand', 'name']);
     }
 
@@ -77,7 +77,7 @@ class ProductApiTest extends TestCase
         $this->product();
         Sanctum::actingAs(User::factory()->create());
 
-        $this->postJson('/api/products', ['gtin' => '036000291452', 'brand' => 'Other', 'name' => 'Dup'])
+        $this->postJson('/api/v1/products', ['gtin' => '036000291452', 'brand' => 'Other', 'name' => 'Dup'])
             ->assertStatus(409)->assertJsonPath('product.brand', 'Acme');
         $this->assertDatabaseCount('products', 1);
     }
@@ -88,9 +88,9 @@ class ProductApiTest extends TestCase
         $this->product(['gtin' => '4006381333931', 'brand' => 'Zed', 'name' => 'Salmon Bites', 'kind' => 'treat']);
         Sanctum::actingAs(User::factory()->create());
 
-        $this->getJson('/api/products?q=salmon')->assertOk()->assertJsonCount(1, 'data');
-        $this->getJson('/api/products?kind=treat')->assertOk()->assertJsonCount(1, 'data');
-        $this->getJson('/api/products?kind=bogus')->assertUnprocessable();
-        $this->getJson('/api/products?q=%25')->assertOk()->assertJsonCount(0, 'data'); // % is literal, not a wildcard
+        $this->getJson('/api/v1/products?q=salmon')->assertOk()->assertJsonCount(1, 'data');
+        $this->getJson('/api/v1/products?kind=treat')->assertOk()->assertJsonCount(1, 'data');
+        $this->getJson('/api/v1/products?kind=bogus')->assertUnprocessable();
+        $this->getJson('/api/v1/products?q=%25')->assertOk()->assertJsonCount(0, 'data'); // % is literal, not a wildcard
     }
 }

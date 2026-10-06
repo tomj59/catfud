@@ -144,6 +144,26 @@ caches derived from the tree; edit the ladder in the app (Catalogue > Details > 
   Scanning any of them finds the product. In the Scan tab, tick "also show products that already have a barcode".
 - **Advisories:** an advisory naming a manufacturer or brand matches every product beneath it in the ladder.
 
+## Renames, aliases, life stage and recipe versions
+
+The industry renames and reformulates constantly, so the catalogue is built to absorb it instead of fighting it.
+
+- **Aliases.** Every brand-tree node can carry aliases ("Purina Pro Plan" for "Pro Plan", the printed "Adult 7+ | Prime Plus" for the line "Prime Plus"). Typing, importing or scanning an alias lands on the existing node instead of creating a duplicate, and aliases are searchable.
+- **Curated ladder.** `database/seeds/brand_suggestions_us.json` is the hand-maintained list of brands, lines and sub-lines (with species, aliases and inherited tags); the instructions are at the top of the file. `php artisan catalogue:seed-brands` creates the nodes (safe to repeat); add `--prune-empty` to drop empty nodes the file no longer lists, `--dry-run` to preview.
+- **Life stage is a facet, not a rung.** Kitten / Adult / Adult 7+ / Senior / All life stages ride with the product as tags, read from line, variety and product names. A line name that is only a life stage is turned into a tag instead of a tree level. A line that only ever holds one stage can carry it as an inherited tag (Prime Plus -> `life_stage:adult-7plus`).
+- **Rename, move, merge** (API): `PATCH /api/brand-nodes/{id}` (`name`, `parent_id`, `kind`, `aliases`, `species`) keeps the old name as an alias and rewrites paths and depth for the subtree; a name that collides is refused. `POST /api/brand-nodes/{id}/merge {"into": id}` folds one node into another (products, children, names). Both respect the 5-level cap. Moving a product to a different line is the existing `PATCH /api/products/{id}` with `path`.
+- **Recipe versions.** A product is the stable thing an owner knows (barcode, ratings, pantry); its name, ingredients and nutrition live in `product_versions`. Editing with `formula_change: "correction"` (default) fixes the current version; `"new_version"` keeps the old recipe as history, bumps `formula_version`, and the card says so neutrally. `GET /api/products/{id}/versions` lists them. A new barcode on a reformulated product, and flagging ratings made before a recipe change, are not built yet.
+- There is no screen for renaming or merging nodes yet; use the API until the node review screen exists.
+
+## Roles, moderation and visibility
+
+- Accounts have a role: `user`, `moderator` or `admin`. Roles cannot be set through the API; use `php artisan user:role you@example.com admin`. The migration makes the first registered account an admin.
+- **Users contribute products, never brand-tree nodes.** A product a user adds is `pending` and **private to them**: it works in their pantry, ratings and suggestions straight away, and nobody else can find it (search, scan, browse and the brand picker all go through one visibility scope, `VisibleScope`, with leak tests in `ModerationVisibilityTest`). Staff additions are approved immediately.
+- The ladder a user picks must already exist (names and aliases match exactly). If it does not, the product stays **unplaced**: no node, no nearest match, the typed ladder kept verbatim in `requested_path` for a moderator.
+- Users can edit only their own unapproved products. Only staff edit the public catalogue or attach barcodes to it; only admins rename, move or merge nodes.
+- Moderation states: `approved`, `pending`, `needs_changes`, `rejected` (stays private to the contributor), `merged` (a duplicate; records are re-pointed). The same barcode can be held privately by different people; it is unique within the public catalogue.
+- Every change to a product or brand node is written to `audit_logs` with who and what changed. The admin tool, `/api/v1`, Scramble docs and the moderation queue are the next steps; see `docs/design-notes.md`.
+
 ## Not built yet
 
 - An admin screen to enter advisories and products (use the import commands for now).
@@ -157,3 +177,15 @@ caches derived from the tree; edit the ladder in the app (Catalogue > Details > 
 - CORS uses Laravel's defaults. Restrict `config/cors.php` to the pilot web app's origin before real use.
 - Registration is open. For a closed pilot, create accounts by hand or put a signup code in front of `/register`.
 - `CLAUDE.md` and `AGENTS.md` come from the Laravel starter kit and can be deleted.
+
+## API versioning and docs
+
+All endpoints live under `/api/v1`. Interactive docs (Scramble, local env only) are at `/docs/api`; the machine-readable
+contract is committed as `docs/openapi.json`. After changing any route, request, resource or `@response` docblock, regenerate it:
+
+```
+php artisan scramble:export --path=docs/openapi.json
+```
+
+`ApiContractTest` fails when the committed spec drifts from the code. Product lists use the standard Laravel envelope
+(`data`, `links`, `meta.total`, `meta.current_page`, ...). Staff-only product fields (`audit_status`, `audit_notes`, `import_key`, `meta`) are omitted for everyone else.

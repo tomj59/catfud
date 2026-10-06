@@ -1,0 +1,4254 @@
+{
+    "openapi": "3.1.0",
+    "info": {
+        "title": "Cat F\u00fcd API",
+        "version": "0.0.1",
+        "description": "The Cat F\u00fcd API: a shared pet-food catalogue (brand ladder, products, barcodes, advisories) plus each user's private pets, pantry, ratings and meal history.\n\nAuthenticate with `POST /register` or `POST /login`, then send `Authorization: Bearer <token>`. Catalogue reads are scoped to the caller's region and\nto what they may see: approved products, plus their own pending contributions. Staff (moderator, admin) see more fields."
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/api/v1"
+        }
+    ],
+    "security": [
+        {
+            "http": []
+        }
+    ],
+    "paths": {
+        "/advisories": {
+            "get": {
+                "operationId": "advisory.index",
+                "summary": "Public Advisories that may relate to what is in the user's pantry (matches limited to pantry products).\n`?all=1` lists every advisory with all of its matches. Every item is attributed to its source",
+                "tags": [
+                    "Advisory"
+                ],
+                "parameters": [
+                    {
+                        "name": "all",
+                        "in": "query",
+                        "schema": {
+                            "type": "boolean",
+                            "default": false
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "advisories": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "attribution": {
+                                                        "type": "string"
+                                                    },
+                                                    "source_name": {
+                                                        "type": "string"
+                                                    },
+                                                    "source_url": {
+                                                        "type": "string"
+                                                    },
+                                                    "published_at": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "ingested_at": {
+                                                        "type": "string"
+                                                    },
+                                                    "topic": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "source_text": {
+                                                        "type": "string"
+                                                    },
+                                                    "matches": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "object",
+                                                            "properties": {
+                                                                "id": {
+                                                                    "type": "integer"
+                                                                },
+                                                                "product": {
+                                                                    "type": [
+                                                                        "object",
+                                                                        "null"
+                                                                    ],
+                                                                    "properties": {
+                                                                        "id": {
+                                                                            "type": "integer"
+                                                                        },
+                                                                        "brand": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "name": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "gtin": {
+                                                                            "type": [
+                                                                                "string",
+                                                                                "null"
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "id",
+                                                                        "brand",
+                                                                        "name",
+                                                                        "gtin"
+                                                                    ]
+                                                                },
+                                                                "match_basis": {
+                                                                    "type": "string"
+                                                                },
+                                                                "confidence": {
+                                                                    "type": "string"
+                                                                },
+                                                                "match_detail": {
+                                                                    "type": [
+                                                                        "string",
+                                                                        "null"
+                                                                    ]
+                                                                },
+                                                                "review": {
+                                                                    "type": "object",
+                                                                    "properties": {
+                                                                        "status": {
+                                                                            "type": "string"
+                                                                        },
+                                                                        "note": {
+                                                                            "type": [
+                                                                                "string",
+                                                                                "null"
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    "required": [
+                                                                        "status",
+                                                                        "note"
+                                                                    ]
+                                                                }
+                                                            },
+                                                            "required": [
+                                                                "id",
+                                                                "product",
+                                                                "match_basis",
+                                                                "confidence",
+                                                                "match_detail",
+                                                                "review"
+                                                            ]
+                                                        }
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "attribution",
+                                                    "source_name",
+                                                    "source_url",
+                                                    "published_at",
+                                                    "ingested_at",
+                                                    "topic",
+                                                    "source_text",
+                                                    "matches"
+                                                ]
+                                            }
+                                        },
+                                        "disclaimer": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "advisories",
+                                        "disclaimer"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/advisory-matches/{id}/review": {
+            "put": {
+                "operationId": "advisory.review",
+                "summary": "The user's own decision about one match: new | confirmed | dismissed, with an optional note. The advisory is untouched",
+                "tags": [
+                    "Advisory"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
+                                            "new",
+                                            "confirmed",
+                                            "dismissed"
+                                        ]
+                                    },
+                                    "note": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "maxLength": 2000
+                                    }
+                                },
+                                "required": [
+                                    "status"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "match": {
+                                            "type": "object",
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer"
+                                                },
+                                                "product": {
+                                                    "type": [
+                                                        "object",
+                                                        "null"
+                                                    ],
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "integer"
+                                                        },
+                                                        "brand": {
+                                                            "type": "string"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "gtin": {
+                                                            "type": [
+                                                                "string",
+                                                                "null"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "id",
+                                                        "brand",
+                                                        "name",
+                                                        "gtin"
+                                                    ]
+                                                },
+                                                "match_basis": {
+                                                    "type": "string"
+                                                },
+                                                "confidence": {
+                                                    "type": "string"
+                                                },
+                                                "match_detail": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "review": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "status": {
+                                                            "type": "string"
+                                                        },
+                                                        "note": {
+                                                            "type": [
+                                                                "string",
+                                                                "null"
+                                                            ]
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "status",
+                                                        "note"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "id",
+                                                "product",
+                                                "match_basis",
+                                                "confidence",
+                                                "match_detail",
+                                                "review"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "match"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/ModelNotFoundException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/register": {
+            "post": {
+                "operationId": "auth.register",
+                "tags": [
+                    "Auth"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RegisterRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "user": {
+                                            "$ref": "#/components/schemas/UserResource"
+                                        },
+                                        "token": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "user",
+                                        "token"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                },
+                "security": []
+            }
+        },
+        "/login": {
+            "post": {
+                "operationId": "auth.login",
+                "tags": [
+                    "Auth"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LoginRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "user": {
+                                            "$ref": "#/components/schemas/UserResource"
+                                        },
+                                        "token": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "user",
+                                        "token"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                },
+                "security": []
+            }
+        },
+        "/me": {
+            "get": {
+                "operationId": "auth.me",
+                "tags": [
+                    "Auth"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "user": {
+                                            "$ref": "#/components/schemas/UserResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "user"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/logout": {
+            "post": {
+                "operationId": "auth.logout",
+                "tags": [
+                    "Auth"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "const": "Logged out."
+                                        }
+                                    },
+                                    "required": [
+                                        "message"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/inventory": {
+            "get": {
+                "operationId": "inventory.index",
+                "summary": "The user's own inventory only. ?status=low|out|stocked and ?form=wet|dry filter",
+                "tags": [
+                    "Inventory"
+                ],
+                "parameters": [
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "stocked",
+                                "low",
+                                "out",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "form",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 100
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "items": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/InventoryItem"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "items"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            },
+            "post": {
+                "operationId": "inventory.store",
+                "summary": "Add a product to the user's inventory by product_id or by a scanned/typed code.\nIf it is already there, the quantity is added to (one row per user per product)",
+                "tags": [
+                    "Inventory"
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "product_id": {
+                                        "type": [
+                                            "integer",
+                                            "null"
+                                        ]
+                                    },
+                                    "gtin": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ]
+                                    },
+                                    "quantity": {
+                                        "type": [
+                                            "number",
+                                            "null"
+                                        ],
+                                        "maximum": 99999
+                                    },
+                                    "unit": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "maxLength": 50
+                                    },
+                                    "status": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "enum": [
+                                            "stocked",
+                                            "low",
+                                            "out",
+                                            null
+                                        ]
+                                    },
+                                    "opened_at": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "format": "date-time"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "const": "Product not found. Look it up or add it first."
+                                        }
+                                    },
+                                    "required": [
+                                        "message"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/inventory/{id}": {
+            "put": {
+                "operationId": "inventory.update",
+                "tags": [
+                    "Inventory"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "quantity": {
+                                        "type": "number",
+                                        "minimum": 0,
+                                        "maximum": 99999
+                                    },
+                                    "unit": {
+                                        "type": "string",
+                                        "maxLength": 50
+                                    },
+                                    "status": {
+                                        "type": "string",
+                                        "enum": [
+                                            "stocked",
+                                            "low",
+                                            "out"
+                                        ]
+                                    },
+                                    "opened_at": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "format": "date-time"
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "item": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "item"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "inventory.destroy",
+                "tags": [
+                    "Inventory"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/meal-offers": {
+            "get": {
+                "operationId": "mealOffer.index",
+                "tags": [
+                    "MealOffer"
+                ],
+                "parameters": [
+                    {
+                        "name": "pet_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "meal_offers": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/MealOffer"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "meal_offers"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            },
+            "post": {
+                "operationId": "mealOffer.store",
+                "summary": "Record what was offered. The outcome can be sent now or filled in afterwards with PATCH",
+                "tags": [
+                    "MealOffer"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "pet_id": {
+                                        "type": "integer"
+                                    },
+                                    "product_id": {
+                                        "type": "integer"
+                                    },
+                                    "offered_at": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "format": "date-time"
+                                    },
+                                    "outcome": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "enum": [
+                                            "ate_all",
+                                            "ate_some",
+                                            "refused",
+                                            null
+                                        ]
+                                    },
+                                    "suggested_by_app": {
+                                        "type": [
+                                            "boolean",
+                                            "null"
+                                        ]
+                                    },
+                                    "note": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "maxLength": 2000
+                                    }
+                                },
+                                "required": [
+                                    "pet_id",
+                                    "product_id"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "meal_offer": {
+                                            "$ref": "#/components/schemas/MealOffer"
+                                        }
+                                    },
+                                    "required": [
+                                        "meal_offer"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/meal-offers/{id}": {
+            "patch": {
+                "operationId": "mealOffer.update",
+                "tags": [
+                    "MealOffer"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "outcome": {
+                                        "type": "string",
+                                        "enum": [
+                                            "ate_all",
+                                            "ate_some",
+                                            "refused"
+                                        ]
+                                    },
+                                    "note": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "maxLength": 2000
+                                    }
+                                },
+                                "required": [
+                                    "outcome"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "meal_offer": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "meal_offer"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/pets": {
+            "get": {
+                "operationId": "pets.index",
+                "tags": [
+                    "Pet"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "pets": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Pet"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "pets"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            },
+            "post": {
+                "operationId": "pets.store",
+                "tags": [
+                    "Pet"
+                ],
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "pet": {
+                                            "anyOf": [
+                                                {
+                                                    "$ref": "#/components/schemas/Pet"
+                                                },
+                                                {
+                                                    "type": "null"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "pet"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/pets/{id}": {
+            "put": {
+                "operationId": "pets.update",
+                "tags": [
+                    "Pet"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "pet": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "pet"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "pets.destroy",
+                "tags": [
+                    "Pet"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/products": {
+            "get": {
+                "operationId": "product.index",
+                "summary": "Search the shared catalogue (the signed-in user's region only).\n?q= every word must match brand, name, line or the brand path/aliases; ?node= limits to a branch of the tree;\n?form=wet|dry; ?tag[]=texture:pate includes, ?exclude_tag[]=texture:chunks excludes; ?barcode=missing|present;\n?audit=; ?per_page= (1-50)",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Every word must match brand, name, line or the brand path and its aliases.",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 200
+                        }
+                    },
+                    {
+                        "name": "kind",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "food",
+                                "treat",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "barcode",
+                        "in": "query",
+                        "description": "Wired up (`present`) or not yet (`missing`).",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "missing",
+                                "present",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "audit",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "unreviewed",
+                                "reviewed",
+                                "needs_changes",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "form",
+                        "in": "query",
+                        "description": "wet, dry or freeze-dried; omit for everything.",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 100
+                        }
+                    },
+                    {
+                        "name": "species",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 50
+                        }
+                    },
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ],
+                            "minimum": 1,
+                            "maximum": 50
+                        }
+                    },
+                    {
+                        "name": "node",
+                        "in": "query",
+                        "description": "Limit to a brand-tree node and everything beneath it.",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "tag[]",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "maxLength": 60
+                            }
+                        }
+                    },
+                    {
+                        "name": "exclude_tag[]",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "string",
+                                "maxLength": 60
+                            }
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Paginated set of `ProductResource`",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "allOf": [
+                                                    {
+                                                        "$ref": "#/components/schemas/ProductResource"
+                                                    },
+                                                    {
+                                                        "type": "object",
+                                                        "required": [
+                                                            "tags",
+                                                            "barcodes"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "links": {
+                                            "type": "object",
+                                            "properties": {
+                                                "first": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "last": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "prev": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "next": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "first",
+                                                "last",
+                                                "prev",
+                                                "next"
+                                            ]
+                                        },
+                                        "meta": {
+                                            "type": "object",
+                                            "properties": {
+                                                "current_page": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "from": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ],
+                                                    "minimum": 1
+                                                },
+                                                "last_page": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "links": {
+                                                    "type": "array",
+                                                    "description": "Generated paginator links.",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "url": {
+                                                                "type": [
+                                                                    "string",
+                                                                    "null"
+                                                                ]
+                                                            },
+                                                            "label": {
+                                                                "type": "string"
+                                                            },
+                                                            "active": {
+                                                                "type": "boolean"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "url",
+                                                            "label",
+                                                            "active"
+                                                        ]
+                                                    }
+                                                },
+                                                "path": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ],
+                                                    "description": "Base path for paginator generated URLs."
+                                                },
+                                                "per_page": {
+                                                    "type": "integer",
+                                                    "description": "Number of items shown per page.",
+                                                    "minimum": 0
+                                                },
+                                                "to": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ],
+                                                    "description": "Number of the last item in the slice.",
+                                                    "minimum": 1
+                                                },
+                                                "total": {
+                                                    "type": "integer",
+                                                    "description": "Total number of items being paginated.",
+                                                    "minimum": 0
+                                                }
+                                            },
+                                            "required": [
+                                                "current_page",
+                                                "from",
+                                                "last_page",
+                                                "links",
+                                                "path",
+                                                "per_page",
+                                                "to",
+                                                "total"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "data",
+                                        "links",
+                                        "meta"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            },
+            "post": {
+                "operationId": "product.store",
+                "summary": "Add a product that the scan lookup could not find. The creator is recorded as provenance",
+                "tags": [
+                    "Product"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreProductRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product": {
+                                            "allOf": [
+                                                {
+                                                    "$ref": "#/components/schemas/ProductResource"
+                                                },
+                                                {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "tags",
+                                                        "barcodes"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "product"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "409": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "const": "A product with that barcode already exists."
+                                        },
+                                        "product": {
+                                            "allOf": [
+                                                {
+                                                    "$ref": "#/components/schemas/ProductResource"
+                                                },
+                                                {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "tags",
+                                                        "barcodes"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "message",
+                                        "product"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/products/lookup/{code}": {
+            "get": {
+                "operationId": "product.lookup",
+                "summary": "Look up a product by whatever the scanner (or the user's fingers) produced: its primary barcode or any extra\npack barcode. Found: 200. Valid code but unknown product: 404 with `gtin`, so the app can offer \"add it\".\nNot a valid barcode: 422",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "code",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product": {
+                                            "$ref": "#/components/schemas/ProductResource"
+                                        },
+                                        "advisories": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "additionalProperties": {}
+                                            }
+                                        },
+                                        "advisory_disclaimer": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "product",
+                                        "advisories",
+                                        "advisory_disclaimer"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/tags": {
+            "get": {
+                "operationId": "product.tags",
+                "summary": "The facet vocabulary (texture, medium, life stage, diet) grouped for the filter and edit screens",
+                "tags": [
+                    "Product"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "tags": {
+                                            "type": "object",
+                                            "additionalProperties": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "integer"
+                                                        },
+                                                        "group": {
+                                                            "type": "string"
+                                                        },
+                                                        "slug": {
+                                                            "type": "string"
+                                                        },
+                                                        "label": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "id",
+                                                        "group",
+                                                        "slug",
+                                                        "label"
+                                                    ]
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "tags"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/brand-nodes": {
+            "get": {
+                "operationId": "product.nodes",
+                "summary": "Browse the brand tree one level at a time: ?parent= (omit for the top). Only branches that hold products are\nlisted, with a count that honours the same ?form= and ?barcode=missing filters the search uses",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "parent",
+                        "in": "query",
+                        "description": "The parent node to list the children of; omit for the top level.",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "form",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 100
+                        }
+                    },
+                    {
+                        "name": "barcode",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "missing",
+                                "present",
+                                null
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "parent": {
+                                            "type": [
+                                                "object",
+                                                "null"
+                                            ],
+                                            "properties": {
+                                                "id": {
+                                                    "type": "integer"
+                                                },
+                                                "name": {
+                                                    "type": "string"
+                                                },
+                                                "kind": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "path": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "id": {
+                                                                "type": "integer"
+                                                            },
+                                                            "name": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "id",
+                                                            "name"
+                                                        ]
+                                                    }
+                                                },
+                                                "products_here": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": [
+                                                "id",
+                                                "name",
+                                                "kind",
+                                                "path",
+                                                "products_here"
+                                            ]
+                                        },
+                                        "nodes": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "kind": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "depth": {
+                                                        "type": "integer"
+                                                    },
+                                                    "product_count": {
+                                                        "type": "integer"
+                                                    },
+                                                    "has_children": {
+                                                        "type": "boolean"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "name",
+                                                    "kind",
+                                                    "depth",
+                                                    "product_count",
+                                                    "has_children"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "parent",
+                                        "nodes"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            }
+        },
+        "/brand-nodes/{brandNode}": {
+            "patch": {
+                "operationId": "product.updateNode",
+                "summary": "Rename, re-kind, re-species or move a brand-tree node. A rename keeps the old name as an alias",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "brandNode",
+                        "in": "path",
+                        "required": true,
+                        "description": "The brand node ID",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateBrandNodeRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "node": {
+                                            "$ref": "#/components/schemas/BrandNodeResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "node"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/ModelNotFoundException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/brand-nodes/{brandNode}/merge": {
+            "post": {
+                "operationId": "product.mergeNode",
+                "summary": "Fold one node into another. Products, lines and barcodes move across; the old names become aliases",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "brandNode",
+                        "in": "path",
+                        "required": true,
+                        "description": "The brand node ID",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MergeBrandNodeRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "node": {
+                                            "$ref": "#/components/schemas/BrandNodeResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "node"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/ModelNotFoundException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/brand-choices": {
+            "get": {
+                "operationId": "product.choices",
+                "summary": "The choices for one rung of the brand-ladder picker. ?path=Purina > Pro Plan returns what can follow it: nodes that\nalready exist (even with no products yet) plus the region's curated ladder (App\\Support\\BrandCatalogue). ?species=cat hides names sold only for other species.\nEach choice carries a logo URL when public/images/brands/{slug}.png|svg|jpg|webp exists",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "path",
+                        "in": "query",
+                        "description": "The ladder chosen so far, rungs separated by `>` (e.g. `Purina > Pro Plan`); omit for the top level.",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 500
+                        }
+                    },
+                    {
+                        "name": "species",
+                        "in": "query",
+                        "description": "Hide names sold only for other species (e.g. `cat`).",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 30
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "path": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "string"
+                                            }
+                                        },
+                                        "max_depth": {
+                                            "type": "integer"
+                                        },
+                                        "can_go_deeper": {
+                                            "type": "boolean"
+                                        },
+                                        "choices": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "known": {
+                                                        "type": "boolean"
+                                                    },
+                                                    "species": {
+                                                        "type": [
+                                                            "array",
+                                                            "null"
+                                                        ],
+                                                        "items": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "logo": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    }
+                                                },
+                                                "required": [
+                                                    "name",
+                                                    "known",
+                                                    "species",
+                                                    "logo"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "path",
+                                        "max_depth",
+                                        "can_go_deeper",
+                                        "choices"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            }
+        },
+        "/products/audit-summary": {
+            "get": {
+                "operationId": "product.auditSummary",
+                "summary": "Progress for the seed -> wire-up -> audit pass",
+                "tags": [
+                    "Product"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "total": {
+                                            "type": "integer"
+                                        },
+                                        "without_barcode": {
+                                            "type": "integer"
+                                        },
+                                        "without_image": {
+                                            "type": "integer"
+                                        },
+                                        "unreviewed": {
+                                            "type": "integer"
+                                        },
+                                        "reviewed": {
+                                            "type": "integer"
+                                        },
+                                        "needs_changes": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "total",
+                                        "without_barcode",
+                                        "without_image",
+                                        "unreviewed",
+                                        "reviewed",
+                                        "needs_changes"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/products/{product}": {
+            "get": {
+                "operationId": "product.show",
+                "summary": "One product with any Public Advisories that may relate to it",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "product",
+                        "in": "path",
+                        "required": true,
+                        "description": "The product ID",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product": {
+                                            "$ref": "#/components/schemas/ProductResource"
+                                        },
+                                        "advisories": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "additionalProperties": {}
+                                            }
+                                        },
+                                        "advisory_disclaimer": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "product",
+                                        "advisories",
+                                        "advisory_disclaimer"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/ModelNotFoundException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            },
+            "patch": {
+                "operationId": "product.update",
+                "summary": "Correct a catalogue record during the audit pass. `path` (\"Purina > Pro Plan > Complete Essentials\") moves the\nproduct within the brand tree; `tags` replaces its facet tags. The primary barcode is changed only through\nattachBarcode. Pilot note: any signed-in user can edit the shared catalogue; real roles are a later question",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "product",
+                        "in": "path",
+                        "required": true,
+                        "description": "The product ID",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UpdateProductRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product": {
+                                            "$ref": "#/components/schemas/ProductResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "product"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "403": {
+                        "description": "An error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "description": "Error overview.",
+                                            "examples": [
+                                                "Only a moderator can change the public catalogue."
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "message"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/ModelNotFoundException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/products/{product}/versions": {
+            "get": {
+                "operationId": "product.versions",
+                "summary": "Every recipe/label on record for a product, newest first",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "product",
+                        "in": "path",
+                        "required": true,
+                        "description": "The product ID",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "versions": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/ProductVersionResource"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "versions"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/ModelNotFoundException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/products/{product}/barcode": {
+            "put": {
+                "operationId": "product.attachBarcode",
+                "summary": "Wire a scanned barcode to a product. A product with no barcode gets it as its primary barcode; a product that\nalready has one gets this as an extra pack barcode (single can, multipack, case). 409 if the code is already\non a product (the response names it, so the app can say so)",
+                "tags": [
+                    "Product"
+                ],
+                "parameters": [
+                    {
+                        "name": "product",
+                        "in": "path",
+                        "required": true,
+                        "description": "The product ID",
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/AttachBarcodeRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product": {
+                                            "$ref": "#/components/schemas/ProductResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "product"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "409": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "enum": [
+                                                "That barcode is already on this product.",
+                                                "That barcode already belongs to another product."
+                                            ]
+                                        },
+                                        "product": {
+                                            "allOf": [
+                                                {
+                                                    "$ref": "#/components/schemas/ProductResource"
+                                                },
+                                                {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "tags",
+                                                        "barcodes"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "message",
+                                        "product"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "403": {
+                        "description": "An error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "description": "Error overview.",
+                                            "examples": [
+                                                "Only a moderator can add a barcode to the public catalogue."
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "message"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/ModelNotFoundException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/ratings": {
+            "get": {
+                "operationId": "rating.index",
+                "tags": [
+                    "Rating"
+                ],
+                "parameters": [
+                    {
+                        "name": "pet_id",
+                        "in": "query",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "ratings": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/Rating"
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "ratings"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            },
+            "post": {
+                "operationId": "rating.store",
+                "summary": "One rating per pet per product: posting again replaces the earlier one",
+                "tags": [
+                    "Rating"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "type": "object",
+                                "properties": {
+                                    "pet_id": {
+                                        "type": "integer"
+                                    },
+                                    "product_id": {
+                                        "type": "integer"
+                                    },
+                                    "rating": {
+                                        "type": "string",
+                                        "enum": [
+                                            "liked",
+                                            "neutral",
+                                            "refused"
+                                        ]
+                                    },
+                                    "note": {
+                                        "type": [
+                                            "string",
+                                            "null"
+                                        ],
+                                        "maxLength": 2000
+                                    }
+                                },
+                                "required": [
+                                    "pet_id",
+                                    "product_id",
+                                    "rating"
+                                ]
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/ratings/{id}": {
+            "delete": {
+                "operationId": "rating.destroy",
+                "tags": [
+                    "Rating"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "204": {
+                        "description": "No content"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/pets/{id}/suggestions": {
+            "get": {
+                "operationId": "suggestion.show",
+                "summary": "GET /pets/{id}/suggestions?shuffle=1&exclude[]=3&exclude[]=7&seed=42&form=wet\nThe pick and the evidence behind it. `exclude` = products the user already passed on; `seed` makes shuffle repeatable",
+                "tags": [
+                    "Suggestion"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    },
+                    {
+                        "name": "shuffle",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "boolean",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "exclude[]",
+                        "in": "query",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "type": "integer"
+                            }
+                        }
+                    },
+                    {
+                        "name": "seed",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "form",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 100
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "anyOf": [
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "pet": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "integer"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "species": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "id",
+                                                        "name",
+                                                        "species"
+                                                    ]
+                                                },
+                                                "suggestion": {
+                                                    "type": "array",
+                                                    "items": {}
+                                                },
+                                                "alternatives": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "product": {
+                                                                "$ref": "#/components/schemas/Product"
+                                                            },
+                                                            "inventory_item_id": {
+                                                                "type": "integer"
+                                                            },
+                                                            "inventory_status": {
+                                                                "type": "string"
+                                                            },
+                                                            "trial": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "offered_last_meal": {
+                                                                "type": "boolean"
+                                                            },
+                                                            "last_offered_at": {
+                                                                "type": "string"
+                                                            },
+                                                            "score": {
+                                                                "type": "number"
+                                                            },
+                                                            "evidence": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "outcomes_recorded": {
+                                                                        "anyOf": [
+                                                                            {
+                                                                                "type": "string"
+                                                                            },
+                                                                            {
+                                                                                "type": "integer",
+                                                                                "minimum": 0
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "ate_all": {
+                                                                        "anyOf": [
+                                                                            {
+                                                                                "type": "string"
+                                                                            },
+                                                                            {
+                                                                                "type": "integer",
+                                                                                "minimum": 0
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "ate_some": {
+                                                                        "anyOf": [
+                                                                            {
+                                                                                "type": "string"
+                                                                            },
+                                                                            {
+                                                                                "type": "integer",
+                                                                                "minimum": 0
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "refused": {
+                                                                        "anyOf": [
+                                                                            {
+                                                                                "type": "string"
+                                                                            },
+                                                                            {
+                                                                                "type": "integer",
+                                                                                "minimum": 0
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "recent_outcomes": {
+                                                                        "anyOf": [
+                                                                            {
+                                                                                "type": "string"
+                                                                            },
+                                                                            {
+                                                                                "type": "array",
+                                                                                "items": {
+                                                                                    "type": "string"
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "your_rating": {
+                                                                        "type": [
+                                                                            "string",
+                                                                            "null"
+                                                                        ]
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "outcomes_recorded",
+                                                                    "ate_all",
+                                                                    "ate_some",
+                                                                    "refused",
+                                                                    "recent_outcomes",
+                                                                    "your_rating"
+                                                                ]
+                                                            },
+                                                            "statement": {
+                                                                "type": "string"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "product",
+                                                            "inventory_item_id",
+                                                            "inventory_status",
+                                                            "trial",
+                                                            "offered_last_meal",
+                                                            "last_offered_at",
+                                                            "score",
+                                                            "evidence",
+                                                            "statement"
+                                                        ]
+                                                    }
+                                                },
+                                                "none_reason": {
+                                                    "type": "null"
+                                                },
+                                                "basis": {
+                                                    "type": "string",
+                                                    "description": "nothing_in_stock | all_passed | null"
+                                                }
+                                            },
+                                            "required": [
+                                                "pet",
+                                                "suggestion",
+                                                "alternatives",
+                                                "none_reason",
+                                                "basis"
+                                            ]
+                                        },
+                                        {
+                                            "type": "object",
+                                            "properties": {
+                                                "pet": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "id": {
+                                                            "type": "integer"
+                                                        },
+                                                        "name": {
+                                                            "type": "string"
+                                                        },
+                                                        "species": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "required": [
+                                                        "id",
+                                                        "name",
+                                                        "species"
+                                                    ]
+                                                },
+                                                "suggestion": {
+                                                    "type": "null"
+                                                },
+                                                "alternatives": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    },
+                                                    "minItems": 0,
+                                                    "maxItems": 0
+                                                },
+                                                "none_reason": {
+                                                    "type": "string",
+                                                    "enum": [
+                                                        "nothing_in_stock",
+                                                        "all_passed"
+                                                    ]
+                                                },
+                                                "basis": {
+                                                    "type": "string",
+                                                    "description": "nothing_in_stock | all_passed | null"
+                                                }
+                                            },
+                                            "required": [
+                                                "pet",
+                                                "suggestion",
+                                                "alternatives",
+                                                "none_reason",
+                                                "basis"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "securitySchemes": {
+            "http": {
+                "type": "http",
+                "scheme": "bearer"
+            }
+        },
+        "schemas": {
+            "AttachBarcodeRequest": {
+                "type": "object",
+                "properties": {
+                    "gtin": {
+                        "type": "string"
+                    },
+                    "pack_label": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "For an extra barcode on a product that already has one: \"24-can case\".",
+                        "maxLength": 100
+                    }
+                },
+                "required": [
+                    "gtin"
+                ],
+                "title": "AttachBarcodeRequest"
+            },
+            "AuditStatus": {
+                "type": "string",
+                "enum": [
+                    "unreviewed",
+                    "reviewed",
+                    "needs_changes"
+                ],
+                "title": "AuditStatus"
+            },
+            "BrandNodeResource": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "parent_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "kind": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "depth": {
+                        "type": "integer"
+                    },
+                    "aliases": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {}
+                    },
+                    "species": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {}
+                    },
+                    "default_tags": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {}
+                    },
+                    "notes": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "parent_id",
+                    "name",
+                    "kind",
+                    "depth",
+                    "aliases",
+                    "species",
+                    "default_tags",
+                    "notes"
+                ],
+                "title": "BrandNodeResource"
+            },
+            "InventoryItem": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "user_id": {
+                        "type": "integer"
+                    },
+                    "product_id": {
+                        "type": "integer"
+                    },
+                    "quantity": {
+                        "type": "string"
+                    },
+                    "unit": {
+                        "type": "string"
+                    },
+                    "status": {
+                        "$ref": "#/components/schemas/InventoryStatus"
+                    },
+                    "opened_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date"
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "id",
+                    "user_id",
+                    "product_id",
+                    "quantity",
+                    "unit",
+                    "status",
+                    "opened_at",
+                    "created_at",
+                    "updated_at"
+                ],
+                "title": "InventoryItem"
+            },
+            "InventoryStatus": {
+                "type": "string",
+                "enum": [
+                    "stocked",
+                    "low",
+                    "out"
+                ],
+                "title": "InventoryStatus"
+            },
+            "LoginRequest": {
+                "type": "object",
+                "properties": {
+                    "email": {
+                        "type": "string",
+                        "format": "email"
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "device_name": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 255
+                    }
+                },
+                "required": [
+                    "email",
+                    "password"
+                ],
+                "title": "LoginRequest"
+            },
+            "MealOffer": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "user_id": {
+                        "type": "integer"
+                    },
+                    "pet_id": {
+                        "type": "integer"
+                    },
+                    "product_id": {
+                        "type": "integer"
+                    },
+                    "offered_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "outcome": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/components/schemas/MealOutcome"
+                            },
+                            {
+                                "type": "null"
+                            }
+                        ]
+                    },
+                    "suggested_by_app": {
+                        "type": "boolean"
+                    },
+                    "note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "id",
+                    "user_id",
+                    "pet_id",
+                    "product_id",
+                    "offered_at",
+                    "outcome",
+                    "suggested_by_app",
+                    "note",
+                    "created_at",
+                    "updated_at"
+                ],
+                "title": "MealOffer"
+            },
+            "MealOutcome": {
+                "type": "string",
+                "enum": [
+                    "ate_all",
+                    "ate_some",
+                    "refused"
+                ],
+                "title": "MealOutcome"
+            },
+            "MergeBrandNodeRequest": {
+                "type": "object",
+                "properties": {
+                    "into": {
+                        "type": "integer",
+                        "description": "The node that absorbs this one."
+                    }
+                },
+                "required": [
+                    "into"
+                ],
+                "title": "MergeBrandNodeRequest"
+            },
+            "Pet": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "user_id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "species": {
+                        "type": "string"
+                    },
+                    "birth_date": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date"
+                    },
+                    "notes": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "id",
+                    "user_id",
+                    "name",
+                    "species",
+                    "birth_date",
+                    "notes",
+                    "created_at",
+                    "updated_at"
+                ],
+                "title": "Pet"
+            },
+            "Product": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "gtin": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "brand": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "species": {
+                        "type": "string"
+                    },
+                    "kind": {
+                        "$ref": "#/components/schemas/ProductKind"
+                    },
+                    "form": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "description": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "ingredients": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "nutrition": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {}
+                    },
+                    "image_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "last_verified_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "import_key": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "line": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "texture": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "source_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "meta": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {}
+                    },
+                    "audit_status": {
+                        "$ref": "#/components/schemas/AuditStatus"
+                    },
+                    "audit_notes": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "region": {
+                        "type": "string"
+                    },
+                    "brand_node_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "path_text": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "title_as_listed": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "formula_version": {
+                        "type": "integer"
+                    },
+                    "formula_changed_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "moderation_status": {
+                        "type": "string"
+                    },
+                    "requested_path": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "reviewed_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "review_note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "upc_a": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "placed": {
+                        "type": "boolean"
+                    },
+                    "has_barcode": {
+                        "type": "boolean"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/Tag"
+                        }
+                    },
+                    "barcodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ProductBarcode"
+                        }
+                    }
+                },
+                "required": [
+                    "id",
+                    "gtin",
+                    "brand",
+                    "name",
+                    "species",
+                    "kind",
+                    "form",
+                    "description",
+                    "ingredients",
+                    "nutrition",
+                    "image_url",
+                    "source",
+                    "last_verified_at",
+                    "created_at",
+                    "updated_at",
+                    "import_key",
+                    "line",
+                    "texture",
+                    "source_url",
+                    "meta",
+                    "audit_status",
+                    "audit_notes",
+                    "region",
+                    "brand_node_id",
+                    "path_text",
+                    "title_as_listed",
+                    "formula_version",
+                    "formula_changed_at",
+                    "moderation_status",
+                    "requested_path",
+                    "reviewed_at",
+                    "review_note",
+                    "upc_a",
+                    "placed",
+                    "has_barcode"
+                ],
+                "title": "Product"
+            },
+            "ProductBarcode": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "product_id": {
+                        "type": "integer"
+                    },
+                    "region": {
+                        "type": "string"
+                    },
+                    "gtin": {
+                        "type": "string"
+                    },
+                    "pack_label": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "added_by": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "upc_a": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "product_id",
+                    "region",
+                    "gtin",
+                    "pack_label",
+                    "added_by",
+                    "created_at",
+                    "updated_at",
+                    "upc_a"
+                ],
+                "title": "ProductBarcode"
+            },
+            "ProductBarcodeResource": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "gtin": {
+                        "type": "string"
+                    },
+                    "upc_a": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "pack_label": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "gtin",
+                    "upc_a",
+                    "pack_label"
+                ],
+                "title": "ProductBarcodeResource"
+            },
+            "ProductKind": {
+                "type": "string",
+                "enum": [
+                    "food",
+                    "treat"
+                ],
+                "title": "ProductKind"
+            },
+            "ProductResource": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "region": {
+                        "type": "string"
+                    },
+                    "gtin": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "upc_a": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "has_barcode": {
+                        "type": "boolean"
+                    },
+                    "placed": {
+                        "type": "boolean"
+                    },
+                    "brand": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "species": {
+                        "type": "string"
+                    },
+                    "kind": {
+                        "type": "string"
+                    },
+                    "form": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "description": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "ingredients": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "nutrition": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {}
+                    },
+                    "image_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "last_verified_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "line": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "texture": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "source_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "brand_node_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "path_text": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "title_as_listed": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "requested_path": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "moderation_status": {
+                        "type": "string"
+                    },
+                    "review_note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "reviewed_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "formula_version": {
+                        "type": "integer"
+                    },
+                    "formula_changed_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/TagResource"
+                        }
+                    },
+                    "barcodes": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/components/schemas/ProductBarcodeResource"
+                        }
+                    },
+                    "audit_status": {
+                        "type": "string"
+                    },
+                    "audit_notes": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "import_key": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "meta": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {}
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "region",
+                    "gtin",
+                    "upc_a",
+                    "has_barcode",
+                    "placed",
+                    "brand",
+                    "name",
+                    "species",
+                    "kind",
+                    "form",
+                    "description",
+                    "ingredients",
+                    "nutrition",
+                    "image_url",
+                    "source",
+                    "last_verified_at",
+                    "line",
+                    "texture",
+                    "source_url",
+                    "brand_node_id",
+                    "path_text",
+                    "title_as_listed",
+                    "requested_path",
+                    "moderation_status",
+                    "review_note",
+                    "reviewed_at",
+                    "formula_version",
+                    "formula_changed_at",
+                    "created_at",
+                    "updated_at"
+                ],
+                "title": "ProductResource"
+            },
+            "ProductVersionResource": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "version": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "title_as_listed": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "ingredients": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "nutrition": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {}
+                    },
+                    "is_current": {
+                        "type": "boolean"
+                    },
+                    "source": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "observed_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "version",
+                    "name",
+                    "title_as_listed",
+                    "ingredients",
+                    "nutrition",
+                    "is_current",
+                    "source",
+                    "observed_at",
+                    "note"
+                ],
+                "title": "ProductVersionResource"
+            },
+            "Rating": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "user_id": {
+                        "type": "integer"
+                    },
+                    "pet_id": {
+                        "type": "integer"
+                    },
+                    "product_id": {
+                        "type": "integer"
+                    },
+                    "rating": {
+                        "$ref": "#/components/schemas/RatingValue"
+                    },
+                    "note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "id",
+                    "user_id",
+                    "pet_id",
+                    "product_id",
+                    "rating",
+                    "note",
+                    "created_at",
+                    "updated_at"
+                ],
+                "title": "Rating"
+            },
+            "RatingValue": {
+                "type": "string",
+                "enum": [
+                    "liked",
+                    "neutral",
+                    "refused"
+                ],
+                "title": "RatingValue"
+            },
+            "RegisterRequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "maxLength": 255
+                    },
+                    "email": {
+                        "type": "string",
+                        "format": "email",
+                        "maxLength": 255
+                    },
+                    "password": {
+                        "type": "string"
+                    },
+                    "device_name": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "Label for the issued token (e.g. \"iPhone\").",
+                        "maxLength": 255
+                    }
+                },
+                "required": [
+                    "name",
+                    "email",
+                    "password"
+                ],
+                "title": "RegisterRequest"
+            },
+            "StoreProductRequest": {
+                "type": "object",
+                "properties": {
+                    "gtin": {
+                        "type": "string",
+                        "description": "UPC-A, EAN-13, EAN-8 or GTIN-14, with a valid check digit."
+                    },
+                    "brand": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 255
+                    },
+                    "path": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "The brand ladder, rungs separated by `>`. Users must pick existing rungs; anything else is kept as a request.",
+                        "maxLength": 500
+                    },
+                    "name": {
+                        "type": "string",
+                        "maxLength": 255
+                    },
+                    "species": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 50
+                    },
+                    "kind": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "enum": [
+                            "food",
+                            "treat",
+                            null
+                        ]
+                    },
+                    "form": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 100
+                    },
+                    "description": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 5000
+                    },
+                    "ingredients": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 5000
+                    },
+                    "nutrition": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "description": "Label values as printed, keyed by field (e.g. `crude_protein_min_pct`).",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "image_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "uri",
+                        "maxLength": 2048
+                    },
+                    "tags": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "description": "Facet tags as `group:slug` (texture, medium, life_stage, diet).",
+                        "items": {
+                            "type": "string",
+                            "maxLength": 60
+                        },
+                        "maxItems": 20
+                    }
+                },
+                "required": [
+                    "gtin",
+                    "name"
+                ],
+                "title": "StoreProductRequest"
+            },
+            "Tag": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "group": {
+                        "type": "string"
+                    },
+                    "slug": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "group",
+                    "slug",
+                    "label"
+                ],
+                "title": "Tag"
+            },
+            "TagResource": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "group": {
+                        "type": "string"
+                    },
+                    "slug": {
+                        "type": "string"
+                    },
+                    "label": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "group",
+                    "slug",
+                    "label"
+                ],
+                "title": "TagResource"
+            },
+            "UpdateBrandNodeRequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "description": "Renaming keeps the old name as an alias.",
+                        "maxLength": 255
+                    },
+                    "parent_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ],
+                        "description": "Move under another node; `null` makes it a top-level node."
+                    },
+                    "kind": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "enum": [
+                            "manufacturer",
+                            "brand",
+                            "line",
+                            "subline",
+                            null
+                        ]
+                    },
+                    "aliases": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {
+                            "type": "string",
+                            "maxLength": 255
+                        },
+                        "maxItems": 30
+                    },
+                    "species": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "description": "Species this is sold for (`cat`, `dog`); `null` or empty means all.",
+                        "items": {
+                            "type": "string",
+                            "maxLength": 30
+                        },
+                        "maxItems": 10
+                    },
+                    "notes": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 5000
+                    }
+                },
+                "title": "UpdateBrandNodeRequest"
+            },
+            "UpdateProductRequest": {
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "type": "string",
+                        "maxLength": 255
+                    },
+                    "path": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "Move the product within the brand tree (`Purina > Pro Plan > Prime Plus`).",
+                        "maxLength": 500
+                    },
+                    "texture": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 255
+                    },
+                    "form": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 100
+                    },
+                    "kind": {
+                        "type": "string",
+                        "enum": [
+                            "food",
+                            "treat"
+                        ]
+                    },
+                    "description": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 5000
+                    },
+                    "ingredients": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 5000
+                    },
+                    "nutrition": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "image_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "uri",
+                        "maxLength": 2048
+                    },
+                    "source_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "uri",
+                        "maxLength": 2048
+                    },
+                    "title_as_listed": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "The name exactly as a retailer or package prints it.",
+                        "maxLength": 500
+                    },
+                    "audit_status": {
+                        "type": "string",
+                        "description": "Staff only; ignored for everyone else.",
+                        "enum": [
+                            "unreviewed",
+                            "reviewed",
+                            "needs_changes"
+                        ]
+                    },
+                    "audit_notes": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 5000
+                    },
+                    "tags": {
+                        "type": "array",
+                        "description": "Replaces the product's facet tags (`group:slug`).",
+                        "items": {
+                            "type": "string",
+                            "maxLength": 60
+                        },
+                        "maxItems": 20
+                    },
+                    "formula_change": {
+                        "type": "string",
+                        "description": "When the name, ingredients or nutrition change: `correction` fixes the recipe on file, `new_version` keeps the old one as history.",
+                        "enum": [
+                            "correction",
+                            "new_version"
+                        ]
+                    },
+                    "version_note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 1000
+                    }
+                },
+                "title": "UpdateProductRequest"
+            },
+            "UserResource": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "email": {
+                        "type": "string"
+                    },
+                    "role": {
+                        "type": "string"
+                    },
+                    "region": {
+                        "type": "string"
+                    }
+                },
+                "required": [
+                    "id",
+                    "name",
+                    "email",
+                    "role",
+                    "region"
+                ],
+                "title": "UserResource"
+            }
+        },
+        "responses": {
+            "ValidationException": {
+                "description": "Validation error",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "description": "Errors overview."
+                                },
+                                "errors": {
+                                    "type": "object",
+                                    "description": "A detailed description of each field that failed validation.",
+                                    "additionalProperties": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "required": [
+                                "message",
+                                "errors"
+                            ]
+                        }
+                    }
+                }
+            },
+            "AuthenticationException": {
+                "description": "Unauthenticated",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "description": "Error overview."
+                                }
+                            },
+                            "required": [
+                                "message"
+                            ]
+                        }
+                    }
+                }
+            },
+            "ModelNotFoundException": {
+                "description": "Not found",
+                "content": {
+                    "application/json": {
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "message": {
+                                    "type": "string",
+                                    "description": "Error overview."
+                                }
+                            },
+                            "required": [
+                                "message"
+                            ]
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

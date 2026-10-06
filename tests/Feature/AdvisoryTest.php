@@ -110,7 +110,7 @@ class AdvisoryTest extends TestCase
         $user->inventoryItems()->create(['product_id' => $inPantry->id]);
         Sanctum::actingAs($user);
 
-        $res = $this->getJson('/api/advisories')->assertOk();
+        $res = $this->getJson('/api/v1/advisories')->assertOk();
 
         $res->assertJsonCount(1, 'advisories')
             ->assertJsonPath('advisories.0.attribution', 'Reported by Example Forum on Sep 15, 2026')
@@ -120,7 +120,7 @@ class AdvisoryTest extends TestCase
             ->assertJsonPath('advisories.0.matches.0.review.status', 'new');
         $this->assertStringContainsString('not a statement of safety', $res->json('disclaimer'));
 
-        $this->getJson('/api/advisories?all=1')->assertOk()->assertJsonCount(2, 'advisories');
+        $this->getJson('/api/v1/advisories?all=1')->assertOk()->assertJsonCount(2, 'advisories');
     }
 
     public function test_a_users_confirm_or_dismiss_is_theirs_alone_and_leaves_the_advisory_untouched(): void
@@ -136,15 +136,15 @@ class AdvisoryTest extends TestCase
         $before = Advisory::first()->only(['source_name', 'source_url', 'source_text']);
 
         Sanctum::actingAs($a);
-        $this->putJson("/api/advisory-matches/{$matchId}/review", ['status' => 'dismissed', 'note' => 'different lot'])
+        $this->putJson("/api/v1/advisory-matches/{$matchId}/review", ['status' => 'dismissed', 'note' => 'different lot'])
             ->assertOk()->assertJsonPath('match.review.status', 'dismissed')->assertJsonPath('match.review.note', 'different lot');
-        $this->putJson("/api/advisory-matches/{$matchId}/review", ['status' => 'confirmed'])
+        $this->putJson("/api/v1/advisory-matches/{$matchId}/review", ['status' => 'confirmed'])
             ->assertOk()->assertJsonPath('match.review.status', 'confirmed');
-        $this->putJson("/api/advisory-matches/{$matchId}/review", ['status' => 'bogus'])->assertUnprocessable();
-        $this->putJson('/api/advisory-matches/9999/review', ['status' => 'dismissed'])->assertNotFound();
+        $this->putJson("/api/v1/advisory-matches/{$matchId}/review", ['status' => 'bogus'])->assertUnprocessable();
+        $this->putJson('/api/v1/advisory-matches/9999/review', ['status' => 'dismissed'])->assertNotFound();
 
         Sanctum::actingAs($b);
-        $this->getJson('/api/advisories')->assertOk()->assertJsonPath('advisories.0.matches.0.review.status', 'new');
+        $this->getJson('/api/v1/advisories')->assertOk()->assertJsonPath('advisories.0.matches.0.review.status', 'new');
 
         $this->assertSame($before, Advisory::first()->only(['source_name', 'source_url', 'source_text']));
         $this->assertDatabaseCount('advisory_match_reviews', 1);
@@ -157,11 +157,11 @@ class AdvisoryTest extends TestCase
         app(AdvisoryImporter::class)->import([$this->entry(['matches' => [['gtin' => '0036000291452']]])]);
         Sanctum::actingAs(User::factory()->create());
 
-        $this->getJson('/api/products/lookup/036000291452')->assertOk()
+        $this->getJson('/api/v1/products/lookup/036000291452')->assertOk()
             ->assertJsonCount(1, 'advisories')
             ->assertJsonPath('advisories.0.attribution', 'Reported by Example Forum on Sep 15, 2026')
             ->assertJsonPath('advisories.0.match.confidence', 'high');
-        $this->getJson('/api/products/lookup/4006381333931')->assertOk()->assertJsonCount(0, 'advisories');
+        $this->getJson('/api/v1/products/lookup/4006381333931')->assertOk()->assertJsonCount(0, 'advisories');
     }
 
     public function test_the_app_never_uses_verdict_language_in_advisory_output(): void
@@ -172,7 +172,7 @@ class AdvisoryTest extends TestCase
         $user->inventoryItems()->create(['product_id' => $p->id]);
         Sanctum::actingAs($user);
 
-        $json = strtolower($this->getJson('/api/advisories')->getContent());
+        $json = strtolower($this->getJson('/api/v1/advisories')->getContent());
         $own = preg_replace('/"source_text":"[^"]*"/', '', $json); // the source's own words are theirs; ours must be verdict-free
 
         foreach (['unsafe', 'dangerous', 'recall', 'avoid', 'toxic', 'do not feed'] as $word) {

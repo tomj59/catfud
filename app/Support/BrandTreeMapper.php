@@ -42,16 +42,26 @@ class BrandTreeMapper
     {
         $line = self::cleanLine($line);
         $rule = $this->ruleFor($brand, $line);
+        $tags = [];
 
         $segments = $rule['prefix'] ?? [['name' => $brand, 'kind' => 'brand']];
         if ($line !== null && ($rule['use_line'] ?? true)) {
-            $segments[] = ['name' => $line, 'kind' => 'line'];
+            // A life stage printed where a line name would go ("Kitten", "Senior 7+") is a facet, not a rung.
+            if (LifeStageParser::isOnlyLifeStage($line)) {
+                $tags = [...$tags, ...LifeStageParser::tagKeys($line)];
+            } else {
+                $segments[] = ['name' => $line, 'kind' => 'line'];
+            }
         }
         if ($variety !== null && trim($variety) !== '' && ($rule['variety_as'] ?? null)) {
-            $segments[] = ['name' => trim($variety), 'kind' => $rule['variety_as']];
+            if (LifeStageParser::isOnlyLifeStage($variety)) {
+                $tags = [...$tags, ...LifeStageParser::tagKeys($variety)];
+            } else {
+                $segments[] = ['name' => trim($variety), 'kind' => $rule['variety_as']];
+            }
         }
 
-        return ['segments' => $segments, 'tags' => []];
+        return ['segments' => $segments, 'tags' => $tags];
     }
 
     /** @return array<string,mixed>|null */
@@ -85,13 +95,17 @@ class BrandTreeMapper
         $meta['source_line'] ??= $product->line;
         $product->forceFill(['meta' => $meta]);
 
-        ['segments' => $segments] = $this->pathFor($meta['source_brand'], $meta['source_line'], $meta['variety'] ?? null);
+        ['segments' => $segments, 'tags' => $tags] = $this->pathFor($meta['source_brand'], $meta['source_line'], $meta['variety'] ?? null);
 
-        $this->place($product, BrandNode::ensurePath($segments));
+        $this->place($product, BrandNode::ensurePath($segments), $tags);
     }
 
-    /** Put a product at a node: refresh the display caches and add the texture, medium and node-default tags. */
-    public function place(Product $product, BrandNode $node): void
+    /**
+     * Put a product at a node: refresh the display caches and add the texture, medium, life-stage and node-default tags.
+     *
+     * @param  list<string>  $extraTags  "group:slug" keys already known from the source (e.g. a life stage dropped from the path)
+     */
+    public function place(Product $product, BrandNode $node, array $extraTags = []): void
     {
         $chain = $node->ancestry();
 
@@ -116,6 +130,8 @@ class BrandTreeMapper
 
         $this->attachTags($product, array_merge(
             TextureParser::tagKeys($product->texture),
+            LifeStageParser::tagKeys($product->name.' '.$product->title_as_listed),
+            $extraTags,
             collect($chain)->flatMap(fn ($n) => $n->default_tags ?? [])->all(),
         ));
     }

@@ -56,7 +56,7 @@ class CatalogueAuditTest extends TestCase
 
     public function test_reimport_skips_products_a_person_has_wired_up_or_reviewed(): void
     {
-        $user = User::factory()->create();
+        $user = User::factory()->admin()->create();
         $p = $this->seeded();
         $p->update(['gtin' => '0036000291452', 'last_edited_by' => $user->id]);
 
@@ -69,25 +69,25 @@ class CatalogueAuditTest extends TestCase
 
     public function test_attach_barcode_wires_the_scanned_code_to_a_seeded_product(): void
     {
-        $user = User::factory()->create();
+        $user = User::factory()->admin()->create();
         Sanctum::actingAs($user);
         $p = $this->seeded();
 
-        $this->putJson("/api/products/{$p->id}/barcode", ['gtin' => '036000291452'])
+        $this->putJson("/api/v1/products/{$p->id}/barcode", ['gtin' => '036000291452'])
             ->assertOk()->assertJsonPath('product.gtin', '0036000291452')->assertJsonPath('product.has_barcode', true);
 
         $this->assertSame($user->id, $p->fresh()->last_edited_by);
-        $this->getJson('/api/products/lookup/036000291452')->assertOk()->assertJsonPath('product.id', $p->id);
+        $this->getJson('/api/v1/products/lookup/036000291452')->assertOk()->assertJsonPath('product.id', $p->id);
     }
 
     public function test_attach_barcode_rejects_bad_codes_and_conflicts(): void
     {
-        Sanctum::actingAs(User::factory()->create());
+        Sanctum::actingAs(User::factory()->admin()->create());
         $a = $this->seeded();
         $b = Product::create(['gtin' => '0036000291452', 'brand' => 'Acme', 'name' => 'Tuna', 'species' => 'cat', 'kind' => 'food', 'source' => 't']);
 
-        $this->putJson("/api/products/{$a->id}/barcode", ['gtin' => '036000291453'])->assertStatus(422);
-        $this->putJson("/api/products/{$a->id}/barcode", ['gtin' => '036000291452'])
+        $this->putJson("/api/v1/products/{$a->id}/barcode", ['gtin' => '036000291453'])->assertStatus(422);
+        $this->putJson("/api/v1/products/{$a->id}/barcode", ['gtin' => '036000291452'])
             ->assertStatus(409)->assertJsonPath('product.id', $b->id); // barcode belongs to another product
 
         $this->assertNull($a->fresh()->gtin);
@@ -95,43 +95,43 @@ class CatalogueAuditTest extends TestCase
 
     public function test_index_filters_by_missing_barcode_audit_status_and_multiword_search(): void
     {
-        Sanctum::actingAs(User::factory()->create());
+        Sanctum::actingAs(User::factory()->admin()->create());
         $a = $this->seeded();
         Product::create(['gtin' => '0036000291452', 'brand' => 'Acme', 'name' => 'Tuna', 'species' => 'cat', 'kind' => 'food', 'source' => 't']);
 
-        $this->getJson('/api/products?barcode=missing')->assertOk()->assertJsonCount(1, 'data')->assertJsonPath('data.0.id', $a->id);
-        $this->getJson('/api/products?barcode=present')->assertOk()->assertJsonCount(1, 'data');
-        $this->getJson('/api/products?q=tiki+beef')->assertOk()->assertJsonCount(1, 'data');
-        $this->getJson('/api/products?q=tiki+tuna')->assertOk()->assertJsonCount(0, 'data');
-        $this->getJson('/api/products?q=after+dark')->assertOk()->assertJsonCount(1, 'data'); // matches the product line
-        $this->getJson('/api/products?audit=reviewed')->assertOk()->assertJsonCount(0, 'data');
-        $this->getJson('/api/products?barcode=bogus')->assertStatus(422);
+        $this->getJson('/api/v1/products?barcode=missing')->assertOk()->assertJsonCount(1, 'data')->assertJsonPath('data.0.id', $a->id);
+        $this->getJson('/api/v1/products?barcode=present')->assertOk()->assertJsonCount(1, 'data');
+        $this->getJson('/api/v1/products?q=tiki+beef')->assertOk()->assertJsonCount(1, 'data');
+        $this->getJson('/api/v1/products?q=tiki+tuna')->assertOk()->assertJsonCount(0, 'data');
+        $this->getJson('/api/v1/products?q=after+dark')->assertOk()->assertJsonCount(1, 'data'); // matches the product line
+        $this->getJson('/api/v1/products?audit=reviewed')->assertOk()->assertJsonCount(0, 'data');
+        $this->getJson('/api/v1/products?barcode=bogus')->assertStatus(422);
     }
 
     public function test_update_records_the_editor_and_marking_reviewed_stamps_verification(): void
     {
-        $user = User::factory()->create();
+        $user = User::factory()->admin()->create();
         Sanctum::actingAs($user);
         $p = $this->seeded();
 
-        $this->patchJson("/api/products/{$p->id}", ['name' => 'Beef & Liver', 'audit_status' => 'reviewed', 'audit_notes' => 'checked can'])
+        $this->patchJson("/api/v1/products/{$p->id}", ['name' => 'Beef & Liver', 'audit_status' => 'reviewed', 'audit_notes' => 'checked can'])
             ->assertOk()->assertJsonPath('product.name', 'Beef & Liver')->assertJsonPath('product.audit_status', 'reviewed');
 
         $fresh = $p->fresh();
         $this->assertSame($user->id, $fresh->last_edited_by);
         $this->assertNotNull($fresh->last_verified_at);
-        $this->patchJson("/api/products/{$p->id}", ['audit_status' => 'nonsense'])->assertStatus(422);
-        $this->patchJson("/api/products/{$p->id}", ['gtin' => '4006381333931'])->assertOk();
+        $this->patchJson("/api/v1/products/{$p->id}", ['audit_status' => 'nonsense'])->assertStatus(422);
+        $this->patchJson("/api/v1/products/{$p->id}", ['gtin' => '4006381333931'])->assertOk();
         $this->assertNull($p->fresh()->gtin); // barcode is not editable through the general update
     }
 
     public function test_audit_summary_counts_progress(): void
     {
-        Sanctum::actingAs(User::factory()->create());
+        Sanctum::actingAs(User::factory()->admin()->create());
         $this->seeded();
         Product::create(['gtin' => '0036000291452', 'brand' => 'Acme', 'name' => 'Tuna', 'species' => 'cat', 'kind' => 'food', 'source' => 't', 'audit_status' => 'reviewed']);
 
-        $this->getJson('/api/products/audit-summary')->assertOk()->assertExactJson([
+        $this->getJson('/api/v1/products/audit-summary')->assertOk()->assertExactJson([
             'total' => 2, 'without_barcode' => 1, 'without_image' => 2, 'unreviewed' => 1, 'reviewed' => 1, 'needs_changes' => 0,
         ]);
     }
@@ -159,20 +159,20 @@ class CatalogueAuditTest extends TestCase
 
     public function test_wet_dry_filter_and_per_page_cap_apply_to_the_product_search(): void
     {
-        Sanctum::actingAs(User::factory()->create());
+        Sanctum::actingAs(User::factory()->admin()->create());
         foreach (range(1, 8) as $i) {
             app(ProductImporter::class)->import([$this->seedRow(['import_key' => "k{$i}", 'name' => "Wet {$i}", 'form' => 'wet'])], 's');
         }
         app(ProductImporter::class)->import([$this->seedRow(['import_key' => 'kd', 'name' => 'Crunchy', 'form' => 'dry'])], 's');
 
-        $this->getJson('/api/products?form=dry')->assertOk()->assertJsonCount(1, 'data');
-        $this->getJson('/api/products?form=WET&per_page=5')->assertOk()->assertJsonCount(5, 'data')->assertJsonPath('total', 8);
-        $this->getJson('/api/products?per_page=500')->assertStatus(422);
+        $this->getJson('/api/v1/products?form=dry')->assertOk()->assertJsonCount(1, 'data');
+        $this->getJson('/api/v1/products?form=WET&per_page=5')->assertOk()->assertJsonCount(5, 'data')->assertJsonPath('meta.total', 8);
+        $this->getJson('/api/v1/products?per_page=500')->assertStatus(422);
     }
 
     public function test_wet_dry_filter_applies_to_inventory_and_suggestions(): void
     {
-        $user = User::factory()->create();
+        $user = User::factory()->admin()->create();
         Sanctum::actingAs($user);
         $pet = $user->pets()->create(['name' => 'Mo', 'species' => 'cat']);
         $wet = Product::create(['gtin' => '0036000291452', 'brand' => 'A', 'name' => 'Wet one', 'species' => 'cat', 'kind' => 'food', 'form' => 'wet', 'source' => 't']);
@@ -180,8 +180,8 @@ class CatalogueAuditTest extends TestCase
         $user->inventoryItems()->create(['product_id' => $wet->id, 'quantity' => 1, 'status' => 'stocked']);
         $user->inventoryItems()->create(['product_id' => $dry->id, 'quantity' => 1, 'status' => 'stocked']);
 
-        $this->getJson('/api/inventory')->assertOk()->assertJsonCount(2, 'items');
-        $this->getJson('/api/inventory?form=dry')->assertOk()->assertJsonCount(1, 'items')->assertJsonPath('items.0.product.name', 'Dry one');
-        $this->getJson("/api/pets/{$pet->id}/suggestions?form=wet")->assertOk()->assertJsonPath('suggestion.product.name', 'Wet one');
+        $this->getJson('/api/v1/inventory')->assertOk()->assertJsonCount(2, 'items');
+        $this->getJson('/api/v1/inventory?form=dry')->assertOk()->assertJsonCount(1, 'items')->assertJsonPath('items.0.product.name', 'Dry one');
+        $this->getJson("/api/v1/pets/{$pet->id}/suggestions?form=wet")->assertOk()->assertJsonPath('suggestion.product.name', 'Wet one');
     }
 }

@@ -216,13 +216,13 @@ class MealSuggesterTest extends TestCase
         $p = $this->stock('Endpoint');
         Sanctum::actingAs($this->user);
 
-        $this->getJson("/api/pets/{$this->pet->id}/suggestions")->assertOk()
+        $this->getJson("/api/v1/pets/{$this->pet->id}/suggestions")->assertOk()
             ->assertJsonPath('suggestion.product.name', 'Endpoint')->assertJsonPath('pet.name', 'Miso');
-        $this->getJson("/api/pets/{$this->pet->id}/suggestions?shuffle=1&exclude[]={$p->id}")->assertOk()
+        $this->getJson("/api/v1/pets/{$this->pet->id}/suggestions?shuffle=1&exclude[]={$p->id}")->assertOk()
             ->assertJsonPath('none_reason', 'all_passed');
-        $this->getJson("/api/pets/{$this->pet->id}/suggestions?exclude=notanarray")->assertUnprocessable();
+        $this->getJson("/api/v1/pets/{$this->pet->id}/suggestions?exclude=notanarray")->assertUnprocessable();
 
         Sanctum::actingAs(User::factory()->create());
-        $this->getJson("/api/pets/{$this->pet->id}/suggestions")->assertNotFound();
+        $this->getJson("/api/v1/pets/{$this->pet->id}/suggestions")->assertNotFound();
     }
 }
