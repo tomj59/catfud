@@ -17,7 +17,7 @@ class Product extends Model
 {
     use Auditable, BelongsToRegion;
 
-    protected $with = ['tags', 'barcodes'];
+    protected $with = ['tags', 'barcodes', 'image'];
 
     protected $fillable = [
         'gtin', 'brand', 'name', 'species', 'kind', 'form', 'description', 'ingredients',
@@ -100,6 +100,11 @@ class Product extends Model
     public function tags(): BelongsToMany
     {
         return $this->belongsToMany(Tag::class)->orderBy('group')->orderBy('sort');
+    }
+
+    public function image(): \Illuminate\Database\Eloquent\Relations\HasOne
+    {
+        return $this->hasOne(ProductImage::class);
     }
 
     public function barcodes()

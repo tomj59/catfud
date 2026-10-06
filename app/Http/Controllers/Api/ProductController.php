@@ -26,6 +26,7 @@ use App\Support\BrandCatalogue;
 use App\Support\BrandNodeEditor;
 use App\Support\BrandTreeMapper;
 use App\Support\Gtin;
+use App\Support\ImageStore;
 use App\Support\LadderPath;
 use App\Support\Region;
 use Illuminate\Http\JsonResponse;
@@ -159,7 +160,7 @@ class ProductController extends Controller
             if ($n->effectiveStatus() === 'discontinued' && ! $request->user()->isStaff()) {
                 continue;   // nobody adds new products to a discontinued line; existing ones keep working
             }
-            $out[mb_strtolower($n->name)] = ['name' => $n->name, 'known' => true, 'species' => $n->species, 'status' => $n->effectiveStatus()];
+            $out[mb_strtolower($n->name)] = ['name' => $n->name, 'known' => true, 'species' => $n->species, 'status' => $n->effectiveStatus(), 'logo' => app(ImageStore::class)->logoUrl($n)];
         }
         foreach ($request->user()->isStaff() ? $curated : [] as $e) {     // only staff see names that are not real nodes yet
             $out[mb_strtolower($e['name'])] ??= ['name' => $e['name'], 'known' => false, 'species' => $e['species'] ?? null, 'status' => 'active'];
@@ -171,7 +172,7 @@ class ProductController extends Controller
         }
         $choices = collect($out)->filter(fn ($c) => BrandCatalogue::forSpecies($c['species'], $species))
             ->sortBy(fn ($c, $k) => sprintf('%04d %s', $rank[$k] ?? 9999, $k))->values()
-            ->map(fn ($c) => $c + ['logo' => $this->logoFor($c['name'])])->all();
+            ->map(fn ($c) => [...$c, 'logo' => ($c['logo'] ?? null) ?: $this->logoFor($c['name'])])->all();
 
         return response()->json(['path' => $names->all(), 'max_depth' => $max, 'can_go_deeper' => $names->count() < $max, 'choices' => $names->count() < $max ? $choices : []]);
     }

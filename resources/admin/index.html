@@ -57,6 +57,9 @@
   .login { max-width:340px; margin:12vh auto; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:24px; }
   .login input { width:100%; margin:6px 0 12px; }
   .indent { display:inline-block; }
+  .thumb { height:26px; width:26px; object-fit:contain; border-radius:5px; background:#fff; border:1px solid var(--line); vertical-align:middle; margin-right:6px; }
+  .preview { max-height:200px; max-width:100%; border-radius:10px; border:1px solid var(--line); background:#fff; display:block; margin:8px 0; }
+  .stack > * { display:block; width:100%; margin-top:8px; }
   @media (max-width: 800px) { .shell { grid-template-columns:1fr; } aside { position:static; height:auto; flex-direction:row; flex-wrap:wrap; } .who { margin:0; } main { padding:16px; } }
 </style>
 </head>
@@ -201,7 +204,7 @@
           <tbody>
             <template x-for="n in nodes" :key="n.id">
               <tr>
-                <td><span class="indent" :style="'padding-left:' + ((n.depth - 1) * 18) + 'px'"></span><strong x-text="n.name"></strong>
+                <td><span class="indent" :style="'padding-left:' + ((n.depth - 1) * 18) + 'px'"></span><img class="thumb" x-show="n.logo" :src="n.logo" alt=""><strong x-text="n.name"></strong>
                   <span class="muted small" x-show="n.kind" x-text="' · ' + n.kind"></span>
                   <div class="small muted" x-show="n.aliases && n.aliases.length" x-text="'also: ' + (n.aliases || []).join(', ')" :style="'padding-left:' + ((n.depth - 1) * 18) + 'px'"></div></td>
                 <td x-text="n.product_count"></td>
@@ -209,6 +212,7 @@
                 <td class="row" style="justify-content:flex-end">
                   <button class="sm" @click="startAddNode(n)" x-show="n.depth < 5">Add under</button>
                   <button class="sm" @click="startRename(n)">Rename</button>
+                  <button class="sm" @click="startLogo(n)">Logo</button>
                   <button class="sm" @click="startMergeNode(n)" x-show="isAdmin">Merge</button>
                   <button class="sm" @click="startRetire(n)" x-show="isAdmin">Status</button>
                   <button class="sm danger" @click="deleteNode(n)" x-show="isAdmin && n.product_count === 0 && n.child_count === 0">Delete</button>
@@ -270,6 +274,21 @@
               <dt>Source</dt><dd x-text="drawer.source || '—'"></dd>
               <dt>Image</dt><dd><a :href="drawer.image_url" target="_blank" rel="noopener" x-show="drawer.image_url" x-text="drawer.image_url"></a><span x-show="!drawer.image_url" class="muted">none yet</span></dd>
             </dl>
+
+            <div class="card">
+              <strong>Picture</strong>
+              <img class="preview" x-show="drawer.image_url" :src="drawer.image_url" alt="">
+              <p class="small muted" x-show="drawer.image">From <span x-text="drawer.image && drawer.image.source.replace('_', ' ')"></span><span x-show="drawer.image && drawer.image.licence" x-text="' · ' + (drawer.image && drawer.image.licence)"></span><span x-show="drawer.image && drawer.image.attribution" x-text="' · credit: ' + (drawer.image && drawer.image.attribution)"></span></p>
+              <p class="small muted" x-show="drawer.image_url && !drawer.image">A link to an outside picture. Upload one to host it here with its source on record.</p>
+              <div class="stack">
+                <input type="file" accept="image/png,image/jpeg,image/webp" x-ref="imgfile">
+                <select x-model="img.source"><option value="manufacturer">From the manufacturer</option><option value="retailer">From a retailer</option><option value="own_photo">Our own photo</option><option value="other">Other</option></select>
+                <input type="url" placeholder="Where it came from (link, optional)" x-model="img.source_url">
+                <input placeholder="Licence or permission (optional)" x-model="img.licence">
+                <input placeholder="Credit line to show (optional)" x-model="img.attribution">
+              </div>
+              <div class="row" style="margin-top:10px"><button class="sm primary" @click="uploadImage()">Upload picture</button><button class="sm danger" x-show="drawer.image" @click="removeImage()">Remove</button></div>
+            </div>
 
             <div class="card" x-show="drawer.moderation_status !== 'merged'">
               <strong>Ladder</strong>
@@ -346,6 +365,13 @@
             <input style="width:100%" list="nodeList" placeholder="Pick the node that survives" x-model="modal.path">
             <div class="row" style="margin-top:12px;justify-content:flex-end"><button @click="modal=null">Cancel</button><button class="danger" :disabled="!nodeByPath(modal.path)" @click="mergeNode()">Merge</button></div></div>
         </template>
+        <template x-if="modal && modal.type === 'logo'">
+          <div><h3 style="margin-top:0">Logo for “<span x-text="modal.node.name"></span>”</h3>
+            <img class="preview" x-show="modal.node.logo" :src="modal.node.logo" alt="">
+            <input type="file" accept="image/png,image/jpeg,image/webp" x-ref="logofile">
+            <p class="small muted">PNG, JPEG or WebP, up to 2 MB. A transparent PNG works best.</p>
+            <div class="row" style="margin-top:12px;justify-content:flex-end"><button class="danger" x-show="modal.node.logo" @click="removeLogo()">Remove</button><button @click="modal=null">Cancel</button><button class="primary" @click="uploadLogo()">Upload</button></div></div>
+        </template>
         <template x-if="modal && modal.type === 'retire'">
           <div><h3 style="margin-top:0">Status of “<span x-text="modal.node.name"></span>”</h3>
             <div class="row"><select x-model="modal.status" @change="previewRetire()"><option value="active">Active</option><option value="phasing_out">Phasing out</option><option value="discontinued">Discontinued</option></select>
@@ -379,7 +405,7 @@ function admin() {
     dash: null, products: [], pmeta: null, selected: [], pf: { q: '', moderation_status: 'pending', placed: '', image: '', barcode: '', page: 1 },
     groups: null, nodes: [], allNodes: [], nf: { q: '', empty: false, status: '' },
     audit: [], ameta: null, af: { subject_type: '', subject_id: '', page: 1 },
-    drawer: null, drawerAudit: [], placePath: '', mergeQ: '', mergeResults: [], modal: null,
+    img: { source: 'manufacturer', source_url: '', licence: '', attribution: '' }, drawer: null, drawerAudit: [], placePath: '', mergeQ: '', mergeResults: [], modal: null,
 
     get isAdmin() { return this.user && this.user.role === 'admin'; },
     get tabs() {
@@ -399,10 +425,10 @@ function admin() {
     async api(path, opts) {
       opts = opts || {};
       var headers = { Accept: 'application/json' };
-      if (opts.body) headers['Content-Type'] = 'application/json';
+      if (opts.body && !opts.form) headers['Content-Type'] = 'application/json';
       if (this.token) headers.Authorization = 'Bearer ' + this.token;
       var res;
-      try { res = await fetch('/api/v1' + path, { method: opts.method || 'GET', headers: headers, body: opts.body ? JSON.stringify(opts.body) : undefined }); }
+      try { res = await fetch('/api/v1' + path, { method: opts.method || 'GET', headers: headers, body: opts.body ? (opts.form ? opts.body : JSON.stringify(opts.body)) : undefined }); }
       catch (e) { return { ok: false, status: 0, data: { message: 'Could not reach the server.' }, raw: null }; }
       if (opts.raw && res.ok) { return { ok: true, status: res.status, raw: res }; }
       var data = null; try { data = await res.json(); } catch (e) {}
@@ -503,6 +529,22 @@ function admin() {
       if (!r.ok) return this.fail(r);
       this.setDrawer(r.data.product); await this.afterProductChange('Placed.');
     },
+    async uploadImage() {
+      var f = this.$refs.imgfile && this.$refs.imgfile.files[0];
+      if (!f) { this.error = 'Choose a picture first.'; return; }
+      var fd = new FormData();
+      fd.append('image', f); fd.append('source', this.img.source);
+      ['source_url', 'licence', 'attribution'].forEach(function (k) { if (this.img[k]) fd.append(k, this.img[k]); }, this);
+      var r = await this.api('/admin/products/' + this.drawer.id + '/image', { method: 'POST', body: fd, form: true });
+      if (!r.ok) return this.fail(r);
+      this.$refs.imgfile.value = ''; this.img = { source: 'manufacturer', source_url: '', licence: '', attribution: '' };
+      this.drawer = r.data.product; await this.afterProductChange('Picture saved.');
+    },
+    async removeImage() {
+      var r = await this.api('/admin/products/' + this.drawer.id + '/image', { method: 'DELETE' });
+      if (!r.ok) return this.fail(r);
+      this.drawer = r.data.product; await this.afterProductChange('Picture removed.');
+    },
     async searchMerge() {
       if (this.mergeQ.trim().length < 2) { this.mergeResults = []; return; }
       var r = await this.api('/admin/products' + this.qs({ q: this.mergeQ, moderation_status: 'approved', per_page: 6 }));
@@ -560,6 +602,20 @@ function admin() {
       var r = await this.api('/brand-nodes/' + m.node.id + '/merge', { method: 'POST', body: { into: target.id } });
       if (!r.ok) return this.fail(r);
       this.modal = null; await this.nodesChanged('Merged.');
+    },
+    startLogo(n) { this.modal = { type: 'logo', node: n }; },
+    async uploadLogo() {
+      var f = this.$refs.logofile && this.$refs.logofile.files[0];
+      if (!f) { this.error = 'Choose a logo first.'; return; }
+      var fd = new FormData(); fd.append('logo', f);
+      var r = await this.api('/admin/nodes/' + this.modal.node.id + '/logo', { method: 'POST', body: fd, form: true });
+      if (!r.ok) return this.fail(r);
+      this.modal = null; await this.nodesChanged('Logo saved.');
+    },
+    async removeLogo() {
+      var r = await this.api('/admin/nodes/' + this.modal.node.id + '/logo', { method: 'DELETE' });
+      if (!r.ok) return this.fail(r);
+      this.modal = null; await this.nodesChanged('Logo removed.');
     },
     async deleteNode(n) {
       var r = await this.api('/admin/nodes/' + n.id, { method: 'DELETE' });

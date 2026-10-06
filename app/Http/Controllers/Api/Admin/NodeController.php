@@ -23,7 +23,7 @@ class NodeController extends Controller
      * Every node in the region with its product counts. Counts include everything beneath a node.
      *
      * @response array{nodes: array<int, array{id: int, parent_id: ?int, name: string, kind: ?string, depth: int, path_text: string,
-     *   status: string, effective_status: string, successor_id: ?int, aliases: ?string[], product_count: int, child_count: int}>}
+     *   status: string, effective_status: string, successor_id: ?int, aliases: ?string[], logo: ?string, product_count: int, child_count: int}>}
      */
     public function index(AdminNodesRequest $request): JsonResponse
     {
@@ -53,7 +53,7 @@ class NodeController extends Controller
             ->map(fn (BrandNode $n) => [
                 'id' => $n->id, 'parent_id' => $n->parent_id, 'name' => $n->name, 'kind' => $n->kind, 'depth' => $n->depth,
                 'path_text' => implode(' › ', array_map(fn ($seg) => $seg, $this->names($n, $byId))),
-                'status' => $n->status, 'effective_status' => $effective($n), 'successor_id' => $n->successor_id, 'aliases' => $n->aliases,
+                'status' => $n->status, 'effective_status' => $effective($n), 'successor_id' => $n->successor_id, 'aliases' => $n->aliases, 'logo' => app(\App\Support\ImageStore::class)->logoUrl($n),
                 'product_count' => $total($n), 'child_count' => (int) ($children[$n->id] ?? 0),
             ]);
         if ($request->boolean('empty')) {

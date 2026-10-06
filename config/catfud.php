@@ -14,4 +14,7 @@ return [
 
     // Brand tree depth cap: manufacturer > brand > line > sub-line > sub-sub-line. Vetted against 390 real products.
     'brand_tree_max_depth' => 5,
+
+    // Where uploaded product pictures and brand logos go (a disk from config/filesystems.php). Run `php artisan storage:link` for 'public'.
+    'image_disk' => env('CATFUD_IMAGE_DISK', 'public'),
 ];

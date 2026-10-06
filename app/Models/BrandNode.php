@@ -20,7 +20,7 @@ class BrandNode extends Model
     use Auditable, BelongsToRegion;
 
     protected $fillable = ['region', 'parent_id', 'name', 'kind', 'depth', 'path_key', 'aliases', 'default_tags', 'species', 'notes',
-        'status', 'discontinued_on', 'status_confidence', 'status_source', 'status_note', 'successor_id'];
+        'status', 'discontinued_on', 'status_confidence', 'status_source', 'status_note', 'successor_id', 'logo_path'];
 
     protected function casts(): array
     {

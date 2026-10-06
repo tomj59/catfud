@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\Admin\AuditLogController;
 use App\Http\Controllers\Api\Admin\DashboardController;
+use App\Http\Controllers\Api\Admin\ImageController;
 use App\Http\Controllers\Api\Admin\NodeController;
 use App\Http\Controllers\Api\Admin\ProductModerationController;
 use App\Http\Controllers\Api\Admin\RequestQueueController;
@@ -55,6 +56,10 @@ Route::prefix('v1')->group(function () {
             Route::post('/products/{id}/moderate', [ProductModerationController::class, 'moderate'])->whereNumber('id');
             Route::post('/products/{id}/place', [ProductModerationController::class, 'place'])->whereNumber('id');
             Route::post('/products/{id}/merge', [ProductModerationController::class, 'merge'])->whereNumber('id');
+            Route::post('/products/{id}/image', [ImageController::class, 'storeProductImage'])->whereNumber('id');
+            Route::delete('/products/{id}/image', [ImageController::class, 'destroyProductImage'])->whereNumber('id');
+            Route::post('/nodes/{id}/logo', [ImageController::class, 'storeLogo'])->whereNumber('id');
+            Route::delete('/nodes/{id}/logo', [ImageController::class, 'destroyLogo'])->whereNumber('id');
             Route::get('/requests', [RequestQueueController::class, 'index']);
             Route::post('/requests/resolve', [RequestQueueController::class, 'resolve']);
             Route::post('/requests/decline', [RequestQueueController::class, 'decline']);

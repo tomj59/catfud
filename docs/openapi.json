@@ -859,6 +859,218 @@
                 }
             }
         },
+        "/admin/products/{id}/image": {
+            "post": {
+                "operationId": "image.storeProductImage",
+                "summary": "Set or replace a product's picture. The previous file is deleted; the new one becomes `image_url`",
+                "tags": [
+                    "Image"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UploadProductImageRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product": {
+                                            "allOf": [
+                                                {
+                                                    "$ref": "#/components/schemas/ProductResource"
+                                                },
+                                                {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "image",
+                                                        "tags",
+                                                        "barcodes"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "product"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "image.destroyProductImage",
+                "tags": [
+                    "Image"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product": {
+                                            "allOf": [
+                                                {
+                                                    "$ref": "#/components/schemas/ProductResource"
+                                                },
+                                                {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "image",
+                                                        "tags",
+                                                        "barcodes"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "product"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/admin/nodes/{id}/logo": {
+            "post": {
+                "operationId": "image.storeLogo",
+                "summary": "Upload a brand, line or manufacturer logo. It replaces any built-in logo shown in the picker",
+                "tags": [
+                    "Image"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "multipart/form-data": {
+                            "schema": {
+                                "$ref": "#/components/schemas/UploadLogoRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "node": {
+                                            "$ref": "#/components/schemas/BrandNodeResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "node"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            },
+            "delete": {
+                "operationId": "image.destroyLogo",
+                "tags": [
+                    "Image"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "node": {
+                                            "$ref": "#/components/schemas/BrandNodeResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "node"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
         "/inventory": {
             "get": {
                 "operationId": "inventory.index",
@@ -1448,6 +1660,12 @@
                                                             "type": "string"
                                                         }
                                                     },
+                                                    "logo": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
                                                     "product_count": {
                                                         "type": "integer"
                                                     },
@@ -1466,6 +1684,7 @@
                                                     "effective_status",
                                                     "successor_id",
                                                     "aliases",
+                                                    "logo",
                                                     "product_count",
                                                     "child_count"
                                                 ]
@@ -1981,6 +2200,7 @@
                                                     {
                                                         "type": "object",
                                                         "required": [
+                                                            "image",
                                                             "tags",
                                                             "barcodes"
                                                         ]
@@ -2154,6 +2374,7 @@
                                                 {
                                                     "type": "object",
                                                     "required": [
+                                                        "image",
                                                         "tags",
                                                         "barcodes"
                                                     ]
@@ -3189,6 +3410,7 @@
                                                     {
                                                         "type": "object",
                                                         "required": [
+                                                            "image",
                                                             "tags",
                                                             "barcodes"
                                                         ]
@@ -3568,6 +3790,7 @@
                                                 {
                                                     "type": "object",
                                                     "required": [
+                                                        "image",
                                                         "tags",
                                                         "barcodes"
                                                     ]
@@ -4534,6 +4757,9 @@
                             "integer",
                             "null"
                         ]
+                    },
+                    "logo": {
+                        "type": "string"
                     }
                 },
                 "required": [
@@ -4551,7 +4777,8 @@
                     "status_confidence",
                     "status_source",
                     "status_note",
-                    "successor_id"
+                    "successor_id",
+                    "logo"
                 ],
                 "title": "BrandNodeResource"
             },
@@ -5096,6 +5323,9 @@
                             "$ref": "#/components/schemas/Tag"
                         }
                     },
+                    "image": {
+                        "$ref": "#/components/schemas/ProductImage"
+                    },
                     "barcodes": {
                         "type": "array",
                         "items": {
@@ -5232,6 +5462,100 @@
                     "pack_label"
                 ],
                 "title": "ProductBarcodeResource"
+            },
+            "ProductImage": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "product_id": {
+                        "type": "integer"
+                    },
+                    "disk": {
+                        "type": "string"
+                    },
+                    "path": {
+                        "type": "string"
+                    },
+                    "mime": {
+                        "type": "string"
+                    },
+                    "bytes": {
+                        "type": "integer"
+                    },
+                    "width": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "height": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "source_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "licence": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "attribution": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "uploaded_by": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "updated_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    }
+                },
+                "required": [
+                    "id",
+                    "product_id",
+                    "disk",
+                    "path",
+                    "mime",
+                    "bytes",
+                    "width",
+                    "height",
+                    "source",
+                    "source_url",
+                    "licence",
+                    "attribution",
+                    "uploaded_by",
+                    "created_at",
+                    "updated_at"
+                ],
+                "title": "ProductImage"
             },
             "ProductKind": {
                 "type": "string",
@@ -5384,6 +5708,59 @@
                         "type": [
                             "string",
                             "null"
+                        ]
+                    },
+                    "image": {
+                        "type": [
+                            "object",
+                            "null"
+                        ],
+                        "properties": {
+                            "url": {
+                                "type": "string"
+                            },
+                            "source": {
+                                "type": "string"
+                            },
+                            "source_url": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "licence": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "attribution": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ]
+                            },
+                            "width": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ]
+                            },
+                            "height": {
+                                "type": [
+                                    "integer",
+                                    "null"
+                                ]
+                            }
+                        },
+                        "required": [
+                            "url",
+                            "source",
+                            "source_url",
+                            "licence",
+                            "attribution",
+                            "width",
+                            "height"
                         ]
                     },
                     "tags": {
@@ -6134,6 +6511,71 @@
                     }
                 },
                 "title": "UpdateProductRequest"
+            },
+            "UploadLogoRequest": {
+                "type": "object",
+                "properties": {
+                    "logo": {
+                        "type": "string",
+                        "format": "binary",
+                        "contentMediaType": "application/octet-stream",
+                        "description": "PNG, JPEG or WebP, up to 2 MB. A transparent PNG works best."
+                    }
+                },
+                "required": [
+                    "logo"
+                ],
+                "title": "UploadLogoRequest"
+            },
+            "UploadProductImageRequest": {
+                "type": "object",
+                "properties": {
+                    "image": {
+                        "type": "string",
+                        "format": "binary",
+                        "contentMediaType": "application/octet-stream",
+                        "description": "JPEG, PNG or WebP, up to 5 MB."
+                    },
+                    "source": {
+                        "type": "string",
+                        "description": "Where the picture came from.",
+                        "enum": [
+                            "manufacturer",
+                            "retailer",
+                            "own_photo",
+                            "other"
+                        ]
+                    },
+                    "source_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "uri",
+                        "maxLength": 2048
+                    },
+                    "licence": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "The licence or the permission it was used under.",
+                        "maxLength": 255
+                    },
+                    "attribution": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "A credit line to show with it, if one is required.",
+                        "maxLength": 255
+                    }
+                },
+                "required": [
+                    "image",
+                    "source"
+                ],
+                "title": "UploadProductImageRequest"
             },
             "UserResource": {
                 "type": "object",

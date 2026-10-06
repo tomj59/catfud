@@ -212,3 +212,13 @@ A static page (Alpine.js, vendored at `public/vendor/alpine.min.js`, no build st
 in with their normal account (the token is shared with the app via the browser). Tabs: Overview, Products (filter, review drawer, bulk
 decisions, merge duplicates, CSV export), Ladder requests, Brand ladder (add, rename, merge, retire with impact preview, delete when empty), History.
 Source: `resources/admin/index.html`. Product images and logo upload come next.
+
+## Images and logos
+
+Product pictures and brand logos are uploaded in the admin tool (staff only) and stored on the disk named by `CATFUD_IMAGE_DISK`
+(default `public`, i.e. `storage/app/public`). Run `php artisan storage:link` once so `/storage/...` is served. `FILESYSTEM_PUBLIC_URL`
+defaults to the relative `/storage`; set an absolute URL or CDN base for a native app. Each product has one current picture with its
+source (manufacturer, retailer, own photo, other), optional source link, licence/permission note and credit line (`product_images`);
+`products.image_url` always points at the current file, so the apps need no change. Replacing or removing a picture deletes the old file.
+A node logo uploaded here overrides the built-in `public/images/brands/{slug}.*` file in the ladder picker.
+Hash-based duplicate detection and several pictures per product (front, back, label) are not built yet.

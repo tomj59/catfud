@@ -21,6 +21,7 @@ class ProductResource extends JsonResource
      *   brand_node_id:?int, path_text:?string, title_as_listed:?string, requested_path:?string,
      *   moderation_status:string, review_note:?string, reviewed_at:?string,
      *   formula_version:int, formula_changed_at:?string,
+     *   image:?array{url:string, source:string, source_url:?string, licence:?string, attribution:?string, width:?int, height:?int},
      *   tags:array<int,array{id:int, group:string, slug:string, label:string}>,
      *   barcodes:array<int,array{id:int, gtin:string, upc_a:?string, pack_label:?string}>,
      *   audit_status?:string, audit_notes?:?string, import_key?:?string, meta?:?array<string,mixed>,
@@ -62,6 +63,10 @@ class ProductResource extends JsonResource
             'reviewed_at' => $this->reviewed_at?->toISOString(),
             'formula_version' => $this->formula_version,
             'formula_changed_at' => $this->formula_changed_at?->toISOString(),
+            'image' => $this->whenLoaded('image', fn () => $this->image ? [
+                'url' => $this->image->url(), 'source' => $this->image->source, 'source_url' => $this->image->source_url,
+                'licence' => $this->image->licence, 'attribution' => $this->image->attribution, 'width' => $this->image->width, 'height' => $this->image->height,
+            ] : null),
             'tags' => TagResource::collection($this->whenLoaded('tags')),
             'barcodes' => ProductBarcodeResource::collection($this->whenLoaded('barcodes')),
             $this->mergeWhen($staff, [

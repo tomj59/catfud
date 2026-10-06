@@ -11,7 +11,7 @@ class BrandNodeResource extends JsonResource
     /**
      * @return array{id:int, parent_id:?int, name:string, kind:?string, depth:int, aliases:?string[], species:?string[],
      *   default_tags:?string[], notes:?string, status:string, discontinued_on:?string,
-     *   status_confidence:?string, status_source:?string, status_note:?string, successor_id:?int}
+     *   status_confidence:?string, status_source:?string, status_note:?string, successor_id:?int, logo:?string}
      */
     public function toArray(Request $request): array
     {
@@ -20,6 +20,7 @@ class BrandNodeResource extends JsonResource
             'aliases' => $this->aliases, 'species' => $this->species, 'default_tags' => $this->default_tags, 'notes' => $this->notes,
             'status' => $this->status, 'discontinued_on' => $this->discontinued_on?->toDateString(), 'status_confidence' => $this->status_confidence,
             'status_source' => $this->status_source, 'status_note' => $this->status_note, 'successor_id' => $this->successor_id,
+            'logo' => app(\App\Support\ImageStore::class)->logoUrl($this->resource),
         ];
     }
 }
