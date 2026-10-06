@@ -1,0 +1,47 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "only-natural",
+    "brand": "Only Natural",
+    "products": [
+        {
+            "path": [
+                "Only Natural"
+            ],
+            "name": "Poultry Indoor",
+            "import_key": "catfood.xlsx|dry food|||poultry indoor|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Deboned Chicken, Turkey Meal, Chicken Meal, Garbanzo Beans, Chicken Fat",
+            "nutrition": {
+                "protein_pct": 45,
+                "fat_pct": 18,
+                "fiber_pct": 6,
+                "carb_pct": 21,
+                "moisture_pct": 10,
+                "kcal_per_cup": 440,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.onlynaturalpet.com/products/only-natural-pet-feline-powerfood-high-protein-grain-free-dry-cat-food?variant=29297541382208&click=6875&utm_source=cj&utm_medium=affiliate&utm_campaign=9114556&cjevent=dfa9cfdca49b11ec825a84d90a82b839&cjdata=MXxOfDB8WXww",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 22,
+                "cost_tier": "Mid-Cost Foods",
+                "size_lb": 10,
+                "cups": 40,
+                "price": 33.99,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Only Natural",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

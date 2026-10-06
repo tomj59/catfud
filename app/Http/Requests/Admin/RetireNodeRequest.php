@@ -16,8 +16,8 @@ class RetireNodeRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'status' => ['required', Rule::in(['active', 'phasing_out', 'discontinued'])],
-            'discontinued_on' => ['nullable', 'date'],
+            'status' => ['required', Rule::in(\App\Enums\NodeStatus::values())],
+            'status_on' => ['nullable', 'date'],
             'confidence' => ['nullable', Rule::in(['confirmed', 'reported', 'rumoured'])],
             /** Where this was learned: a URL or a short note. */
             'source' => ['nullable', 'string', 'max:500'],

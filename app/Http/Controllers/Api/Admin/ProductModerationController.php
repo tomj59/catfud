@@ -29,7 +29,13 @@ class ProductModerationController extends Controller
     /** Every product, including other people's pending and rejected ones. Newest first. */
     public function index(AdminProductsRequest $request): AnonymousResourceCollection
     {
-        return ProductResource::collection($this->query($request)->orderByDesc('id')->paginate((int) $request->query('per_page', 25)));
+        $q = $this->query($request);
+        // Review queues read oldest-first; browsing the catalogue reads like the catalogue (brand, line, name).
+        in_array($request->query('moderation_status'), ['pending', 'needs_changes'], true)
+            ? $q->orderBy('id')
+            : $q->orderBy('brand')->orderBy('line')->orderBy('name');
+
+        return ProductResource::collection($q->paginate((int) $request->query('per_page', 25)));
     }
 
     public function show(int $id): ProductResource
@@ -124,6 +130,14 @@ class ProductModerationController extends Controller
             $q->where(fn ($w) => $w->whereRaw('lower(brand) like ?', [$like])->orWhereRaw('lower(name) like ?', [$like])
                 ->orWhereRaw('lower(line) like ?', [$like])->orWhereRaw('lower(search_text) like ?', [$like])
                 ->orWhereRaw('lower(requested_path) like ?', [$like]));
+        }
+        if ($nodeId = $request->query('node')) {
+            $node = BrandNode::find((int) $nodeId);
+            $q->whereIn('brand_node_id', $node ? BrandNode::where('path_key', $node->path_key)->orWhere('path_key', 'like', str_replace(['%', '_'], ['\\%', '\\_'], $node->path_key).'>%')->pluck('id') : [0]);
+        }
+        if ($tag = $request->query('tag')) {
+            [$group, $slug] = array_pad(explode(':', $tag, 2), 2, '');
+            $q->whereHas('tags', fn ($t) => $t->where('group', $group)->where('slug', $slug));
         }
         $q->when($request->query('moderation_status'), fn ($b, $v) => $b->where('moderation_status', $v))
             ->when($request->query('created_by'), fn ($b, $v) => $b->where('created_by', $v))

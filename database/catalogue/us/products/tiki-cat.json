@@ -1,0 +1,1426 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "tiki-cat",
+    "brand": "Tiki Cat",
+    "products": [
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Beef & Beef Liver",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||beef & beef liver|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Beef, water, beef liver, beef lung, beef kidney, dried yeast, cassia gum",
+            "nutrition": {
+                "protein_pct": 40.6,
+                "fat_pct": 35.8,
+                "carb_pct": 9.4,
+                "fiber_pct": 3.7,
+                "moisture_pct": 76,
+                "kcal_per_can": 110,
+                "kcal_per_oz": 36.67,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-after-dark-pate-beef-beef/dp/285522",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 6,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 25.8,
+                "price_per_oz": 0.72,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Chicken & Beef",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||chicken & beef|broth",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Broth",
+            "tags": [
+                "medium:broth"
+            ],
+            "ingredients": "Chicken Broth, Chicken, Chicken Liver, Chicken Gizzard, Chicken Heart, Beef",
+            "nutrition": {
+                "protein_pct": 72.2,
+                "fat_pct": 12.8,
+                "carb_pct": 0,
+                "fiber_pct": 3.3,
+                "moisture_pct": 82,
+                "kcal_per_can": 131,
+                "kcal_per_oz": 23.82,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-after-dark-chicken-beef/dp/139625",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 10,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 26.72,
+                "price_per_oz": 0.61,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Chicken & Duck",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||chicken & duck|broth",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Broth",
+            "tags": [
+                "medium:broth"
+            ],
+            "ingredients": "Chicken Broth, Chicken, Chicken Liver, Chicken Gizzard, Chicken Heart, Duck",
+            "nutrition": {
+                "protein_pct": 64.7,
+                "fat_pct": 21.1,
+                "carb_pct": 7.2,
+                "fiber_pct": 3.3,
+                "moisture_pct": 82,
+                "kcal_per_can": 125,
+                "kcal_per_oz": 22.73,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-after-dark-chicken-duck/dp/139621",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 12,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 26.72,
+                "price_per_oz": 0.61,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Chicken & Lamb",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||chicken & lamb|broth",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Broth",
+            "tags": [
+                "medium:broth"
+            ],
+            "ingredients": "Chicken Broth, Chicken, Chicken Liver, Chicken Gizzard, Chicken Heart, Lamb",
+            "nutrition": {
+                "protein_pct": 72.2,
+                "fat_pct": 12.8,
+                "carb_pct": 1.2,
+                "fiber_pct": 3.3,
+                "moisture_pct": 82,
+                "kcal_per_can": 125,
+                "kcal_per_oz": 22.73,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-after-dark-chicken-lamb/dp/139624",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 8,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 24,
+                "price_per_oz": 0.55,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Chicken & Pork",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||chicken & pork|broth",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Broth",
+            "tags": [
+                "medium:broth"
+            ],
+            "ingredients": "Chicken Broth, Chicken, Chicken Liver, Chicken Gizzard, Chicken Heart, Pork",
+            "nutrition": {
+                "protein_pct": 68.4,
+                "fat_pct": 12.1,
+                "carb_pct": 0,
+                "fiber_pct": 3.2,
+                "moisture_pct": 81,
+                "kcal_per_can": 129,
+                "kcal_per_oz": 23.45,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-after-dark-chicken-pork/dp/139637",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 11,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 26.72,
+                "price_per_oz": 0.61,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Chicken & Quail",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||chicken & quail|broth",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Broth",
+            "tags": [
+                "medium:broth"
+            ],
+            "ingredients": "Chicken Broth, Chicken, Chicken Liver, Chicken Gizzard, Chicken Heart, Quail Egg",
+            "nutrition": {
+                "protein_pct": 63,
+                "fat_pct": 16,
+                "carb_pct": 6.7,
+                "fiber_pct": 2.9,
+                "moisture_pct": 82,
+                "kcal_per_can": 120,
+                "kcal_per_oz": 21.82,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-after-dark-chicken-quail/dp/139634",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 9,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 23.92,
+                "price_per_oz": 0.54,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Chicken Recipe",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||chicken recipe|broth",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Broth",
+            "tags": [
+                "medium:broth"
+            ],
+            "ingredients": "Chicken Broth, Chicken, Chicken Liver, Chicken Gizzard, Chicken Heart",
+            "nutrition": {
+                "protein_pct": 70.5,
+                "fat_pct": 16,
+                "carb_pct": 1.4,
+                "fiber_pct": 4,
+                "moisture_pct": 83,
+                "kcal_per_can": 111,
+                "kcal_per_oz": 20.18,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-after-dark-chicken-canned/dp/139626",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 14,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 27.12,
+                "price_per_oz": 0.62,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Duck & Chicken Liver",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||duck & chicken liver|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Duck, Water, Chicken Liver, Dried Yeast, Cassia Gum",
+            "nutrition": {
+                "protein_pct": 43.5,
+                "fat_pct": 34.8,
+                "carb_pct": 7.2,
+                "fiber_pct": 4.4,
+                "moisture_pct": 77,
+                "kcal_per_can": 100,
+                "kcal_per_oz": 33.33,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-after-dark-pate-duck-chicken/dp/285526",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 7,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 25.8,
+                "price_per_oz": 0.72,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Rabbit & Chicken Liver",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||rabbit & chicken liver|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Rabbit, water, duck, chicken liver, dried yeast, cassia gum",
+            "nutrition": {
+                "protein_pct": 68.2,
+                "fat_pct": 27.3,
+                "carb_pct": 0,
+                "fiber_pct": 4.5,
+                "moisture_pct": 78,
+                "kcal_per_can": 80,
+                "kcal_per_oz": 26.67,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://tikipets.com/product/tiki-cat/after-dark/rabbit-chicken-liver-pate/",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 13,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 25.8,
+                "price_per_oz": 0.72,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "After Dark"
+            ],
+            "name": "Venison & Beef Liver",
+            "import_key": "catfood.xlsx|tiki cat|after dark line||venison & beef liver|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Venison, Water, Beef Liver, Dried Yeast, Cassia Gum",
+            "nutrition": {
+                "protein_pct": 56.5,
+                "fat_pct": 13,
+                "carb_pct": 7.5,
+                "fiber_pct": 4.4,
+                "moisture_pct": 77,
+                "kcal_per_can": 80,
+                "kcal_per_oz": 26.67,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-after-dark-pate-venison-beef/dp/285524",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 15,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 34.44,
+                "price_per_oz": 0.96,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "After Dark Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Aloha Friends"
+            ],
+            "name": "Tuna & Pumpkin",
+            "import_key": "catfood.xlsx|tiki cat|aloha friends line||tuna & pumpkin|shreds",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds",
+            "tags": [
+                "texture:shreds"
+            ],
+            "ingredients": "Tuna, Tuna Broth, Pumpkin, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 68.8,
+                "fat_pct": 11.3,
+                "carb_pct": 1.2,
+                "fiber_pct": 3.1,
+                "moisture_pct": 84,
+                "kcal_per_can": 111,
+                "kcal_per_oz": 20.18,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-aloha-friends-tuna-pumpkin/dp/130418",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 44,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 15.36,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "Aloha Friends Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Aloha Friends"
+            ],
+            "name": "Tuna, Calamari, & Pumpkin",
+            "import_key": "catfood.xlsx|tiki cat|aloha friends line||tuna, calamari, & pumpkin|shreds",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds",
+            "tags": [
+                "texture:shreds"
+            ],
+            "ingredients": "Flaked Tuna, Tuna Broth, Pumpkin, Calamari, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 68.8,
+                "fat_pct": 11.3,
+                "carb_pct": 1.5,
+                "fiber_pct": 3.1,
+                "moisture_pct": 84,
+                "kcal_per_can": 112,
+                "kcal_per_oz": 20.36,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-aloha-friends-tuna-calamari/dp/130409",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 42,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 15.36,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "Aloha Friends Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Aloha Friends"
+            ],
+            "name": "Tuna, Ocean Whitefish & Pumpkin",
+            "import_key": "catfood.xlsx|tiki cat|aloha friends line||tuna, ocean whitefish & pumpkin|shreds",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds",
+            "tags": [
+                "texture:shreds"
+            ],
+            "ingredients": "Flaked Tuna, Tuna Broth, Pumpkin, Ocean Whitefish, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 73,
+                "fat_pct": 10.6,
+                "carb_pct": 1.7,
+                "fiber_pct": 2.9,
+                "moisture_pct": 83,
+                "kcal_per_can": 115,
+                "kcal_per_oz": 20.91,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-aloha-friends-tuna-ocean/dp/130414",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 41,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 15.36,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "Aloha Friends Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Aloha Friends"
+            ],
+            "name": "Tuna, Shrimp, & Pumpkin",
+            "import_key": "catfood.xlsx|tiki cat|aloha friends line||tuna, shrimp, & pumpkin|shreds",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds",
+            "tags": [
+                "texture:shreds"
+            ],
+            "ingredients": "Flaked Tuna, Tuna Broth, Pumpkin, Shrimp, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 68.8,
+                "fat_pct": 11.3,
+                "carb_pct": 2.4,
+                "fiber_pct": 3.1,
+                "moisture_pct": 84,
+                "kcal_per_can": 117,
+                "kcal_per_oz": 21.27,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-aloha-friends-tuna-shrimp/dp/130422",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 40,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 15.36,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "Aloha Friends Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Aloha Friends"
+            ],
+            "name": "Tuna, Tilapia & Pumpkin",
+            "import_key": "catfood.xlsx|tiki cat|aloha friends line||tuna, tilapia & pumpkin|shreds",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds",
+            "tags": [
+                "texture:shreds"
+            ],
+            "ingredients": "Flaked Tuna, Tuna Broth, Pumpkin, Tilapia, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 68.8,
+                "fat_pct": 11.3,
+                "carb_pct": 1.2,
+                "fiber_pct": 3.1,
+                "moisture_pct": 84,
+                "kcal_per_can": 112,
+                "kcal_per_oz": 20.36,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-aloha-friends-tuna-tilapia/dp/130427",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 43,
+                "packs_per_case": 8,
+                "can_oz": 5.5,
+                "case_oz": 44,
+                "case_price": 15.36,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "source_brand": "Tiki Cat",
+                "source_line": "Aloha Friends Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Grill"
+            ],
+            "name": "Ahi Tuna",
+            "import_key": "catfood.xlsx|tiki cat|grill line||ahi tuna|shreds",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds",
+            "tags": [
+                "texture:shreds"
+            ],
+            "ingredients": "Tuna, Fish Broth, Sunflower Seed Oil,",
+            "nutrition": {
+                "protein_pct": 72.7,
+                "fat_pct": 9.1,
+                "carb_pct": 1,
+                "moisture_pct": 78,
+                "kcal_per_can": 251,
+                "kcal_per_oz": 25.1,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-grill-ahi-tuna-recipe-grain/dp/285530",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 30,
+                "packs_per_case": 4,
+                "can_oz": 10,
+                "case_oz": 40,
+                "case_price": 12.56,
+                "price_per_oz": 0.31,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Grill Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Grill"
+            ],
+            "name": "Ahi Tuna & Crab",
+            "import_key": "catfood.xlsx|tiki cat|grill line||ahi tuna & crab|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Tuna, Tuna Broth, Crab, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 80,
+                "fat_pct": 10,
+                "carb_pct": 5.5,
+                "moisture_pct": 77,
+                "kcal_per_can": 160,
+                "kcal_per_oz": 26.67,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://chewy.com/tiki-cat-hana-grill-ahi-tuna-crab-in/dp/34292",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 32,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 16.56,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Grill Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Grill"
+            ],
+            "name": "Ahi Tuna & Prawns",
+            "import_key": "catfood.xlsx|tiki cat|grill line||ahi tuna & prawns|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Tuna, Tuna Broth, Prawns, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 81,
+                "fat_pct": 9.5,
+                "carb_pct": 0,
+                "moisture_pct": 79,
+                "kcal_per_can": 152,
+                "kcal_per_oz": 25.33,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-manana-grill-ahi-tuna-prawns/dp/37712",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 33,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 15.76,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Grill Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Grill"
+            ],
+            "name": "Mackarel & Sardines in Calamari",
+            "import_key": "catfood.xlsx|tiki cat|grill line||mackarel & sardines in calamari|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Mackerel, Sardines, Calamari Broth, Calamari, Sunflower Seed Oil, Locust Bean Gum",
+            "nutrition": {
+                "protein_pct": 70.1,
+                "fat_pct": 17.5,
+                "carb_pct": 0,
+                "moisture_pct": 84,
+                "kcal_per_can": 118,
+                "kcal_per_oz": 19.67,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-makaha-grill-mackerel/dp/37713",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 36,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 15.92,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Grill Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Grill"
+            ],
+            "name": "Sardine Cutlets",
+            "import_key": "catfood.xlsx|tiki cat|grill line||sardine cutlets|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Sardine, Sardine Broth, Sunflower Seed Oil, Locust Bean Gum",
+            "nutrition": {
+                "protein_pct": 76.5,
+                "fat_pct": 11.8,
+                "carb_pct": 1,
+                "moisture_pct": 83,
+                "kcal_per_can": 128,
+                "kcal_per_oz": 21.33,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-tahitian-grill-sardine/dp/37708",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 34,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 15.76,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Grill Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Grill"
+            ],
+            "name": "Sardine Cutlets in Lobster",
+            "import_key": "catfood.xlsx|tiki cat|grill line||sardine cutlets in lobster|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Sardines, Lobster Broth, Sunflower Seed Oil, Locust Bean Gum",
+            "nutrition": {
+                "protein_pct": 64.7,
+                "fat_pct": 17.7,
+                "carb_pct": 0,
+                "moisture_pct": 83,
+                "kcal_per_can": 124,
+                "kcal_per_oz": 20.67,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-bora-bora-grill-sardine/dp/37721",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 35,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 15.72,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Grill Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Grill"
+            ],
+            "name": "Tuna & Crab Surimi",
+            "import_key": "catfood.xlsx|tiki cat|grill line||tuna & crab surimi|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Tuna, Tuna Broth, Crab Surimi (Ocean Whitefish, Crab Broth), Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 72.7,
+                "fat_pct": 9.1,
+                "carb_pct": 1.3,
+                "moisture_pct": 78,
+                "kcal_per_can": 155,
+                "kcal_per_oz": 25.83,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-lanai-grill-tuna-in-crab/dp/37714",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 31,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 15.76,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Grill Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Luau"
+            ],
+            "name": "Ahi Tuna & Chicken",
+            "import_key": "catfood.xlsx|tiki cat|luau line||ahi tuna & chicken|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Chicken Broth, Tuna, Chicken, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 77.3,
+                "fat_pct": 13.6,
+                "moisture_pct": 81,
+                "kcal_per_can": 177,
+                "kcal_per_oz": 29.5,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-hookena-luau-ahi-tuna/dp/37716",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "carb unreadable in sheet: '<1%'; fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 20,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 26.32,
+                "price_per_oz": 0.55,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "carb unreadable in sheet: '<1%'",
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Luau Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Luau"
+            ],
+            "name": "Ahi Tuna & Mackerel",
+            "import_key": "catfood.xlsx|tiki cat|luau line||ahi tuna & mackerel|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Tuna, Mackerel, Tuna Broth, Sunflower Seed Oil, Fish Oil",
+            "nutrition": {
+                "protein_pct": 81,
+                "fat_pct": 9.5,
+                "carb_pct": 0,
+                "moisture_pct": 79,
+                "kcal_per_can": 154,
+                "kcal_per_oz": 25.67,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-papeekeo-luau-ahi-tuna/dp/37710",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 19,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 22.52,
+                "price_per_oz": 0.47,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Luau Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Luau"
+            ],
+            "name": "Chicken & Egg",
+            "import_key": "catfood.xlsx|tiki cat|luau line||chicken & egg|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Chicken, Chicken Broth, Dried Egg, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 74.1,
+                "fat_pct": 15.7,
+                "carb_pct": 2.8,
+                "moisture_pct": 79,
+                "kcal_per_can": 244,
+                "kcal_per_oz": 24.4,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-luau-chicken-egg-recipe-in/dp/285536",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 21,
+                "packs_per_case": 4,
+                "can_oz": 10,
+                "case_oz": 40,
+                "case_price": 18.36,
+                "price_per_oz": 0.46,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Luau Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Luau"
+            ],
+            "name": "Seabass",
+            "import_key": "catfood.xlsx|tiki cat|luau line||seabass|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Seabass Broth, Seabass, Mackerel, Olive Oil",
+            "nutrition": {
+                "protein_pct": 70,
+                "fat_pct": 23.5,
+                "carb_pct": 1,
+                "moisture_pct": 80,
+                "kcal_per_can": 156,
+                "kcal_per_oz": 26,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-oahu-luau-seabass-in-seabass/dp/106784",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 24,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 26.32,
+                "price_per_oz": 0.55,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Luau Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Luau"
+            ],
+            "name": "Succulent Chicken",
+            "import_key": "catfood.xlsx|tiki cat|luau line||succulent chicken|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Chicken, Chicken Broth, Sunflower Seed Oi",
+            "nutrition": {
+                "protein_pct": 80,
+                "fat_pct": 13,
+                "carb_pct": 1,
+                "moisture_pct": 80,
+                "kcal_per_can": 225,
+                "kcal_per_oz": 22.5,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-luau-succulent-chicken-in/dp/285534",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 22,
+                "packs_per_case": 4,
+                "can_oz": 10,
+                "case_oz": 40,
+                "case_price": 18.36,
+                "price_per_oz": 0.46,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Luau Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Luau"
+            ],
+            "name": "Tilapia",
+            "import_key": "catfood.xlsx|tiki cat|luau line||tilapia|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Tilapia, Tilapia Broth, Mackerel, Olive Oil",
+            "nutrition": {
+                "protein_pct": 68.4,
+                "fat_pct": 23.7,
+                "carb_pct": 9.9,
+                "moisture_pct": 81,
+                "kcal_per_can": 158,
+                "kcal_per_oz": 26.33,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-kapiolani-luau-tilapia-in/dp/106787",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 23,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 26.32,
+                "price_per_oz": 0.55,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Luau Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Luau"
+            ],
+            "name": "Wild Salmon",
+            "import_key": "catfood.xlsx|tiki cat|luau line||wild salmon|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Salmon, Salmon Broth, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 74.1,
+                "fat_pct": 19.9,
+                "carb_pct": 0,
+                "moisture_pct": 81,
+                "kcal_per_can": 125,
+                "kcal_per_oz": 20.83,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-hanalei-luau-wild-salmon-in/dp/37719",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 25,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 26.32,
+                "price_per_oz": 0.55,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Luau Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat",
+                "Luau"
+            ],
+            "name": "Wild Salmon & Chicken",
+            "import_key": "catfood.xlsx|tiki cat|luau line||wild salmon & chicken|shreds & pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Shreds & Pate",
+            "tags": [
+                "texture:pate",
+                "texture:shreds"
+            ],
+            "ingredients": "Salmon, Chicken, Chicken Broth, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 73.9,
+                "fat_pct": 20.5,
+                "carb_pct": 4.7,
+                "moisture_pct": 79,
+                "kcal_per_can": 151,
+                "kcal_per_oz": 25.17,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-napili-luau-wild-salmon/dp/37705",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "fiber unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Tiki Cat",
+                "row": 26,
+                "packs_per_case": 8,
+                "can_oz": 6,
+                "case_oz": 48,
+                "case_price": 26.32,
+                "price_per_oz": 0.55,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "fiber unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Tiki Cat",
+                "source_line": "Luau Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Tiki Cat"
+            ],
+            "name": "Born Carnivore Chicken & Egg",
+            "import_key": "catfood.xlsx|dry food|||born carnivore chicken & egg|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Deboned Chicken, Chicken Meal, Dehydrated Chicken, Dried Egg Product, Tapioca",
+            "nutrition": {
+                "protein_pct": 46,
+                "fat_pct": 19,
+                "fiber_pct": 4,
+                "carb_pct": 11,
+                "moisture_pct": 10,
+                "kcal_per_cup": 482,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/tiki-cat-born-carnivore-chicken-egg/dp/266429",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 29,
+                "cost_tier": "High-Cost Foods",
+                "size_lb": 11.1,
+                "cups": 44.4,
+                "price": 50,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Tiki Cat",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

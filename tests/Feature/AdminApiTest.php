@@ -167,24 +167,24 @@ class AdminApiTest extends TestCase
         $this->postJson('/api/v1/inventory', ['product_id' => $id, 'quantity' => 1])->assertCreated();
 
         $this->as(User::factory()->moderator()->create());
-        $this->postJson("/api/v1/admin/nodes/{$node->id}/retire", ['status' => 'discontinued'])->assertForbidden();
+        $this->postJson("/api/v1/admin/nodes/{$node->id}/retire", ['status' => 'retired'])->assertForbidden();
 
         $this->as(User::factory()->admin()->create());
-        $this->postJson("/api/v1/admin/nodes/{$node->id}/retire", ['status' => 'discontinued', 'preview' => true])->assertOk()
+        $this->postJson("/api/v1/admin/nodes/{$node->id}/retire", ['status' => 'retired', 'preview' => true])->assertOk()
             ->assertJsonPath('applied', false)->assertJsonPath('impact.households', 1)->assertJsonPath('impact.pending_products', 1);
         $this->assertSame('active', $node->fresh()->status);
 
-        $this->postJson("/api/v1/admin/nodes/{$node->id}/retire", ['status' => 'discontinued', 'discontinued_on' => '2026-09-01', 'confidence' => 'confirmed', 'note' => 'Replaced'])
-            ->assertOk()->assertJsonPath('node.status', 'discontinued')->assertJsonPath('node.discontinued_on', '2026-09-01');
+        $this->postJson("/api/v1/admin/nodes/{$node->id}/retire", ['status' => 'retired', 'status_on' => '2026-09-01', 'confidence' => 'confirmed', 'note' => 'Replaced'])
+            ->assertOk()->assertJsonPath('node.status', 'retired')->assertJsonPath('node.status_on', '2026-09-01');
     }
 
-    public function test_a_discontinued_line_is_not_offered_to_users_for_new_products_but_staff_still_see_it(): void
+    public function test_a_retired_line_is_not_offered_to_users_for_new_products_but_staff_still_see_it(): void
     {
         $this->ladder();
         $child = BrandNode::ensurePath([['name' => 'Purina'], ['name' => 'Pro Plan'], ['name' => 'Beyond']]);
         $parent = $child->parent;
-        $parent->update(['status' => 'discontinued']);                // the brand retires, so its lines are effectively retired too
-        $this->assertSame('discontinued', $child->fresh()->effectiveStatus());
+        $parent->update(['status' => 'retired']);                // the brand retires, so its lines are effectively retired too
+        $this->assertSame('retired', $child->fresh()->effectiveStatus());
 
         $this->as(User::factory()->create());
         $names = collect($this->getJson('/api/v1/brand-choices?path='.urlencode('Purina'))->assertOk()->json('choices'))->pluck('name');
@@ -192,7 +192,7 @@ class AdminApiTest extends TestCase
 
         $this->as(User::factory()->moderator()->create());
         $row = collect($this->getJson('/api/v1/brand-choices?path='.urlencode('Purina'))->json('choices'))->firstWhere('name', 'Pro Plan');
-        $this->assertSame('discontinued', $row['status']);
+        $this->assertSame('retired', $row['status']);
     }
 
     public function test_nodes_can_be_created_and_listed_and_only_empty_ones_deleted(): void
@@ -220,5 +220,73 @@ class AdminApiTest extends TestCase
         $r = $this->getJson("/api/v1/admin/audit-log?subject_type=Product&subject_id={$id}")->assertOk();
         $this->assertGreaterThanOrEqual(2, count($r->json('data')));
         $this->assertSame('Product', $r->json('data.0.subject_type'));
+    }
+
+    public function test_the_ladder_lists_in_tree_order_so_sublines_stay_under_their_own_line(): void
+    {
+        BrandNode::ensurePath([['name' => "Hill's"], ['name' => 'Science Diet'], ['name' => 'Adult'], ['name' => 'Indoor']]);
+        BrandNode::ensurePath([['name' => "Hill's"], ['name' => 'Science Diet'], ['name' => 'Adult 7+']]);   // sorts between "Adult" and "Adult>Indoor" by path
+        BrandNode::ensurePath([['name' => "Hill's"], ['name' => 'Science Diet'], ['name' => 'Kitten']]);
+        $this->as(User::factory()->moderator()->create());
+
+        $names = collect($this->getJson('/api/v1/admin/nodes')->assertOk()->json('nodes'))->pluck('name')->all();
+        $this->assertSame(["Hill's", 'Science Diet', 'Adult', 'Indoor', 'Adult 7+', 'Kitten'], $names);
+    }
+
+    public function test_each_line_reports_the_life_stages_actually_seen_and_products_can_be_browsed_by_them(): void
+    {
+        $this->as(User::factory()->admin()->create());
+        $adult = BrandNode::ensurePath([['name' => 'Hills'], ['name' => 'Science Diet'], ['name' => 'Adult']]);
+        $kitten = BrandNode::ensurePath([['name' => 'Hills'], ['name' => 'Science Diet'], ['name' => 'Kitten']]);
+        $mapper = app(\App\Support\BrandTreeMapper::class);
+        foreach ([[$adult, 'Chicken 7+', ['life_stage:adult-7plus']], [$adult, 'Beef', ['life_stage:adult']], [$adult, 'Turkey 7+', ['life_stage:adult-7plus']], [$kitten, 'Tuna', ['life_stage:kitten']]] as $i => [$node, $name, $tags]) {
+            $p = Product::create(['brand' => 'Hills', 'name' => $name, 'species' => 'cat', 'kind' => 'food', 'source' => 't', 'moderation_status' => 'approved', 'gtin' => null]);
+            $mapper->place($p, $node, $tags);
+        }
+
+        $rows = collect($this->getJson('/api/v1/admin/nodes')->assertOk()->json('nodes'));
+        $line = $rows->firstWhere('name', 'Adult');
+        $this->assertEqualsCanonicalizing(['adult-7plus' => 2, 'adult' => 1], collect($line['stages'])->pluck('count', 'slug')->all());
+        $this->assertSame(['kitten' => 1], collect($rows->firstWhere('name', 'Kitten')['stages'])->pluck('count', 'slug')->all());
+        $this->assertSame(3, collect($rows->firstWhere('name', 'Science Diet')['stages'])->count());   // rolls up: adult, adult-7plus, kitten
+
+        $this->getJson('/api/v1/admin/products?node='.$adult->id.'&tag=life_stage:adult-7plus')->assertOk()->assertJsonPath('meta.total', 2);
+        $this->getJson('/api/v1/admin/products')->assertOk()->assertJsonPath('meta.total', 4);          // no filter: browse everything
+    }
+
+    public function test_a_disabled_rung_is_hidden_from_users_like_a_retired_one_and_a_retiring_one_is_still_offered(): void
+    {
+        BrandNode::ensurePath([['name' => 'Acme'], ['name' => 'Old Line']]);
+        BrandNode::ensurePath([['name' => 'Acme'], ['name' => 'Fading Line']]);
+        BrandNode::ensurePath([['name' => 'Acme'], ['name' => 'Bad Data']]);
+        $admin = User::factory()->admin()->create();
+        $this->as($admin);
+        foreach (['Old Line' => 'retired', 'Fading Line' => 'retiring', 'Bad Data' => 'disabled'] as $name => $status) {
+            $id = BrandNode::where('name', $name)->value('id');
+            $this->postJson("/api/v1/admin/nodes/{$id}/retire", ['status' => $status, 'status_on' => '2026-09-01'])->assertOk()->assertJsonPath('node.status', $status)->assertJsonPath('node.status_on', '2026-09-01');
+        }
+        $this->postJson('/api/v1/admin/nodes/'.BrandNode::where('name', 'Bad Data')->value('id').'/retire', ['status' => 'gone'])->assertUnprocessable();
+
+        $this->as(User::factory()->create());
+        $seen = collect($this->getJson('/api/v1/brand-choices?path=Acme')->assertOk()->json('choices'))->pluck('status', 'name')->all();
+        $this->assertSame(['Fading Line' => 'retiring'], $seen);
+    }
+
+    public function test_a_status_change_remembers_the_previous_status_and_can_be_filtered_by_history(): void
+    {
+        BrandNode::ensurePath([['name' => 'Acme'], ['name' => 'Gone Line']]);
+        BrandNode::ensurePath([['name' => 'Acme'], ['name' => 'Never Line']]);
+        $this->as(User::factory()->admin()->create());
+        $id = BrandNode::where('name', 'Gone Line')->value('id');
+
+        $this->postJson("/api/v1/admin/nodes/{$id}/retire", ['status' => 'retired'])->assertOk()->assertJsonPath('node.previous_status', 'active');
+        $this->postJson("/api/v1/admin/nodes/{$id}/retire", ['status' => 'disabled', 'note' => 'listed in error'])->assertOk()
+            ->assertJsonPath('node.status', 'disabled')->assertJsonPath('node.previous_status', 'retired');
+
+        $names = fn (string $qs) => collect($this->getJson("/api/v1/admin/nodes?{$qs}")->assertOk()->json('nodes'))->pluck('name')->all();
+        $this->assertSame(['Gone Line'], $names('ever=retired'));
+        $this->assertSame([], $names('status=retired'));
+        $this->assertSame(['Gone Line'], $names('status=disabled'));
+        $this->getJson('/api/v1/admin/nodes?ever=bogus')->assertUnprocessable();
     }
 }

@@ -23,11 +23,11 @@ class NodeController extends Controller
      * Every node in the region with its product counts. Counts include everything beneath a node.
      *
      * @response array{nodes: array<int, array{id: int, parent_id: ?int, name: string, kind: ?string, depth: int, path_text: string,
-     *   status: string, effective_status: string, successor_id: ?int, aliases: ?string[], logo: ?string, product_count: int, child_count: int}>}
+     *   status: string, previous_status: ?string, effective_status: string, successor_id: ?int, aliases: ?string[], logo: ?string, stages: array<int, array{slug: string, label: string, count: int}>, product_count: int, child_count: int}>}
      */
     public function index(AdminNodesRequest $request): JsonResponse
     {
-        $nodes = BrandNode::orderBy('path_key')->get();
+        $nodes = $this->inTreeOrder(BrandNode::all());
         $own = Product::withoutGlobalScope(VisibleScope::class)->with([])->whereNotNull('brand_node_id')
             ->whereNotIn('moderation_status', ['merged'])->selectRaw('brand_node_id, count(*) as n')->groupBy('brand_node_id')->pluck('n', 'brand_node_id');
         $children = $nodes->groupBy('parent_id')->map->count();
@@ -38,7 +38,7 @@ class NodeController extends Controller
         };
         $effective = function (BrandNode $n) use ($byId) {
             for ($cur = $n; $cur; $cur = $cur->parent_id ? $byId[$cur->parent_id] ?? null : null) {
-                if ($cur->status !== 'active') {
+                if (($cur->status ?? 'active') !== 'active') {
                     return $cur->status;
                 }
             }
@@ -46,15 +46,35 @@ class NodeController extends Controller
             return 'active';
         };
 
+        // Life stages actually seen on the products under each node (witnessed, never presumed).
+        $stageRows = DB::table('product_tag')->join('tags', 'tags.id', '=', 'product_tag.tag_id')->join('products', 'products.id', '=', 'product_tag.product_id')
+            ->where('tags.group', 'life_stage')->whereNotNull('products.brand_node_id')->where('products.moderation_status', '!=', 'merged')
+            ->selectRaw('products.brand_node_id as node_id, tags.slug, tags.label, tags.sort, count(*) as n')->groupBy('products.brand_node_id', 'tags.slug', 'tags.label', 'tags.sort')->get()->groupBy('node_id');
+        $stages = function (BrandNode $n) use ($nodes, $stageRows) {
+            $acc = [];
+            foreach ($nodes as $o) {
+                if (($o->path_key === $n->path_key || str_starts_with($o->path_key, $n->path_key.'>')) && isset($stageRows[$o->id])) {
+                    foreach ($stageRows[$o->id] as $r) {
+                        $acc[$r->slug] ??= ['slug' => $r->slug, 'label' => $r->label, 'count' => 0, 'sort' => (int) $r->sort];
+                        $acc[$r->slug]['count'] += (int) $r->n;
+                    }
+                }
+            }
+            usort($acc, fn ($a, $b) => $a['sort'] <=> $b['sort']);
+
+            return array_map(fn ($a) => ['slug' => $a['slug'], 'label' => $a['label'], 'count' => $a['count']], $acc);
+        };
+
         $rows = $nodes
             ->when($request->query('parent'), fn ($c, $p) => $c->where('parent_id', (int) $p))
-            ->when($request->query('status'), fn ($c, $s) => $c->where('status', $s))
+            ->when($request->query('ever'), fn ($c, $s) => $c->filter(fn ($n) => ($n->status ?? 'active') === $s || $n->previous_status === $s))
+            ->when($request->query('status'), fn ($c, $s) => $c->filter(fn ($n) => ($n->status ?? 'active') === $s))
             ->when($request->query('q'), fn ($c, $q) => $c->filter(fn ($n) => $n->matchesName($q) || str_contains($n->path_key, mb_strtolower($q))))
             ->map(fn (BrandNode $n) => [
                 'id' => $n->id, 'parent_id' => $n->parent_id, 'name' => $n->name, 'kind' => $n->kind, 'depth' => $n->depth,
                 'path_text' => implode(' › ', array_map(fn ($seg) => $seg, $this->names($n, $byId))),
-                'status' => $n->status, 'effective_status' => $effective($n), 'successor_id' => $n->successor_id, 'aliases' => $n->aliases, 'logo' => app(\App\Support\ImageStore::class)->logoUrl($n),
-                'product_count' => $total($n), 'child_count' => (int) ($children[$n->id] ?? 0),
+                'status' => $n->status ?? 'active', 'previous_status' => $n->previous_status, 'effective_status' => $effective($n), 'successor_id' => $n->successor_id, 'aliases' => $n->aliases, 'logo' => app(\App\Support\ImageStore::class)->logoUrl($n),
+                'stages' => $stages($n), 'product_count' => $total($n), 'child_count' => (int) ($children[$n->id] ?? 0),
             ]);
         if ($request->boolean('empty')) {
             $rows = $rows->filter(fn ($r) => $r['product_count'] === 0);
@@ -98,9 +118,10 @@ class NodeController extends Controller
     }
 
     /**
-     * Mark a node phasing out, discontinued, or active again. Nothing is deleted or hidden from people who own it; the
-     * status is inherited by everything beneath (a discontinued brand retires its lines) and the picker stops offering it
-     * for new products. Send `preview: true` to see what would be affected first.
+     * Set a rung's status: active, retiring (being phased out), retired (gone from the market) or disabled (switched off by
+     * an admin whatever the market is doing). Nothing is deleted or hidden from people who own the product. The status is
+     * inherited by everything beneath, and the picker stops offering retired and disabled rungs to non-staff for new
+     * products. `status_on` is when it took (or takes) effect. Send `preview: true` to see what would be affected first.
      *
      * @response array{node: BrandNodeResource, impact: array{nodes: int, products: int, pending_products: int, pantry_items: int, households: int}, applied: bool}
      */
@@ -120,7 +141,7 @@ class NodeController extends Controller
         $active = $data['status'] === 'active';
         $node->update([
             'status' => $data['status'],
-            'discontinued_on' => $active ? null : ($data['discontinued_on'] ?? $node->discontinued_on),
+            'status_on' => $active ? null : ($data['status_on'] ?? $node->status_on),
             'status_confidence' => $active ? null : ($data['confidence'] ?? null),
             'status_source' => $active ? null : ($data['source'] ?? null),
             'status_note' => $active ? null : ($data['note'] ?? null),
@@ -144,6 +165,22 @@ class NodeController extends Controller
             'pantry_items' => (clone $pantry)->count(),
             'households' => (clone $pantry)->distinct()->count('user_id'),
         ];
+    }
+
+    /** Parents before children, siblings alphabetical, so every branch stays together (path_key order splits "Adult" from its sub-lines). */
+    private function inTreeOrder($all)
+    {
+        $by = $all->groupBy('parent_id')->map(fn ($g) => $g->sortBy(fn ($n) => mb_strtolower($n->name))->values());
+        $out = collect();
+        $walk = function ($parentId) use (&$walk, $by, $out) {
+            foreach ($by[$parentId] ?? [] as $n) {
+                $out->push($n);
+                $walk($n->id);
+            }
+        };
+        $walk(null);
+
+        return $out;
     }
 
     /** @return list<string> */

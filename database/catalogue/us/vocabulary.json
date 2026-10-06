@@ -1,0 +1,137 @@
+{
+    "region": "US",
+    "tags": [
+        {
+            "group": "diet",
+            "slug": "clinical",
+            "label": "Clinical (vet diet)",
+            "sort": 0
+        },
+        {
+            "group": "life_stage",
+            "slug": "kitten",
+            "label": "Kitten",
+            "sort": 0
+        },
+        {
+            "group": "life_stage",
+            "slug": "adult",
+            "label": "Adult",
+            "sort": 1
+        },
+        {
+            "group": "life_stage",
+            "slug": "adult-7plus",
+            "label": "Adult 7+",
+            "sort": 2
+        },
+        {
+            "group": "life_stage",
+            "slug": "senior",
+            "label": "Senior",
+            "sort": 2
+        },
+        {
+            "group": "life_stage",
+            "slug": "all",
+            "label": "All life stages",
+            "sort": 3
+        },
+        {
+            "group": "medium",
+            "slug": "gravy",
+            "label": "Gravy",
+            "sort": 0
+        },
+        {
+            "group": "medium",
+            "slug": "broth",
+            "label": "Broth",
+            "sort": 1
+        },
+        {
+            "group": "medium",
+            "slug": "sauce",
+            "label": "Sauce",
+            "sort": 2
+        },
+        {
+            "group": "medium",
+            "slug": "jelly",
+            "label": "Jelly",
+            "sort": 3
+        },
+        {
+            "group": "medium",
+            "slug": "aspic",
+            "label": "Aspic",
+            "sort": 4
+        },
+        {
+            "group": "medium",
+            "slug": "stew",
+            "label": "Stew",
+            "sort": 5
+        },
+        {
+            "group": "texture",
+            "slug": "pate",
+            "label": "Pâté",
+            "sort": 0
+        },
+        {
+            "group": "texture",
+            "slug": "mousse",
+            "label": "Mousse",
+            "sort": 1
+        },
+        {
+            "group": "texture",
+            "slug": "shreds",
+            "label": "Shreds",
+            "sort": 2
+        },
+        {
+            "group": "texture",
+            "slug": "chunks",
+            "label": "Chunks",
+            "sort": 3
+        },
+        {
+            "group": "texture",
+            "slug": "flaked",
+            "label": "Flaked",
+            "sort": 4
+        },
+        {
+            "group": "texture",
+            "slug": "minced",
+            "label": "Minced",
+            "sort": 5
+        },
+        {
+            "group": "texture",
+            "slug": "morsels",
+            "label": "Morsels",
+            "sort": 6
+        },
+        {
+            "group": "texture",
+            "slug": "cuts",
+            "label": "Cuts",
+            "sort": 7
+        },
+        {
+            "group": "texture",
+            "slug": "sliced",
+            "label": "Sliced",
+            "sort": 8
+        },
+        {
+            "group": "texture",
+            "slug": "loaf",
+            "label": "Loaf",
+            "sort": 9
+        }
+    ]
+}

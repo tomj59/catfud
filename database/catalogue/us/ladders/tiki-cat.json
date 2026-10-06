@@ -1,0 +1,26 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": {
+        "name": "Tiki Cat",
+        "kind": "brand",
+        "children": [
+            {
+                "name": "After Dark",
+                "kind": "line"
+            },
+            {
+                "name": "Aloha Friends",
+                "kind": "line"
+            },
+            {
+                "name": "Grill",
+                "kind": "line"
+            },
+            {
+                "name": "Luau",
+                "kind": "line"
+            }
+        ]
+    }
+}

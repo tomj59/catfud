@@ -1,0 +1,686 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "instinct",
+    "brand": "Instinct",
+    "products": [
+        {
+            "path": [
+                "Instinct",
+                "Freeze-Dried Raw"
+            ],
+            "name": "Chicken",
+            "import_key": "catfood.xlsx|instinct|freeze-dried raw line||chicken|pellets",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pellets",
+            "ingredients": "Chicken (including Ground Chicken Bone), Chicken Liver, Chicken Heart, Montmorillonite Clay, Ground Flaxseed, Salmon Oil, Carrots, Apples, Butternut Squash, Blueberries, Spinach, Rosemary Extract.",
+            "nutrition": {
+                "protein_pct": 41.3,
+                "fat_pct": 37,
+                "carb_pct": 2.1,
+                "fiber_pct": 3.3,
+                "moisture_pct": 8,
+                "kcal_per_can": 2990,
+                "kcal_per_oz": 119.6,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-limited-ingredient-diet/dp/374029",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 33,
+                "packs_per_case": 1,
+                "can_oz": 25,
+                "case_oz": 25,
+                "case_price": 54.99,
+                "price_per_oz": 2.2,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Freeze-Dried Raw Line"
+            },
+            "_flags": [
+                "texture 'Pellets' is not tagged",
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Limited Ingredient Diet"
+            ],
+            "name": "Rabbit Recipe",
+            "import_key": "catfood.xlsx|instinct|limited ingredient diet line||rabbit recipe|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Rabbit, Water, Pea Protein, Peas, Rabbit Liver, Montmorillonite Clay, Salt",
+            "nutrition": {
+                "protein_pct": 51.6,
+                "fat_pct": 40,
+                "carb_pct": 26.3,
+                "moisture_pct": 78,
+                "kcal_per_can": 156,
+                "kcal_per_oz": 28.36,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-limited-ingredient-diet/dp/374030",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 17,
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 88.56,
+                "price_per_oz": 0.67,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Limited Ingredient Diet Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Limited Ingredient Diet"
+            ],
+            "name": "Turkey Recipe",
+            "import_key": "catfood.xlsx|instinct|limited ingredient diet line||turkey recipe|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Turkey, Turkey Broth, Turkey Liver, Peas, Pea Protein, Guar Gum, Salt",
+            "nutrition": {
+                "protein_pct": 50.2,
+                "fat_pct": 33.3,
+                "carb_pct": 9,
+                "moisture_pct": 78,
+                "kcal_per_can": 204,
+                "kcal_per_oz": 37.09,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-limited-ingredient-diet/dp/374029",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 16,
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 62.16,
+                "price_per_oz": 0.47,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Limited Ingredient Diet Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Minced Cups"
+            ],
+            "name": "Chicken",
+            "import_key": "catfood.xlsx|instinct|minced cups line||chicken|minced",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Minced",
+            "tags": [
+                "texture:minced"
+            ],
+            "ingredients": "Chicken Broth, Chicken, Chicken Liver, Egg Whites, Ground Dried Peas, Spinach, Carrots, Ground Flaxseed, Guar Gum, Natural Flavor, Salt, Montmorillonite Clay, Dried Kelp, Xanthan Gum, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley",
+            "nutrition": {
+                "carb_pct": 11.7,
+                "moisture_pct": 82,
+                "kcal_per_can": 97,
+                "kcal_per_oz": 27.71,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-grain-free-minced-recipe/dp/149508",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 21,
+                "packs_per_case": 12,
+                "can_oz": 3.5,
+                "case_oz": 42,
+                "case_price": 26.28,
+                "price_per_oz": 0.63,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Minced Cups Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Minced Cups"
+            ],
+            "name": "Rabbit",
+            "import_key": "catfood.xlsx|instinct|minced cups line||rabbit|minced",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Minced",
+            "tags": [
+                "texture:minced"
+            ],
+            "ingredients": "Pork Broth, Rabbit, Pork Liver, Pork, Egg Whites, Ground Dried Peas, Spinach, Carrots, Ground Flaxseed, Montmorillonite Clay, Guar Gum, Natural Flavor, Salt, Flaxseed Oil, Dried Kelp, Xanthan Gum, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley",
+            "nutrition": {
+                "carb_pct": 5.6,
+                "moisture_pct": 82,
+                "kcal_per_can": 74,
+                "kcal_per_oz": 21.14,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-grain-free-minced-recipe/dp/149515",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 22,
+                "packs_per_case": 12,
+                "can_oz": 3.5,
+                "case_oz": 42,
+                "case_price": 26.28,
+                "price_per_oz": 0.63,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Minced Cups Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Minced Cups"
+            ],
+            "name": "Salmon",
+            "import_key": "catfood.xlsx|instinct|minced cups line||salmon|minced",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Minced",
+            "tags": [
+                "texture:minced"
+            ],
+            "ingredients": "Salmon Broth, Salmon, Chicken Liver, Egg Whites, Chicken, Ground Dried Peas, Spinach, Carrots, Ground Flaxseed, Guar Gum, Natural Flavor, Salt, Montmorillonite Clay, Dried Kelp, Xanthan Gum, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley",
+            "nutrition": {
+                "carb_pct": 11.1,
+                "moisture_pct": 82,
+                "kcal_per_can": 88,
+                "kcal_per_oz": 25.14,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-grain-free-minced-recipe/dp/149512",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 23,
+                "packs_per_case": 12,
+                "can_oz": 3.5,
+                "case_oz": 42,
+                "case_price": 26.28,
+                "price_per_oz": 0.63,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Minced Cups Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Minced Cups"
+            ],
+            "name": "Tuna Recipe",
+            "import_key": "catfood.xlsx|instinct|minced cups line||tuna recipe|minced",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Minced",
+            "tags": [
+                "texture:minced"
+            ],
+            "ingredients": "Fish Broth, Tuna, Pork Liver, Egg Whites, Pork, Ground Dried Peas, Spinach, Carrots, Ground Flaxseed, Montmorillonite Clay, Guar Gum, Natural Flavor, Sunflower Oil, Salt, Dried Kelp, Xanthan Gum, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley",
+            "nutrition": {
+                "carb_pct": 13.8,
+                "moisture_pct": 82,
+                "kcal_per_can": 81,
+                "kcal_per_oz": 23.14,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-grain-free-minced-recipe/dp/149510",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 24,
+                "packs_per_case": 12,
+                "can_oz": 3.5,
+                "case_oz": 42,
+                "case_price": 27.48,
+                "price_per_oz": 0.65,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Minced Cups Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Original"
+            ],
+            "name": "Chicken",
+            "import_key": "catfood.xlsx|instinct|original line||chicken|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Chicken, Chicken Broth, Chicken Liver, Egg Product, Turkey, Peas, Carrots, Pumpkin, Tomato, Kale, Cabbage, Ground Flaxseed, Tuna Fish Oil, Guar Gum, Broccoli, Cranberries, Blueberries, Salt, Parsley",
+            "nutrition": {
+                "carb_pct": 2.4,
+                "moisture_pct": 78,
+                "kcal_per_can": 240,
+                "kcal_per_oz": 43.64,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-original-grain-free-pate/dp/33433",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 7,
+                "packs_per_case": 12,
+                "can_oz": 5.5,
+                "case_oz": 66,
+                "case_price": 28.68,
+                "price_per_oz": 0.43,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Original Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Original"
+            ],
+            "name": "Duck",
+            "import_key": "catfood.xlsx|instinct|original line||duck|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Duck, Chicken Broth, Chicken Liver, Egg Product, Tuna Fish Oil, Peas, Carrots, Pumpkin, Tomato, Kale, Cabbage, Ground Flaxseed, Guar Gum, Broccoli, Salt, Cranberries, Blueberries, Parsley",
+            "nutrition": {
+                "protein_pct": 40.9,
+                "fat_pct": 31.8,
+                "moisture_pct": 78,
+                "kcal_per_can": 225,
+                "kcal_per_oz": 40.91,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-original-grain-free-pate/dp/33435",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "carb unreadable in sheet: '3..18%'",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 8,
+                "packs_per_case": 12,
+                "can_oz": 5.5,
+                "case_oz": 66,
+                "case_price": 38.28,
+                "price_per_oz": 0.58,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "carb unreadable in sheet: '3..18%'"
+                ],
+                "source_brand": "Instinct",
+                "source_line": "Original Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Original"
+            ],
+            "name": "Lamb",
+            "import_key": "catfood.xlsx|instinct|original line||lamb|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Lamb, Lamb Broth, Turkey, Turkey Liver, Ground Flaxseed, Montmorillonite Clay, Eggs, Peas, Carrots, Salt, Menhaden Fish Oil, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley",
+            "nutrition": {
+                "carb_pct": 1.6,
+                "moisture_pct": 78,
+                "kcal_per_can": 206,
+                "kcal_per_oz": 37.45,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-original-grain-free-pate/dp/34862",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 9,
+                "packs_per_case": 12,
+                "can_oz": 5.5,
+                "case_oz": 66,
+                "case_price": 38.28,
+                "price_per_oz": 0.58,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Original Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Original"
+            ],
+            "name": "Rabbit",
+            "import_key": "catfood.xlsx|instinct|original line||rabbit|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Rabbit, Pork, Pork Liver, Pork Broth, Ground Flaxseed, Montmorillonite Clay, Peas, Carrots, Salt, Menhaden Fish Oil, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley",
+            "nutrition": {
+                "protein_pct": 59.4,
+                "carb_pct": 3.4,
+                "moisture_pct": 78,
+                "kcal_per_can": 147,
+                "kcal_per_oz": 26.73,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-original-grain-free-pate/dp/33439",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 10,
+                "packs_per_case": 12,
+                "can_oz": 5.5,
+                "case_oz": 66,
+                "case_price": 28,
+                "price_per_oz": 0.42,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Original Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Original"
+            ],
+            "name": "Salmon",
+            "import_key": "catfood.xlsx|instinct|original line||salmon|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Salmon, Salmon Broth, Pork Liver, Ground Flaxseed, Montmorillonite Clay, Egg Product, Peas, Carrots, Potassium Chloride, Salt, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley",
+            "nutrition": {
+                "protein_pct": 77,
+                "fat_pct": 26.3,
+                "carb_pct": 3.3,
+                "moisture_pct": 76,
+                "kcal_per_can": 165,
+                "kcal_per_oz": 30,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-original-grain-free-pate/dp/44661",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 11,
+                "packs_per_case": 12,
+                "can_oz": 5.5,
+                "case_oz": 66,
+                "case_price": 34.68,
+                "price_per_oz": 0.53,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Original Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Original"
+            ],
+            "name": "Venison",
+            "import_key": "catfood.xlsx|instinct|original line||venison|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Venison, Pork Liver, Pork Broth, Ground Flaxseed, Montmorillonite Clay, Peas, Carrots, Menhaden Fish Oil, Salt, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley",
+            "nutrition": {
+                "protein_pct": 50,
+                "fat_pct": 31.8,
+                "carb_pct": 4.2,
+                "moisture_pct": 78,
+                "kcal_per_can": 199,
+                "kcal_per_oz": 36.18,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-original-grain-free-pate/dp/34741",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 12,
+                "packs_per_case": 12,
+                "can_oz": 5.5,
+                "case_oz": 66,
+                "case_price": 41.88,
+                "price_per_oz": 0.63,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Original Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Ultimate Protein"
+            ],
+            "name": "Chicken",
+            "import_key": "catfood.xlsx|instinct|ultimate protein line||chicken|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Chicken, Chicken Broth, Chicken Liver, Egg Product, Turkey, Peas, Carrots, Pumpkin, Tomato, Kale, Cabbage, Ground Flaxseed, Tuna Fish Oil, Guar Gum, Broccoli, Cranberries, Blueberries, Salt, Parsley",
+            "nutrition": {
+                "protein_pct": 52,
+                "fat_pct": 34,
+                "fiber_pct": 13,
+                "moisture_pct": 78,
+                "kcal_per_can": 240,
+                "kcal_per_oz": 43.64,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-ultimate-protein-grain-free/dp/121824",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "carb unreadable in sheet: '<1%'",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 28,
+                "packs_per_case": 12,
+                "can_oz": 5.5,
+                "case_oz": 66,
+                "case_price": 26.3,
+                "price_per_oz": 0.4,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "carb unreadable in sheet: '<1%'"
+                ],
+                "source_brand": "Instinct",
+                "source_line": "Ultimate Protein Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct",
+                "Ultimate Protein"
+            ],
+            "name": "Rabbit",
+            "import_key": "catfood.xlsx|instinct|ultimate protein line||rabbit|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Rabbit, Pork, Pork Liver, Pork Broth, Ground Flaxseed, Montmorillonite Clay, Tricalcium Phosphate, Peas, Carrots, Salt, Menhaden Fish Oil, Artichokes, Cranberries, Pumpkin, Tomato, Blueberries, Broccoli, Cabbage, Kale, Parsley",
+            "nutrition": {
+                "protein_pct": 56.8,
+                "fat_pct": 22.7,
+                "carb_pct": 1.7,
+                "fiber_pct": 6.8,
+                "moisture_pct": 78,
+                "kcal_per_can": 80,
+                "kcal_per_oz": 26.67,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-ultimate-protein-grain-free/dp/149497?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1100lvWfgPwW&utm_term=1100lvWfgPwW",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Instinct",
+                "row": 29,
+                "packs_per_case": 24,
+                "can_oz": 3,
+                "case_oz": 72,
+                "case_price": 54.96,
+                "price_per_oz": 0.76,
+                "price_snapshot": "2024-12",
+                "source_brand": "Instinct",
+                "source_line": "Ultimate Protein Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Instinct"
+            ],
+            "name": "Original Grain-Free with Chicken Freeze-Dried Raw Coated",
+            "import_key": "catfood.xlsx|dry food|||original grain-free with chicken freeze-dried raw coated|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Chicken, Chicken Meal, Turkey Meal, Menhaden Fish Meal, Peas, Chicken Fat",
+            "nutrition": {
+                "protein_pct": 41,
+                "fat_pct": 21,
+                "fiber_pct": 3,
+                "carb_pct": 14,
+                "moisture_pct": 9,
+                "kcal_per_cup": 505,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/instinct-original-grain-free-recipe/dp/146301?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l35864&utm_content=0&clickref=1100liStotIt&utm_term=1100liStotIt",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 23,
+                "cost_tier": "Mid-Cost Foods",
+                "size_lb": 11,
+                "cups": 44,
+                "price": 40,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Instinct",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

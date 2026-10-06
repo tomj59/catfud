@@ -199,7 +199,7 @@ php artisan scramble:export --path=docs/openapi.json
 | Decisions | `POST /admin/products/{id}/moderate` (approve / needs_changes / reject, note required to send back or decline), `/place`, `/merge`, `POST /admin/products/bulk` |
 | Requests | `GET /admin/requests` unplaced products grouped by the ladder people typed; `POST /admin/requests/resolve` places (and optionally approves) a whole group; `POST /admin/requests/decline` |
 | Ladder | `GET /admin/nodes`, `POST /admin/nodes`; rename/move/merge stay on `PATCH /brand-nodes/{id}` and `POST /brand-nodes/{id}/merge` (admin) |
-| Retire (admin) | `POST /admin/nodes/{id}/retire` with `status` active / phasing_out / discontinued, `preview: true` for an impact report, `DELETE /admin/nodes/{id}` only when empty |
+| Retire (admin) | `POST /admin/nodes/{id}/retire` with `status` active / retiring / retired / disabled, `preview: true` for an impact report, `DELETE /admin/nodes/{id}` only when empty |
 | History | `GET /admin/audit-log?subject_type=Product&subject_id=42` |
 
 Rules enforced here: an unplaced product cannot be approved; a barcode already in the public catalogue means merge, not a second copy;
@@ -222,3 +222,12 @@ source (manufacturer, retailer, own photo, other), optional source link, licence
 `products.image_url` always points at the current file, so the apps need no change. Replacing or removing a picture deletes the old file.
 A node logo uploaded here overrides the built-in `public/images/brands/{slug}.*` file in the ladder picker.
 Hash-based duplicate detection and several pictures per product (front, back, label) are not built yet.
+
+## Catalogue files (source of truth for brands and products)
+
+`database/catalogue/{region}/` holds `vocabulary.json` (tag groups), `ladders/{root}.json` (one brand ladder per file) and `products/{brand}.json` (every product with an explicit `path`, a list of rung names). Nothing is inferred at import time: the importer creates exactly the rungs the ladder files list, product paths never create rungs, and tags are exactly the listed ones.
+
+Workflow, one brand at a time: edit the files, set `"reviewed": true`, then `php artisan catalogue:check <brand>` (errors block, `--warnings` shows flags), `php artisan catalogue:import --ladders`, `php artisan catalogue:import <brand>` (`--dry-run` to preview, `--overwrite` to replace values on existing rungs). Re-importing is safe and skips audited products. `catalogue:export` writes draft files from a database (never over reviewed files without `--force`).
+
+### Rung status
+Enum `App\Enums\NodeStatus`: `active`, `retiring` (still offered), `retired` (gone from the market) and `disabled` (switched off by us). Retired and disabled are hidden from non-staff pickers; a rung inherits a non-active status from its nearest ancestor. Every change records `previous_status` automatically, so a retired rung later disabled still reads "was retired"; the admin node list filters by current status (`status=`) and history (`ever=`). Detail: `status_on`, `status_confidence`, `status_source`, `status_note`, `successor_id`.

@@ -1,0 +1,128 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "purina",
+    "brand": "Cat Chow",
+    "products": [
+        {
+            "path": [
+                "Purina",
+                "Cat Chow"
+            ],
+            "name": "Complete",
+            "import_key": "catfood.xlsx|dry food|||complete|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Chicken By-Product Meal, Ground Yellow Corn, Corn Gluten Meal, Whole Grain Wheat, Rice",
+            "nutrition": {
+                "protein_pct": 32,
+                "fat_pct": 12,
+                "fiber_pct": 3,
+                "carb_pct": 41,
+                "moisture_pct": 12,
+                "kcal_per_cup": 405,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/cat-chow-complete-dry-cat-food/dp/127649",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 8,
+                "cost_tier": "Low-Cost Foods",
+                "size_lb": 20,
+                "cups": 80,
+                "price": 19.59,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Purina Cat Chow",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Cat Chow"
+            ],
+            "name": "Naturals Original",
+            "import_key": "catfood.xlsx|dry food|||naturals original|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Chicken, Corn Gluten Meal, Chicken By-product Meal, Rice, Soybean Meal",
+            "nutrition": {
+                "protein_pct": 34,
+                "fat_pct": 13,
+                "fiber_pct": 3,
+                "carb_pct": 38,
+                "moisture_pct": 12,
+                "kcal_per_cup": 398,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/purina-cat-chow-naturals-original/dp/127682",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 10,
+                "cost_tier": "Low-Cost Foods",
+                "size_lb": 18,
+                "cups": 72,
+                "price": 20.99,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Purina Cat Chow",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Cat Chow"
+            ],
+            "name": "Sensitive Stomach",
+            "import_key": "catfood.xlsx|dry food|||sensitive stomach|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Turkey By-product Meal, Corn Gluten Meal, Soybean Meal, Rice, Chicken By-product Meal",
+            "nutrition": {
+                "protein_pct": 34,
+                "fat_pct": 11,
+                "fiber_pct": 5,
+                "carb_pct": 38,
+                "moisture_pct": 12,
+                "kcal_per_cup": 402,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/cat-chow-sensitive-stomach-gentle-dry/dp/127657",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 11,
+                "cost_tier": "Low-Cost Foods",
+                "size_lb": 13,
+                "cups": 52,
+                "price": 15.99,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Purina Cat Chow",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

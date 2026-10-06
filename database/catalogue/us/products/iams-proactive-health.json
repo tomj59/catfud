@@ -1,0 +1,47 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "iams-proactive-health",
+    "brand": "Iams ProActive Health",
+    "products": [
+        {
+            "path": [
+                "Iams ProActive Health"
+            ],
+            "name": "Original",
+            "import_key": "catfood.xlsx|dry food|||original|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Chicken, Chicken By-Product Meal, Ground Whole Grain Corn, Corn Grits, Corn Gluten Meal",
+            "nutrition": {
+                "protein_pct": 32,
+                "fat_pct": 15,
+                "fiber_pct": 3,
+                "carb_pct": 38,
+                "moisture_pct": 10,
+                "kcal_per_cup": 399,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/iams-proactive-health-healthy-adult/dp/121249",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 13,
+                "cost_tier": "Low-Cost Foods",
+                "size_lb": 22,
+                "cups": 88,
+                "price": 33.99,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Iams ProActive Health",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

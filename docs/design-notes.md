@@ -25,7 +25,7 @@ Living notes. Newest decisions are at the top of each section. Anything under "R
 ## Discontinuation (decided in principle, not built)
 
 - Separate from recalls (attributed third-party notices) and from rebrands (rename/merge/move: identity continues). Discontinuation ends an identity.
-- A status on **any node**: active, phasing out, discontinued, with announced/ended dates, source link, note, confidence, and an optional "replaced by" node. Everything below inherits; a product may override. Never deleted: barcodes still scan, pantry and ratings stay, a neutral badge says the maker discontinued it.
+- A status on **any node**: active, retiring, retired, disabled (with `previous_status` kept automatically), with announced/ended dates, source link, note, confidence, and an optional "replaced by" node. Everything below inherits; a product may override. Never deleted: barcodes still scan, pantry and ratings stay, a neutral badge says the maker discontinued it.
 - Hidden from the picker for new products, "add to shopping" suggestions and the default catalogue view; pantry stock still counts for meal suggestions.
 - Admin tool gets a guided "retire this node" action that previews affected products, pantry items and users. Detection and owner notifications come later.
 - First real case: **Purina > Beyond** (reported by Tom while building the database; the maker's pages are still live, so record a source and confidence rather than assuming).
@@ -66,8 +66,17 @@ The wording in the request flow is a UX problem for the client, not admin work. 
   places the whole group on a node (creating rungs only here, by staff) and can approve in the same step.
 - Duplicate barcode on approve is refused; merge re-points inventory, ratings, meal offers and advisory matches (survivor's row wins
   on collisions) and keeps the duplicate's barcode as a pack barcode.
-- Discontinuation: `brand_nodes.status` (active / phasing_out / discontinued), date, confidence, source, note, optional successor.
-  Inherited from the nearest ancestor; never deleted; non-staff pickers stop offering discontinued rungs. Retire has a `preview`
+- Discontinuation: `brand_nodes.status` (active / retiring / retired / disabled, plus previous_status), date, confidence, source, note, optional successor.
+  Inherited from the nearest ancestor; never deleted; non-staff pickers stop offering retired and disabled rungs. Retire has a `preview`
   that counts nodes, products, pantry items and households first.
 - Not built yet: per-product override of an inherited status, a badge on product cards, successor suggestions in the app,
   notifications to households, and automatic detection of discontinuations.
+
+## Catalogue files (source of truth for brands and products)
+
+`database/catalogue/{region}/` holds `vocabulary.json` (tag groups), `ladders/{root}.json` (one brand ladder per file) and `products/{brand}.json` (every product with an explicit `path`, a list of rung names). Nothing is inferred at import time: the importer creates exactly the rungs the ladder files list, product paths never create rungs, and tags are exactly the listed ones.
+
+Workflow, one brand at a time: edit the files, set `"reviewed": true`, then `php artisan catalogue:check <brand>` (errors block, `--warnings` shows flags), `php artisan catalogue:import --ladders`, `php artisan catalogue:import <brand>` (`--dry-run` to preview, `--overwrite` to replace values on existing rungs). Re-importing is safe and skips audited products. `catalogue:export` writes draft files from a database (never over reviewed files without `--force`).
+
+### Rung status
+Enum `App\Enums\NodeStatus`: `active`, `retiring` (still offered), `retired` (gone from the market) and `disabled` (switched off by us). Retired and disabled are hidden from non-staff pickers; a rung inherits a non-active status from its nearest ancestor. Every change records `previous_status` automatically, so a retired rung later disabled still reads "was retired"; the admin node list filters by current status (`status=`) and history (`ever=`). Detail: `status_on`, `status_confidence`, `status_source`, `status_note`, `successor_id`.

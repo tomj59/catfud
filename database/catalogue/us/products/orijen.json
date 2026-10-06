@@ -1,0 +1,47 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "orijen",
+    "brand": "ORIJEN",
+    "products": [
+        {
+            "path": [
+                "ORIJEN"
+            ],
+            "name": "Regional Red Grain-Free",
+            "import_key": "catfood.xlsx|dry food|||regional red grain-free|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Beef, Pork, Whole Mackerel, Beef Liver, Wild Boar, Goat, Lamb, Lamb Liver",
+            "nutrition": {
+                "protein_pct": 40,
+                "fat_pct": 20,
+                "fiber_pct": 3,
+                "carb_pct": 19,
+                "moisture_pct": 10,
+                "kcal_per_cup": 510,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/orijen-regional-red-grain-free-dry/dp/133952?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1011l111765&utm_content=0&clickref=1100liWRVwYW&utm_term=1100liWRVwYW",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 30,
+                "cost_tier": "High-Cost Foods",
+                "size_lb": 12,
+                "cups": 48,
+                "price": 72.99,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "ORIJEN",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

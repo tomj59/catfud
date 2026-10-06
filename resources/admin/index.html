@@ -43,7 +43,7 @@
   tr.click:hover td { background:var(--chip); }
   .muted { color:var(--muted); } .small { font-size:13px; }
   .pill { display:inline-block; padding:1px 9px; border-radius:999px; font-size:12px; background:var(--chip); }
-  .pill.approved { color:var(--ok); } .pill.pending { color:var(--warn); } .pill.needs_changes { color:var(--warn); } .pill.rejected, .pill.discontinued { color:var(--bad); } .pill.merged { color:var(--muted); } .pill.phasing_out { color:var(--warn); }
+  .pill.approved { color:var(--ok); } .pill.pending { color:var(--warn); } .pill.needs_changes { color:var(--warn); } .pill.rejected, .pill.retired { color:var(--bad); } .pill.merged { color:var(--muted); } .pill.disabled, .pill.retiring { color:var(--warn); }
   .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin-bottom:12px; }
   .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
   .grow { flex:1; min-width:0; }
@@ -114,7 +114,7 @@
               <button class="tile" @click="openReview({moderation_status:'approved', image:'missing'})"><div class="n" x-text="dash.catalogue.without_image"></div><div class="l">No image</div></button>
               <button class="tile" @click="openReview({moderation_status:'approved', barcode:'missing'})"><div class="n" x-text="dash.catalogue.without_barcode"></div><div class="l">No barcode</div></button>
               <button class="tile" @click="openNodes({empty:true})"><div class="n" x-text="dash.tree.empty_nodes"></div><div class="l">Empty ladder nodes</div></button>
-              <button class="tile" @click="openNodes({status:'discontinued'})"><div class="n" x-text="dash.tree.retired_nodes"></div><div class="l">Retired nodes</div></button>
+              <button class="tile" @click="openNodes({})"><div class="n" x-text="dash.tree.inactive_nodes"></div><div class="l">Not active</div></button>
             </div>
             <h3 x-show="dash.tree.near_duplicates.length">Names that look like the same thing</h3>
             <template x-for="d in dash.tree.near_duplicates" :key="d.a.id + '-' + d.b.id">
@@ -141,6 +141,10 @@
           <select x-model="pf.image" @change="pf.page=1; loadProducts()"><option value="">Any image</option><option value="missing">No image</option><option value="present">Has image</option></select>
           <select x-model="pf.barcode" @change="pf.page=1; loadProducts()"><option value="">Any barcode</option><option value="missing">No barcode</option><option value="present">Has barcode</option></select>
           <button @click="exportCsv()">Export CSV</button>
+        </div>
+        <div class="bar" x-show="pf.node || pf.tag">
+          <span class="pill" x-show="pf.node">in <strong x-text="pf.nodeName"></strong> <button class="sm" style="border:0;padding:0 4px" @click="pf.node=''; pf.nodeName=''; pf.page=1; loadProducts()">✕</button></span>
+          <span class="pill" x-show="pf.tag">stage <strong x-text="pf.tag.split(':')[1]"></strong> <button class="sm" style="border:0;padding:0 4px" @click="pf.tag=''; pf.page=1; loadProducts()">✕</button></span>
         </div>
         <div class="bar" x-show="selected.length">
           <strong x-text="selected.length + ' selected'"></strong>
@@ -196,7 +200,8 @@
         <div class="bar">
           <input type="search" placeholder="Search nodes" x-model.debounce.300ms="nf.q" @input="loadNodes()">
           <label class="small"><input type="checkbox" x-model="nf.empty" @change="loadNodes()"> Only empty</label>
-          <select x-model="nf.status" @change="loadNodes()"><option value="">Any status</option><option value="phasing_out">Phasing out</option><option value="discontinued">Discontinued</option></select>
+          <select x-model="nf.status" @change="loadNodes()"><option value="">Any status</option><option value="retiring">Retiring</option><option value="retired">Retired</option><option value="disabled">Disabled</option></select>
+          <select x-model="nf.ever" @change="loadNodes()"><option value="">Any history</option><option value="retiring">Ever retiring</option><option value="retired">Ever retired</option><option value="disabled">Ever disabled</option></select>
           <button class="primary" @click="startAddNode(null)">Add top-level</button>
         </div>
         <table>
@@ -206,9 +211,11 @@
               <tr>
                 <td><span class="indent" :style="'padding-left:' + ((n.depth - 1) * 18) + 'px'"></span><img class="thumb" x-show="n.logo" :src="n.logo" alt=""><strong x-text="n.name"></strong>
                   <span class="muted small" x-show="n.kind" x-text="' · ' + n.kind"></span>
+ <span style="margin-left:6px" x-show="n.stages && n.stages.length && ['line','subline'].includes(n.kind)"><template x-for="st in n.stages" :key="st.slug"><button class="pill" style="border:0;cursor:pointer;margin-right:4px" :title="'Show the ' + st.count + ' product(s) tagged ' + st.label" @click="openReview({node: n.id, nodeName: n.name, tag: 'life_stage:' + st.slug})" x-text="st.label + ' ' + st.count"></button></template></span>
                   <div class="small muted" x-show="n.aliases && n.aliases.length" x-text="'also: ' + (n.aliases || []).join(', ')" :style="'padding-left:' + ((n.depth - 1) * 18) + 'px'"></div></td>
-                <td x-text="n.product_count"></td>
-                <td><span class="pill" :class="n.effective_status" x-show="n.effective_status !== 'active'" x-text="label(n.effective_status) + (n.status === 'active' ? ' (inherited)' : '')"></span></td>
+                <td><a href="#" @click.prevent="openReview({node: n.id, nodeName: n.name})" x-text="n.product_count"></a></td>
+                <td><span class="pill" :class="n.effective_status" x-show="['retiring','retired','disabled'].includes(n.effective_status)" x-text="label(n.effective_status) + (n.status === 'active' ? ' (inherited)' : '')"></span>
+                <small x-show="n.previous_status && n.previous_status !== 'active' && n.previous_status !== n.status" x-text="'was ' + label(n.previous_status)"></small></td>
                 <td class="row" style="justify-content:flex-end">
                   <button class="sm" @click="startAddNode(n)" x-show="n.depth < 5">Add under</button>
                   <button class="sm" @click="startRename(n)">Rename</button>
@@ -374,7 +381,7 @@
         </template>
         <template x-if="modal && modal.type === 'retire'">
           <div><h3 style="margin-top:0">Status of “<span x-text="modal.node.name"></span>”</h3>
-            <div class="row"><select x-model="modal.status" @change="previewRetire()"><option value="active">Active</option><option value="phasing_out">Phasing out</option><option value="discontinued">Discontinued</option></select>
+            <div class="row"><select x-model="modal.status" @change="previewRetire()"><option value="active">Active</option><option value="retiring">Retiring</option><option value="retired">Retired</option><option value="disabled">Disabled</option></select>
               <input type="date" x-model="modal.date" x-show="modal.status !== 'active'">
               <select x-model="modal.confidence" x-show="modal.status !== 'active'"><option value="">How sure?</option><option value="confirmed">Confirmed</option><option value="reported">Reported</option><option value="rumoured">Rumoured</option></select></div>
             <input style="width:100%;margin-top:8px" placeholder="Source (link or note)" x-model="modal.source" x-show="modal.status !== 'active'">
@@ -397,13 +404,13 @@
 function admin() {
   var KEY = 'cf_token';
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} return null; }
-  var LABELS = { approved: 'Approved', pending: 'Waiting', needs_changes: 'Sent back', rejected: 'Declined', merged: 'Merged', active: 'Active', phasing_out: 'Phasing out', discontinued: 'Discontinued' };
+  var LABELS = { approved: 'Approved', pending: 'Waiting', needs_changes: 'Sent back', rejected: 'Declined', merged: 'Merged', active: 'Active', retiring: 'Retiring', retired: 'Retired', disabled: 'Disabled' };
 
   return {
     token: store(KEY), user: null, login: { email: '', password: '', error: '' }, busy: false,
     tab: 'dashboard', error: '', notice: '',
-    dash: null, products: [], pmeta: null, selected: [], pf: { q: '', moderation_status: 'pending', placed: '', image: '', barcode: '', page: 1 },
-    groups: null, nodes: [], allNodes: [], nf: { q: '', empty: false, status: '' },
+    dash: null, products: [], pmeta: null, selected: [], pf: { q: '', moderation_status: '', placed: '', image: '', barcode: '', node: '', tag: '', nodeName: '', page: 1 },
+    groups: null, nodes: [], allNodes: [], nf: { q: '', empty: false, status: '', ever: '' },
     audit: [], ameta: null, af: { subject_type: '', subject_id: '', page: 1 },
     img: { source: 'manufacturer', source_url: '', licence: '', attribution: '' }, drawer: null, drawerAudit: [], placePath: '', mergeQ: '', mergeResults: [], modal: null,
 
@@ -471,8 +478,8 @@ function admin() {
       if (t === 'nodes') this.loadNodes();
       if (t === 'history') this.loadAudit();
     },
-    openReview(filters) { this.pf = Object.assign({ q: '', moderation_status: '', placed: '', image: '', barcode: '', page: 1 }, filters); this.go('products'); },
-    openNodes(filters) { this.nf = Object.assign({ q: '', empty: false, status: '' }, filters); this.go('nodes'); },
+    openReview(filters) { this.pf = Object.assign({ q: '', moderation_status: '', placed: '', image: '', barcode: '', node: '', tag: '', nodeName: '', page: 1 }, filters); this.go('products'); },
+    openNodes(filters) { this.nf = Object.assign({ q: '', empty: false, status: '', ever: '' }, filters); this.go('nodes'); },
 
     async loadDash() { var r = await this.api('/admin/dashboard'); if (r.ok) this.dash = r.data; },
     async loadAllNodes() { var r = await this.api('/admin/nodes'); if (r.ok) this.allNodes = r.data.nodes; },
@@ -483,14 +490,14 @@ function admin() {
       var s = p.toString(); return s ? '?' + s : '';
     },
     async loadProducts() {
-      var f = this.pf, r = await this.api('/admin/products' + this.qs({ q: f.q, moderation_status: f.moderation_status, placed: f.placed, image: f.image, barcode: f.barcode, page: f.page, per_page: 25 }));
+      var f = this.pf, r = await this.api('/admin/products' + this.qs({ q: f.q, moderation_status: f.moderation_status, placed: f.placed, image: f.image, barcode: f.barcode, node: f.node, tag: f.tag, page: f.page, per_page: 25 }));
       if (!r.ok) return this.fail(r);
       this.products = r.data.data; this.pmeta = r.data.meta; this.selected = [];
     },
     toggle(id) { this.selected = this.selected.includes(id) ? this.selected.filter(function (i) { return i !== id; }) : this.selected.concat(id); },
     toggleAll(on) { this.selected = on ? this.products.map(function (p) { return p.id; }) : []; },
     async exportCsv() {
-      var f = this.pf, r = await this.api('/admin/products/export' + this.qs({ q: f.q, moderation_status: f.moderation_status, placed: f.placed, image: f.image, barcode: f.barcode }), { raw: true });
+      var f = this.pf, r = await this.api('/admin/products/export' + this.qs({ q: f.q, moderation_status: f.moderation_status, placed: f.placed, image: f.image, barcode: f.barcode, node: f.node, tag: f.tag }), { raw: true });
       if (!r.ok) return this.fail(r);
       var blob = await r.raw.blob(), a = document.createElement('a');
       a.href = URL.createObjectURL(blob); a.download = 'catfud-products.csv'; document.body.appendChild(a); a.click(); a.remove();
@@ -574,7 +581,7 @@ function admin() {
     },
 
     async loadNodes() {
-      var f = this.nf, r = await this.api('/admin/nodes' + this.qs({ q: f.q, empty: f.empty, status: f.status }));
+      var f = this.nf, r = await this.api('/admin/nodes' + this.qs({ q: f.q, empty: f.empty, status: f.status, ever: f.ever }));
       if (!r.ok) return this.fail(r);
       this.nodes = r.data.nodes;
     },
@@ -623,7 +630,7 @@ function admin() {
       await this.nodesChanged('Deleted.');
     },
     async startRetire(n) {
-      this.modal = { type: 'retire', node: n, status: n.status === 'active' ? 'discontinued' : n.status, date: '', confidence: '', source: '', note: '', successor: '', impact: null };
+      this.modal = { type: 'retire', node: n, status: n.status === 'active' ? 'retired' : n.status, date: '', confidence: '', source: '', note: '', successor: '', impact: null };
       await this.previewRetire();
     },
     async previewRetire() {
@@ -633,7 +640,7 @@ function admin() {
     },
     async retire() {
       var m = this.modal, succ = this.nodeByPath(m.successor);
-      var r = await this.api('/admin/nodes/' + m.node.id + '/retire', { method: 'POST', body: { status: m.status, discontinued_on: m.date || null, confidence: m.confidence || null, source: m.source || null, note: m.note || null, successor_id: succ ? succ.id : null } });
+      var r = await this.api('/admin/nodes/' + m.node.id + '/retire', { method: 'POST', body: { status: m.status, status_on: m.date || null, confidence: m.confidence || null, source: m.source || null, note: m.note || null, successor_id: succ ? succ.id : null } });
       if (!r.ok) return this.fail(r);
       this.modal = null; await this.nodesChanged('Status saved.');
     },

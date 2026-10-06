@@ -1,0 +1,18 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": {
+        "name": "Nacho",
+        "kind": "brand",
+        "children": [
+            {
+                "name": "Cups",
+                "kind": "line"
+            },
+            {
+                "name": "Pouches",
+                "kind": "line"
+            }
+        ]
+    }
+}

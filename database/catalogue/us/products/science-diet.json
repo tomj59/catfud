@@ -1,0 +1,816 @@
+{
+  "region": "US",
+  "reviewed": false,
+  "ladder": "hills",
+  "brand": "Science Diet",
+  "products": [
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Adult"
+      ],
+      "name": "Chicken & Vegetable",
+      "import_key": "catfood.xlsx|hills|adult 7+ line||chicken & vegetable|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult-7plus"
+      ],
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-7-plus-senior-vitality-chicken-vegetable-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 30,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult 7+ Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Adult"
+      ],
+      "name": "Liver & Chicken",
+      "import_key": "catfood.xlsx|hills|adult line|adult|liver & chicken|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "nutrition": {
+        "protein_pct": 41.4,
+        "fat_pct": 20.2,
+        "carb_pct": 27,
+        "fiber_pct": 5,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-liver-chicken-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 9,
+        "variety": "Adult",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 47.28,
+        "price_per_oz": 0.36,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Adult"
+      ],
+      "name": "Ocean Fish",
+      "import_key": "catfood.xlsx|hills|adult line|adult|ocean fish|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "nutrition": {
+        "protein_pct": 38.3,
+        "fat_pct": 21.2,
+        "carb_pct": 29.5,
+        "fiber_pct": 5,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-ocean-fish-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 12,
+        "variety": "Adult",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 49.99,
+        "price_per_oz": 0.38,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Adult"
+      ],
+      "name": "Savory Beef",
+      "import_key": "catfood.xlsx|hills|adult 7+ line||savory beef|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult-7plus"
+      ],
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-7-plus-savory-beef-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 29,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult 7+ Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Adult"
+      ],
+      "name": "Savory Chicken",
+      "import_key": "catfood.xlsx|hills|adult line|adult|savory chicken|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "nutrition": {
+        "protein_pct": 40.1,
+        "fat_pct": 26.6,
+        "carb_pct": 22.4,
+        "fiber_pct": 3.9,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-savory-chicken-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 11,
+        "variety": "Adult",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 49.99,
+        "price_per_oz": 0.38,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Adult"
+      ],
+      "name": "Savory Salmon",
+      "import_key": "catfood.xlsx|hills|adult line|adult|savory salmon|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "nutrition": {
+        "protein_pct": 36.6,
+        "fat_pct": 25.9,
+        "carb_pct": 27.4,
+        "fiber_pct": 4.2,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-savory-salmon-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 10,
+        "variety": "Adult",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 47.28,
+        "price_per_oz": 0.36,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Adult"
+      ],
+      "name": "Savory Turkey",
+      "import_key": "catfood.xlsx|hills|adult line|adult|savory turkey|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "nutrition": {
+        "protein_pct": 33.9,
+        "fat_pct": 26.1,
+        "carb_pct": 29.3,
+        "fiber_pct": 5.1,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-savory-turkey-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 8,
+        "variety": "Adult",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 49,
+        "price_per_oz": 0.37,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Adult"
+      ],
+      "name": "Savory Turkey",
+      "import_key": "catfood.xlsx|hills|adult 7+ line||savory turkey|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult-7plus"
+      ],
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-7-plus-savory-turkey-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 31,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult 7+ Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Adult"
+      ],
+      "name": "Turkey & Liver",
+      "import_key": "catfood.xlsx|hills|adult line|adult|turkey & liver|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "nutrition": {
+        "protein_pct": 35.3,
+        "fat_pct": 29.5,
+        "carb_pct": 24.2,
+        "fiber_pct": 5.3,
+        "moisture_pct": 78,
+        "kcal_per_can": 187,
+        "kcal_per_oz": 34,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-science-diet-adult-turkey-liver/dp/34185?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1101lvWyNmsu&utm_term=1101lvWyNmsu",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "no ingredients in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 7,
+        "variety": "Adult",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 49.99,
+        "price_per_oz": 0.38,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "no ingredients in sheet"
+        ],
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/sd-feline-adult-turkey-liver-entree-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Indoor"
+      ],
+      "name": "Ocean Fish",
+      "import_key": "catfood.xlsx|hills|adult line|indoor|ocean fish|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "nutrition": {
+        "protein_pct": 38.3,
+        "fat_pct": 21,
+        "carb_pct": 26.2,
+        "fiber_pct": 8.5,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-indoor-ocean-fish-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 14,
+        "variety": "Indoor",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 47.28,
+        "price_per_oz": 0.36,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Indoor"
+      ],
+      "name": "Savory Chicken",
+      "import_key": "catfood.xlsx|hills|adult line|indoor|savory chicken|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "nutrition": {
+        "protein_pct": 33.6,
+        "fat_pct": 23.8,
+        "carb_pct": 25.3,
+        "fiber_pct": 9.8,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-indoor-savory-chicken-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 13,
+        "variety": "Indoor",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 47.28,
+        "price_per_oz": 0.36,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Kitten"
+      ],
+      "name": "Liver & Chicken",
+      "import_key": "catfood.xlsx|hills|kitten line||liver & chicken|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:kitten"
+      ],
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-kitten-liver-chicken-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 36,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Kitten Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Kitten"
+      ],
+      "name": "Savory Salmon",
+      "import_key": "catfood.xlsx|hills|kitten line||savory salmon|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:kitten"
+      ],
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-kitten-savory-salmon-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 37,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Kitten Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Kitten"
+      ],
+      "name": "Savory Turkey",
+      "import_key": "catfood.xlsx|hills|kitten line||savory turkey|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:kitten"
+      ],
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-kitten-savory-turkey-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 38,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Kitten Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Light"
+      ],
+      "name": "Liver & Chicken",
+      "import_key": "catfood.xlsx|hills|adult line|light|licker & chicken|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "nutrition": {
+        "protein_pct": 36.7,
+        "fat_pct": 15,
+        "carb_pct": 34.4,
+        "fiber_pct": 7,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-light-liver-chicken-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "Sheet said 'Licker & Chicken'; corrected from the product URL (liver-chicken).",
+      "meta": {
+        "sheet": "Hills",
+        "row": 15,
+        "variety": "Light",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 48.28,
+        "price_per_oz": 0.37,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Adult Line"
+      }
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Specialty"
+      ],
+      "name": "Chicken",
+      "import_key": "catfood.xlsx|hills|specialty line||chicken|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "nutrition": {
+        "protein_pct": 36.3,
+        "fat_pct": 21.1,
+        "carb_pct": 26.3,
+        "fiber_pct": 7,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-urinary-hairball-control-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 19,
+        "case_oz": 0,
+        "case_price": 49.68,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Specialty Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Specialty"
+      ],
+      "name": "Chicken",
+      "import_key": "catfood.xlsx|hills|specialty line||chicken|#2",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-hairball-control-savory-chicken-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet; same name/line appears more than once in the sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 21,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet",
+          "same name/line appears more than once in the sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Specialty Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Specialty"
+      ],
+      "name": "Chicken & Vegetable",
+      "import_key": "catfood.xlsx|hills|specialty line||chicken & vegetable|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-sensitive-stomach-and-skin-chicken-vegetable-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 24,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Specialty Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Specialty"
+      ],
+      "name": "Liver & Chicken",
+      "import_key": "catfood.xlsx|hills|specialty line||liver & chicken|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-perfect-weight-liver-chicken-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 22,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Specialty Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Specialty"
+      ],
+      "name": "Ocean Fish",
+      "import_key": "catfood.xlsx|hills|specialty line||ocean fish|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-hairball-control-ocean-fish-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 20,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Specialty Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Science Diet",
+        "Specialty"
+      ],
+      "name": "Tuna & Vegetable",
+      "import_key": "catfood.xlsx|hills|specialty line||tuna & vegetable|",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "source_url": "https://www.hillspet.com/cat-food/sd-feline-adult-sensitive-stomach-and-skin-tuna-vegetable-entree-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "audit_notes": "price_per_oz unreadable in sheet: '#DIV/0!'; kcal_per_oz unreadable in sheet: '#DIV/0!'; price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+      "meta": {
+        "sheet": "Hills",
+        "row": 23,
+        "case_oz": 0,
+        "price_snapshot": "2024-12",
+        "flags": [
+          "price_per_oz unreadable in sheet: '#DIV/0!'",
+          "kcal_per_oz unreadable in sheet: '#DIV/0!'",
+          "price_per_kcal unreadable in sheet: '#DIV/0!'",
+          "no ingredients in sheet",
+          "no nutrition values in sheet"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Specialty Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    }
+  ]
+}

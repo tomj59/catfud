@@ -15,7 +15,7 @@ class DashboardController extends Controller
      * @response array{
      *   moderation: array{pending: int, pending_unplaced: int, needs_changes: int, rejected: int, oldest_unplaced_at: ?string},
      *   catalogue: array{approved: int, without_image: int, without_barcode: int, unreviewed: int},
-     *   tree: array{nodes: int, empty_nodes: int, retired_nodes: int, near_duplicates: array<int, array{a: array{id: int, name: string}, b: array{id: int, name: string}, parent: ?string}>}
+     *   tree: array{nodes: int, empty_nodes: int, inactive_nodes: int, near_duplicates: array<int, array{a: array{id: int, name: string}, b: array{id: int, name: string}, parent: ?string}>}
      * }
      */
     public function __invoke(): JsonResponse
@@ -46,7 +46,7 @@ class DashboardController extends Controller
             'tree' => [
                 'nodes' => $nodes->count(),
                 'empty_nodes' => $empty,
-                'retired_nodes' => $nodes->where('status', '!=', 'active')->count(),
+                'inactive_nodes' => $nodes->where('status', '!=', 'active')->count(),
                 'near_duplicates' => $this->nearDuplicates($nodes),
             ],
         ]);

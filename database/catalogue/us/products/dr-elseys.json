@@ -1,0 +1,47 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "dr-elseys",
+    "brand": "Dr. Elsey's",
+    "products": [
+        {
+            "path": [
+                "Dr. Elsey's"
+            ],
+            "name": "cleanprotein",
+            "import_key": "catfood.xlsx|dry food|||cleanprotein|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Chicken, Dried Egg Product, Pork Protein Isolate, Gelatin, Chicken Fat",
+            "nutrition": {
+                "protein_pct": 59,
+                "fat_pct": 18,
+                "fiber_pct": 4,
+                "carb_pct": 4,
+                "moisture_pct": 12,
+                "kcal_per_cup": 554,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/dr-elseys-cleanprotein-chicken/dp/146270?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l35864&utm_content=0&clickref=1100liSttptw&utm_term=1100liSttptw",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 31,
+                "cost_tier": "High-Cost Foods",
+                "size_lb": 6.6,
+                "cups": 26.4,
+                "price": 41,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Dr. Elsey's",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

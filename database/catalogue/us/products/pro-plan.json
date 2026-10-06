@@ -1,0 +1,52 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "purina",
+    "brand": "Pro Plan",
+    "products": [
+        {
+            "path": [
+                "Purina",
+                "Pro Plan"
+            ],
+            "name": "Chicken Entree",
+            "import_key": "catfood.xlsx|purina|purina pro plan||chicken entree|gravy",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Gravy",
+            "tags": [
+                "medium:gravy"
+            ],
+            "ingredients": "Water, Chicken, Wheat Gluten, Meat By-Products, Liver, Fish, Soy Flour, Corn Starch modified, Natural Flavor",
+            "nutrition": {
+                "protein_pct": 50,
+                "fat_pct": 9.1,
+                "carb_pct": 16.1,
+                "fiber_pct": 6.8,
+                "moisture_pct": 80,
+                "kcal_per_can": 135,
+                "kcal_per_oz": 24.55,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/purina-pro-plan-adult-chicken-entree/dp/129802",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Purina",
+                "row": 41,
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 44.16,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Purina",
+                "source_line": "Purina Pro Plan"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

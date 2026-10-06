@@ -1,0 +1,47 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "health-extension",
+    "brand": "Health Extension",
+    "products": [
+        {
+            "path": [
+                "Health Extension"
+            ],
+            "name": "Chicken & Brown Rice Recipe",
+            "import_key": "catfood.xlsx|dry food|||chicken & brown rice recipe|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Chicken, Chicken Meal, Brown Rice, Oatmeal, Dried Egg Product,",
+            "nutrition": {
+                "protein_pct": 36,
+                "fat_pct": 16,
+                "fiber_pct": 6,
+                "carb_pct": 28,
+                "moisture_pct": 10,
+                "kcal_per_cup": 422,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/health-extension-chicken-brown-rice/dp/56199?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l35864&utm_content=0&clickref=1101liSKsjTW&utm_term=1101liSKsjTW",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 19,
+                "cost_tier": "Mid-Cost Foods",
+                "size_lb": 15,
+                "cups": 60,
+                "price": 40,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Health Extension",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,181 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": {
+        "name": "Purina",
+        "kind": "manufacturer",
+        "children": [
+            {
+                "name": "Cat Chow",
+                "kind": "brand",
+                "aliases": [
+                    "Purina Cat Chow"
+                ]
+            },
+            {
+                "name": "Purina ONE",
+                "kind": "brand",
+                "aliases": [
+                    "ONE",
+                    "Purina One"
+                ],
+                "children": [
+                    {
+                        "name": "Grain Free",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Ideal Weight",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Indoor+Hairball",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "True Instinct",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Urinary Tract",
+                        "kind": "line"
+                    }
+                ]
+            },
+            {
+                "name": "Pro Plan",
+                "kind": "brand",
+                "aliases": [
+                    "Purina Pro Plan"
+                ],
+                "children": [
+                    {
+                        "name": "Complete Essentials",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Urinary Tract Health",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Indoor Balance",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Healthy Metabolism",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Weight Management",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Vital Systems",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Focus",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Prime Plus",
+                        "kind": "line",
+                        "aliases": [
+                            "Adult 7+ | Prime Plus",
+                            "Prime Plus Adult 7+",
+                            "Adult 7+"
+                        ],
+                        "tags": [
+                            "life_stage:adult-7plus"
+                        ]
+                    },
+                    {
+                        "name": "Small Breed",
+                        "kind": "line",
+                        "species": [
+                            "dog"
+                        ]
+                    },
+                    {
+                        "name": "Large Breed",
+                        "kind": "line",
+                        "species": [
+                            "dog"
+                        ]
+                    },
+                    {
+                        "name": "High Protein",
+                        "kind": "line",
+                        "species": [
+                            "dog"
+                        ]
+                    },
+                    {
+                        "name": "Savor",
+                        "kind": "line",
+                        "species": [
+                            "dog"
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "Gourmet",
+                "kind": "brand"
+            },
+            {
+                "name": "Friskies",
+                "kind": "brand"
+            },
+            {
+                "name": "Fancy Feast",
+                "kind": "brand",
+                "children": [
+                    {
+                        "name": "Classic",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Creamy Delights",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Delights with Cheddar",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Gourmet Naturals",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Gravy Lovers",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Medleys",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Petites",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Purely",
+                        "kind": "line"
+                    },
+                    {
+                        "name": "Savory Centers",
+                        "kind": "line"
+                    }
+                ]
+            },
+            {
+                "name": "Beyond",
+                "kind": "brand",
+                "aliases": [
+                    "Purina Beyond"
+                ]
+            }
+        ]
+    }
+}

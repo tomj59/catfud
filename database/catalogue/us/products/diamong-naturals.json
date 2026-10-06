@@ -1,0 +1,47 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "diamong-naturals",
+    "brand": "Diamong Naturals",
+    "products": [
+        {
+            "path": [
+                "Diamong Naturals"
+            ],
+            "name": "Active",
+            "import_key": "catfood.xlsx|dry food|||active|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Chicken Meal, Ground White Rice, Chicken Fat, Natural Flavor, Flaxseed",
+            "nutrition": {
+                "protein_pct": 40,
+                "fat_pct": 20,
+                "fiber_pct": 3,
+                "carb_pct": 17,
+                "moisture_pct": 10,
+                "kcal_per_cup": 454,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/diamond-naturals-active-chicken-meal/dp/34935",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 15,
+                "cost_tier": "Low-Cost Foods",
+                "size_lb": 18,
+                "cups": 72,
+                "price": 30.99,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Diamong Naturals",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

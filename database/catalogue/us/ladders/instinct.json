@@ -1,0 +1,30 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": {
+        "name": "Instinct",
+        "kind": "brand",
+        "children": [
+            {
+                "name": "Freeze-Dried Raw",
+                "kind": "line"
+            },
+            {
+                "name": "Limited Ingredient Diet",
+                "kind": "line"
+            },
+            {
+                "name": "Minced Cups",
+                "kind": "line"
+            },
+            {
+                "name": "Original",
+                "kind": "line"
+            },
+            {
+                "name": "Ultimate Protein",
+                "kind": "line"
+            }
+        ]
+    }
+}

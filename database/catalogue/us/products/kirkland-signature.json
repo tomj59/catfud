@@ -1,0 +1,47 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "kirkland-signature",
+    "brand": "Kirkland Signature",
+    "products": [
+        {
+            "path": [
+                "Kirkland Signature"
+            ],
+            "name": "Chicken & Rice",
+            "import_key": "catfood.xlsx|dry food|||chicken & rice|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Chicken, chicken meal, whole grain brown rice, ground white rice, chicken fat",
+            "nutrition": {
+                "protein_pct": 30,
+                "fat_pct": 20,
+                "fiber_pct": 3,
+                "carb_pct": 32,
+                "moisture_pct": 10,
+                "kcal_per_cup": 443,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.costco.com/kirkland-signature-chicken-and-rice-cat-food-25-lbs..product.100334973.html",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 12,
+                "cost_tier": "Low-Cost Foods",
+                "size_lb": 25,
+                "cups": 100,
+                "price": 36.99,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Kirkland Signature",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

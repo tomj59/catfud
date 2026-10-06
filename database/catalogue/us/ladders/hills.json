@@ -1,0 +1,60 @@
+{
+  "region": "US",
+  "reviewed": false,
+  "ladder": {
+    "name": "Hill's",
+    "kind": "manufacturer",
+    "aliases": [
+      "Hills"
+    ],
+    "children": [
+      {
+        "name": "Science Diet",
+        "kind": "brand",
+        "aliases": [
+          "Hill's Science Diet"
+        ],
+        "children": [
+          {
+            "name": "Adult",
+            "kind": "line",
+            "notes": "Life stage is a tag on each product (adult, adult-7plus), not a rung. Hill's prints 'Adult 7+' as its own line name; it lands here with the adult-7plus tag."
+          },
+          {
+            "name": "Indoor",
+            "kind": "line",
+            "aliases": [
+              "Adult Indoor"
+            ]
+          },
+          {
+            "name": "Light",
+            "kind": "line",
+            "aliases": [
+              "Adult Light"
+            ]
+          },
+          {
+            "name": "Kitten",
+            "kind": "line"
+          },
+          {
+            "name": "Specialty",
+            "kind": "line"
+          }
+        ]
+      },
+      {
+        "name": "Prescription Diet",
+        "kind": "brand",
+        "aliases": [
+          "Hill's Prescription Diet",
+          "Rx"
+        ],
+        "tags": [
+          "diet:clinical"
+        ]
+      }
+    ]
+  }
+}

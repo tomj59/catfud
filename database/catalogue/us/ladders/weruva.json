@@ -1,0 +1,22 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": {
+        "name": "Weruva",
+        "kind": "brand",
+        "children": [
+            {
+                "name": "B.F.F.",
+                "kind": "line"
+            },
+            {
+                "name": "Cats In The Kitchen",
+                "kind": "line"
+            },
+            {
+                "name": "Classics",
+                "kind": "line"
+            }
+        ]
+    }
+}

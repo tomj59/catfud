@@ -1,0 +1,458 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "purina",
+    "brand": "Beyond",
+    "products": [
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Alaskan Cod & Spinich",
+            "import_key": "catfood.xlsx|purina|purina beyond||alaskan cod & spinich|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "source_url": "https://www.chewy.com/purina-beyond-grain-free-pate-alaskan/dp/139374",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 30,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 12.56,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no ingredients in sheet",
+                    "no nutrition values in sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Alaskan Salmon & Sweet Potato",
+            "import_key": "catfood.xlsx|purina|purina beyond||alaskan salmon & sweet potato|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "source_url": "https://www.chewy.com/purina-beyond-wild-alaskan-salmon/dp/139387",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 33,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 13.26,
+                "price_per_oz": 0.37,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no ingredients in sheet",
+                    "no nutrition values in sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Arctic Char & Spinich",
+            "import_key": "catfood.xlsx|purina|purina beyond||arctic char & spinich|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "source_url": "https://www.chewy.com/purina-beyond-arctic-char-spinach/dp/159441",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 32,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 15.36,
+                "price_per_oz": 0.43,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no ingredients in sheet",
+                    "no nutrition values in sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Canadian Duck & Sweet Potato",
+            "import_key": "catfood.xlsx|purina|purina beyond||canadian duck & sweet potato|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "source_url": "https://www.chewy.com/purina-beyond-duck-sweet-potato-pate/dp/159440",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 34,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 16.68,
+                "price_per_oz": 0.46,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no ingredients in sheet",
+                    "no nutrition values in sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Chicken & Carrot Recipe",
+            "import_key": "catfood.xlsx|purina|purina beyond||chicken & carrot recipe|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "source_url": "https://www.chewy.com/purina-beyond-high-protein-organic/dp/279316",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 37,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "price_per_oz": 0,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no ingredients in sheet",
+                    "no nutrition values in sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Chicken & Sweet Potato",
+            "import_key": "catfood.xlsx|purina|purina beyond||chicken & sweet potato|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "source_url": "https://www.chewy.com/purina-beyond-grain-free-natural-pate/dp/139379",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 29,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 13.54,
+                "price_per_oz": 0.38,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no ingredients in sheet",
+                    "no nutrition values in sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Chicken & Sweet Potato",
+            "import_key": "catfood.xlsx|purina|purina beyond||chicken & sweet potato|#2",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "source_url": "https://www.chewy.com/purina-beyond-high-protein-organic/dp/279314",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet; same name/line appears more than once in the sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 35,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 14.61,
+                "price_per_oz": 0.41,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no ingredients in sheet",
+                    "no nutrition values in sheet",
+                    "same name/line appears more than once in the sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Chicken, Beef, & Carrot",
+            "import_key": "catfood.xlsx|purina|purina beyond||chicken, beef, & carrot|gravy",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Gravy",
+            "tags": [
+                "medium:gravy"
+            ],
+            "ingredients": "Chicken and Beef Broth, Chicken, Liver, Wheat Gluten, Beef, Carrots, Egg Product, Natural Flavor, Xanthan Gum, Carrageenan, Salt",
+            "source_url": "https://www.chewy.com/purina-beyond-chicken-beef-carrot/dp/139380",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no nutrition values in sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 31,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 12.55,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no nutrition values in sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Trout & Catfish Recipe",
+            "import_key": "catfood.xlsx|purina|purina beyond||trout & catfish recipe|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Trout, Chicken, Liver, Fish Broth, Catfish, Carrots, Egg Product, Guar Gum, Salt",
+            "nutrition": {
+                "protein_pct": 45.5,
+                "fat_pct": 22.7,
+                "carb_pct": 10,
+                "fiber_pct": 6.8,
+                "moisture_pct": 78,
+                "kcal_per_can": 99,
+                "kcal_per_oz": 33,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/purina-beyond-grain-free-trout/dp/139381",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Purina",
+                "row": 27,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 12.6,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Tuna, Alaskan Cod, & Carrot",
+            "import_key": "catfood.xlsx|purina|purina beyond||tuna, alaskan cod, & carrot|gravy",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Gravy",
+            "tags": [
+                "medium:gravy"
+            ],
+            "ingredients": "Tuna and Cod Broth, Tuna, Chicken, Wheat Gluten, Liver, Cod, Carrots, Natural Flavor, Egg Product, Xanthan Gum, Carrageenan, Salt",
+            "source_url": "https://www.chewy.com/purina-beyond-natural-wild-caught/dp/139382",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no nutrition values in sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 28,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 12.49,
+                "price_per_oz": 0.35,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no nutrition values in sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Turkey, Sweet Potato, & Spinich",
+            "import_key": "catfood.xlsx|purina|purina beyond||turkey, sweet potato, & spinich|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "source_url": "https://www.chewy.com/purina-beyond-cage-free-turkey-sweet/dp/139386",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "price_per_kcal unreadable in sheet: '#DIV/0!'; no ingredients in sheet; no nutrition values in sheet",
+            "meta": {
+                "sheet": "Purina",
+                "row": 36,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 18.96,
+                "price_per_oz": 0.53,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "price_per_kcal unreadable in sheet: '#DIV/0!'",
+                    "no ingredients in sheet",
+                    "no nutrition values in sheet"
+                ],
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Purina",
+                "Beyond"
+            ],
+            "name": "Wild Salmon Recipe",
+            "import_key": "catfood.xlsx|purina|purina beyond||wild salmon recipe|pate",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "Pate",
+            "tags": [
+                "texture:pate"
+            ],
+            "ingredients": "Salmon, Liver, Chicken, Fish Broth, Carrots, Egg Product, Guar Gum, Salt",
+            "nutrition": {
+                "protein_pct": 45.5,
+                "fat_pct": 22.7,
+                "carb_pct": 2.3,
+                "fiber_pct": 9.1,
+                "moisture_pct": 78,
+                "kcal_per_can": 101,
+                "kcal_per_oz": 33.67,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/purina-beyond-grain-free-wild-salmon/dp/139385",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Purina",
+                "row": 26,
+                "packs_per_case": 12,
+                "can_oz": 3,
+                "case_oz": 36,
+                "case_price": 11.96,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Purina",
+                "source_line": "Purina Beyond"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

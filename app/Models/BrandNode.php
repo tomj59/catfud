@@ -20,11 +20,11 @@ class BrandNode extends Model
     use Auditable, BelongsToRegion;
 
     protected $fillable = ['region', 'parent_id', 'name', 'kind', 'depth', 'path_key', 'aliases', 'default_tags', 'species', 'notes',
-        'status', 'discontinued_on', 'status_confidence', 'status_source', 'status_note', 'successor_id', 'logo_path'];
+        'status', 'previous_status', 'status_on', 'status_confidence', 'status_source', 'status_note', 'successor_id', 'logo_path'];
 
     protected function casts(): array
     {
-        return ['aliases' => 'array', 'default_tags' => 'array', 'species' => 'array', 'discontinued_on' => 'date'];
+        return ['aliases' => 'array', 'default_tags' => 'array', 'species' => 'array', 'status_on' => 'date'];
     }
 
     public function parent(): BelongsTo
@@ -37,11 +37,21 @@ class BrandNode extends Model
         return $this->belongsTo(self::class, 'successor_id');
     }
 
+    protected static function booted(): void
+    {
+        // Remember what the status was before it changed ("retired" -> "disabled" keeps "retired").
+        static::updating(function (self $n) {
+            if ($n->isDirty('status')) {
+                $n->previous_status = $n->getOriginal('status') ?: 'active';
+            }
+        });
+    }
+
     /** The status that applies here: this node's own if it has one, else the nearest ancestor's (a retired brand retires its lines). */
     public function effectiveStatus(): string
     {
         foreach (array_reverse($this->ancestry()) as $n) {
-            if ($n->status !== 'active') {
+            if (($n->status ?? 'active') !== 'active') {
                 return $n->status;
             }
         }

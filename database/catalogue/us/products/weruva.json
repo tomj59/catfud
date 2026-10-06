@@ -1,0 +1,1277 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "weruva",
+    "brand": "Weruva",
+    "products": [
+        {
+            "path": [
+                "Weruva",
+                "B.F.F."
+            ],
+            "name": "Tuna & Bonito Be Mine",
+            "import_key": "catfood.xlsx|weruva|b.f.f. line||tuna & bonito be mine|(originals) (gelee)",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "(Originals) (Gelee)",
+            "tags": [
+                "medium:jelly"
+            ],
+            "ingredients": "Tuna, Fish Broth, Sunflower Seed Oil, Bonito, Calcium Lactate",
+            "nutrition": {
+                "protein_pct": 77.5,
+                "fat_pct": 14.2,
+                "carb_pct": 2.7,
+                "fiber_pct": 0.1,
+                "moisture_pct": 81.3,
+                "kcal_per_oz": 23.3,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/bff-tuna-tilapia-twosome-dinner-in/dp/132283",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 43,
+                "case_oz": 132,
+                "case_price": 43.99,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "B.F.F. Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "B.F.F."
+            ],
+            "name": "Tuna & Chicken 4Eva",
+            "import_key": "catfood.xlsx|weruva|b.f.f. line||tuna & chicken 4eva|(originals) (gelee)",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "(Originals) (Gelee)",
+            "tags": [
+                "medium:jelly"
+            ],
+            "ingredients": "Tuna, Fish Broth, Chicken (Boneless, Skinless Breast), Potato Starch, Sunflower Seed Oil,",
+            "nutrition": {
+                "protein_pct": 75.5,
+                "fat_pct": 13.1,
+                "carb_pct": 2.5,
+                "fiber_pct": 0.1,
+                "moisture_pct": 80,
+                "kcal_per_oz": 23.5,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/bff-tuna-chicken-4-eva-dinner-in/dp/36044",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 38,
+                "case_oz": 120,
+                "case_price": 32.99,
+                "price_per_oz": 0.27,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "B.F.F. Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "B.F.F."
+            ],
+            "name": "Tuna & Chicken Chuckles",
+            "import_key": "catfood.xlsx|weruva|b.f.f. line||tuna & chicken chuckles|(originals) (gelee)",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "(Originals) (Gelee)",
+            "tags": [
+                "medium:jelly"
+            ],
+            "ingredients": "Tuna, Fish Broth, Chicken (Boneless, Skinless Breast), Sunflower Seed Oil, Calcium Lactate,",
+            "nutrition": {
+                "protein_pct": 80.1,
+                "fat_pct": 14,
+                "carb_pct": 2.7,
+                "fiber_pct": 0.1,
+                "moisture_pct": 81.4,
+                "kcal_per_oz": 22.9,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/bff-tuna-chicken-chuckles-dinner-in/dp/132269",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 41,
+                "case_oz": 132,
+                "case_price": 43.99,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "B.F.F. Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "B.F.F."
+            ],
+            "name": "Tuna & Pumpkin Valentine",
+            "import_key": "catfood.xlsx|weruva|b.f.f. line||tuna & pumpkin valentine|(originals) (gelee)",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "(Originals) (Gelee)",
+            "tags": [
+                "medium:jelly"
+            ],
+            "ingredients": "Tuna, Fish Broth, Pumpkin, Potato Starch, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 75,
+                "fat_pct": 15.2,
+                "carb_pct": 5.6,
+                "fiber_pct": 0.1,
+                "moisture_pct": 82,
+                "kcal_per_oz": 23.1,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/bff-tuna-pumpkin-valentine-dinner-in/dp/36045",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 40,
+                "case_oz": 120,
+                "case_price": 32.99,
+                "price_per_oz": 0.27,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "B.F.F. Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "B.F.F."
+            ],
+            "name": "Tuna & Salmon Soulmates",
+            "import_key": "catfood.xlsx|weruva|b.f.f. line||tuna & salmon soulmates|(originals) (gelee)",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "(Originals) (Gelee)",
+            "tags": [
+                "medium:jelly"
+            ],
+            "ingredients": "Tuna, Fish Broth, Salmon, Sunflower Seed Oil, Calcium Lactate",
+            "nutrition": {
+                "protein_pct": 77,
+                "fat_pct": 15.1,
+                "carb_pct": 2.7,
+                "fiber_pct": 0.1,
+                "moisture_pct": 81.3,
+                "kcal_per_oz": 22.9,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/bff-tuna-salmon-soulmates-dinner-in/dp/36043",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 39,
+                "case_oz": 120,
+                "case_price": 32.99,
+                "price_per_oz": 0.27,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "B.F.F. Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "B.F.F."
+            ],
+            "name": "Tuna & Shrimp Sweethearts",
+            "import_key": "catfood.xlsx|weruva|b.f.f. line||tuna & shrimp sweethearts|(originals) (gelee)",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "(Originals) (Gelee)",
+            "tags": [
+                "medium:jelly"
+            ],
+            "ingredients": "Tuna, Fish Broth, Shrimp, Potato Starch, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 75.3,
+                "fat_pct": 16.1,
+                "carb_pct": 2.7,
+                "fiber_pct": 0.1,
+                "moisture_pct": 81.4,
+                "kcal_per_oz": 23.1,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/bff-tuna-shrimp-sweethearts-dinner-in/dp/132281",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 42,
+                "case_oz": 132,
+                "case_price": 43.99,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "B.F.F. Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "B.F.F."
+            ],
+            "name": "Tuna & Tilapia Twosome",
+            "import_key": "catfood.xlsx|weruva|b.f.f. line||tuna & tilapia twosome|(originals) (gelee)",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "(Originals) (Gelee)",
+            "tags": [
+                "medium:jelly"
+            ],
+            "ingredients": "Tuna, Fish Broth, Tilapia, Sunflower Seed Oil, Calcium Lactate",
+            "nutrition": {
+                "protein_pct": 79.3,
+                "fat_pct": 14.1,
+                "carb_pct": 2.7,
+                "fiber_pct": 0.1,
+                "moisture_pct": 81.6,
+                "kcal_per_oz": 22.9,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/bff-tuna-bonito-be-mine-dinner-in/dp/132230",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 44,
+                "case_oz": 132,
+                "case_price": 43.99,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "B.F.F. Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "B.F.F."
+            ],
+            "name": "Tuna Too Cool",
+            "import_key": "catfood.xlsx|weruva|b.f.f. line||tuna too cool|(originals) (gelee)",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "texture": "(Originals) (Gelee)",
+            "tags": [
+                "medium:jelly"
+            ],
+            "ingredients": "Tuna, Fish Broth, Sunflower Seed Oil, Calcium Lactate, Locust Bean Gum",
+            "nutrition": {
+                "protein_pct": 76.9,
+                "fat_pct": 13.1,
+                "carb_pct": 2.7,
+                "fiber_pct": 0.1,
+                "moisture_pct": 81.4,
+                "kcal_per_oz": 22.72,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/bff-tuna-too-cool-dinner-in-gelee/dp/132285",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 37,
+                "case_oz": 132,
+                "case_price": 43.99,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "B.F.F. Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "Chicken Frick a Zee",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|chicken|chicken frick a zee|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken, Chicken Broth, Sunflower Seed Oil, Locust Bean Gum, Calcium Lactate",
+            "nutrition": {
+                "protein_pct": 67.4,
+                "fat_pct": 25.8,
+                "carb_pct": 0.2,
+                "fiber_pct": 2.7,
+                "moisture_pct": 81,
+                "kcal_per_can": 243,
+                "kcal_per_oz": 24.3,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-lamb-burgini/dp/43953",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 13,
+                "flavor": "Chicken",
+                "packs_per_case": 12,
+                "can_oz": 10,
+                "case_oz": 144,
+                "case_price": 37.51,
+                "price_per_oz": 0.26,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "Foul Ball",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|chicken & turkey|foul ball|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken, Chicken Broth, Turkey, Locust Bean Gum, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 57.1,
+                "fat_pct": 32.2,
+                "carb_pct": 5.8,
+                "fiber_pct": 0.3,
+                "moisture_pct": 82,
+                "kcal_per_can": 129,
+                "kcal_per_oz": 21.5,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-two-tu-tango/dp/43959",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 18,
+                "flavor": "Chicken & Turkey",
+                "packs_per_case": 24,
+                "can_oz": 6,
+                "case_oz": 144,
+                "case_price": 47.99,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "Funk In The Trunk",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|chicken & pumpkin|funk in the trunk|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken Broth, Chicken (Boneless, Skinless Breast), Tuna, Pumpkin, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 72,
+                "fat_pct": 13.5,
+                "carb_pct": 5.8,
+                "fiber_pct": 0.3,
+                "moisture_pct": 86,
+                "kcal_per_can": 178,
+                "kcal_per_oz": 17.8,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-double-dip/dp/43957",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 10,
+                "flavor": "Chicken & Pumpkin",
+                "packs_per_case": 12,
+                "can_oz": 10,
+                "case_oz": 144,
+                "case_price": 34.49,
+                "price_per_oz": 0.24,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "Goldie Lox",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|chicken & salmon|goldie lox|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken Broth, Chicken (Boneless, Skinless Breast), Tuna, Salmon, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 75.4,
+                "fat_pct": 14.1,
+                "carb_pct": 4.6,
+                "fiber_pct": 0.4,
+                "moisture_pct": 85,
+                "kcal_per_can": 110,
+                "kcal_per_oz": 18.3,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-fowl-ball/dp/43943",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 9,
+                "flavor": "Chicken & Salmon",
+                "packs_per_case": 24,
+                "can_oz": 6,
+                "case_oz": 144,
+                "case_price": 47.99,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "Kitty Gone Wild",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|wild salmon|kitty gone wild|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Fish Broth, Salmon, Tuna, Sardine, Mackerel, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 67.7,
+                "fat_pct": 16.2,
+                "carb_pct": 5.3,
+                "fiber_pct": 0.3,
+                "moisture_pct": 85,
+                "kcal_per_can": 188,
+                "kcal_per_oz": 18.8,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-splash-dance/dp/43955",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 12,
+                "flavor": "Wild Salmon",
+                "packs_per_case": 12,
+                "can_oz": 10,
+                "case_oz": 144,
+                "case_price": 34.49,
+                "price_per_oz": 0.24,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "La Isla Bonita",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|mackerel & shrimp|la isla bonita|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Fish Broth, Mackerel, Tuna, Shrimp, Locust Bean Gum, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 57.7,
+                "fat_pct": 24.7,
+                "carb_pct": 9.7,
+                "fiber_pct": 0.4,
+                "moisture_pct": 79,
+                "kcal_per_can": 118,
+                "kcal_per_oz": 19.7,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-la-isla-bonita/dp/43951",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 17,
+                "flavor": "Mackerel & Shrimp",
+                "packs_per_case": 24,
+                "can_oz": 6,
+                "case_oz": 144,
+                "case_price": 48.99,
+                "price_per_oz": 0.34,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "Lamb Burger-ini",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|lamb|lamb burger-ini|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Fish Broth, Tuna, Lamb, Lamb Lung, Locust Bean Gum, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 57.7,
+                "fat_pct": 24.7,
+                "carb_pct": 9.7,
+                "fiber_pct": 0.4,
+                "moisture_pct": 81,
+                "kcal_per_can": 268,
+                "kcal_per_oz": 26.8,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-la-isla-bonita/dp/43951",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 16,
+                "flavor": "Lamb",
+                "packs_per_case": 12,
+                "can_oz": 10,
+                "case_oz": 144,
+                "case_price": 39.99,
+                "price_per_oz": 0.28,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "Splash Dance",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|chicken & ocean fish|splash dance|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken Broth, Chicken, Ocean Fish, Tuna, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 63.7,
+                "fat_pct": 24,
+                "carb_pct": 5.6,
+                "fiber_pct": 0.2,
+                "moisture_pct": 81,
+                "kcal_per_can": 146,
+                "kcal_per_oz": 24.3,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-kitty-gone/dp/43949",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 14,
+                "flavor": "Chicken & Ocean Fish",
+                "packs_per_case": 24,
+                "can_oz": 6,
+                "case_oz": 144,
+                "case_price": 47.99,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "The Double Dip",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|chicken & beef|the double dip|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken Broth, Chicken, Beef, Beef Lung, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 61,
+                "fat_pct": 23.3,
+                "carb_pct": 9.7,
+                "fiber_pct": 0.2,
+                "moisture_pct": 84,
+                "kcal_per_can": 124,
+                "kcal_per_oz": 20.7,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-funk-in-trunk/dp/169227",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 15,
+                "flavor": "Chicken & Beef",
+                "packs_per_case": 24,
+                "can_oz": 6,
+                "case_oz": 144,
+                "case_price": 47.99,
+                "price_per_oz": 0.33,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Cats In The Kitchen"
+            ],
+            "name": "Two Tu Tango",
+            "import_key": "catfood.xlsx|weruva|cats in the kitchen line|sardine, tuna, & turkey|two tu tango|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Fish Broth, Sardine, Tuna, Turkey, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 67.8,
+                "fat_pct": 18.8,
+                "carb_pct": 9.7,
+                "fiber_pct": 0.2,
+                "moisture_pct": 84,
+                "kcal_per_can": 114,
+                "kcal_per_oz": 19,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-cats-in-kitchen-goldie-lox/dp/43947",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 11,
+                "flavor": "Sardine, Tuna, & Turkey",
+                "packs_per_case": 24,
+                "can_oz": 6,
+                "case_oz": 144,
+                "case_price": 48.99,
+                "price_per_oz": 0.34,
+                "price_snapshot": "2024-12",
+                "source_brand": "Weruva",
+                "source_line": "Cats In The Kitchen Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Amazon Livin'",
+            "import_key": "catfood.xlsx|weruva|classics line|chicken & chicken liver|amazon livin'|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken (Boneless, Skinless Breast), Chicken Broth, Chicken Liver, Potato Starch, Sunflower Seed Oil, Xanthan Gum",
+            "nutrition": {
+                "protein_pct": 0.7,
+                "fat_pct": 0.2,
+                "carb_pct": 0.1,
+                "fiber_pct": 0,
+                "moisture_pct": 84.5,
+                "kcal_per_can": 109,
+                "kcal_per_oz": 19.8,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-nine-liver-chicken-chicken/dp/34495",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 32,
+                "flavor": "Chicken & Chicken Liver",
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 54.69,
+                "price_per_oz": 0.41,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/amazon-livin-4/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Asian Fusion",
+            "import_key": "catfood.xlsx|weruva|classics line|tuna & shirasu|asian fusion|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Tuna Red Meat, Water, Shirasu, Sunflower Seed Oil, Locust Bean Gum, Guar Gum",
+            "nutrition": {
+                "protein_pct": 0.7,
+                "fat_pct": 0.2,
+                "carb_pct": 0,
+                "fiber_pct": 0,
+                "moisture_pct": 82.8,
+                "kcal_per_can": 120,
+                "kcal_per_oz": 21.8,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-asian-fusion-tuna-shirasu/dp/34477",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 24,
+                "flavor": "Tuna & Shirasu",
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 55.99,
+                "price_per_oz": 0.42,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/asian-fusion-4/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Funky Chunky",
+            "import_key": "catfood.xlsx|weruva|classics line|chicken soup, pumpkin|funky chunky|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken Broth, Chicken (Boneless, Skinless Breast), Pumpkin, Carrot, Pea, Potato Starch, Sunflower Seed Oil, Xanthan Gum",
+            "nutrition": {
+                "protein_pct": 0.6,
+                "fat_pct": 0.1,
+                "carb_pct": 0.2,
+                "fiber_pct": 0,
+                "kcal_per_can": 96,
+                "kcal_per_oz": 17.5,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-funky-chunky-chicken-soup/dp/34479",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "moisture unreadable in sheet: '84/2%'",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 31,
+                "flavor": "Chicken Soup, Pumpkin",
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 52.49,
+                "price_per_oz": 0.4,
+                "price_snapshot": "2024-12",
+                "flags": [
+                    "moisture unreadable in sheet: '84/2%'"
+                ],
+                "extra_links": [
+                    "https://weruva.com/product/funky-chunky-6/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Grandma's Chicken Soup",
+            "import_key": "catfood.xlsx|weruva|classics line|chicken & pumpkin|grandma's chicken soup|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken Broth, Chicken (Boneless, Skinless Breast), Pumpkin, Carrot, Pea, Tapioca Starch, Sunflower Seed Oil, Xanthan Gum",
+            "nutrition": {
+                "protein_pct": 0.6,
+                "fat_pct": 0.1,
+                "carb_pct": 0.2,
+                "fiber_pct": 0,
+                "moisture_pct": 84.5,
+                "kcal_per_can": 106,
+                "kcal_per_oz": 19.3,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-grandmas-chicken-soup-chicken/dp/34481",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 30,
+                "flavor": "Chicken & Pumpkin",
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 55.99,
+                "price_per_oz": 0.42,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/grandmas-chicken-soup-6/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Green Eggs & Chicken",
+            "import_key": "catfood.xlsx|weruva|classics line|chicken, egg, pea soup|green eggs & chicken|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken (Boneless, Skinless), Chicken Broth, Egg, Potato Starch, Pea, Sunflower Seed Oil, Xanthan Gum",
+            "nutrition": {
+                "protein_pct": 0.7,
+                "fat_pct": 0.2,
+                "carb_pct": 0.1,
+                "fiber_pct": 0,
+                "moisture_pct": 84.6,
+                "kcal_per_can": 117,
+                "kcal_per_oz": 21.3,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-green-eggs-chicken-chicken-egg/dp/34483",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 33,
+                "flavor": "Chicken, Egg, Pea Soup",
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 49.99,
+                "price_per_oz": 0.38,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/green-eggs-chicken-6/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Mack and Jack",
+            "import_key": "catfood.xlsx|weruva|classics line|mackerel & grilled skipjack|mack and jack|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Water, Tuna Red Meat, Mackerel, Skipjack, Sunflower Seed Oil, Locust Bean Gum, Guar Gum",
+            "nutrition": {
+                "protein_pct": 0.8,
+                "fat_pct": 0.1,
+                "carb_pct": 0.1,
+                "fiber_pct": 0,
+                "moisture_pct": 84.1,
+                "kcal_per_can": 220,
+                "kcal_per_oz": 22,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-mack-jack-mackerel-grilled/dp/46732",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 25,
+                "flavor": "Mackerel & Grilled Skipjack",
+                "packs_per_case": 12,
+                "can_oz": 10,
+                "case_oz": 132,
+                "case_price": 46.99,
+                "price_per_oz": 0.36,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/mack-and-jack-6/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Marbella Paela",
+            "import_key": "catfood.xlsx|weruva|classics line|mackerel, shrimp, mussels|marbella paela|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Mackerel, Water, Shrimp, Squid, Mussel, Sunflower Seed Oil, Locust Bean Gum, Guar Gum",
+            "nutrition": {
+                "protein_pct": 0.7,
+                "fat_pct": 0.2,
+                "carb_pct": 0,
+                "fiber_pct": 0,
+                "moisture_pct": 82.8,
+                "kcal_per_can": 113,
+                "kcal_per_oz": 20.5,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-marbella-paella-mackerel/dp/34487",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 23,
+                "flavor": "Mackerel, Shrimp, Mussels",
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 55.99,
+                "price_per_oz": 0.42,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/marbella-paella-6/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Meow Luau",
+            "import_key": "catfood.xlsx|weruva|classics line|mackerel & pumpkin|meow luau|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Mackerel, Water, Pumpkin, Potato Starch, Sunflower Seed Oil",
+            "nutrition": {
+                "protein_pct": 0.7,
+                "fat_pct": 0.2,
+                "carb_pct": 0,
+                "fiber_pct": 0,
+                "moisture_pct": 83.6,
+                "kcal_per_can": 115,
+                "kcal_per_oz": 20.9,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-meow-luau-mackerel-pumpkin/dp/34491",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 26,
+                "flavor": "Mackerel & Pumpkin",
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 55.99,
+                "price_per_oz": 0.42,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/meow-luau-4/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Mideast Feast",
+            "import_key": "catfood.xlsx|weruva|classics line|grilled tilapia|mideast feast|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Tuna, Water, Tilapia, Potato Starch, Sunflower Seed Oil, Xanthan Gum",
+            "nutrition": {
+                "protein_pct": 0.7,
+                "fat_pct": 0.2,
+                "carb_pct": 0.1,
+                "fiber_pct": 0,
+                "moisture_pct": 81.5,
+                "kcal_per_can": 218,
+                "kcal_per_oz": 21.8,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-mideast-feast-grilled-tilapia/dp/46730",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 27,
+                "flavor": "Grilled Tilapia",
+                "packs_per_case": 12,
+                "can_oz": 10,
+                "case_oz": 132,
+                "case_price": 41.99,
+                "price_per_oz": 0.32,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/mideast-feast-6/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Outback Grill",
+            "import_key": "catfood.xlsx|weruva|classics line|sardine & seabass|outback grill|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Sardine, Water, Trevally, Barramundi, Sunflower Seed Oil, Locust Bean Gum, Guar Gum",
+            "nutrition": {
+                "protein_pct": 0.7,
+                "fat_pct": 0.2,
+                "carb_pct": 0,
+                "fiber_pct": 0,
+                "moisture_pct": 85,
+                "kcal_per_can": 104,
+                "kcal_per_oz": 18.9,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-outback-grill-trevally/dp/34499",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 22,
+                "flavor": "Sardine & Seabass",
+                "packs_per_case": 24,
+                "can_oz": 5.5,
+                "case_oz": 132,
+                "case_price": 55.99,
+                "price_per_oz": 0.42,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/outback-grill-4/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Paw Lickin' Chicken",
+            "import_key": "catfood.xlsx|weruva|classics line|chicken|paw lickin' chicken|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Chicken (Boneless, Skinless Breast), Chicken Broth, Potato Starch, Sunflower Seed Oil, Xanthan Gum",
+            "nutrition": {
+                "protein_pct": 0.8,
+                "fat_pct": 0.2,
+                "carb_pct": 0,
+                "fiber_pct": 0,
+                "moisture_pct": 84.1,
+                "kcal_per_can": 192,
+                "kcal_per_oz": 19.2,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-paw-lickin-chicken-in-gravy/dp/35401",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 29,
+                "flavor": "Chicken",
+                "packs_per_case": 12,
+                "can_oz": 10,
+                "case_oz": 132,
+                "case_price": 41.99,
+                "price_per_oz": 0.32,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/paw-lickin-chicken-8/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Weruva",
+                "Classics"
+            ],
+            "name": "Polynesian BBQ",
+            "import_key": "catfood.xlsx|weruva|classics line|grilled red bigeye|polynesian bbq|",
+            "species": "cat",
+            "kind": "food",
+            "form": "wet",
+            "ingredients": "Water, Sardine, Tuna, Red Bigeye, Sunflower Seed Oil, Locust Bean Gum, Guar Gum",
+            "nutrition": {
+                "protein_pct": 0.8,
+                "fat_pct": 0.2,
+                "carb_pct": 0.1,
+                "fiber_pct": 0,
+                "moisture_pct": 79.6,
+                "kcal_per_can": 208,
+                "kcal_per_oz": 20.8,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/weruva-polynesian-bbq-grilled-red/dp/34505",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "meta": {
+                "sheet": "Weruva",
+                "row": 28,
+                "flavor": "Grilled Red Bigeye",
+                "packs_per_case": 12,
+                "can_oz": 10,
+                "case_oz": 132,
+                "case_price": 46.99,
+                "price_per_oz": 0.36,
+                "price_snapshot": "2024-12",
+                "extra_links": [
+                    "https://weruva.com/product/polynesian-bbq-6/"
+                ],
+                "source_brand": "Weruva",
+                "source_line": "Classics Line"
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,86 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "wellness",
+    "brand": "Wellness",
+    "products": [
+        {
+            "path": [
+                "Wellness"
+            ],
+            "name": "Complete Health Deboned Chicken",
+            "import_key": "catfood.xlsx|dry food|||complete health deboned chicken|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Deboned Chicken, Chicken Meal, Peas, Chickpeas, Chicken Fat",
+            "nutrition": {
+                "protein_pct": 40,
+                "fat_pct": 18,
+                "fiber_pct": 4,
+                "carb_pct": 27.5,
+                "moisture_pct": 10,
+                "kcal_per_cup": 477,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/wellness-complete-health-natural/dp/141771",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 20,
+                "cost_tier": "Mid-Cost Foods",
+                "size_lb": 11.5,
+                "cups": 46,
+                "price": 32.29,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Wellness",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        },
+        {
+            "path": [
+                "Wellness"
+            ],
+            "name": "CORE Original",
+            "import_key": "catfood.xlsx|dry food|||core original|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Deboned Turkey, Deboned Chicken, Turkey Meal, Chicken Meal, Peas, Herring Meal, Chicken Fat",
+            "nutrition": {
+                "protein_pct": 45,
+                "fat_pct": 18,
+                "fiber_pct": 3,
+                "carb_pct": 13,
+                "moisture_pct": 10,
+                "kcal_per_cup": 497,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/wellness-core-grain-free-original/dp/34435",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 24,
+                "cost_tier": "Mid-Cost Foods",
+                "size_lb": 11,
+                "cups": 44,
+                "price": 40.89,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Wellness",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

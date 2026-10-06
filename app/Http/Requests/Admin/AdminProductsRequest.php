@@ -24,6 +24,10 @@ class AdminProductsRequest extends FormRequest
             'created_by' => ['nullable', 'integer'],
             'barcode' => ['nullable', Rule::in(['missing', 'present'])],
             'image' => ['nullable', Rule::in(['missing', 'present'])],
+            /** Limit to a brand-tree node and everything beneath it. */
+            'node' => ['nullable', 'integer'],
+            /** Only products carrying this facet tag (`group:slug`, e.g. `life_stage:adult-7plus`). */
+            'tag' => ['nullable', 'string', 'max:60'],
             'per_page' => ['nullable', 'integer', 'min:1', 'max:100'],
         ];
     }

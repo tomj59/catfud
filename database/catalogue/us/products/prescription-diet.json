@@ -1,0 +1,588 @@
+{
+  "region": "US",
+  "reviewed": false,
+  "ladder": "hills",
+  "brand": "Prescription Diet",
+  "products": [
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Digestive Care I/D",
+      "import_key": "catfood.xlsx|hills|prescription line|chicken|digestive care i/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Water, Pork Liver, Chicken, Rice, Potato Protein, Chicken Fat, Chicken Liver Flavor, Powdered Cellulose, Dried Beet Pulp, Guar Gum, Iodized Salt",
+      "nutrition": {
+        "protein_pct": 40,
+        "fat_pct": 24.5,
+        "carb_pct": 25.3,
+        "fiber_pct": 2.6,
+        "moisture_pct": 78,
+        "kcal_per_can": 161,
+        "kcal_per_oz": 29.27,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-prescription-diet-id-digestive/dp/54767?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1101lvWyMpIq&utm_term=1101lvWyMpIq",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 43,
+        "flavor": "Chicken",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 66.99,
+        "price_per_oz": 0.51,
+        "price_snapshot": "2024-12",
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/pd-id-feline-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Food Sensitivities Z/D",
+      "import_key": "catfood.xlsx|hills|prescription line|chicken liver|food sensitivites z/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Hydrolyzed Chicken Liver, Water, Corn Starch, Powdered Cellulose, Soybean Oil",
+      "nutrition": {
+        "protein_pct": 34.3,
+        "fat_pct": 17.7,
+        "carb_pct": 40.3,
+        "fiber_pct": 1.8,
+        "moisture_pct": 78,
+        "kcal_per_can": 169,
+        "kcal_per_oz": 30.73,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-prescription-diet-zd-skinfood/dp/54733?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1011lvX2Kunf&utm_term=1011lvX2Kunf",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 44,
+        "flavor": "Chicken Liver",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 84.99,
+        "price_per_oz": 0.64,
+        "price_snapshot": "2024-12",
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/pd-zd-feline-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ],
+      "audit_notes": "Sheet spelled 'Sensitivites'; corrected."
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Glucosupport M/D",
+      "import_key": "catfood.xlsx|hills|prescription line|pork liver|glucosupport m/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Pork Liver, Pork By-Products, Water, Chicken Fat, Corn Starch, Potato Protein, Powdered Cellulose, Natural Flavor, Guar Gum, Fish Oil, Iodized Salt, Locust Bean Gum, Carrageenan",
+      "nutrition": {
+        "protein_pct": 52.1,
+        "fat_pct": 24.8,
+        "carb_pct": 13.1,
+        "fiber_pct": 2.7,
+        "moisture_pct": 78,
+        "kcal_per_can": 173,
+        "kcal_per_oz": 31.45,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-prescription-diet-md/dp/54757?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1100lvWfmukh&utm_term=1100lvWfmukh",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 45,
+        "flavor": "Pork Liver",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 64.99,
+        "price_per_oz": 0.49,
+        "price_snapshot": "2024-12",
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/pd-md-feline-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Kidney Care K/D",
+      "import_key": "catfood.xlsx|hills|prescription line|chicken|kidney care k/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Water, Pork Liver, Chicken, Egg Product, Brewers Rice, Sugar, Chicken Fat, Modified Rice Starch, Hydrolyzed Chicken Flavor, Powdered Cellulose, Fish Oil, Calcium Sulfate, Potassium Citrate, Guar Gum, Soybean Oil, Natural Flavor, Caramel color",
+      "nutrition": {
+        "protein_pct": 29.7,
+        "fat_pct": 22.9,
+        "carb_pct": 39.4,
+        "fiber_pct": 2.4,
+        "moisture_pct": 78,
+        "kcal_per_can": 177,
+        "kcal_per_oz": 32.18,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-prescription-diet-kd-kidney/dp/54762?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1101lvWyMFDH&utm_term=1101lvWyMFDH",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 46,
+        "flavor": "Chicken",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 65.99,
+        "price_per_oz": 0.5,
+        "price_snapshot": "2024-12",
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/pd-kd-feline-with-chicken-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Kidney Care K/D",
+      "import_key": "catfood.xlsx|hills|prescription line|tuna|kidney care k/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Water, Chicken, Pork Liver, Brewers Rice, Tuna, Modified Rice Starch, Dried Whey, Chicken Liver Flavor, Soybean Oil, Fish Oil, Chicken Fat, Egg Product, Powdered Cellulose, Calcium Sulfate, L-Threonine, Potassium Citrate, Guar Gum, Natural Flavor,",
+      "nutrition": {
+        "protein_pct": 29.7,
+        "fat_pct": 19.9,
+        "carb_pct": 43,
+        "fiber_pct": 1.4,
+        "moisture_pct": 78,
+        "kcal_per_can": 170,
+        "kcal_per_oz": 30.91,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-prescription-diet-kd-kidney/dp/109879?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1100lvWfmy8p&utm_term=1100lvWfmy8p",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 47,
+        "flavor": "Tuna",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 65.99,
+        "price_per_oz": 0.5,
+        "price_snapshot": "2024-12",
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/pd-kd-feline-with-tuna-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Metabolic",
+      "import_key": "catfood.xlsx|hills|prescription line|chicken|metabolic|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Water, Pork Liver, Pork By-Products, Corn Flour, Powdered Cellulose, Chicken, Corn Starch, Flaxseed, Dried Tomato Pomace, Corn Gluten Meal, Natural Flavor, Coconut Oil, Dicalcium Phosphate, Guar Gum, Calcium Carbonate, Carrots, Fish Oil",
+      "nutrition": {
+        "protein_pct": 38.3,
+        "fat_pct": 13.8,
+        "carb_pct": 30.9,
+        "fiber_pct": 10.6,
+        "moisture_pct": 78,
+        "kcal_per_can": 136,
+        "kcal_per_oz": 24.73,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/pd-metabolic-feline-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 53,
+        "flavor": "Chicken",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 59.99,
+        "price_per_oz": 0.45,
+        "price_snapshot": "2024-12",
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Thyroid Care Y/D",
+      "import_key": "catfood.xlsx|hills|prescription line|chicken|thyroid care y/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Water, Pork Liver, Pork By-Products, Chicken, Corn Flour, Rice, Chicken Fat, Chicken Liver Flavor, Powdered Cellulose, Calcium Carbonate, Fish Oil, Natural Flavor",
+      "nutrition": {
+        "protein_pct": 33.2,
+        "fat_pct": 27.1,
+        "carb_pct": 31.2,
+        "fiber_pct": 3.1,
+        "moisture_pct": 78,
+        "kcal_per_can": 188,
+        "kcal_per_oz": 34.18,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-prescription-diet-yd-thyroid/dp/54738?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1101lvWyMSDs&utm_term=1101lvWyMSDs",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 48,
+        "flavor": "Chicken",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 76.99,
+        "price_per_oz": 0.58,
+        "price_snapshot": "2024-12",
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/pd-yd-feline-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Urgent Care A/D",
+      "import_key": "catfood.xlsx|hills|prescription line|chicken|urgent care a/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Water, Turkey Liver, Pork Liver, Chicken, Turkey Heart, Corn Flour, Pork Protein Isolate, Fish Oil, Calcium Carbonate, Chicken Liver Flavor, Egg Flavor, Guar Gum",
+      "nutrition": {
+        "protein_pct": 44,
+        "fat_pct": 33,
+        "carb_pct": 13.3,
+        "fiber_pct": 10,
+        "moisture_pct": 78,
+        "kcal_per_can": 180,
+        "kcal_per_oz": 32.73,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-prescription-diet-d-urgent-care/dp/54659?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1101lvWyNeU3&utm_term=1101lvWyNeU3",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 54,
+        "flavor": "Chicken",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 75.99,
+        "price_per_oz": 0.58,
+        "price_snapshot": "2024-12",
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/pd-ad-canine-feline-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Urinary Care C/D",
+      "import_key": "catfood.xlsx|hills|prescription line|ocean fish|urinary care c/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Pork By-Products, Water, Pork Liver, Tuna, Brewers Rice, Chicken Fat, Corn Starch, Powdered Cellulose, Corn Gluten Meal, Soybean Oil, Chicken Liver Flavor, Fish Oil, Hydrolyzed Chicken Flavor, Calcium Sulfate, Guar Gum, Brewers Dried Yeast",
+      "nutrition": {
+        "protein_pct": 43,
+        "fat_pct": 19.9,
+        "carb_pct": 27.1,
+        "fiber_pct": 3.9,
+        "moisture_pct": 78,
+        "kcal_per_can": 178,
+        "kcal_per_oz": 32.36,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-prescription-diet-cd-multicare/dp/54775?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1101lvWyMUMI&utm_term=1101lvWyMUMI",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 49,
+        "flavor": "Ocean Fish",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 65.99,
+        "price_per_oz": 0.5,
+        "price_snapshot": "2024-12",
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/pd-cd-multicare-feline-with-ocean-fish-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Urinary Care C/D",
+      "import_key": "catfood.xlsx|hills|prescription line|chicken|urinary care c/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Pork By-Products, Water, Pork Liver, Chicken, Brewers Rice, Corn Starch, Chicken Fat, Soybean Meal, Chicken Liver Flavor, Fish Oil, Hydrolyzed Chicken Flavor, Calcium Sulfate, Guar Gum, Brewers Dried Yeast",
+      "nutrition": {
+        "protein_pct": 41.4,
+        "fat_pct": 21.9,
+        "carb_pct": 29.6,
+        "fiber_pct": 90,
+        "moisture_pct": 78,
+        "kcal_per_can": 163,
+        "kcal_per_oz": 29.64,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.chewy.com/hills-prescription-diet-cd-multicare/dp/54783?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l67254&utm_content=0&clickref=1011lvX2KQde&utm_term=1011lvX2KQde",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 50,
+        "flavor": "Chicken",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 65.99,
+        "price_per_oz": 0.5,
+        "price_snapshot": "2024-12",
+        "extra_links": [
+          "https://www.hillspet.com/cat-food/pd-cd-multicare-feline-with-chicken-canned"
+        ],
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Urinary Care S/D",
+      "import_key": "catfood.xlsx|hills|prescription line|chicken|urinary care s/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Pork Liver, Pork By-Products, Water, Chicken Fat, Brewers Rice, Corn Starch, Whole Grain Corn, Soybean Oil, Calcium Sulfate, Powdered Cellulose, Guar Gum,",
+      "nutrition": {
+        "protein_pct": 38.9,
+        "fat_pct": 30.2,
+        "carb_pct": 21.3,
+        "fiber_pct": 2.2,
+        "moisture_pct": 78,
+        "kcal_per_can": 215,
+        "kcal_per_oz": 39.09,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/pd-sd-feline-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 51,
+        "flavor": "Chicken",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 58.99,
+        "price_per_oz": 0.45,
+        "price_snapshot": "2024-12",
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Hill's",
+        "Prescription Diet"
+      ],
+      "name": "Weight Reduction R/D",
+      "import_key": "catfood.xlsx|hills|prescription line|chicken|weight reduction r/d|pate",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "texture": "Pate",
+      "tags": [
+        "diet:clinical",
+        "texture:pate"
+      ],
+      "ingredients": "Water, Pork Liver, Pork By-Products, Powdered Cellulose, Chicken, Brewers Rice, Corn Gluten Meal, Corn Starch, Calcium Sulfate, Soybean Oil, Dicalcium Phosphate, Guar Gum",
+      "nutrition": {
+        "protein_pct": 36.5,
+        "fat_pct": 11.9,
+        "carb_pct": 29.3,
+        "fiber_pct": 16.1,
+        "moisture_pct": 78,
+        "kcal_per_can": 114,
+        "kcal_per_oz": 20.73,
+        "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+      },
+      "source_url": "https://www.hillspet.com/cat-food/pd-rd-feline-canned",
+      "source": "catfood.xlsx",
+      "audit_status": "unreviewed",
+      "meta": {
+        "sheet": "Hills",
+        "row": 52,
+        "flavor": "Chicken",
+        "packs_per_case": 24,
+        "can_oz": 5.5,
+        "case_oz": 132,
+        "case_price": 56.99,
+        "price_per_oz": 0.43,
+        "price_snapshot": "2024-12",
+        "source_brand": "Hill's",
+        "source_line": "Prescription Line"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    }
+  ]
+}

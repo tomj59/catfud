@@ -20,7 +20,9 @@ class AdminNodesRequest extends FormRequest
             'parent' => ['nullable', 'integer'],
             /** `1` lists only branches with no products anywhere beneath them. */
             'empty' => ['nullable', 'boolean'],
-            'status' => ['nullable', Rule::in(['active', 'phasing_out', 'discontinued'])],
+            'status' => ['nullable', Rule::in(\App\Enums\NodeStatus::values())],
+            /** Rungs that are, or ever were, in this status (e.g. `retired` also finds a retired rung since switched to disabled). */
+            'ever' => ['nullable', Rule::in(\App\Enums\NodeStatus::values())],
         ];
     }
 }

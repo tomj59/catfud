@@ -1,0 +1,47 @@
+{
+    "region": "US",
+    "reviewed": false,
+    "ladder": "go-fit-free",
+    "brand": "Go! Fit + Free",
+    "products": [
+        {
+            "path": [
+                "Go! Fit + Free"
+            ],
+            "name": "Grain-Free Chicken, Turkey & Duck",
+            "import_key": "catfood.xlsx|dry food|||grain-free chicken, turkey & duck|",
+            "species": "cat",
+            "kind": "food",
+            "form": "dry",
+            "ingredients": "Chicken Meal, De-Boned Chicken, De-Boned Turkey, Duck Meal, Turkey Meal",
+            "nutrition": {
+                "protein_pct": 46,
+                "fat_pct": 18,
+                "fiber_pct": 1.5,
+                "carb_pct": 18,
+                "moisture_pct": 10,
+                "kcal_per_cup": 473,
+                "basis": "spreadsheet value, not from a label; probably dry-matter. Audit before trusting."
+            },
+            "source_url": "https://www.chewy.com/go-solutions-carnivore-grain-free/dp/189530?utm_source=partnerize&utm_medium=affiliates&utm_campaign=1100l35864&utm_content=0&clickref=1100liStp4Fo&utm_term=1100liStp4Fo",
+            "source": "catfood.xlsx",
+            "audit_status": "unreviewed",
+            "audit_notes": "brand/name split guessed from one sheet cell",
+            "meta": {
+                "sheet": "Dry Food",
+                "row": 25,
+                "cost_tier": "Mid-Cost Foods",
+                "size_lb": 16,
+                "cups": 64,
+                "price": 60,
+                "price_snapshot": "2024-12",
+                "brand_guessed_from_name": true,
+                "source_brand": "Go! Fit + Free",
+                "source_line": null
+            },
+            "_flags": [
+                "no life stage tag"
+            ]
+        }
+    ]
+}

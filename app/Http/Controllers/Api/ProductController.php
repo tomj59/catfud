@@ -157,8 +157,8 @@ class ProductController extends Controller
 
         $out = [];
         foreach ($existing as $n) {
-            if ($n->effectiveStatus() === 'discontinued' && ! $request->user()->isStaff()) {
-                continue;   // nobody adds new products to a discontinued line; existing ones keep working
+            if (in_array($n->effectiveStatus(), \App\Enums\NodeStatus::hiddenValues(), true) && ! $request->user()->isStaff()) {
+                continue;   // nobody adds new products to a retired or disabled line; existing ones keep working
             }
             $out[mb_strtolower($n->name)] = ['name' => $n->name, 'known' => true, 'species' => $n->species, 'status' => $n->effectiveStatus(), 'logo' => app(ImageStore::class)->logoUrl($n)];
         }

@@ -100,12 +100,8 @@ class BrandTreeMapper
         $this->place($product, BrandNode::ensurePath($segments), $tags);
     }
 
-    /**
-     * Put a product at a node: refresh the display caches and add the texture, medium, life-stage and node-default tags.
-     *
-     * @param  list<string>  $extraTags  "group:slug" keys already known from the source (e.g. a life stage dropped from the path)
-     */
-    public function place(Product $product, BrandNode $node, array $extraTags = []): void
+    /** Point a product at a node and refresh the display caches (brand, line, path text, search text). Touches no tags. */
+    public function cachePlacement(Product $product, BrandNode $node): void
     {
         $chain = $node->ancestry();
 
@@ -127,7 +123,18 @@ class BrandTreeMapper
             'path_text' => $names->implode(' › '),
             'search_text' => mb_strtolower($names->merge($aliases)->implode(' ')),
         ])->save();
+    }
 
+    /**
+     * Put a product at a node: refresh the display caches and add the texture, medium, life-stage and node-default tags.
+     *
+     * @param  list<string>  $extraTags  "group:slug" keys already known from the source (e.g. a life stage dropped from the path)
+     */
+    public function place(Product $product, BrandNode $node, array $extraTags = []): void
+    {
+        $this->cachePlacement($product, $node);
+
+        $chain = $node->ancestry();
         $this->attachTags($product, array_merge(
             TextureParser::tagKeys($product->texture),
             LifeStageParser::tagKeys($product->name.' '.$product->title_as_listed),
