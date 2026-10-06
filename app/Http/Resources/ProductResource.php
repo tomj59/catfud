@@ -24,6 +24,7 @@ class ProductResource extends JsonResource
      *   tags:array<int,array{id:int, group:string, slug:string, label:string}>,
      *   barcodes:array<int,array{id:int, gtin:string, upc_a:?string, pack_label:?string}>,
      *   audit_status?:string, audit_notes?:?string, import_key?:?string, meta?:?array<string,mixed>,
+     *   created_by?:?int, reviewed_by?:?int, merged_into_id?:?int,
      *   created_at:?string, updated_at:?string
      * }
      */
@@ -68,6 +69,9 @@ class ProductResource extends JsonResource
                 'audit_notes' => $this->audit_notes,
                 'import_key' => $this->import_key,
                 'meta' => $this->meta,
+                'created_by' => $this->created_by,
+                'reviewed_by' => $this->reviewed_by,
+                'merged_into_id' => $this->merged_into_id,
             ]),
             'created_at' => $this->created_at?->toISOString(),
             'updated_at' => $this->updated_at?->toISOString(),

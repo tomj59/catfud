@@ -56,3 +56,18 @@ The wording in the request flow is a UX problem for the client, not admin work. 
 - A Fancy Feast row reads "Wild Alaskan Salmon (kitten) (Kitten)": the converter appended a variety that the name already contained.
 - Pro Plan "High Protein" and "Savor" are marked dog-only but unverified.
 - Brand logos came from a stock-photo collage; replace with official assets before any public release.
+
+
+## Admin API and node lifecycle (built)
+
+- Everything under `/api/v1/admin` requires moderator; retiring or deleting nodes requires admin. The admin tool reads products
+  without `VisibleScope`, so it sees every contributor's pending and rejected items.
+- The unplaced queue groups by typed ladder (case-insensitive), ordered by number of contributors, then oldest. One resolve call
+  places the whole group on a node (creating rungs only here, by staff) and can approve in the same step.
+- Duplicate barcode on approve is refused; merge re-points inventory, ratings, meal offers and advisory matches (survivor's row wins
+  on collisions) and keeps the duplicate's barcode as a pack barcode.
+- Discontinuation: `brand_nodes.status` (active / phasing_out / discontinued), date, confidence, source, note, optional successor.
+  Inherited from the nearest ancestor; never deleted; non-staff pickers stop offering discontinued rungs. Retire has a `preview`
+  that counts nodes, products, pantry items and households first.
+- Not built yet: per-product override of an inherited status, a badge on product cards, successor suggestions in the app,
+  notifications to households, and automatic detection of discontinuations.

@@ -19,16 +19,34 @@ class BrandNode extends Model
 {
     use Auditable, BelongsToRegion;
 
-    protected $fillable = ['region', 'parent_id', 'name', 'kind', 'depth', 'path_key', 'aliases', 'default_tags', 'species', 'notes'];
+    protected $fillable = ['region', 'parent_id', 'name', 'kind', 'depth', 'path_key', 'aliases', 'default_tags', 'species', 'notes',
+        'status', 'discontinued_on', 'status_confidence', 'status_source', 'status_note', 'successor_id'];
 
     protected function casts(): array
     {
-        return ['aliases' => 'array', 'default_tags' => 'array', 'species' => 'array'];
+        return ['aliases' => 'array', 'default_tags' => 'array', 'species' => 'array', 'discontinued_on' => 'date'];
     }
 
     public function parent(): BelongsTo
     {
         return $this->belongsTo(self::class, 'parent_id');
+    }
+
+    public function successor(): BelongsTo
+    {
+        return $this->belongsTo(self::class, 'successor_id');
+    }
+
+    /** The status that applies here: this node's own if it has one, else the nearest ancestor's (a retired brand retires its lines). */
+    public function effectiveStatus(): string
+    {
+        foreach (array_reverse($this->ancestry()) as $n) {
+            if ($n->status !== 'active') {
+                return $n->status;
+            }
+        }
+
+        return 'active';
     }
 
     public function children(): HasMany

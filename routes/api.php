@@ -1,5 +1,10 @@
 <?php
 
+use App\Http\Controllers\Api\Admin\AuditLogController;
+use App\Http\Controllers\Api\Admin\DashboardController;
+use App\Http\Controllers\Api\Admin\NodeController;
+use App\Http\Controllers\Api\Admin\ProductModerationController;
+use App\Http\Controllers\Api\Admin\RequestQueueController;
 use App\Http\Controllers\Api\AdvisoryController;
 use App\Http\Controllers\Api\AuthController;
 use App\Http\Controllers\Api\InventoryController;
@@ -39,6 +44,26 @@ Route::prefix('v1')->group(function () {
         Route::patch('/products/{product}', [ProductController::class, 'update'])->whereNumber('product');
         Route::put('/products/{product}/barcode', [ProductController::class, 'attachBarcode'])->whereNumber('product');
         Route::post('/products', [ProductController::class, 'store']);
+
+        // Moderators and admins: the review queue, every contributor's products, the ladder, and the change history.
+        Route::prefix('admin')->middleware('role:moderator')->group(function () {
+            Route::get('/dashboard', DashboardController::class);
+            Route::get('/products', [ProductModerationController::class, 'index']);
+            Route::get('/products/export', [ProductModerationController::class, 'export']);
+            Route::post('/products/bulk', [ProductModerationController::class, 'bulk']);
+            Route::get('/products/{id}', [ProductModerationController::class, 'show'])->whereNumber('id');
+            Route::post('/products/{id}/moderate', [ProductModerationController::class, 'moderate'])->whereNumber('id');
+            Route::post('/products/{id}/place', [ProductModerationController::class, 'place'])->whereNumber('id');
+            Route::post('/products/{id}/merge', [ProductModerationController::class, 'merge'])->whereNumber('id');
+            Route::get('/requests', [RequestQueueController::class, 'index']);
+            Route::post('/requests/resolve', [RequestQueueController::class, 'resolve']);
+            Route::post('/requests/decline', [RequestQueueController::class, 'decline']);
+            Route::get('/nodes', [NodeController::class, 'index']);
+            Route::post('/nodes', [NodeController::class, 'store']);
+            Route::delete('/nodes/{id}', [NodeController::class, 'destroy'])->whereNumber('id')->middleware('role:admin');
+            Route::post('/nodes/{id}/retire', [NodeController::class, 'retire'])->whereNumber('id')->middleware('role:admin');
+            Route::get('/audit-log', [AuditLogController::class, 'index']);
+        });
 
         // Public Advisories: attributed third-party information, plus each user's own confirm/dismiss
         Route::get('/advisories', [AdvisoryController::class, 'index']);

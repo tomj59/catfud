@@ -26,12 +26,12 @@ use App\Support\BrandCatalogue;
 use App\Support\BrandNodeEditor;
 use App\Support\BrandTreeMapper;
 use App\Support\Gtin;
+use App\Support\LadderPath;
 use App\Support\Region;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Str;
-use InvalidArgumentException;
 use RuntimeException;
 
 class ProductController extends Controller
@@ -139,7 +139,7 @@ class ProductController extends Controller
      * already exist (even with no products yet) plus the region's curated ladder (App\Support\BrandCatalogue). ?species=cat hides names sold only for other species.
      * Each choice carries a logo URL when public/images/brands/{slug}.png|svg|jpg|webp exists.
      *
-     * @response array{path: string[], max_depth: int, can_go_deeper: bool, choices: array<int, array{name: string, known: bool, species: ?string[], logo: ?string}>}
+     * @response array{path: string[], max_depth: int, can_go_deeper: bool, choices: array<int, array{name: string, known: bool, species: ?string[], status: string, logo: ?string}>}
      */
     public function choices(BrandChoicesRequest $request): JsonResponse
     {
@@ -156,10 +156,13 @@ class ProductController extends Controller
 
         $out = [];
         foreach ($existing as $n) {
-            $out[mb_strtolower($n->name)] = ['name' => $n->name, 'known' => true, 'species' => $n->species];
+            if ($n->effectiveStatus() === 'discontinued' && ! $request->user()->isStaff()) {
+                continue;   // nobody adds new products to a discontinued line; existing ones keep working
+            }
+            $out[mb_strtolower($n->name)] = ['name' => $n->name, 'known' => true, 'species' => $n->species, 'status' => $n->effectiveStatus()];
         }
         foreach ($request->user()->isStaff() ? $curated : [] as $e) {     // only staff see names that are not real nodes yet
-            $out[mb_strtolower($e['name'])] ??= ['name' => $e['name'], 'known' => false, 'species' => $e['species'] ?? null];
+            $out[mb_strtolower($e['name'])] ??= ['name' => $e['name'], 'known' => false, 'species' => $e['species'] ?? null, 'status' => 'active'];
         }
         // Curated names lead, in the file's order; anything people added themselves follows alphabetically.
         $rank = [];
@@ -468,14 +471,6 @@ class ProductController extends Controller
     /** @return list<array{name:string}>|null|false null: no path given; false: too deep */
     private function segmentsFromPath(?string $path): array|null|false
     {
-        if ($path === null || trim($path) === '') {
-            return null;
-        }
-        $segments = array_values(array_filter(array_map(fn ($s) => ['name' => trim($s)], preg_split('/\s*(?:>|›)\s*/u', $path)), fn ($s) => $s['name'] !== ''));
-        try {
-            return count($segments) > (int) config('catfud.brand_tree_max_depth', 5) ? false : ($segments ?: null);
-        } catch (InvalidArgumentException) {
-            return false;
-        }
+        return LadderPath::parse($path);
     }
 }

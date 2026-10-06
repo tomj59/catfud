@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cat Füd Admin</title>
+<style>
+  :root { --bg:#f6f4ef; --panel:#fff; --ink:#23201c; --muted:#6f685f; --line:#e3ded4; --brand:#b4541a; --brand-ink:#fff; --ok:#2f7d4f; --warn:#b7791f; --bad:#b3372f; --chip:#efe9dd; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#171513; --panel:#211e1b; --ink:#f0ebe3; --muted:#a39a8d; --line:#37322c; --brand:#e0834a; --brand-ink:#1b1209; --ok:#58b97f; --warn:#e0a94b; --bad:#ec7a70; --chip:#2c2823; } }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font:15px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  [x-cloak] { display:none !important; }
+  .shell { display:grid; grid-template-columns:210px 1fr; min-height:100vh; }
+  aside { background:var(--panel); border-right:1px solid var(--line); padding:18px 12px; position:sticky; top:0; height:100vh; display:flex; flex-direction:column; gap:4px; }
+  aside h1 { font-size:17px; margin:0 8px 14px; }
+  aside button.nav { text-align:left; background:none; border:0; color:var(--ink); padding:9px 10px; border-radius:8px; cursor:pointer; font:inherit; display:flex; justify-content:space-between; align-items:center; }
+  aside button.nav:hover { background:var(--chip); }
+  aside button.nav.on { background:var(--chip); font-weight:650; }
+  .badge { background:var(--brand); color:var(--brand-ink); border-radius:999px; font-size:12px; padding:0 7px; min-width:20px; text-align:center; }
+  .who { margin-top:auto; font-size:13px; color:var(--muted); padding:8px; }
+  main { padding:24px 28px 60px; max-width:1200px; width:100%; }
+  h2 { margin:0 0 14px; font-size:21px; }
+  .bar { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin-bottom:14px; }
+  input, select, textarea { font:inherit; color:var(--ink); background:var(--panel); border:1px solid var(--line); border-radius:8px; padding:7px 10px; }
+  input[type=checkbox] { padding:0; width:16px; height:16px; }
+  textarea { width:100%; min-height:70px; }
+  button { font:inherit; border:1px solid var(--line); background:var(--panel); color:var(--ink); border-radius:8px; padding:7px 12px; cursor:pointer; }
+  button:hover { border-color:var(--muted); }
+  button.primary { background:var(--brand); color:var(--brand-ink); border-color:var(--brand); font-weight:600; }
+  button.danger { color:var(--bad); }
+  button.sm { padding:3px 9px; font-size:13px; }
+  button:disabled { opacity:.5; cursor:default; }
+  .tiles { display:grid; grid-template-columns:repeat(auto-fill,minmax(170px,1fr)); gap:12px; margin-bottom:22px; }
+  .tile { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px; text-align:left; }
+  .tile .n { font-size:28px; font-weight:700; line-height:1.1; }
+  .tile .l { color:var(--muted); font-size:13px; }
+  .tile.hot .n { color:var(--brand); }
+  table { width:100%; border-collapse:collapse; background:var(--panel); border:1px solid var(--line); border-radius:10px; overflow:hidden; }
+  th, td { text-align:left; padding:8px 10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { font-size:12px; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); background:var(--chip); }
+  tr:last-child td { border-bottom:0; }
+  tr.click { cursor:pointer; }
+  tr.click:hover td { background:var(--chip); }
+  .muted { color:var(--muted); } .small { font-size:13px; }
+  .pill { display:inline-block; padding:1px 9px; border-radius:999px; font-size:12px; background:var(--chip); }
+  .pill.approved { color:var(--ok); } .pill.pending { color:var(--warn); } .pill.needs_changes { color:var(--warn); } .pill.rejected, .pill.discontinued { color:var(--bad); } .pill.merged { color:var(--muted); } .pill.phasing_out { color:var(--warn); }
+  .card { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:14px 16px; margin-bottom:12px; }
+  .row { display:flex; gap:10px; align-items:center; flex-wrap:wrap; }
+  .grow { flex:1; min-width:0; }
+  .err { color:var(--bad); margin:8px 0; } .okmsg { color:var(--ok); margin:8px 0; }
+  .overlay { position:fixed; inset:0; background:rgba(0,0,0,.45); display:flex; justify-content:flex-end; z-index:20; }
+  .drawer { background:var(--bg); width:min(620px,100%); height:100%; overflow:auto; padding:22px; border-left:1px solid var(--line); }
+  .modal { background:var(--panel); margin:auto; width:min(520px,92%); border-radius:14px; padding:20px; border:1px solid var(--line); }
+  .overlay.center { justify-content:center; }
+  dl { display:grid; grid-template-columns:130px 1fr; gap:4px 12px; margin:10px 0; }
+  dt { color:var(--muted); font-size:13px; } dd { margin:0; overflow-wrap:anywhere; }
+  .login { max-width:340px; margin:12vh auto; background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:24px; }
+  .login input { width:100%; margin:6px 0 12px; }
+  .indent { display:inline-block; }
+  @media (max-width: 800px) { .shell { grid-template-columns:1fr; } aside { position:static; height:auto; flex-direction:row; flex-wrap:wrap; } .who { margin:0; } main { padding:16px; } }
+</style>
+</head>
+<body>
+<div x-data="admin()" x-init="init()" x-cloak>
+
+  <!-- sign in -->
+  <template x-if="!user">
+    <form class="login" @submit.prevent="signIn()">
+      <h1 style="margin-top:0">Cat Füd Admin</h1>
+      <label class="small muted">Email</label>
+      <input type="email" x-model="login.email" autocomplete="username" required>
+      <label class="small muted">Password</label>
+      <input type="password" x-model="login.password" autocomplete="current-password" required>
+      <p class="err" x-show="login.error" x-text="login.error"></p>
+      <button class="primary" style="width:100%" :disabled="busy">Sign in</button>
+    </form>
+  </template>
+
+  <template x-if="user">
+  <div class="shell">
+    <aside>
+      <h1>Cat Füd Admin</h1>
+      <template x-for="t in tabs" :key="t.id">
+        <button class="nav" :class="{on: tab === t.id}" @click="go(t.id)">
+          <span x-text="t.label"></span>
+          <span class="badge" x-show="t.count()" x-text="t.count()"></span>
+        </button>
+      </template>
+      <div class="who">
+        <div x-text="user.name"></div>
+        <div x-text="user.role"></div>
+        <button class="sm" style="margin-top:8px" @click="signOut()">Sign out</button>
+      </div>
+    </aside>
+
+    <main>
+      <p class="err" x-show="error" x-text="error"></p>
+      <p class="okmsg" x-show="notice" x-text="notice"></p>
+
+      <!-- DASHBOARD -->
+      <section x-show="tab === 'dashboard'">
+        <h2>Overview</h2>
+        <template x-if="dash">
+          <div>
+            <div class="tiles">
+              <button class="tile" :class="{hot: dash.moderation.pending}" @click="openReview({moderation_status:'pending'})"><div class="n" x-text="dash.moderation.pending"></div><div class="l">Waiting for review</div></button>
+              <button class="tile" :class="{hot: dash.moderation.pending_unplaced}" @click="go('requests')"><div class="n" x-text="dash.moderation.pending_unplaced"></div><div class="l">Need a ladder</div><div class="l small" x-show="dash.moderation.oldest_unplaced_at" x-text="'oldest ' + ago(dash.moderation.oldest_unplaced_at)"></div></button>
+              <button class="tile" @click="openReview({moderation_status:'needs_changes'})"><div class="n" x-text="dash.moderation.needs_changes"></div><div class="l">Sent back</div></button>
+              <button class="tile" @click="openReview({moderation_status:'rejected'})"><div class="n" x-text="dash.moderation.rejected"></div><div class="l">Declined</div></button>
+              <button class="tile" @click="openReview({moderation_status:'approved'})"><div class="n" x-text="dash.catalogue.approved"></div><div class="l">In the catalogue</div></button>
+              <button class="tile" @click="openReview({moderation_status:'approved', image:'missing'})"><div class="n" x-text="dash.catalogue.without_image"></div><div class="l">No image</div></button>
+              <button class="tile" @click="openReview({moderation_status:'approved', barcode:'missing'})"><div class="n" x-text="dash.catalogue.without_barcode"></div><div class="l">No barcode</div></button>
+              <button class="tile" @click="openNodes({empty:true})"><div class="n" x-text="dash.tree.empty_nodes"></div><div class="l">Empty ladder nodes</div></button>
+              <button class="tile" @click="openNodes({status:'discontinued'})"><div class="n" x-text="dash.tree.retired_nodes"></div><div class="l">Retired nodes</div></button>
+            </div>
+            <h3 x-show="dash.tree.near_duplicates.length">Names that look like the same thing</h3>
+            <template x-for="d in dash.tree.near_duplicates" :key="d.a.id + '-' + d.b.id">
+              <div class="card row">
+                <div class="grow"><strong x-text="d.a.name"></strong> and <strong x-text="d.b.name"></strong>
+                  <span class="muted small" x-show="d.parent" x-text="'under ' + d.parent"></span></div>
+                <button class="sm" @click="openNodes({q:d.a.name})">Look</button>
+              </div>
+            </template>
+          </div>
+        </template>
+      </section>
+
+      <!-- REVIEW / PRODUCTS -->
+      <section x-show="tab === 'products'">
+        <h2>Products</h2>
+        <div class="bar">
+          <input type="search" placeholder="Search name, brand, ladder" x-model.debounce.350ms="pf.q" @input="pf.page=1; loadProducts()">
+          <select x-model="pf.moderation_status" @change="pf.page=1; loadProducts()">
+            <option value="">Any status</option><option value="pending">Waiting for review</option><option value="needs_changes">Sent back</option>
+            <option value="approved">Approved</option><option value="rejected">Declined</option><option value="merged">Merged</option>
+          </select>
+          <select x-model="pf.placed" @change="pf.page=1; loadProducts()"><option value="">Placed or not</option><option value="yes">On the ladder</option><option value="no">Unplaced</option></select>
+          <select x-model="pf.image" @change="pf.page=1; loadProducts()"><option value="">Any image</option><option value="missing">No image</option><option value="present">Has image</option></select>
+          <select x-model="pf.barcode" @change="pf.page=1; loadProducts()"><option value="">Any barcode</option><option value="missing">No barcode</option><option value="present">Has barcode</option></select>
+          <button @click="exportCsv()">Export CSV</button>
+        </div>
+        <div class="bar" x-show="selected.length">
+          <strong x-text="selected.length + ' selected'"></strong>
+          <button class="sm primary" @click="bulk('approve')">Approve</button>
+          <button class="sm" @click="askNote('Send back', n => bulk('needs_changes', n))">Send back</button>
+          <button class="sm danger" @click="askNote('Decline', n => bulk('reject', n))">Decline</button>
+          <button class="sm" @click="selected=[]">Clear</button>
+        </div>
+        <table>
+          <thead><tr><th style="width:28px"><input type="checkbox" :checked="products.length && selected.length === products.length" @change="toggleAll($event.target.checked)"></th><th>Product</th><th>Ladder</th><th>Barcode</th><th>Status</th><th>Added</th></tr></thead>
+          <tbody>
+            <template x-for="p in products" :key="p.id">
+              <tr class="click" @click="openProduct(p.id)">
+                <td @click.stop><input type="checkbox" :checked="selected.includes(p.id)" @change="toggle(p.id)"></td>
+                <td><strong x-text="p.name"></strong><div class="small muted" x-text="p.brand + (p.form ? ' · ' + p.form : '')"></div></td>
+                <td class="small"><span x-text="p.path_text || ''"></span><span x-show="!p.placed" class="muted" x-text="'typed: ' + (p.requested_path || '—')"></span></td>
+                <td class="small" x-text="p.upc_a || p.gtin || '—'"></td>
+                <td><span class="pill" :class="p.moderation_status" x-text="label(p.moderation_status)"></span></td>
+                <td class="small muted" x-text="ago(p.created_at)"></td>
+              </tr>
+            </template>
+            <tr x-show="!products.length"><td colspan="6" class="muted">Nothing matches.</td></tr>
+          </tbody>
+        </table>
+        <div class="bar" style="margin-top:12px" x-show="pmeta">
+          <button class="sm" :disabled="pf.page <= 1" @click="pf.page--; loadProducts()">Previous</button>
+          <span class="small muted" x-text="pmeta ? 'Page ' + pmeta.current_page + ' of ' + pmeta.last_page + ' · ' + pmeta.total + ' products' : ''"></span>
+          <button class="sm" :disabled="!pmeta || pf.page >= pmeta.last_page" @click="pf.page++; loadProducts()">Next</button>
+        </div>
+      </section>
+
+      <!-- REQUESTS -->
+      <section x-show="tab === 'requests'">
+        <h2>Ladder requests</h2>
+        <p class="muted small">Products whose ladder does not exist yet, grouped by what people typed. Most-requested first. Map a group onto a ladder, or decline it.</p>
+        <p class="muted" x-show="groups && !groups.length">Nothing waiting.</p>
+        <template x-for="g in groups || []" :key="g.requested_path">
+          <div class="card">
+            <div class="row">
+              <div class="grow"><strong x-text="g.requested_path"></strong>
+                <div class="small muted" x-text="g.products + ' product(s) · ' + g.contributors + ' person(s) · ' + g.with_barcode + ' with a barcode · oldest ' + ago(g.oldest_at)"></div></div>
+              <button class="sm primary" @click="startResolve(g)">Map to a ladder</button>
+              <button class="sm danger" @click="askNote('Decline ' + g.requested_path, n => decline(g, n))">Decline</button>
+              <button class="sm" @click="openReview({placed:'no', moderation_status:'pending', q:g.requested_path})">View products</button>
+            </div>
+          </div>
+        </template>
+      </section>
+
+      <!-- LADDER -->
+      <section x-show="tab === 'nodes'">
+        <h2>Brand ladder</h2>
+        <div class="bar">
+          <input type="search" placeholder="Search nodes" x-model.debounce.300ms="nf.q" @input="loadNodes()">
+          <label class="small"><input type="checkbox" x-model="nf.empty" @change="loadNodes()"> Only empty</label>
+          <select x-model="nf.status" @change="loadNodes()"><option value="">Any status</option><option value="phasing_out">Phasing out</option><option value="discontinued">Discontinued</option></select>
+          <button class="primary" @click="startAddNode(null)">Add top-level</button>
+        </div>
+        <table>
+          <thead><tr><th>Name</th><th>Products</th><th>Status</th><th></th></tr></thead>
+          <tbody>
+            <template x-for="n in nodes" :key="n.id">
+              <tr>
+                <td><span class="indent" :style="'padding-left:' + ((n.depth - 1) * 18) + 'px'"></span><strong x-text="n.name"></strong>
+                  <span class="muted small" x-show="n.kind" x-text="' · ' + n.kind"></span>
+                  <div class="small muted" x-show="n.aliases && n.aliases.length" x-text="'also: ' + (n.aliases || []).join(', ')" :style="'padding-left:' + ((n.depth - 1) * 18) + 'px'"></div></td>
+                <td x-text="n.product_count"></td>
+                <td><span class="pill" :class="n.effective_status" x-show="n.effective_status !== 'active'" x-text="label(n.effective_status) + (n.status === 'active' ? ' (inherited)' : '')"></span></td>
+                <td class="row" style="justify-content:flex-end">
+                  <button class="sm" @click="startAddNode(n)" x-show="n.depth < 5">Add under</button>
+                  <button class="sm" @click="startRename(n)">Rename</button>
+                  <button class="sm" @click="startMergeNode(n)" x-show="isAdmin">Merge</button>
+                  <button class="sm" @click="startRetire(n)" x-show="isAdmin">Status</button>
+                  <button class="sm danger" @click="deleteNode(n)" x-show="isAdmin && n.product_count === 0 && n.child_count === 0">Delete</button>
+                </td>
+              </tr>
+            </template>
+            <tr x-show="!nodes.length"><td colspan="4" class="muted">No nodes match.</td></tr>
+          </tbody>
+        </table>
+      </section>
+
+      <!-- HISTORY -->
+      <section x-show="tab === 'history'">
+        <h2>Change history</h2>
+        <div class="bar">
+          <select x-model="af.subject_type" @change="af.page=1; loadAudit()"><option value="">Products and nodes</option><option value="Product">Products</option><option value="BrandNode">Nodes</option></select>
+          <input type="number" placeholder="Item id" style="width:110px" x-model.debounce.300ms="af.subject_id" @input="af.page=1; loadAudit()">
+        </div>
+        <table>
+          <thead><tr><th>When</th><th>Who</th><th>What</th><th>Details</th></tr></thead>
+          <tbody>
+            <template x-for="a in audit" :key="a.id">
+              <tr>
+                <td class="small" x-text="when(a.created_at)"></td>
+                <td class="small" x-text="a.user_name || 'system'"></td>
+                <td class="small"><span x-text="a.action"></span> <span class="muted" x-text="a.subject_type + ' #' + a.subject_id"></span></td>
+                <td class="small"><template x-for="(v, k) in (a.changes || {})" :key="k"><div><span class="muted" x-text="k + ': '"></span><span x-text="fmt(v)"></span></div></template><div class="muted" x-show="a.note" x-text="a.note"></div></td>
+              </tr>
+            </template>
+            <tr x-show="!audit.length"><td colspan="4" class="muted">No history yet.</td></tr>
+          </tbody>
+        </table>
+        <div class="bar" style="margin-top:12px" x-show="ameta">
+          <button class="sm" :disabled="af.page <= 1" @click="af.page--; loadAudit()">Newer</button>
+          <span class="small muted" x-text="ameta ? 'Page ' + ameta.current_page + ' of ' + ameta.last_page : ''"></span>
+          <button class="sm" :disabled="!ameta || af.page >= ameta.last_page" @click="af.page++; loadAudit()">Older</button>
+        </div>
+      </section>
+    </main>
+
+    <!-- PRODUCT DRAWER -->
+    <div class="overlay" x-show="drawer" @click.self="drawer=null" @keydown.escape.window="drawer=null; modal=null">
+      <div class="drawer" x-show="drawer">
+        <template x-if="drawer">
+          <div>
+            <div class="row"><h2 class="grow" style="margin:0" x-text="drawer.name"></h2><button class="sm" @click="drawer=null">Close</button></div>
+            <p><span class="pill" :class="drawer.moderation_status" x-text="label(drawer.moderation_status)"></span>
+              <span class="muted small" x-text="'#' + drawer.id + ' · added ' + ago(drawer.created_at) + ' by user ' + drawer.created_by"></span></p>
+            <p class="small" x-show="drawer.review_note"><strong>Note on file:</strong> <span x-text="drawer.review_note"></span></p>
+            <dl>
+              <dt>Brand</dt><dd x-text="drawer.brand"></dd>
+              <dt>Ladder</dt><dd><span x-text="drawer.path_text || 'Not placed yet'"></span></dd>
+              <dt x-show="drawer.requested_path">Typed ladder</dt><dd x-show="drawer.requested_path" x-text="drawer.requested_path"></dd>
+              <dt>Barcode</dt><dd x-text="drawer.upc_a || drawer.gtin || 'none'"></dd>
+              <dt>Kind / form</dt><dd x-text="drawer.kind + (drawer.form ? ' · ' + drawer.form : '') + ' · ' + drawer.species"></dd>
+              <dt>Listed as</dt><dd x-text="drawer.title_as_listed || '—'"></dd>
+              <dt>Ingredients</dt><dd x-text="drawer.ingredients || '—'"></dd>
+              <dt>Tags</dt><dd><template x-for="t in drawer.tags" :key="t.id"><span class="pill" style="margin-right:4px" x-text="t.label"></span></template><span x-show="!drawer.tags.length" class="muted">none</span></dd>
+              <dt>Source</dt><dd x-text="drawer.source || '—'"></dd>
+              <dt>Image</dt><dd><a :href="drawer.image_url" target="_blank" rel="noopener" x-show="drawer.image_url" x-text="drawer.image_url"></a><span x-show="!drawer.image_url" class="muted">none yet</span></dd>
+            </dl>
+
+            <div class="card" x-show="drawer.moderation_status !== 'merged'">
+              <strong>Ladder</strong>
+              <div class="row" style="margin-top:8px">
+                <input class="grow" list="nodeList" placeholder="Pick or type: Purina › Pro Plan › Prime Plus" x-model="placePath">
+                <button class="sm" @click="place()" :disabled="!placePath.trim()">Place</button>
+              </div>
+              <p class="small muted" x-show="placePath && !nodeByPath(placePath)">This ladder is new. Missing rungs will be created.</p>
+            </div>
+
+            <div class="card" x-show="drawer.moderation_status !== 'merged'">
+              <strong>Decision</strong>
+              <div class="row" style="margin-top:8px">
+                <button class="primary" @click="moderate('approve')" :disabled="!drawer.placed || drawer.moderation_status==='approved'">Approve</button>
+                <button @click="askNote('Send back', n => moderate('needs_changes', n))">Send back</button>
+                <button class="danger" @click="askNote('Decline', n => moderate('reject', n))">Decline</button>
+              </div>
+              <p class="small muted" x-show="!drawer.placed">Place it on the ladder first.</p>
+            </div>
+
+            <div class="card" x-show="drawer.moderation_status !== 'merged'">
+              <strong>Duplicate of an existing product?</strong>
+              <div class="row" style="margin-top:8px">
+                <input class="grow" type="search" placeholder="Search the catalogue" x-model.debounce.300ms="mergeQ" @input="searchMerge()">
+              </div>
+              <template x-for="m in mergeResults" :key="m.id">
+                <div class="row" style="margin-top:6px"><div class="grow small"><strong x-text="m.name"></strong> <span class="muted" x-text="(m.path_text || m.brand) + ' · ' + (m.upc_a || 'no barcode')"></span></div>
+                  <button class="sm" @click="merge(m)">Merge into this</button></div>
+              </template>
+            </div>
+
+            <details class="card"><summary><strong>History</strong></summary>
+              <template x-for="a in drawerAudit" :key="a.id"><div class="small" style="margin-top:6px"><span class="muted" x-text="when(a.created_at) + ' · ' + (a.user_name || 'system') + ' · '"></span><span x-text="a.action"></span><template x-for="(v, k) in (a.changes || {})" :key="k"><div class="muted" x-text="k + ': ' + fmt(v)"></div></template></div></template>
+            </details>
+          </div>
+        </template>
+      </div>
+    </div>
+
+    <datalist id="nodeList"><template x-for="n in allNodes" :key="n.id"><option :value="n.path_text"></option></template></datalist>
+
+    <!-- MODALS -->
+    <div class="overlay center" x-show="modal" @click.self="modal=null">
+      <div class="modal" x-show="modal">
+        <template x-if="modal && modal.type === 'note'">
+          <div><h3 style="margin-top:0" x-text="modal.title"></h3>
+            <p class="small muted">The contributor can read this.</p>
+            <textarea x-model="modal.text" placeholder="Why?"></textarea>
+            <div class="row" style="margin-top:12px;justify-content:flex-end"><button @click="modal=null">Cancel</button><button class="primary" :disabled="!modal.text.trim()" @click="modal.done(modal.text.trim()); modal=null">Confirm</button></div></div>
+        </template>
+        <template x-if="modal && modal.type === 'resolve'">
+          <div><h3 style="margin-top:0">Map “<span x-text="modal.group.requested_path"></span>”</h3>
+            <p class="small muted" x-text="modal.group.products + ' product(s) will be placed on this ladder.'"></p>
+            <input style="width:100%" list="nodeList" placeholder="Pick or type a ladder" x-model="modal.path">
+            <p class="small muted" x-show="modal.path && !nodeByPath(modal.path)">This ladder is new. Missing rungs will be created.</p>
+            <label class="small"><input type="checkbox" x-model="modal.approve"> Approve them too</label>
+            <div class="row" style="margin-top:12px;justify-content:flex-end"><button @click="modal=null">Cancel</button><button class="primary" :disabled="!modal.path.trim()" @click="resolve()">Place</button></div></div>
+        </template>
+        <template x-if="modal && modal.type === 'rename'">
+          <div><h3 style="margin-top:0">Rename “<span x-text="modal.node.name"></span>”</h3>
+            <p class="small muted">The old name stays as an alias, so nothing breaks.</p>
+            <input style="width:100%" x-model="modal.name">
+            <div class="row" style="margin-top:12px;justify-content:flex-end"><button @click="modal=null">Cancel</button><button class="primary" :disabled="!modal.name.trim()" @click="renameNode()">Rename</button></div></div>
+        </template>
+        <template x-if="modal && modal.type === 'addnode'">
+          <div><h3 style="margin-top:0" x-text="modal.parent ? 'Add under ' + modal.parent.name : 'Add a top-level name'"></h3>
+            <input style="width:100%" placeholder="Name" x-model="modal.name">
+            <div class="row" style="margin-top:8px"><select x-model="modal.kind"><option value="">Kind (optional)</option><option>manufacturer</option><option>brand</option><option>line</option><option>subline</option></select></div>
+            <div class="row" style="margin-top:12px;justify-content:flex-end"><button @click="modal=null">Cancel</button><button class="primary" :disabled="!modal.name.trim()" @click="addNode()">Add</button></div></div>
+        </template>
+        <template x-if="modal && modal.type === 'mergenode'">
+          <div><h3 style="margin-top:0">Merge “<span x-text="modal.node.name"></span>” into…</h3>
+            <p class="small muted">Its products, sub-lines and barcodes move across; its names become aliases. This cannot be undone.</p>
+            <input style="width:100%" list="nodeList" placeholder="Pick the node that survives" x-model="modal.path">
+            <div class="row" style="margin-top:12px;justify-content:flex-end"><button @click="modal=null">Cancel</button><button class="danger" :disabled="!nodeByPath(modal.path)" @click="mergeNode()">Merge</button></div></div>
+        </template>
+        <template x-if="modal && modal.type === 'retire'">
+          <div><h3 style="margin-top:0">Status of “<span x-text="modal.node.name"></span>”</h3>
+            <div class="row"><select x-model="modal.status" @change="previewRetire()"><option value="active">Active</option><option value="phasing_out">Phasing out</option><option value="discontinued">Discontinued</option></select>
+              <input type="date" x-model="modal.date" x-show="modal.status !== 'active'">
+              <select x-model="modal.confidence" x-show="modal.status !== 'active'"><option value="">How sure?</option><option value="confirmed">Confirmed</option><option value="reported">Reported</option><option value="rumoured">Rumoured</option></select></div>
+            <input style="width:100%;margin-top:8px" placeholder="Source (link or note)" x-model="modal.source" x-show="modal.status !== 'active'">
+            <textarea style="margin-top:8px" placeholder="Note" x-model="modal.note" x-show="modal.status !== 'active'"></textarea>
+            <input style="width:100%;margin-top:8px" list="nodeList" placeholder="Replaced by (optional)" x-model="modal.successor" x-show="modal.status !== 'active'">
+            <div class="card small" style="margin-top:10px" x-show="modal.impact">
+              Affects <strong x-text="modal.impact && modal.impact.nodes"></strong> node(s), <strong x-text="modal.impact && modal.impact.products"></strong> public product(s),
+              <strong x-text="modal.impact && modal.impact.pantry_items"></strong> pantry item(s) in <strong x-text="modal.impact && modal.impact.households"></strong> household(s).
+              Nothing is deleted. People who own it keep it.</div>
+            <div class="row" style="margin-top:12px;justify-content:flex-end"><button @click="modal=null">Cancel</button><button class="primary" @click="retire()">Save</button></div></div>
+        </template>
+      </div>
+    </div>
+  </div>
+  </template>
+</div>
+
+<script src="/vendor/alpine.min.js" defer></script>
+<script>
+function admin() {
+  var KEY = 'cf_token';
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) {} return null; }
+  var LABELS = { approved: 'Approved', pending: 'Waiting', needs_changes: 'Sent back', rejected: 'Declined', merged: 'Merged', active: 'Active', phasing_out: 'Phasing out', discontinued: 'Discontinued' };
+
+  return {
+    token: store(KEY), user: null, login: { email: '', password: '', error: '' }, busy: false,
+    tab: 'dashboard', error: '', notice: '',
+    dash: null, products: [], pmeta: null, selected: [], pf: { q: '', moderation_status: 'pending', placed: '', image: '', barcode: '', page: 1 },
+    groups: null, nodes: [], allNodes: [], nf: { q: '', empty: false, status: '' },
+    audit: [], ameta: null, af: { subject_type: '', subject_id: '', page: 1 },
+    drawer: null, drawerAudit: [], placePath: '', mergeQ: '', mergeResults: [], modal: null,
+
+    get isAdmin() { return this.user && this.user.role === 'admin'; },
+    get tabs() {
+      var self = this;
+      return [
+        { id: 'dashboard', label: 'Overview', count: function () { return 0; } },
+        { id: 'products', label: 'Products', count: function () { return self.dash ? self.dash.moderation.pending : 0; } },
+        { id: 'requests', label: 'Ladder requests', count: function () { return self.dash ? self.dash.moderation.pending_unplaced : 0; } },
+        { id: 'nodes', label: 'Brand ladder', count: function () { return 0; } },
+        { id: 'history', label: 'History', count: function () { return 0; } },
+      ];
+    },
+
+    async init() {
+      if (this.token) { await this.loadUser(); }
+    },
+    async api(path, opts) {
+      opts = opts || {};
+      var headers = { Accept: 'application/json' };
+      if (opts.body) headers['Content-Type'] = 'application/json';
+      if (this.token) headers.Authorization = 'Bearer ' + this.token;
+      var res;
+      try { res = await fetch('/api/v1' + path, { method: opts.method || 'GET', headers: headers, body: opts.body ? JSON.stringify(opts.body) : undefined }); }
+      catch (e) { return { ok: false, status: 0, data: { message: 'Could not reach the server.' }, raw: null }; }
+      if (opts.raw && res.ok) { return { ok: true, status: res.status, raw: res }; }
+      var data = null; try { data = await res.json(); } catch (e) {}
+      if (res.status === 401 && this.token) { this.signOut(); }
+      return { ok: res.ok, status: res.status, data: data };
+    },
+    problem(r) {
+      var d = r.data || {};
+      if (d.errors) return Object.keys(d.errors).map(function (k) { return d.errors[k].join(' '); }).join(' ');
+      return d.message || 'Something went wrong.';
+    },
+    fail(r) { this.error = this.problem(r); this.notice = ''; },
+    done(msg) { this.notice = msg; this.error = ''; var self = this; setTimeout(function () { if (self.notice === msg) self.notice = ''; }, 4000); },
+
+    async signIn() {
+      this.busy = true; this.login.error = '';
+      var r = await this.api('/login', { method: 'POST', body: { email: this.login.email, password: this.login.password, device_name: 'admin' } });
+      this.busy = false;
+      if (!r.ok) { this.login.error = this.problem(r); return; }
+      this.token = r.data.token; store(KEY, this.token);
+      await this.loadUser();
+    },
+    async loadUser() {
+      var r = await this.api('/me');
+      if (!r.ok) { this.signOut(); return; }
+      if (['moderator', 'admin'].indexOf(r.data.user.role) < 0) {
+        this.login.error = 'This account is not a moderator. Ask an admin to promote it.'; this.token = null; store(KEY, null); this.user = null; return;
+      }
+      this.user = r.data.user;
+      await Promise.all([this.loadDash(), this.loadAllNodes()]);
+      this.go('dashboard');
+    },
+    signOut() { this.token = null; this.user = null; store(KEY, null); },
+
+    go(t) {
+      this.tab = t; this.error = '';
+      if (t === 'dashboard') this.loadDash();
+      if (t === 'products') this.loadProducts();
+      if (t === 'requests') this.loadGroups();
+      if (t === 'nodes') this.loadNodes();
+      if (t === 'history') this.loadAudit();
+    },
+    openReview(filters) { this.pf = Object.assign({ q: '', moderation_status: '', placed: '', image: '', barcode: '', page: 1 }, filters); this.go('products'); },
+    openNodes(filters) { this.nf = Object.assign({ q: '', empty: false, status: '' }, filters); this.go('nodes'); },
+
+    async loadDash() { var r = await this.api('/admin/dashboard'); if (r.ok) this.dash = r.data; },
+    async loadAllNodes() { var r = await this.api('/admin/nodes'); if (r.ok) this.allNodes = r.data.nodes; },
+
+    qs(obj) {
+      var p = new URLSearchParams();
+      Object.keys(obj).forEach(function (k) { var v = obj[k]; if (v !== '' && v !== null && v !== undefined && v !== false) p.set(k, v === true ? '1' : v); });
+      var s = p.toString(); return s ? '?' + s : '';
+    },
+    async loadProducts() {
+      var f = this.pf, r = await this.api('/admin/products' + this.qs({ q: f.q, moderation_status: f.moderation_status, placed: f.placed, image: f.image, barcode: f.barcode, page: f.page, per_page: 25 }));
+      if (!r.ok) return this.fail(r);
+      this.products = r.data.data; this.pmeta = r.data.meta; this.selected = [];
+    },
+    toggle(id) { this.selected = this.selected.includes(id) ? this.selected.filter(function (i) { return i !== id; }) : this.selected.concat(id); },
+    toggleAll(on) { this.selected = on ? this.products.map(function (p) { return p.id; }) : []; },
+    async exportCsv() {
+      var f = this.pf, r = await this.api('/admin/products/export' + this.qs({ q: f.q, moderation_status: f.moderation_status, placed: f.placed, image: f.image, barcode: f.barcode }), { raw: true });
+      if (!r.ok) return this.fail(r);
+      var blob = await r.raw.blob(), a = document.createElement('a');
+      a.href = URL.createObjectURL(blob); a.download = 'catfud-products.csv'; document.body.appendChild(a); a.click(); a.remove();
+    },
+    async bulk(action, note) {
+      var r = await this.api('/admin/products/bulk', { method: 'POST', body: { ids: this.selected, action: action, note: note || null } });
+      if (!r.ok) return this.fail(r);
+      var fails = r.data.failed.length;
+      if (fails) this.error = fails + ' could not be changed: ' + r.data.failed.map(function (f) { return '#' + f.id + ' ' + f.reason; }).join(' · '); else this.error = '';
+      this.done(r.data.done.length + ' updated.');
+      await Promise.all([this.loadProducts(), this.loadDash()]);
+    },
+
+    async openProduct(id) {
+      var r = await this.api('/admin/products/' + id);
+      if (!r.ok) return this.fail(r);
+      this.setDrawer(r.data.data || r.data);
+      var a = await this.api('/admin/audit-log?subject_type=Product&subject_id=' + id + '&per_page=20');
+      this.drawerAudit = a.ok ? a.data.data : [];
+    },
+    setDrawer(p) { this.drawer = p; this.placePath = p.path_text || ''; this.mergeQ = ''; this.mergeResults = []; },
+    async afterProductChange(msg) {
+      this.done(msg);
+      var self = this;
+      await Promise.all([this.loadDash(), this.tab === 'products' ? this.loadProducts() : this.tab === 'requests' ? this.loadGroups() : null, this.loadAllNodes()]);
+      if (this.drawer) { var a = await this.api('/admin/audit-log?subject_type=Product&subject_id=' + this.drawer.id + '&per_page=20'); this.drawerAudit = a.ok ? a.data.data : []; }
+    },
+    async moderate(action, note) {
+      var r = await this.api('/admin/products/' + this.drawer.id + '/moderate', { method: 'POST', body: { action: action, note: note || null } });
+      if (!r.ok) return this.fail(r);
+      this.setDrawer(r.data.product); await this.afterProductChange('Saved.');
+    },
+    async place() {
+      var node = this.nodeByPath(this.placePath), body = node ? { node_id: node.id } : { path: this.placePath };
+      var r = await this.api('/admin/products/' + this.drawer.id + '/place', { method: 'POST', body: body });
+      if (!r.ok) return this.fail(r);
+      this.setDrawer(r.data.product); await this.afterProductChange('Placed.');
+    },
+    async searchMerge() {
+      if (this.mergeQ.trim().length < 2) { this.mergeResults = []; return; }
+      var r = await this.api('/admin/products' + this.qs({ q: this.mergeQ, moderation_status: 'approved', per_page: 6 }));
+      this.mergeResults = r.ok ? r.data.data.filter(function (x) { return true; }) : [];
+    },
+    async merge(target) {
+      var r = await this.api('/admin/products/' + this.drawer.id + '/merge', { method: 'POST', body: { into: target.id } });
+      if (!r.ok) return this.fail(r);
+      this.drawer = null; await this.afterProductChange('Merged into ' + target.name + '.');
+    },
+
+    async loadGroups() { var r = await this.api('/admin/requests'); if (r.ok) this.groups = r.data.groups; else this.fail(r); },
+    startResolve(g) { this.modal = { type: 'resolve', group: g, path: '', approve: true }; },
+    async resolve() {
+      var m = this.modal, node = this.nodeByPath(m.path), body = { requested_path: m.group.requested_path, approve: m.approve };
+      if (node) body.node_id = node.id; else body.path = m.path;
+      var r = await this.api('/admin/requests/resolve', { method: 'POST', body: body });
+      if (!r.ok) return this.fail(r);
+      this.modal = null;
+      if (r.data.failed.length) this.error = r.data.failed.map(function (f) { return '#' + f.id + ' ' + f.reason; }).join(' · ');
+      await this.afterProductChange(r.data.placed + ' placed, ' + r.data.approved + ' approved.');
+    },
+    async decline(g, note) {
+      var r = await this.api('/admin/requests/decline', { method: 'POST', body: { requested_path: g.requested_path, note: note } });
+      if (!r.ok) return this.fail(r);
+      await this.afterProductChange(r.data.declined + ' declined.');
+    },
+
+    async loadNodes() {
+      var f = this.nf, r = await this.api('/admin/nodes' + this.qs({ q: f.q, empty: f.empty, status: f.status }));
+      if (!r.ok) return this.fail(r);
+      this.nodes = r.data.nodes;
+    },
+    async nodesChanged(msg) { this.done(msg); await Promise.all([this.loadNodes(), this.loadAllNodes(), this.loadDash()]); },
+    nodeByPath(text) {
+      var t = this.norm(text); if (!t) return null;
+      return this.allNodes.filter(function (n) { return this.norm(n.path_text) === t; }, this)[0] || null;
+    },
+    norm(s) { return String(s || '').toLowerCase().replace(/\s*[>›]\s*/g, '>').replace(/\s+/g, ' ').trim(); },
+    startAddNode(parent) { this.modal = { type: 'addnode', parent: parent, name: '', kind: '' }; },
+    async addNode() {
+      var m = this.modal, r = await this.api('/admin/nodes', { method: 'POST', body: { parent_id: m.parent ? m.parent.id : null, name: m.name, kind: m.kind || null } });
+      if (!r.ok) return this.fail(r);
+      this.modal = null; await this.nodesChanged(r.data.created ? 'Added.' : 'That name already existed there.');
+    },
+    startRename(n) { this.modal = { type: 'rename', node: n, name: n.name }; },
+    async renameNode() {
+      var m = this.modal, r = await this.api('/brand-nodes/' + m.node.id, { method: 'PATCH', body: { name: m.name } });
+      if (!r.ok) return this.fail(r);
+      this.modal = null; await this.nodesChanged('Renamed.');
+    },
+    startMergeNode(n) { this.modal = { type: 'mergenode', node: n, path: '' }; },
+    async mergeNode() {
+      var m = this.modal, target = this.nodeByPath(m.path);
+      var r = await this.api('/brand-nodes/' + m.node.id + '/merge', { method: 'POST', body: { into: target.id } });
+      if (!r.ok) return this.fail(r);
+      this.modal = null; await this.nodesChanged('Merged.');
+    },
+    async deleteNode(n) {
+      var r = await this.api('/admin/nodes/' + n.id, { method: 'DELETE' });
+      if (!r.ok) return this.fail(r);
+      await this.nodesChanged('Deleted.');
+    },
+    async startRetire(n) {
+      this.modal = { type: 'retire', node: n, status: n.status === 'active' ? 'discontinued' : n.status, date: '', confidence: '', source: '', note: '', successor: '', impact: null };
+      await this.previewRetire();
+    },
+    async previewRetire() {
+      var m = this.modal; if (!m) return;
+      var r = await this.api('/admin/nodes/' + m.node.id + '/retire', { method: 'POST', body: { status: m.status, preview: true } });
+      if (r.ok) m.impact = r.data.impact;
+    },
+    async retire() {
+      var m = this.modal, succ = this.nodeByPath(m.successor);
+      var r = await this.api('/admin/nodes/' + m.node.id + '/retire', { method: 'POST', body: { status: m.status, discontinued_on: m.date || null, confidence: m.confidence || null, source: m.source || null, note: m.note || null, successor_id: succ ? succ.id : null } });
+      if (!r.ok) return this.fail(r);
+      this.modal = null; await this.nodesChanged('Status saved.');
+    },
+
+    async loadAudit() {
+      var f = this.af, r = await this.api('/admin/audit-log' + this.qs({ subject_type: f.subject_type, subject_id: f.subject_id, page: f.page, per_page: 30 }));
+      if (!r.ok) return this.fail(r);
+      this.audit = r.data.data; this.ameta = r.data.meta;
+    },
+
+    askNote(title, done) { this.modal = { type: 'note', title: title, text: '', done: done }; },
+    label(s) { return LABELS[s] || s; },
+    ago(iso) {
+      if (!iso) return '';
+      var s = Math.max(0, (Date.now() - new Date(iso).getTime()) / 1000);
+      if (s < 3600) return Math.max(1, Math.round(s / 60)) + ' min ago';
+      if (s < 86400) return Math.round(s / 3600) + ' h ago';
+      return Math.round(s / 86400) + ' d ago';
+    },
+    when(iso) { return iso ? new Date(iso).toLocaleString() : ''; },
+    fmt(v) {
+      if (Array.isArray(v) && v.length === 2) return this.one(v[0]) + ' → ' + this.one(v[1]);
+      return this.one(v);
+    },
+    one(v) { if (v === null || v === undefined || v === '') return '—'; if (typeof v === 'object') return JSON.stringify(v); var s = String(v); return s.length > 80 ? s.slice(0, 80) + '…' : s; },
+  };
+}
+</script>
+</body>
+</html>

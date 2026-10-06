@@ -189,3 +189,26 @@ php artisan scramble:export --path=docs/openapi.json
 
 `ApiContractTest` fails when the committed spec drifts from the code. Product lists use the standard Laravel envelope
 (`data`, `links`, `meta.total`, `meta.current_page`, ...). Staff-only product fields (`audit_status`, `audit_notes`, `import_key`, `meta`) are omitted for everyone else.
+
+## Admin API (`/api/v1/admin`, moderators and admins)
+
+| Area | Endpoints |
+| --- | --- |
+| Dashboard | `GET /admin/dashboard` queue sizes, catalogue gaps, empty and near-duplicate nodes |
+| Products | `GET /admin/products` (all contributors, filters: `moderation_status`, `placed`, `q`, `created_by`, `barcode`, `image`), `GET /admin/products/{id}`, `GET /admin/products/export` (CSV) |
+| Decisions | `POST /admin/products/{id}/moderate` (approve / needs_changes / reject, note required to send back or decline), `/place`, `/merge`, `POST /admin/products/bulk` |
+| Requests | `GET /admin/requests` unplaced products grouped by the ladder people typed; `POST /admin/requests/resolve` places (and optionally approves) a whole group; `POST /admin/requests/decline` |
+| Ladder | `GET /admin/nodes`, `POST /admin/nodes`; rename/move/merge stay on `PATCH /brand-nodes/{id}` and `POST /brand-nodes/{id}/merge` (admin) |
+| Retire (admin) | `POST /admin/nodes/{id}/retire` with `status` active / phasing_out / discontinued, `preview: true` for an impact report, `DELETE /admin/nodes/{id}` only when empty |
+| History | `GET /admin/audit-log?subject_type=Product&subject_id=42` |
+
+Rules enforced here: an unplaced product cannot be approved; a barcode already in the public catalogue means merge, not a second copy;
+merging moves pantry stock, ratings, meal history, advisory matches and barcodes to the survivor. A retired node is inherited by
+everything beneath it, stays visible to anyone who already owns the product, and is no longer offered in the picker to non-staff.
+
+## Admin tool (`/admin`)
+
+A static page (Alpine.js, vendored at `public/vendor/alpine.min.js`, no build step) on the same origin as the API. Moderators and admins sign
+in with their normal account (the token is shared with the app via the browser). Tabs: Overview, Products (filter, review drawer, bulk
+decisions, merge duplicates, CSV export), Ladder requests, Brand ladder (add, rename, merge, retire with impact preview, delete when empty), History.
+Source: `resources/admin/index.html`. Product images and logo upload come next.

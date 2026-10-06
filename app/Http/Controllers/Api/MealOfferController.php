@@ -23,7 +23,7 @@ class MealOfferController extends Controller
     public function store(Request $request): JsonResponse
     {
         $data = $request->validate([
-            'pet_id' => ['required', 'integer', Rule::exists('pets', 'id')->where('user_id', $request->user()->id)],
+            'pet_id' => ['required', 'integer', Rule::exists('pets', 'id')->where('user_id', $request->user()?->id)],
             'product_id' => ['required', 'integer', 'exists:products,id'],
             'offered_at' => ['nullable', 'date'],
             'outcome' => ['nullable', Rule::in(MealOutcome::values())],

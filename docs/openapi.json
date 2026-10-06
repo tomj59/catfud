@@ -336,6 +336,222 @@
                 }
             }
         },
+        "/admin/audit-log": {
+            "get": {
+                "operationId": "auditLog.index",
+                "summary": "Who changed what, newest first. Filter to one product or node with `subject_type` and `subject_id`",
+                "tags": [
+                    "AuditLog"
+                ],
+                "parameters": [
+                    {
+                        "name": "subject_type",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "Product",
+                                "BrandNode",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "subject_id",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "user_id",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "action",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 40
+                        }
+                    },
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ],
+                            "minimum": 1,
+                            "maximum": 100
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Paginated set of `AuditLogResource`",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "$ref": "#/components/schemas/AuditLogResource"
+                                            }
+                                        },
+                                        "links": {
+                                            "type": "object",
+                                            "properties": {
+                                                "first": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "last": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "prev": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "next": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "first",
+                                                "last",
+                                                "prev",
+                                                "next"
+                                            ]
+                                        },
+                                        "meta": {
+                                            "type": "object",
+                                            "properties": {
+                                                "current_page": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "from": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ],
+                                                    "minimum": 1
+                                                },
+                                                "last_page": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "links": {
+                                                    "type": "array",
+                                                    "description": "Generated paginator links.",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "url": {
+                                                                "type": [
+                                                                    "string",
+                                                                    "null"
+                                                                ]
+                                                            },
+                                                            "label": {
+                                                                "type": "string"
+                                                            },
+                                                            "active": {
+                                                                "type": "boolean"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "url",
+                                                            "label",
+                                                            "active"
+                                                        ]
+                                                    }
+                                                },
+                                                "path": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ],
+                                                    "description": "Base path for paginator generated URLs."
+                                                },
+                                                "per_page": {
+                                                    "type": "integer",
+                                                    "description": "Number of items shown per page.",
+                                                    "minimum": 0
+                                                },
+                                                "to": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ],
+                                                    "description": "Number of the last item in the slice.",
+                                                    "minimum": 1
+                                                },
+                                                "total": {
+                                                    "type": "integer",
+                                                    "description": "Total number of items being paginated.",
+                                                    "minimum": 0
+                                                }
+                                            },
+                                            "required": [
+                                                "current_page",
+                                                "from",
+                                                "last_page",
+                                                "links",
+                                                "path",
+                                                "per_page",
+                                                "to",
+                                                "total"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "data",
+                                        "links",
+                                        "meta"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            }
+        },
         "/register": {
             "post": {
                 "operationId": "auth.register",
@@ -480,6 +696,158 @@
                                     },
                                     "required": [
                                         "message"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/admin/dashboard": {
+            "get": {
+                "operationId": "admin.dashboard",
+                "tags": [
+                    "Dashboard"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "moderation": {
+                                            "type": "object",
+                                            "properties": {
+                                                "pending": {
+                                                    "type": "integer"
+                                                },
+                                                "pending_unplaced": {
+                                                    "type": "integer"
+                                                },
+                                                "needs_changes": {
+                                                    "type": "integer"
+                                                },
+                                                "rejected": {
+                                                    "type": "integer"
+                                                },
+                                                "oldest_unplaced_at": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "pending",
+                                                "pending_unplaced",
+                                                "needs_changes",
+                                                "rejected",
+                                                "oldest_unplaced_at"
+                                            ]
+                                        },
+                                        "catalogue": {
+                                            "type": "object",
+                                            "properties": {
+                                                "approved": {
+                                                    "type": "integer"
+                                                },
+                                                "without_image": {
+                                                    "type": "integer"
+                                                },
+                                                "without_barcode": {
+                                                    "type": "integer"
+                                                },
+                                                "unreviewed": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": [
+                                                "approved",
+                                                "without_image",
+                                                "without_barcode",
+                                                "unreviewed"
+                                            ]
+                                        },
+                                        "tree": {
+                                            "type": "object",
+                                            "properties": {
+                                                "nodes": {
+                                                    "type": "integer"
+                                                },
+                                                "empty_nodes": {
+                                                    "type": "integer"
+                                                },
+                                                "retired_nodes": {
+                                                    "type": "integer"
+                                                },
+                                                "near_duplicates": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "a": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "id": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "name": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "id",
+                                                                    "name"
+                                                                ]
+                                                            },
+                                                            "b": {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "id": {
+                                                                        "type": "integer"
+                                                                    },
+                                                                    "name": {
+                                                                        "type": "string"
+                                                                    }
+                                                                },
+                                                                "required": [
+                                                                    "id",
+                                                                    "name"
+                                                                ]
+                                                            },
+                                                            "parent": {
+                                                                "type": [
+                                                                    "string",
+                                                                    "null"
+                                                                ]
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "a",
+                                                            "b",
+                                                            "parent"
+                                                        ]
+                                                    }
+                                                }
+                                            },
+                                            "required": [
+                                                "nodes",
+                                                "empty_nodes",
+                                                "retired_nodes",
+                                                "near_duplicates"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "moderation",
+                                        "catalogue",
+                                        "tree"
                                     ]
                                 }
                             }
@@ -961,6 +1329,365 @@
                     },
                     "401": {
                         "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/admin/nodes": {
+            "get": {
+                "operationId": "node.index",
+                "summary": "Every node in the region with its product counts. Counts include everything beneath a node",
+                "tags": [
+                    "Node"
+                ],
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 100
+                        }
+                    },
+                    {
+                        "name": "parent",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "empty",
+                        "in": "query",
+                        "description": "`1` lists only branches with no products anywhere beneath them.",
+                        "schema": {
+                            "type": [
+                                "boolean",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "status",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "active",
+                                "phasing_out",
+                                "discontinued",
+                                null
+                            ]
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "nodes": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "parent_id": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "name": {
+                                                        "type": "string"
+                                                    },
+                                                    "kind": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "depth": {
+                                                        "type": "integer"
+                                                    },
+                                                    "path_text": {
+                                                        "type": "string"
+                                                    },
+                                                    "status": {
+                                                        "type": "string"
+                                                    },
+                                                    "effective_status": {
+                                                        "type": "string"
+                                                    },
+                                                    "successor_id": {
+                                                        "type": [
+                                                            "integer",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "aliases": {
+                                                        "type": [
+                                                            "array",
+                                                            "null"
+                                                        ],
+                                                        "items": {
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "product_count": {
+                                                        "type": "integer"
+                                                    },
+                                                    "child_count": {
+                                                        "type": "integer"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "parent_id",
+                                                    "name",
+                                                    "kind",
+                                                    "depth",
+                                                    "path_text",
+                                                    "status",
+                                                    "effective_status",
+                                                    "successor_id",
+                                                    "aliases",
+                                                    "product_count",
+                                                    "child_count"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "nodes"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            },
+            "post": {
+                "operationId": "node.store",
+                "summary": "Add a rung. Use this (not a user request) to create a brand, line or sub-line that does not exist yet",
+                "tags": [
+                    "Node"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/StoreNodeRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/admin/nodes/{id}": {
+            "delete": {
+                "operationId": "node.destroy",
+                "summary": "Delete a node only when nothing hangs from it: no sub-lines and no products. Anything else is merged or retired, never deleted",
+                "tags": [
+                    "Node"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "const": "Deleted."
+                                        }
+                                    },
+                                    "required": [
+                                        "message"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "message": {
+                                            "type": "string",
+                                            "const": "This node still has sub-lines or products. Merge it into another node, or retire it."
+                                        },
+                                        "errors": {
+                                            "type": "object",
+                                            "properties": {
+                                                "node": {
+                                                    "type": "array",
+                                                    "prefixItems": [
+                                                        {
+                                                            "type": "string",
+                                                            "const": "In use."
+                                                        }
+                                                    ],
+                                                    "minItems": 1,
+                                                    "maxItems": 1
+                                                }
+                                            },
+                                            "required": [
+                                                "node"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "message",
+                                        "errors"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/admin/nodes/{id}/retire": {
+            "post": {
+                "operationId": "node.retire",
+                "summary": "Mark a node phasing out, discontinued, or active again. Nothing is deleted or hidden from people who own it; the\nstatus is inherited by everything beneath (a discontinued brand retires its lines) and the picker stops offering it\nfor new products. Send `preview: true` to see what would be affected first",
+                "tags": [
+                    "Node"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/RetireNodeRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "node": {
+                                            "$ref": "#/components/schemas/BrandNodeResource"
+                                        },
+                                        "impact": {
+                                            "type": "object",
+                                            "properties": {
+                                                "nodes": {
+                                                    "type": "integer"
+                                                },
+                                                "products": {
+                                                    "type": "integer"
+                                                },
+                                                "pending_products": {
+                                                    "type": "integer"
+                                                },
+                                                "pantry_items": {
+                                                    "type": "integer"
+                                                },
+                                                "households": {
+                                                    "type": "integer"
+                                                }
+                                            },
+                                            "required": [
+                                                "nodes",
+                                                "products",
+                                                "pending_products",
+                                                "pantry_items",
+                                                "households"
+                                            ]
+                                        },
+                                        "applied": {
+                                            "type": "boolean"
+                                        }
+                                    },
+                                    "required": [
+                                        "node",
+                                        "impact",
+                                        "applied"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
                     }
                 }
             }
@@ -1943,6 +2670,9 @@
                                                             "type": "string"
                                                         }
                                                     },
+                                                    "status": {
+                                                        "type": "string"
+                                                    },
                                                     "logo": {
                                                         "type": [
                                                             "string",
@@ -1954,6 +2684,7 @@
                                                     "name",
                                                     "known",
                                                     "species",
+                                                    "status",
                                                     "logo"
                                                 ]
                                             }
@@ -2333,6 +3064,686 @@
                 }
             }
         },
+        "/admin/products": {
+            "get": {
+                "operationId": "productModeration.index",
+                "summary": "Every product, including other people's pending and rejected ones. Newest first",
+                "tags": [
+                    "ProductModeration"
+                ],
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Every word must match brand, name, line, the typed ladder or the brand path.",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 200
+                        }
+                    },
+                    {
+                        "name": "moderation_status",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "approved",
+                                "pending",
+                                "needs_changes",
+                                "rejected",
+                                "merged",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "placed",
+                        "in": "query",
+                        "description": "`no` lists products still waiting for a ladder.",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "yes",
+                                "no",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "created_by",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "barcode",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "missing",
+                                "present",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "image",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "missing",
+                                "present",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ],
+                            "minimum": 1,
+                            "maximum": 100
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Paginated set of `ProductResource`",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "type": "array",
+                                            "items": {
+                                                "allOf": [
+                                                    {
+                                                        "$ref": "#/components/schemas/ProductResource"
+                                                    },
+                                                    {
+                                                        "type": "object",
+                                                        "required": [
+                                                            "tags",
+                                                            "barcodes"
+                                                        ]
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "links": {
+                                            "type": "object",
+                                            "properties": {
+                                                "first": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "last": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "prev": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                },
+                                                "next": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ]
+                                                }
+                                            },
+                                            "required": [
+                                                "first",
+                                                "last",
+                                                "prev",
+                                                "next"
+                                            ]
+                                        },
+                                        "meta": {
+                                            "type": "object",
+                                            "properties": {
+                                                "current_page": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "from": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ],
+                                                    "minimum": 1
+                                                },
+                                                "last_page": {
+                                                    "type": "integer",
+                                                    "minimum": 1
+                                                },
+                                                "links": {
+                                                    "type": "array",
+                                                    "description": "Generated paginator links.",
+                                                    "items": {
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "url": {
+                                                                "type": [
+                                                                    "string",
+                                                                    "null"
+                                                                ]
+                                                            },
+                                                            "label": {
+                                                                "type": "string"
+                                                            },
+                                                            "active": {
+                                                                "type": "boolean"
+                                                            }
+                                                        },
+                                                        "required": [
+                                                            "url",
+                                                            "label",
+                                                            "active"
+                                                        ]
+                                                    }
+                                                },
+                                                "path": {
+                                                    "type": [
+                                                        "string",
+                                                        "null"
+                                                    ],
+                                                    "description": "Base path for paginator generated URLs."
+                                                },
+                                                "per_page": {
+                                                    "type": "integer",
+                                                    "description": "Number of items shown per page.",
+                                                    "minimum": 0
+                                                },
+                                                "to": {
+                                                    "type": [
+                                                        "integer",
+                                                        "null"
+                                                    ],
+                                                    "description": "Number of the last item in the slice.",
+                                                    "minimum": 1
+                                                },
+                                                "total": {
+                                                    "type": "integer",
+                                                    "description": "Total number of items being paginated.",
+                                                    "minimum": 0
+                                                }
+                                            },
+                                            "required": [
+                                                "current_page",
+                                                "from",
+                                                "last_page",
+                                                "links",
+                                                "path",
+                                                "per_page",
+                                                "to",
+                                                "total"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "data",
+                                        "links",
+                                        "meta"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            }
+        },
+        "/admin/products/export": {
+            "get": {
+                "operationId": "productModeration.export",
+                "summary": "Download the filtered list as CSV (same filters as the list)",
+                "tags": [
+                    "ProductModeration"
+                ],
+                "parameters": [
+                    {
+                        "name": "q",
+                        "in": "query",
+                        "description": "Every word must match brand, name, line, the typed ladder or the brand path.",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 200
+                        }
+                    },
+                    {
+                        "name": "moderation_status",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "approved",
+                                "pending",
+                                "needs_changes",
+                                "rejected",
+                                "merged",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "placed",
+                        "in": "query",
+                        "description": "`no` lists products still waiting for a ladder.",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "yes",
+                                "no",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "created_by",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ]
+                        }
+                    },
+                    {
+                        "name": "barcode",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "missing",
+                                "present",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "image",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "enum": [
+                                "missing",
+                                "present",
+                                null
+                            ]
+                        }
+                    },
+                    {
+                        "name": "per_page",
+                        "in": "query",
+                        "schema": {
+                            "type": [
+                                "integer",
+                                "null"
+                            ],
+                            "minimum": 1,
+                            "maximum": 100
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "text/csv": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Transfer-Encoding": {
+                                "required": true,
+                                "schema": {
+                                    "type": "string",
+                                    "enum": [
+                                        "chunked"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            }
+        },
+        "/admin/products/bulk": {
+            "post": {
+                "operationId": "productModeration.bulk",
+                "summary": "Apply one decision to many products. Each product succeeds or fails on its own; the response lists both",
+                "tags": [
+                    "ProductModeration"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/BulkModerateRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "done": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "integer"
+                                            }
+                                        },
+                                        "failed": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "reason": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "reason"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "done",
+                                        "failed"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            }
+        },
+        "/admin/products/{id}": {
+            "get": {
+                "operationId": "productModeration.show",
+                "tags": [
+                    "ProductModeration"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "`ProductResource`",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "data": {
+                                            "allOf": [
+                                                {
+                                                    "$ref": "#/components/schemas/ProductResource"
+                                                },
+                                                {
+                                                    "type": "object",
+                                                    "required": [
+                                                        "tags",
+                                                        "barcodes"
+                                                    ]
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "data"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/admin/products/{id}/moderate": {
+            "post": {
+                "operationId": "productModeration.moderate",
+                "summary": "Approve, send back for changes, or decline a product. Sending back or declining needs a note the contributor can read",
+                "tags": [
+                    "ProductModeration"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ModerateProductRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product": {
+                                            "$ref": "#/components/schemas/ProductResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "product"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/admin/products/{id}/place": {
+            "post": {
+                "operationId": "productModeration.place",
+                "summary": "Place a product on the ladder: on an existing node, or on a typed path whose missing rungs are created",
+                "tags": [
+                    "ProductModeration"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/PlaceProductRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            }
+        },
+        "/admin/products/{id}/merge": {
+            "post": {
+                "operationId": "productModeration.merge",
+                "summary": "Fold a duplicate into the approved product that survives. Stock, ratings, history and barcodes move with it",
+                "tags": [
+                    "ProductModeration"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/MergeProductRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "product": {
+                                            "$ref": "#/components/schemas/ProductResource"
+                                        }
+                                    },
+                                    "required": [
+                                        "product"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
         "/ratings": {
             "get": {
                 "operationId": "rating.index",
@@ -2461,6 +3872,187 @@
                     },
                     "401": {
                         "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/admin/requests": {
+            "get": {
+                "operationId": "requestQueue.index",
+                "tags": [
+                    "RequestQueue"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "groups": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "requested_path": {
+                                                        "type": "string"
+                                                    },
+                                                    "products": {
+                                                        "type": "integer"
+                                                    },
+                                                    "contributors": {
+                                                        "type": "integer"
+                                                    },
+                                                    "with_barcode": {
+                                                        "type": "integer"
+                                                    },
+                                                    "oldest_at": {
+                                                        "type": [
+                                                            "string",
+                                                            "null"
+                                                        ]
+                                                    },
+                                                    "product_ids": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                },
+                                                "required": [
+                                                    "requested_path",
+                                                    "products",
+                                                    "contributors",
+                                                    "with_barcode",
+                                                    "oldest_at",
+                                                    "product_ids"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "groups"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    }
+                }
+            }
+        },
+        "/admin/requests/resolve": {
+            "post": {
+                "operationId": "requestQueue.resolve",
+                "summary": "Place every product in a group on one node. Add `approve` to make them public in the same step; products that cannot\nbe approved (a barcode already in the public catalogue) stay placed and are listed under `failed` for merging",
+                "tags": [
+                    "RequestQueue"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ResolveRequestRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "placed": {
+                                            "type": "integer"
+                                        },
+                                        "approved": {
+                                            "type": "integer"
+                                        },
+                                        "failed": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "id": {
+                                                        "type": "integer"
+                                                    },
+                                                    "reason": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "required": [
+                                                    "id",
+                                                    "reason"
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "required": [
+                                        "placed",
+                                        "approved",
+                                        "failed"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
+                    }
+                }
+            }
+        },
+        "/admin/requests/decline": {
+            "post": {
+                "operationId": "requestQueue.decline",
+                "summary": "Decline a whole group, with a reason each contributor can read",
+                "tags": [
+                    "RequestQueue"
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/DeclineRequestRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "type": "object",
+                                    "properties": {
+                                        "declined": {
+                                            "type": "integer"
+                                        }
+                                    },
+                                    "required": [
+                                        "declined"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "401": {
+                        "$ref": "#/components/responses/AuthenticationException"
+                    },
+                    "422": {
+                        "$ref": "#/components/responses/ValidationException"
                     }
                 }
             }
@@ -2787,6 +4379,69 @@
                 ],
                 "title": "AttachBarcodeRequest"
             },
+            "AuditLogResource": {
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "action": {
+                        "type": "string"
+                    },
+                    "subject_type": {
+                        "type": "string"
+                    },
+                    "subject_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "user_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "user_name": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "changes": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {}
+                    },
+                    "note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "created_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    }
+                },
+                "required": [
+                    "id",
+                    "action",
+                    "subject_type",
+                    "subject_id",
+                    "user_id",
+                    "user_name",
+                    "changes",
+                    "note",
+                    "created_at"
+                ],
+                "title": "AuditLogResource"
+            },
             "AuditStatus": {
                 "type": "string",
                 "enum": [
@@ -2846,6 +4501,39 @@
                             "string",
                             "null"
                         ]
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "discontinued_on": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "status_confidence": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "status_source": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "status_note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "successor_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
                     }
                 },
                 "required": [
@@ -2857,9 +4545,67 @@
                     "aliases",
                     "species",
                     "default_tags",
-                    "notes"
+                    "notes",
+                    "status",
+                    "discontinued_on",
+                    "status_confidence",
+                    "status_source",
+                    "status_note",
+                    "successor_id"
                 ],
                 "title": "BrandNodeResource"
+            },
+            "BulkModerateRequest": {
+                "type": "object",
+                "properties": {
+                    "ids": {
+                        "type": "array",
+                        "items": {
+                            "type": "integer"
+                        },
+                        "minItems": 1,
+                        "maxItems": 200
+                    },
+                    "action": {
+                        "type": "string",
+                        "enum": [
+                            "approve",
+                            "needs_changes",
+                            "reject"
+                        ]
+                    },
+                    "note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 2000
+                    }
+                },
+                "required": [
+                    "ids",
+                    "action"
+                ],
+                "title": "BulkModerateRequest"
+            },
+            "DeclineRequestRequest": {
+                "type": "object",
+                "properties": {
+                    "requested_path": {
+                        "type": "string",
+                        "maxLength": 500
+                    },
+                    "note": {
+                        "type": "string",
+                        "description": "Shown to each contributor.",
+                        "maxLength": 2000
+                    }
+                },
+                "required": [
+                    "requested_path",
+                    "note"
+                ],
+                "title": "DeclineRequestRequest"
             },
             "InventoryItem": {
                 "type": "object",
@@ -3039,6 +4785,51 @@
                 ],
                 "title": "MergeBrandNodeRequest"
             },
+            "MergeProductRequest": {
+                "type": "object",
+                "properties": {
+                    "into": {
+                        "type": "integer",
+                        "description": "The approved product that survives."
+                    },
+                    "note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 2000
+                    }
+                },
+                "required": [
+                    "into"
+                ],
+                "title": "MergeProductRequest"
+            },
+            "ModerateProductRequest": {
+                "type": "object",
+                "properties": {
+                    "action": {
+                        "type": "string",
+                        "enum": [
+                            "approve",
+                            "needs_changes",
+                            "reject"
+                        ]
+                    },
+                    "note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "Required when sending a product back or declining it; the contributor can read it.",
+                        "maxLength": 2000
+                    }
+                },
+                "required": [
+                    "action"
+                ],
+                "title": "ModerateProductRequest"
+            },
             "Pet": {
                 "type": "object",
                 "properties": {
@@ -3093,6 +4884,27 @@
                     "updated_at"
                 ],
                 "title": "Pet"
+            },
+            "PlaceProductRequest": {
+                "type": "object",
+                "properties": {
+                    "node_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ],
+                        "description": "An existing node to place the product on."
+                    },
+                    "path": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "Or a ladder (\"Purina > Pro Plan > Prime Plus\"); rungs that do not exist yet are created.",
+                        "maxLength": 500
+                    }
+                },
+                "title": "PlaceProductRequest"
             },
             "Product": {
                 "type": "object",
@@ -3608,6 +5420,24 @@
                         ],
                         "items": {}
                     },
+                    "created_by": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "reviewed_by": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "merged_into_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
                     "created_at": {
                         "type": [
                             "string",
@@ -3813,6 +5643,160 @@
                     "password"
                 ],
                 "title": "RegisterRequest"
+            },
+            "ResolveRequestRequest": {
+                "type": "object",
+                "properties": {
+                    "requested_path": {
+                        "type": "string",
+                        "description": "The ladder text exactly as listed in the queue.",
+                        "maxLength": 500
+                    },
+                    "node_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
+                    },
+                    "path": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 500
+                    },
+                    "approve": {
+                        "type": [
+                            "boolean",
+                            "null"
+                        ],
+                        "description": "Also approve the products once placed."
+                    }
+                },
+                "required": [
+                    "requested_path"
+                ],
+                "title": "ResolveRequestRequest"
+            },
+            "RetireNodeRequest": {
+                "type": "object",
+                "properties": {
+                    "status": {
+                        "type": "string",
+                        "enum": [
+                            "active",
+                            "phasing_out",
+                            "discontinued"
+                        ]
+                    },
+                    "discontinued_on": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "confidence": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "enum": [
+                            "confirmed",
+                            "reported",
+                            "rumoured",
+                            null
+                        ]
+                    },
+                    "source": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "description": "Where this was learned: a URL or a short note.",
+                        "maxLength": 500
+                    },
+                    "note": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "maxLength": 5000
+                    },
+                    "successor_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ],
+                        "description": "The node that replaces this one, so shoppers can be pointed to it."
+                    },
+                    "preview": {
+                        "type": [
+                            "boolean",
+                            "null"
+                        ],
+                        "description": "Report what would be affected without changing anything."
+                    }
+                },
+                "required": [
+                    "status"
+                ],
+                "title": "RetireNodeRequest"
+            },
+            "StoreNodeRequest": {
+                "type": "object",
+                "properties": {
+                    "parent_id": {
+                        "type": [
+                            "integer",
+                            "null"
+                        ],
+                        "description": "Omit for a new top-level manufacturer or brand."
+                    },
+                    "name": {
+                        "type": "string",
+                        "maxLength": 255
+                    },
+                    "kind": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "enum": [
+                            "manufacturer",
+                            "brand",
+                            "line",
+                            "subline",
+                            null
+                        ]
+                    },
+                    "species": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {
+                            "type": "string",
+                            "maxLength": 30
+                        },
+                        "maxItems": 10
+                    },
+                    "aliases": {
+                        "type": [
+                            "array",
+                            "null"
+                        ],
+                        "items": {
+                            "type": "string",
+                            "maxLength": 255
+                        },
+                        "maxItems": 30
+                    }
+                },
+                "required": [
+                    "name"
+                ],
+                "title": "StoreNodeRequest"
             },
             "StoreProductRequest": {
                 "type": "object",
