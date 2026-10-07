@@ -1,0 +1,68 @@
+{
+  "dump_products": 56,
+  "excluded": [
+    "Made by Nacho Gift Cards",
+    "Made by Nacho Hydration Kit",
+    "Made by Nacho Starter Kit",
+    "Postcard1"
+  ],
+  "drafted": 52,
+  "lines": {
+    "Minced": {
+      "products": 9,
+      "sublines": []
+    },
+    "Flaked": {
+      "products": 9,
+      "sublines": []
+    },
+    "Freeze-Dried": {
+      "products": 3,
+      "sublines": []
+    },
+    "Lickable Mousse Treats": {
+      "products": 8,
+      "sublines": []
+    },
+    "Pâté": {
+      "products": 7,
+      "sublines": []
+    },
+    "Shreds": {
+      "products": 1,
+      "sublines": []
+    },
+    "Kibble": {
+      "products": 5,
+      "sublines": []
+    },
+    "Toppers": {
+      "products": 6,
+      "sublines": [
+        "Bone Broth",
+        "Functional"
+      ]
+    },
+    "Cuts in Gravy": {
+      "products": 4,
+      "sublines": []
+    }
+  },
+  "flags": {
+    "no life stage tag": 30,
+    "variety pack: several recipes in one product": 8,
+    "treat vs topper: decide kind": 4,
+    "no product_type on the store": 4,
+    "adult and senior both tagged": 1
+  },
+  "unplaced": [],
+  "species": {
+    "cat": 52
+  },
+  "with_description": 52,
+  "with_image": 52,
+  "tag_coverage": {
+    "texture_or_medium": 43,
+    "life_stage": 22
+  }
+}

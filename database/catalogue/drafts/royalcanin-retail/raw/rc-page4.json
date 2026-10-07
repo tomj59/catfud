@@ -1,0 +1,823 @@
+{
+	"currentPage": 4,
+	"facets": [
+		{
+			"code": "digital_sub_category",
+			"items": [
+				{
+					"code": "dry_food",
+					"count": 25,
+					"label": "pa.plpFilters.cat.digitalSubCategory.dryFood"
+				},
+				{
+					"code": "wet_food",
+					"count": 28,
+					"label": "pa.plpFilters.cat.digitalSubCategory.wetFood"
+				},
+				{
+					"code": "supplement",
+					"count": 1,
+					"label": "pa.plpFilters.cat.digitalSubCategory.supplement"
+				}
+			],
+			"label": "pa.plpFiltersCategory.digitalSubCategory"
+		},
+		{
+			"code": "lifestage",
+			"items": [
+				{
+					"code": "baby",
+					"count": 4,
+					"label": "pa.plpFilters.cat.lifestage.baby"
+				},
+				{
+					"code": "kitten",
+					"count": 11,
+					"label": "pa.plpFilters.cat.lifestage.kitten"
+				},
+				{
+					"code": "adult",
+					"count": 42,
+					"label": "pa.plpFilters.cat.lifestage.adult"
+				},
+				{
+					"code": "mature",
+					"count": 39,
+					"label": "pa.plpFilters.cat.lifestage.mature"
+				},
+				{
+					"code": "ageing",
+					"count": 3,
+					"label": "pa.plpFilters.cat.lifestage.ageing"
+				}
+			],
+			"label": "pa.plpFiltersCategory.lifestage"
+		},
+		{
+			"code": "breed",
+			"items": [
+				{
+					"code": "maine_coon",
+					"count": 2,
+					"label": "pa.plpFilters.cat.breed.maineCoon"
+				},
+				{
+					"code": "persian",
+					"count": 2,
+					"label": "pa.plpFilters.cat.breed.persian"
+				},
+				{
+					"code": "american_shorthair",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.americanShorthair"
+				},
+				{
+					"code": "bengal",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.bengal"
+				},
+				{
+					"code": "ragdoll",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.ragdoll"
+				},
+				{
+					"code": "siamese",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.siamese"
+				},
+				{
+					"code": "any",
+					"count": 46,
+					"label": "pa.plpFilters.cat.breed.any"
+				}
+			],
+			"label": "pa.plpFiltersCategory.breed"
+		},
+		{
+			"code": "specific_needs",
+			"items": [
+				{
+					"code": "digestive_support",
+					"count": 7,
+					"label": "pa.plpFilters.cat.specificNeeds.digestiveSupport"
+				},
+				{
+					"code": "weight_management",
+					"count": 7,
+					"label": "pa.plpFilters.cat.specificNeeds.weightManagement"
+				},
+				{
+					"code": "skin_and_coat_support",
+					"count": 5,
+					"label": "pa.plpFilters.cat.specificNeeds.skinAndCoatSupport"
+				},
+				{
+					"code": "pregnant",
+					"count": 3,
+					"label": "pa.plpFilters.cat.specificNeeds.pregnant"
+				},
+				{
+					"code": "hairballs",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.hairballs"
+				},
+				{
+					"code": "tendency_to_beg_for_food",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.tendencyToBegForFood"
+				},
+				{
+					"code": "urinary_support",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.urinarySupport"
+				},
+				{
+					"code": "appetite_stimulation",
+					"count": 1,
+					"label": "pa.plpFilters.cat.specificNeeds.appetiteStimulation"
+				},
+				{
+					"code": "oral_dental_hygiene",
+					"count": 1,
+					"label": "pa.plpFilters.cat.specificNeeds.oralDentalHygiene"
+				}
+			],
+			"label": "pa.plpFiltersCategory.specificNeeds"
+		},
+		{
+			"code": "sterilized",
+			"items": [
+				{
+					"code": "false",
+					"count": 52,
+					"label": "pa.plpFilters.cat.sterilized.false"
+				},
+				{
+					"code": "true",
+					"count": 2,
+					"label": "pa.plpFilters.cat.sterilized.true"
+				}
+			],
+			"label": "pa.plpFiltersCategory.sterilized"
+		},
+		{
+			"code": "pack_weight_ranges",
+			"items": [
+				{
+					"code": "up_to_6oz",
+					"count": 30,
+					"label": "pa.plpFilters.cat.packWeightRanges.upTo6oz"
+				},
+				{
+					"code": "from_6_to_16oz",
+					"count": 1,
+					"label": "pa.plpFilters.cat.packWeightRanges.from6To16oz"
+				},
+				{
+					"code": "from_1_to_5lbs",
+					"count": 15,
+					"label": "pa.plpFilters.cat.packWeightRanges.from1To5lbs"
+				},
+				{
+					"code": "from_5_to_11lbs",
+					"count": 21,
+					"label": "pa.plpFilters.cat.packWeightRanges.from5To11lbs"
+				},
+				{
+					"code": "from_11_to_21lbs",
+					"count": 9,
+					"label": "pa.plpFilters.cat.packWeightRanges.from11To21lbs"
+				}
+			],
+			"label": "pa.plpFiltersCategory.packWeightRanges"
+		}
+	],
+	"products": [
+		{
+			"analyticsData": {
+				"mainItemCode": "1589",
+				"name": "2022 - FCN - Wet - Cat - HAIRBALL CARE Thin slices in gravy - Zone North America - FDA VERSION 2 - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Hairball Care This Slices In Gravy Canned Cat Food",
+				"titleUrl": "HAIRBALL CARE Thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1589,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053806,
+			"image": "https://marspetcareaprimocdn.petcare.global/4ff242f9-65af-49e3-9b77-b24900070651/4ff242f9-65af-49e3-9b77-b24900070651_DownloadAsJpg.jpg",
+			"imageAlt": "Hairball Care This Slices In Gravy Canned Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1589,
+			"name": "2022 - FCN - Wet - Cat - HAIRBALL CARE Thin slices in gravy - Zone North America - FDA VERSION 2 - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$108.98",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111750150",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Hairball Care This Slices In Gravy Canned Cat Food",
+			"titleUrl": "HAIRBALL CARE Thin slices in gravy",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2548",
+				"name": "2016 - FHN - DRY - Cat - Indoor 7+ - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Indoor 7+ Dry Cat Food",
+				"titleUrl": "Indoor 7+"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2548,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336771,
+			"image": "https://cdn.royalcanin-weshare-online.io/Mz85vYcBRYZmsWpcA_gL/v43/center-front-hero-image-2548-030111630315-cat-01-jpg",
+			"imageAlt": "Indoor 7+ Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"mature"
+			],
+			"mainItem": 2548,
+			"name": "2016 - FHN - DRY - Cat - Indoor 7+ - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$22.79",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111630322",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Indoor 7+ Dry Cat Food",
+			"titleUrl": "Indoor 7+",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1475",
+				"name": "2022 - FCN - Wet - Cat - HAIR&SKIN CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Hair & Skin Care Thin Slices in Gravy Canned Cat Food ",
+				"titleUrl": "HAIR&SKIN CARE Thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1475,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053786,
+			"image": "https://marspetcareaprimocdn.petcare.global/b2005e09-f1da-4d81-a667-b1ef000edd44/b2005e09-f1da-4d81-a667-b1ef000edd44_DownloadAsJpg.jpg",
+			"imageAlt": "Hair & Skin Care Thin Slices in Gravy Canned Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1475,
+			"name": "2022 - FCN - Wet - Cat - HAIR&SKIN CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$54.49",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "10030111604429",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Hair & Skin Care Thin Slices in Gravy Canned Cat Food ",
+			"titleUrl": "HAIR&SKIN CARE Thin slices in gravy",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1430",
+				"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Digestive Care Thin Slices In Gravy Canned Cat Food",
+				"titleUrl": "DIGESTIVE CARE Thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1430,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053766,
+			"image": "https://cdn.royalcanin-weshare-online.io/tj_tTIcBRYZmsWpc-_XE/v26/00030111471550d-cf-gs1",
+			"imageAlt": "Digestive Care Thin Slices In Gravy Canned Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1430,
+			"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$54.49",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111471550",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Digestive Care Thin Slices In Gravy Canned Cat Food",
+			"titleUrl": "DIGESTIVE CARE Thin slices in gravy",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4180",
+				"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Digestive Care Loaf In Sauce",
+				"titleUrl": "DIGESTIVE CARE loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4180,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1047684,
+			"image": "https://cdn.royalcanin-weshare-online.io/uD8pTYcBRYZmsWpcc_Um/v66/00030111411556d-cf-gs1",
+			"imageAlt": "Digestive Care Loaf In Sauce",
+			"inStock": false,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 4180,
+			"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$0.00",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111411556",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Digestive Care Loaf In Sauce",
+			"titleUrl": "DIGESTIVE CARE loaf in sauce",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4180",
+				"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE loaf in sauce - Zone North America - HANDYCANS - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Digestive Care Loaf In Sauce ",
+				"titleUrl": "DIGESTIVE CARE loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4180,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1047690,
+			"image": "https://cdn.royalcanin-weshare-online.io/uT8xTYcBRYZmsWpcHfW8/v46/00030111411211b-cf-gs1",
+			"imageAlt": "Digestive Care Loaf In Sauce ",
+			"inStock": false,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 4180,
+			"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE loaf in sauce - Zone North America - HANDYCANS - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "0",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "10030111941128",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Digestive Care Loaf In Sauce ",
+			"titleUrl": "DIGESTIVE CARE loaf in sauce",
+			"variation": "2",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4076",
+				"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE Chunks in gravy - Zone North America - IMPORT FROM BRK - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Digestive Care Chunks In Gravy Pouch",
+				"titleUrl": "DIGESTIVE CARE Chunks in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4076,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053770,
+			"image": "https://cdn.royalcanin-weshare-online.io/_VYhoIcBBKJuub5qRvrl/v24/00030111155856-cf",
+			"imageAlt": "Digestive Care Chunks In Gravy Pouch",
+			"inStock": false,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 4076,
+			"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE Chunks in gravy - Zone North America - IMPORT FROM BRK - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$108.98",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111955852",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Digestive Care Chunks In Gravy Pouch",
+			"titleUrl": "DIGESTIVE CARE Chunks in gravy",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4146",
+				"name": "2016 - FHNW - Wet - Cat - Adult Instinctive loaf in sauce - Zone North America - HANDYCANS - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Adult Instinctive Loaf In Sauce",
+				"titleUrl": "Adult Instinctive loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4146,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 976392,
+			"image": "https://cdn.royalcanin-weshare-online.io/_D9DvYcBRYZmsWpcu_h0/v65/center-front-hero-image-1201-030111941022-cat-01-jpg",
+			"imageAlt": "Adult Instinctive Loaf In Sauce",
+			"inStock": false,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult"
+			],
+			"mainItem": 4146,
+			"name": "2016 - FHNW - Wet - Cat - Adult Instinctive loaf in sauce - Zone North America - HANDYCANS - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "0",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111410214",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Adult Instinctive Loaf In Sauce",
+			"titleUrl": "Adult Instinctive loaf in sauce",
+			"variation": "2",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4059",
+				"name": "2017 - FHNW - WET - Cat - Adult Instinctive thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Adult Instinctive Thin Slices in Gravy ",
+				"titleUrl": "Adult Instinctive thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4059,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 338136,
+			"image": "https://marspetcareaprimocdn.petcare.global/faa2e5b7-47d4-4f6e-b04e-b1ef000edd6d/faa2e5b7-47d4-4f6e-b04e-b1ef000edd6d_DownloadAsJpg.jpg",
+			"imageAlt": "Adult Instinctive Thin Slices in Gravy ",
+			"inStock": false,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult"
+			],
+			"mainItem": 4059,
+			"name": "2017 - FHNW - WET - Cat - Adult Instinctive thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "0",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111174666",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Adult Instinctive Thin Slices in Gravy ",
+			"titleUrl": "Adult Instinctive thin slices in gravy",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "8074",
+				"name": "2025 - FHN - Wet - Cat - AGING 11+ ULTRA SOFT MOUSSE IN SAUCE - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Aging 11+ Loaf in Sauce Wet Cat Food",
+				"titleUrl": "AGING 11+ ULTRA SOFT MOUSSE IN SAUCE"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 8074,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1363108,
+			"image": "https://marspetcareaprimocdn.petcare.global/384105a5-42af-4898-aac1-b3ae016ca6c5/384105a5-42af-4898-aac1-b3ae016ca6c5_DownloadAsJpg.jpg",
+			"imageAlt": "Aging 11+ Loaf in Sauce Wet Cat Food",
+			"inStock": false,
+			"isD2CProduct": true,
+			"lifestages": [
+				"ageing"
+			],
+			"mainItem": 8074,
+			"name": "2025 - FHN - Wet - Cat - AGING 11+ ULTRA SOFT MOUSSE IN SAUCE - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$70.45",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "10030111949643",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Aging 11+ Loaf in Sauce Wet Cat Food",
+			"titleUrl": "AGING 11+ ULTRA SOFT MOUSSE IN SAUCE",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1307",
+				"name": "2020 - FHNW - Wet - Cat - INDOOR 7+ Morsels in Gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Indoor 7+ Morsels In Gravy Canned Cat Food",
+				"titleUrl": "Indoor 7+ Morsels in Gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1307,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 976444,
+			"image": "https://marspetcareaprimocdn.petcare.global/f4cc050e-ca1c-44b0-8727-b1ef000edb1f/f4cc050e-ca1c-44b0-8727-b1ef000edb1f_DownloadAsJpg.jpg",
+			"imageAlt": "Indoor 7+ Morsels In Gravy Canned Cat Food",
+			"inStock": false,
+			"isD2CProduct": true,
+			"lifestages": [
+				"mature"
+			],
+			"mainItem": 1307,
+			"name": "2020 - FHNW - Wet - Cat - INDOOR 7+ Morsels in Gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$0.00",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111471819",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Indoor 7+ Morsels In Gravy Canned Cat Food",
+			"titleUrl": "Indoor 7+ Morsels in Gravy",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2561",
+				"name": "2025 - FHN - Dry - Cat - AGING 11+ - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Royal Canin Feline Health Nutrition Aging 11+",
+				"titleUrl": "AGING 11+"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2561,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1363104,
+			"image": "https://marspetcareaprimocdn.petcare.global/4f0f0956-9b45-445b-a3a1-b3ae016ca062/4f0f0956-9b45-445b-a3a1-b3ae016ca062_DownloadAsJpg.jpg",
+			"imageAlt": "Royal Canin Feline Health Nutrition Aging 11+",
+			"inStock": false,
+			"isD2CProduct": true,
+			"lifestages": [
+				"ageing"
+			],
+			"mainItem": 2561,
+			"name": "2025 - FHN - Dry - Cat - AGING 11+ - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$35.14",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111215062",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Royal Canin Feline Health Nutrition Aging 11+",
+			"titleUrl": "AGING 11+",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		}
+	],
+	"totalPages": 4,
+	"totalProducts": 54
+}

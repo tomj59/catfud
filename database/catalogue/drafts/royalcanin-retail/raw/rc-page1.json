@@ -1,0 +1,933 @@
+{
+	"currentPage": 1,
+	"facets": [
+		{
+			"code": "digital_sub_category",
+			"items": [
+				{
+					"code": "dry_food",
+					"count": 25,
+					"label": "pa.plpFilters.cat.digitalSubCategory.dryFood"
+				},
+				{
+					"code": "wet_food",
+					"count": 28,
+					"label": "pa.plpFilters.cat.digitalSubCategory.wetFood"
+				},
+				{
+					"code": "supplement",
+					"count": 1,
+					"label": "pa.plpFilters.cat.digitalSubCategory.supplement"
+				}
+			],
+			"label": "pa.plpFiltersCategory.digitalSubCategory"
+		},
+		{
+			"code": "lifestage",
+			"items": [
+				{
+					"code": "baby",
+					"count": 4,
+					"label": "pa.plpFilters.cat.lifestage.baby"
+				},
+				{
+					"code": "kitten",
+					"count": 11,
+					"label": "pa.plpFilters.cat.lifestage.kitten"
+				},
+				{
+					"code": "adult",
+					"count": 42,
+					"label": "pa.plpFilters.cat.lifestage.adult"
+				},
+				{
+					"code": "mature",
+					"count": 39,
+					"label": "pa.plpFilters.cat.lifestage.mature"
+				},
+				{
+					"code": "ageing",
+					"count": 3,
+					"label": "pa.plpFilters.cat.lifestage.ageing"
+				}
+			],
+			"label": "pa.plpFiltersCategory.lifestage"
+		},
+		{
+			"code": "breed",
+			"items": [
+				{
+					"code": "maine_coon",
+					"count": 2,
+					"label": "pa.plpFilters.cat.breed.maineCoon"
+				},
+				{
+					"code": "persian",
+					"count": 2,
+					"label": "pa.plpFilters.cat.breed.persian"
+				},
+				{
+					"code": "american_shorthair",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.americanShorthair"
+				},
+				{
+					"code": "bengal",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.bengal"
+				},
+				{
+					"code": "ragdoll",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.ragdoll"
+				},
+				{
+					"code": "siamese",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.siamese"
+				},
+				{
+					"code": "any",
+					"count": 46,
+					"label": "pa.plpFilters.cat.breed.any"
+				}
+			],
+			"label": "pa.plpFiltersCategory.breed"
+		},
+		{
+			"code": "specific_needs",
+			"items": [
+				{
+					"code": "digestive_support",
+					"count": 7,
+					"label": "pa.plpFilters.cat.specificNeeds.digestiveSupport"
+				},
+				{
+					"code": "weight_management",
+					"count": 7,
+					"label": "pa.plpFilters.cat.specificNeeds.weightManagement"
+				},
+				{
+					"code": "skin_and_coat_support",
+					"count": 5,
+					"label": "pa.plpFilters.cat.specificNeeds.skinAndCoatSupport"
+				},
+				{
+					"code": "pregnant",
+					"count": 3,
+					"label": "pa.plpFilters.cat.specificNeeds.pregnant"
+				},
+				{
+					"code": "hairballs",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.hairballs"
+				},
+				{
+					"code": "tendency_to_beg_for_food",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.tendencyToBegForFood"
+				},
+				{
+					"code": "urinary_support",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.urinarySupport"
+				},
+				{
+					"code": "appetite_stimulation",
+					"count": 1,
+					"label": "pa.plpFilters.cat.specificNeeds.appetiteStimulation"
+				},
+				{
+					"code": "oral_dental_hygiene",
+					"count": 1,
+					"label": "pa.plpFilters.cat.specificNeeds.oralDentalHygiene"
+				}
+			],
+			"label": "pa.plpFiltersCategory.specificNeeds"
+		},
+		{
+			"code": "sterilized",
+			"items": [
+				{
+					"code": "false",
+					"count": 52,
+					"label": "pa.plpFilters.cat.sterilized.false"
+				},
+				{
+					"code": "true",
+					"count": 2,
+					"label": "pa.plpFilters.cat.sterilized.true"
+				}
+			],
+			"label": "pa.plpFiltersCategory.sterilized"
+		},
+		{
+			"code": "pack_weight_ranges",
+			"items": [
+				{
+					"code": "up_to_6oz",
+					"count": 30,
+					"label": "pa.plpFilters.cat.packWeightRanges.upTo6oz"
+				},
+				{
+					"code": "from_6_to_16oz",
+					"count": 1,
+					"label": "pa.plpFilters.cat.packWeightRanges.from6To16oz"
+				},
+				{
+					"code": "from_1_to_5lbs",
+					"count": 15,
+					"label": "pa.plpFilters.cat.packWeightRanges.from1To5lbs"
+				},
+				{
+					"code": "from_5_to_11lbs",
+					"count": 21,
+					"label": "pa.plpFilters.cat.packWeightRanges.from5To11lbs"
+				},
+				{
+					"code": "from_11_to_21lbs",
+					"count": 9,
+					"label": "pa.plpFilters.cat.packWeightRanges.from11To21lbs"
+				}
+			],
+			"label": "pa.plpFiltersCategory.packWeightRanges"
+		}
+	],
+	"products": [
+		{
+			"analyticsData": {
+				"mainItemCode": "1200",
+				"name": "2022 - FHNW - Wet - Cat - KITTEN loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Kitten Loaf in Sauce Canned Cat Food ",
+				"titleUrl": "KITTEN loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1200,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1046563,
+			"image": "https://cdn.royalcanin-weshare-online.io/yOeIa4cBaPOZra8qI_zR/v16/00030111410184d-cf-gs1",
+			"imageAlt": "Kitten Loaf in Sauce Canned Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"kitten"
+			],
+			"mainItem": 1200,
+			"name": "2022 - FHNW - Wet - Cat - KITTEN loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$52.21",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111410184",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "birth_and_growth",
+			"title": "Kitten Loaf in Sauce Canned Cat Food ",
+			"titleUrl": "KITTEN loaf in sauce",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2554",
+				"name": "2016 - FBN - Dry - Cat - Persian KITTEN - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fbn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Persian Kitten Dry Cat Food",
+				"titleUrl": "Persian Kitten"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"persian"
+			],
+			"bvProductId": 2554,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336832,
+			"image": "https://cdn.royalcanin-weshare-online.io/qD8-vYcBRYZmsWpc0_i9/v17/center-front-hero-image-2554-030111542731-cat-01-jpg",
+			"imageAlt": "Persian Kitten Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"kitten"
+			],
+			"mainItem": 2554,
+			"name": "2016 - FBN - Dry - Cat - Persian KITTEN - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$30.39",
+			"productCategory": "mainmeal",
+			"range": "fbn",
+			"sku": "030111542731",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "breed",
+			"title": "Persian Kitten Dry Cat Food",
+			"titleUrl": "Persian Kitten",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2551",
+				"name": "2016 - FBN - DRY - Cat - Siamese ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fbn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Siamese Adult Dry Cat Food",
+				"titleUrl": "Siamese Adult"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"siamese"
+			],
+			"bvProductId": 2551,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336838,
+			"image": "https://cdn.royalcanin-weshare-online.io/Pz85vYcBRYZmsWpcl_gT/v17/center-front-hero-image-2551-030111543349-cat-01-jpg",
+			"imageAlt": "Siamese Adult Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2551,
+			"name": "2016 - FBN - DRY - Cat - Siamese ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$43.69",
+			"productCategory": "mainmeal",
+			"range": "fbn",
+			"sku": "030111543363",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "breed",
+			"title": "Siamese Adult Dry Cat Food",
+			"titleUrl": "Siamese Adult",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4098",
+				"name": "2022 - FHNW - Wet - Cat - MOTHER & BABYCAT ultra soft mousse in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Mother & Babycat Ultra Soft Mousse in Sauce Canned Cat Food ",
+				"titleUrl": "MOTHER & BABYCAT ultra soft mousse in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4098,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1046555,
+			"image": "https://cdn.royalcanin-weshare-online.io/sD_PTIcBRYZmsWpcyfVQ/v34/00030111442192h-cf-gs1",
+			"imageAlt": "Mother & Babycat Ultra Soft Mousse in Sauce Canned Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"baby",
+				"kitten",
+				"mature"
+			],
+			"mainItem": 4098,
+			"name": "2022 - FHNW - Wet - Cat - MOTHER & BABYCAT ultra soft mousse in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$52.21",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111442192",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "birth_and_growth",
+			"title": "Mother & Babycat Ultra Soft Mousse in Sauce Canned Cat Food ",
+			"titleUrl": "MOTHER & BABYCAT ultra soft mousse in sauce",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2532",
+				"name": "2022 - FCN - Dry - Cat - DENTAL CARE - Zone North America - CA - MX - US - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Dental Care Dry Cat Food",
+				"titleUrl": "DENTAL CARE"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2532,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1053758,
+			"image": "https://cdn.royalcanin-weshare-online.io/kFZRTYcBBKJuub5qsvl4/v55/00030111646071f-cf-gs1",
+			"imageAlt": "Dental Care Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2532,
+			"name": "2022 - FCN - Dry - Cat - DENTAL CARE - Zone North America - CA - MX - US - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$27.54",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111646071",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Dental Care Dry Cat Food",
+			"titleUrl": "DENTAL CARE",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2544",
+				"name": "2022 - FHN - Dry - Cat - Mother & Babycat - Zone North America - ALGAE OIL - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Mother & Babycat Dry Cat Food",
+				"titleUrl": "Mother & Babycat"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2544,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1046415,
+			"image": "https://marspetcareaprimocdn.petcare.global/ad14fe6a-bb6a-4e5a-af6f-b1ef000eda85/ad14fe6a-bb6a-4e5a-af6f-b1ef000eda85_DownloadAsJpg.jpg",
+			"imageAlt": "Mother & Babycat Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"baby",
+				"kitten",
+				"mature"
+			],
+			"mainItem": 2544,
+			"name": "2022 - FHN - Dry - Cat - Mother & Babycat - Zone North America - ALGAE OIL - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$28.49",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111450036",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "birth_and_growth",
+			"title": "Mother & Babycat Dry Cat Food",
+			"titleUrl": "Mother & Babycat",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1279",
+				"name": "2020 - FHNW - Wet - Cat - INDOOR ADULT Morsels in Gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Indoor Adult Morsels in Gravy Canned Cat Food ",
+				"titleUrl": "Indoor Adult Morsels in Gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1279,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 976434,
+			"image": "https://marspetcareaprimocdn.petcare.global/31c884d3-14be-42e5-94ee-b2490007a459/31c884d3-14be-42e5-94ee-b2490007a459_DownloadAsJpg.jpg",
+			"imageAlt": "Indoor Adult Morsels in Gravy Canned Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult"
+			],
+			"mainItem": 1279,
+			"name": "2020 - FHNW - Wet - Cat - INDOOR ADULT Morsels in Gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$49.93",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111471789",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Indoor Adult Morsels in Gravy Canned Cat Food ",
+			"titleUrl": "Indoor Adult Morsels in Gravy",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2520",
+				"name": "2016 - FHN - DRY - Cat - Fit and Active - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Fit And Active Dry Cat Food",
+				"titleUrl": "Fit and Active"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2520,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336819,
+			"image": "https://cdn.royalcanin-weshare-online.io/Yz87vYcBRYZmsWpcSfhw/v27/center-front-hero-image-2520-030111431837-cat-01-jpg",
+			"imageAlt": "Fit And Active Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2520,
+			"name": "2016 - FHN - DRY - Cat - Fit and Active - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$22.79",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111431837",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Fit And Active Dry Cat Food",
+			"titleUrl": "Fit and Active",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2552",
+				"name": "2016 - FBN - DRY - Cat - Persian ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fbn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Persian Adult Dry Cat Food",
+				"titleUrl": "Persian Adult"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"persian"
+			],
+			"bvProductId": 2552,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336834,
+			"image": "https://cdn.royalcanin-weshare-online.io/KD84vYcBRYZmsWpccPiX/v25/center-front-hero-image-2552-030111843531-cat-01-jpg",
+			"imageAlt": "Persian Adult Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2552,
+			"name": "2016 - FBN - DRY - Cat - Persian ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$43.69",
+			"productCategory": "mainmeal",
+			"range": "fbn",
+			"sku": "030111843579",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "breed",
+			"title": "Persian Adult Dry Cat Food",
+			"titleUrl": "Persian Adult",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2529",
+				"name": "2016 - FHN - Dry - Cat - Indoor Adult - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Indoor Adult Dry Cat Food",
+				"titleUrl": "Indoor Adult"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2529,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336775,
+			"image": "https://cdn.royalcanin-weshare-online.io/dj88vYcBRYZmsWpcS_hJ/v15/center-front-hero-image-2529-030111628084-cat-01-jpg",
+			"imageAlt": "Indoor Adult Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult"
+			],
+			"mainItem": 2529,
+			"name": "2016 - FHN - Dry - Cat - Indoor Adult - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$22.79",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111430403",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Indoor Adult Dry Cat Food",
+			"titleUrl": "Indoor Adult",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2550",
+				"name": "2016 - FBN - DRY - Cat - Maine Coon ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fbn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Maine Coon Adult Dry Cat Food",
+				"titleUrl": "Maine Coon ADULT"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"maine_coon"
+			],
+			"bvProductId": 2550,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336830,
+			"image": "https://marspetcareaprimocdn.petcare.global/ee4ea3de-fd50-49c6-8183-b20b00254d6b/ee4ea3de-fd50-49c6-8183-b20b00254d6b_DownloadAsJpg.jpg",
+			"imageAlt": "Maine Coon Adult Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2550,
+			"name": "2016 - FBN - DRY - Cat - Maine Coon ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$43.69",
+			"productCategory": "mainmeal",
+			"range": "fbn",
+			"sku": "030111543943",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "breed",
+			"title": "Maine Coon Adult Dry Cat Food",
+			"titleUrl": "Maine Coon ADULT",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2515",
+				"name": "2016 - FBN - DRY - Cat - Ragdoll ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fbn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Ragdoll Adult Dry Cat Food",
+				"titleUrl": "Ragdoll Adult"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"ragdoll"
+			],
+			"bvProductId": 2515,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336836,
+			"image": "https://cdn.royalcanin-weshare-online.io/ST85vYcBRYZmsWpc_fgg/v17/center-front-hero-image-2515-030111542977-cat-01-jpg",
+			"imageAlt": "Ragdoll Adult Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2515,
+			"name": "2016 - FBN - DRY - Cat - Ragdoll ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$43.69",
+			"productCategory": "mainmeal",
+			"range": "fbn",
+			"sku": "030111542977",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "breed",
+			"title": "Ragdoll Adult Dry Cat Food",
+			"titleUrl": "Ragdoll Adult",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4350",
+				"name": "2016 - FBN - DRY - Cat - American Shorthair ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fbn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "American Shorthair Adult Dry Cat Food ",
+				"titleUrl": "American Shorthair Adult"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"american_shorthair"
+			],
+			"bvProductId": 4350,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 338917,
+			"image": "https://cdn.royalcanin-weshare-online.io/fT88vYcBRYZmsWpcmPje/v17/center-front-hero-image-4350-030111496317-cat-01-jpg",
+			"imageAlt": "American Shorthair Adult Dry Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 4350,
+			"name": "2016 - FBN - DRY - Cat - American Shorthair ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$43.69",
+			"productCategory": "mainmeal",
+			"range": "fbn",
+			"sku": "030111496317",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "breed",
+			"title": "American Shorthair Adult Dry Cat Food ",
+			"titleUrl": "American Shorthair Adult",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4098",
+				"name": "2022 - FHNW - Wet - Cat - MOTHER & BABYCAT ultra soft mousse in sauce - Zone North America - HANDYCAN - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Mother & Babycat Ultra Soft Mousse in Sauce Canned Cat Food ",
+				"titleUrl": "MOTHER & BABYCAT ultra soft mousse in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4098,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1046559,
+			"image": "https://cdn.royalcanin-weshare-online.io/eec9TYcBaPOZra8q8fzt/v83/00030111410658b-cf-gs1",
+			"imageAlt": "Mother & Babycat Ultra Soft Mousse in Sauce Canned Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"baby",
+				"kitten",
+				"mature"
+			],
+			"mainItem": 4098,
+			"name": "2022 - FHNW - Wet - Cat - MOTHER & BABYCAT ultra soft mousse in sauce - Zone North America - HANDYCAN - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$70.45",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "10030111941081",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "birth_and_growth",
+			"title": "Mother & Babycat Ultra Soft Mousse in Sauce Canned Cat Food ",
+			"titleUrl": "MOTHER & BABYCAT ultra soft mousse in sauce",
+			"variation": "2",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		}
+	],
+	"totalPages": 4,
+	"totalProducts": 54
+}

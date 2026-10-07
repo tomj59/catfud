@@ -1,0 +1,4542 @@
+{
+  "region": "US",
+  "reviewed": false,
+  "ladder": "purina",
+  "brand": "Friskies",
+  "products": [
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Seafood Sensations"
+      ],
+      "name": "Dry With Flavors of Salmon, Tuna & Shrimp",
+      "title_as_listed": "Friskies Seafood Sensations Dry Cat Food With Flavors of Salmon, Tuna & Shrimp",
+      "import_key": "purina|site|7674",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0050000015474",
+          "pack_label": "3.15 lb bag"
+        },
+        {
+          "gtin": "0050000575770",
+          "pack_label": "16 lb bag"
+        },
+        {
+          "gtin": "0050000168866",
+          "pack_label": "17.6 lb bag"
+        },
+        {
+          "gtin": "0050000290833",
+          "pack_label": "22 lb bag"
+        },
+        {
+          "gtin": "0050000963584",
+          "pack_label": "30 lb bag"
+        }
+      ],
+      "description": "Purina Friskies Dry Cat Food Seafood Sensations With Salmon, Tuna, and Shrimp Flavors puts the me-wow in every meal. This cat-tastic combination provides an extra layer of irresistible yum that your cats won't be able to resist. Purina Friskies Dry Cat Food Seafood Sensations With Salmon, Tuna, and Shrimp Flavors provides the best in the bowl, making your cats’ eating dream come true, and yours too, because each serving of this cat kibble provides essential fatty acids for skin and coat health, vitamin A and taurine for vision support, and antioxidants for cats’ immune support. This purrfect blend of 100 percent complete and balanced nutrition also contains protein to help support healthy muscles, giving your cats everything they need for climbing, jumping, and exploring. Make this Friskies cat food part of your cats’ mealtime, and they will meow for more. There’s always more to explore.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-05/friskies-seafood-sensations-dry-cat-food.png.webp?itok=RCne6I2W",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-seafood-sensations-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7674",
+        "bazaarvoice_id": "50000-01547",
+        "package_type": "single",
+        "rating": "4.79989",
+        "review_count": "3773",
+        "upc_site": "5000001547"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Salmon Dinner",
+      "title_as_listed": "Friskies Paté Salmon Dinner Wet Cat Food",
+      "import_key": "purina|site|7706",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000423347",
+      "barcodes": [
+        {
+          "gtin": "0050000423347",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Serve your cat’s favorite flavors with this enticing salmon cat food pate recipe. This delicious pate cat food includes high-quality ingredients; for a delightful meal with no artificial colors or preservatives you can feel good about serving her.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000423347_a1c1.png.webp?itok=cKciaRJB",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-salmon-dinner-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7706",
+        "bazaarvoice_id": "50000-42334",
+        "package_type": "single",
+        "rating": "4.73632",
+        "review_count": "1498",
+        "upc_site": "5000042334"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Surfin' & Turfin'"
+      ],
+      "name": "Surfin’ & Turfin’ Favorites With Flavors of Chicken, Whitefish, Salmon & Filet Mignon",
+      "title_as_listed": "Friskies Surfin’ & Turfin’ Favorites Dry Cat Food With Flavors of Chicken, Whitefish, Salmon & Filet Mignon",
+      "import_key": "purina|site|7662",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0050000100347",
+          "pack_label": "3.15 lb bag"
+        },
+        {
+          "gtin": "0050000294701",
+          "pack_label": "12 lb bag"
+        },
+        {
+          "gtin": "0050000575794",
+          "pack_label": "16 lb bag"
+        },
+        {
+          "gtin": "0050000290215",
+          "pack_label": "22 lb bag"
+        }
+      ],
+      "description": "Bring your cats an exciting world of tastes with Purina Friskies Cat Food Surfin and Turfin Favorites Flavors of Chicken, Whitefish, Salmon and Filet Mignon. This dry cat food not only offers exciting mealtimes full of flavors, but it also contains 100 percent complete and balanced nutrition from cute kitten days to playful adult years. The crunchy cat kibble features cat-tastic shapes to capture their attention, helps keep their teeth clean, and provides essential fatty acids for skin and coat health, vitamin A and taurine for vision support, and antioxidants for cats' immune support. Purina Friskies Cat Food Surfin and Turfin Favorites Flavors of Chicken, Whitefish, Salmon and Filet Mignon is the purrfect recipe to take your cats on an amazing flavor journey, making your cats’ eating dream come true. All of your cats, whether kittens or adults, will meow for more.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-05/friskies-surfin-turfin-favorites-dry-cat-food.png.webp?itok=dJ_P13rS",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-surfin-turfin-favorites-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7662",
+        "bazaarvoice_id": "50000-10034",
+        "package_type": "single",
+        "rating": "4.78656",
+        "review_count": "2619",
+        "upc_site": "5000010034"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "Chicken & Salmon Dinner In Gravy",
+      "title_as_listed": "Friskies Shreds Chicken & Salmon Dinner In Gravy Wet Cat Food",
+      "import_key": "purina|site|7496",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:shreds"
+      ],
+      "gtin": "0050000445691",
+      "barcodes": [
+        {
+          "gtin": "0050000445691",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Serve a meal that cats of all ages can enjoy with Friskies Shreds Chicken & Salmon Dinner in Gravy cat food. Each serving of this moist cat food features tasty shreds that are tender enough for even older cats to manage.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-chicken-and-salmon-dinner-in-gravy-wet-cat-food.png.webp?itok=O1fG1NuX",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-chicken-salmon-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7496",
+        "bazaarvoice_id": "50000-44569",
+        "package_type": "single",
+        "rating": "4.73268",
+        "review_count": "1025",
+        "upc_site": "5000044569"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "With Chicken in Gravy",
+      "title_as_listed": "Friskies Prime Filets With Chicken in Gravy Wet Cat Food",
+      "import_key": "purina|site|7490",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000170180",
+      "barcodes": [
+        {
+          "gtin": "0050000170180",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Bring the scrumptious goodness of real chicken to your cat’s dish with Friskies Prime Filets With Chicken in Gravy wet cat food. A savory gravy for cats adds extra yum to every tender, tasty bite with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-prime-filets-with-chicken-in-gravy-wet-cat-food.png.webp?itok=ccI66nsm",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-prime-filets-chicken-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7490",
+        "bazaarvoice_id": "50000-17018",
+        "package_type": "single",
+        "rating": "4.72035",
+        "review_count": "919",
+        "upc_site": "5000017018"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Tender & Crunchy"
+      ],
+      "name": "Combo With Flavors of Chicken, Beef, Carrots & Green Beans",
+      "title_as_listed": "Friskies Tender & Crunchy Combo Dry Cat Food With Flavors of Chicken, Beef, Carrots & Green Beans",
+      "import_key": "purina|site|7673",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0050000084500",
+          "pack_label": "3.5 lb bag"
+        },
+        {
+          "gtin": "0050000575787",
+          "pack_label": "16 lb bag"
+        }
+      ],
+      "description": "Bring the deliciousness of variety in every bite with a cat-approved flavor combination when you serve Purina Friskies Tender and Crunchy Combo Dry Cat food With Flavors of Chicken, Beef, Carrots and Green Beans. Savory carrot and green bean flavors combine with rich chicken and beef cat food flavors to create the taste cats crave with crunchy bites and meaty tenders. Let the sound of the mouthwatering cat dry food hitting her bowl pique your cat's attention and watch as she delights in every last glorious bite. This protein-packed Friskies cat food recipe features 38 essential nutrients for a complete adult cat food that supports a happy, healthy heart and powers your cat’s playtime. Made for adult cats, Friskies healthy dry cat food provides 100 percent complete and balanced adult nutrition and helps support immune health all wrapped in a delicious variety of textures and tastes cats love. Feed your cat the best in the bowl with irresistible taste and crunchy and tender kibble every time you offer up Friskies Tender and Crunchy Combo With Flavors of Chicken, Beef, Carrots and Green Beans Dry Cat Food.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-10/friskies-tender-crunchy-dry-cat-food.png.webp?itok=CyUODF-1",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-tender-crunchd-chicken-beef-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7673",
+        "bazaarvoice_id": "50000-08450",
+        "package_type": "single",
+        "rating": "4.71768",
+        "review_count": "2444",
+        "upc_site": "5000057578"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Gravy Sensations"
+      ],
+      "name": "With Ocean Whitefish & Tuna In Gravy",
+      "title_as_listed": "Friskies Gravy Sensations With Ocean Whitefish & Tuna In Gravy Wet Cat Food",
+      "import_key": "purina|site|7318",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000578054",
+      "barcodes": [
+        {
+          "gtin": "0050000578054",
+          "pack_label": "12-count pack"
+        }
+      ],
+      "description": "Tender bites made with ocean whitefish and tuna is smothered with gravy. If only every meal were this gravy-licous.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/friskies-gravy-sensations-ocean-whitefish-tuna-gravy.jpg.webp?itok=xvFIHsA7",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-gravy-sensations-ocean-whitefish-tuna-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7318",
+        "bazaarvoice_id": "50000-57805",
+        "package_type": "single",
+        "rating": "5",
+        "review_count": "1",
+        "upc_site": "5000057805"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Indoor"
+      ],
+      "name": "Delights With Flavors of Chicken, Salmon, Peas & Carrots",
+      "title_as_listed": "Friskies Indoor Delights Dry Cat Food With Flavors of Chicken, Salmon, Peas & Carrots",
+      "import_key": "purina|site|7663",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0050000051472",
+          "pack_label": "3.15 lb bag"
+        },
+        {
+          "gtin": "0050000376407",
+          "pack_label": "18.5 lb bag"
+        }
+      ],
+      "description": "Help your cats maintain their purrfect physique with Purina Friskies Dry Cat Food Indoor Delights Flavors of Chicken, Salmon, Peas, and Carrots. This a-MEOW-zing formula provides 100 percent complete and balanced nutrition for adult cats, promoting healthy weight and helping control hairballs for your indoor cats. This cat kibble specifically provides essential fatty acids for skin and coat health, vitamin A and taurine for vision support, and antioxidants for cats’ immune support. If you are still looking to give your indoor cats something more to explore, this Friskies cat food features cat-tastic shapes to capture their attention and imagination. Make this delicious indoor cat food part of your cats’ mealtime, feed their taste for adventure, and they will meow for more. Purina Friskies Dry Cat Food Indoor Delights Flavors of Chicken, Salmon, Peas, and Carrots has it all.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-05/friskies-indoor-delights-dry-cat-food.png.webp?itok=aphymPAP",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-indoor-delights-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7663",
+        "bazaarvoice_id": "50000-05147",
+        "package_type": "single",
+        "rating": "4.73086",
+        "review_count": "1646",
+        "upc_site": "5000005147"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Gravy Swirl'd"
+      ],
+      "name": "Gravy Swirlers With Flavors of Chicken, Salmon & Gravy",
+      "title_as_listed": "Friskies Gravy Swirlers Dry Cat Food With Flavors of Chicken, Salmon & Gravy",
+      "import_key": "purina|site|7664",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0050000168583",
+          "pack_label": "3.15 lb bag"
+        },
+        {
+          "gtin": "0050000504121",
+          "pack_label": "12 lb bag"
+        },
+        {
+          "gtin": "0050000168620",
+          "pack_label": "16 lb bag"
+        },
+        {
+          "gtin": "0050000172559",
+          "pack_label": "22 lb bag"
+        }
+      ],
+      "description": "Bring the deliciousness of gravy mixed with two cat-approved flavors to your cat's dish with Purina Friskies Gravy Swirlers cat kibble. Savory salmon and chicken cat food flavors combine to create the taste cats crave with rich gravy swirls baked into each crunchy bite for added yum. Let the sound of the mouthwatering cat dry food hitting her bowl pique your cat's attention and watch as she delights in every last glorious bite. This protein-packed Friskies cat food recipe features 40 essential nutrients for a complete cat food that supports a happy, healthy heart and powers your cat’s playtime. Made for all cats, Friskies healthy dry cat food provides 100 percent complete and balanced nutrition and helps support immune health all wrapped in a delicious taste and crunchy texture cats love. Feed your cat the best in the bowl with irresistible crunchy kibble, and the tastes of savory chicken, salmon, and gravy every time you offer up Friskies Gravy Swirlers With Chicken, Salmon and Gravy Flavors.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-10/friskies-gravy-swirlers-dry-cat-food.png.webp?itok=RnUB1ZZC",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-gravy-swirld-chicken-salmon-gravy-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7664",
+        "bazaarvoice_id": "50000-16858",
+        "package_type": "single",
+        "rating": "4.18943",
+        "review_count": "17859",
+        "upc_site": "5000016862"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Wild Favorites"
+      ],
+      "name": "Mini Bites With Wild Caught Sardines & Kale In Sauce",
+      "title_as_listed": "Friskies Wild Favorites Mini Bites With Wild Caught Sardines & Kale In Sauce Wet Cat Food",
+      "import_key": "purina|site|7722",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000543298",
+      "barcodes": [
+        {
+          "gtin": "0050000543298",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Made with natural, wild-caught sardines and real kale, this is a sard-incredible meal that’ll have your cat saying, “Kale yeah!”",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/PUMain_friskies-wild-favs-sardines-kale-wet-cat-food.png.webp?itok=19XyDp7n",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/wild-favorites-mini-bites-sardines-kale",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7722",
+        "bazaarvoice_id": "50000-54329",
+        "package_type": "single",
+        "rating": "4.52632",
+        "review_count": "38",
+        "upc_site": "5000054329"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Wild Favorites"
+      ],
+      "name": "Mini Bites With Wild Caught Haddock & Sweet Potato In Sauce",
+      "title_as_listed": "Friskies Wild Favorites Mini Bites With Wild Caught Haddock & Sweet Potato In Sauce Wet Cat Food",
+      "import_key": "purina|site|7723",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000543250",
+      "barcodes": [
+        {
+          "gtin": "0050000543250",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Has your cat haddock enough of their usual food? Give them a meal made with natural, wild-caught haddock and real sweet potato!",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/PUMain_friskies-wild-favs-haddock-sweet-potato-wet-cat-food.png.webp?itok=jOOCTgsm",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/wild-favorites-mini-bites-haddock-sweet-potato",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7723",
+        "bazaarvoice_id": "50000-54325",
+        "package_type": "single",
+        "rating": "4.69136",
+        "review_count": "81",
+        "upc_site": "5000054325"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Chicken & Tuna Dinner",
+      "title_as_listed": "Friskies Paté Chicken & Tuna Dinner Wet Cat Food",
+      "import_key": "purina|site|7697",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000424443",
+      "barcodes": [
+        {
+          "gtin": "0050000424443",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Feed your cat a gourmet seafood meal with Purina Friskies Pate Chicken and Tuna Dinner canned cat food. The soft texture is easy for cats of any age to manage, and the recipe provides balanced nutrition with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000424443_a1c1.png.webp?itok=Pj_B_uh0",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-chicken-tuna-dinner-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7697",
+        "bazaarvoice_id": "50000-42444",
+        "package_type": "single",
+        "rating": "4.5535",
+        "review_count": "972",
+        "upc_site": "5000042444"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Country Style Dinner",
+      "title_as_listed": "Friskies Paté Country Style Dinner Wet Cat Food",
+      "import_key": "purina|site|7698",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000423248",
+      "barcodes": [
+        {
+          "gtin": "0050000423248",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Deliver more of your cat’s favorite flavors to her dish with this country-style pate cat food. This soft cat food includes high-quality ingredients with no artificial colors or preservatives for delicious meals you can feel good about serving her.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000423248_a1c1.png.webp?itok=fJ1DjKhJ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-country-style-dinner-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7698",
+        "bazaarvoice_id": "50000-42324",
+        "package_type": "single",
+        "rating": "4.64286",
+        "review_count": "308",
+        "upc_site": "5000042324"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Turkey & Giblets Dinner",
+      "title_as_listed": "Friskies Paté Turkey & Giblets Dinner Wet Cat Food",
+      "import_key": "purina|site|7699",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000421848",
+      "barcodes": [
+        {
+          "gtin": "0050000421848",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Show your cat you care about her flavor preferences when you serve Purina Friskies Turkey and Giblets Dinner pate cat food with no artificial colors or preservatives. Real turkey is the star of this meal, which provides outstanding nutrition.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000421848_a1c1.png.webp?itok=2wpFwcAP",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-turkey-giblets-dinner-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7699",
+        "bazaarvoice_id": "50000-42184",
+        "package_type": "single",
+        "rating": "4.68925",
+        "review_count": "1033",
+        "upc_site": "5000042184"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Liver & Chicken Dinner",
+      "title_as_listed": "Friskies Paté Liver & Chicken Dinner Wet Cat Food",
+      "import_key": "purina|site|7700",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000420445",
+      "barcodes": [
+        {
+          "gtin": "0050000420445",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Take care of your cat's nutrition and indulge her cravings with Purina Friskies Classic Pate Liver and Chicken cat food Recipe with no artificial colors or preservatives. The silky texture of this complete and balanced food tempts even picky cats.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000420445_a1c1.png.webp?itok=7DrW4uhk",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-liver-chicken-dinner-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7700",
+        "bazaarvoice_id": "50000-42044",
+        "package_type": "single",
+        "rating": "4.69599",
+        "review_count": "898",
+        "upc_site": "5000042044"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Mariner's Catch",
+      "title_as_listed": "Friskies Paté Mariner's Catch Wet Cat Food",
+      "import_key": "purina|site|7701",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000425044",
+      "barcodes": [
+        {
+          "gtin": "0050000425044",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Satisfy your cat's cravings with Purina Friskies Pate Mariner's Catch soft cat food. Delicious fish flavors tempt your cat with yummy goodness, and a smooth pate texture keeps her coming back for more with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000425044_a1c1.png.webp?itok=s7JHgeKS",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-mariners-catch-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7701",
+        "bazaarvoice_id": "50000-42504",
+        "package_type": "single",
+        "rating": "4.64234",
+        "review_count": "959",
+        "upc_site": "5000042504"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Mixed Grill",
+      "title_as_listed": "Friskies Paté Mixed Grill Wet Cat Food",
+      "import_key": "purina|site|7702",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000421541",
+      "barcodes": [
+        {
+          "gtin": "0050000421541",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Deliver more of your cat’s favorite flavors to her dish with this mixed grill pate cat food. This canned cat food includes high-quality ingredients with no artificial colors or preservatives for a delicious meal you can feel good about serving her.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000421541_a1c1.png.webp?itok=_tsm_LXQ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-mixed-grill-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7702",
+        "bazaarvoice_id": "50000-42154",
+        "package_type": "single",
+        "rating": "4.67349",
+        "review_count": "1173",
+        "upc_site": "5000042154"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Ocean Whitefish & Tuna Dinner",
+      "title_as_listed": "Friskies Paté Ocean Whitefish & Tuna Dinner Wet Cat Food",
+      "import_key": "purina|site|7703",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000424948",
+      "barcodes": [
+        {
+          "gtin": "0050000424948",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Get your cat's attention at mealtime with the delectable aroma of Purina Friskies Pate Ocean Whitefish and Tuna Dinner wet canned cat food. She's sure to purr for the yummy flavor of our pate seafood entree with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000424948_a1c1.png.webp?itok=70ReMz_8",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-ocean-whitefish-tuna-dinner-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7703",
+        "bazaarvoice_id": "50000-42494",
+        "package_type": "single",
+        "rating": "4.54259",
+        "review_count": "1174",
+        "upc_site": "5000042494"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Poultry Platter",
+      "title_as_listed": "Friskies Paté Poultry Platter Wet Cat Food",
+      "import_key": "purina|site|7704",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000423644",
+      "barcodes": [
+        {
+          "gtin": "0050000423644",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Offer up crave-worthy flavor with Purina Friskies Pate Poultry Platter wet canned cat food with no artificial colors or preservatives. The tender texture invites your cat to nibble away, and an enticing aroma calls her to her dish at mealtime.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000423644_a1c1.png.webp?itok=Ok-DzT6K",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-poultry-platter-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7704",
+        "bazaarvoice_id": "50000-42364",
+        "package_type": "single",
+        "rating": "4.63265",
+        "review_count": "637",
+        "upc_site": "5000042364"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Sea Captain's Choice",
+      "title_as_listed": "Friskies Paté Sea Captain's Choice Wet Cat Food",
+      "import_key": "purina|site|7705",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000425648",
+      "barcodes": [
+        {
+          "gtin": "0050000425648",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Serve more of your cat’s favorite flavors with this enticing wet pate cat food. This delicious Purina wet cat food recipe includes high-quality ingredients, like fish for cats for a delightful meal with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000425648_a1c1.png.webp?itok=zwC4K7qI",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-sea-captains-choice-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7705",
+        "bazaarvoice_id": "50000-42564",
+        "package_type": "single",
+        "rating": "4.63265",
+        "review_count": "343",
+        "upc_site": "5000042564"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "With Beef in Gravy",
+      "title_as_listed": "Friskies Meaty Bits With Beef in Gravy Wet Cat Food",
+      "import_key": "purina|site|7707",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000423149",
+      "barcodes": [
+        {
+          "gtin": "0050000423149",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Give your cat the goodness of real beef when you serve Friskies Meaty Bits With Beef in Gravy cat food with no artificial colors or preservatives. Tender chunks deliver a tempting texture, while rich gravy adds extra moisture.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-meaty-bits-with-beef-in-gravy-wet-cat-food.png.webp?itok=JEC8B8RC",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-meaty-bits-beef-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7707",
+        "bazaarvoice_id": "50000-42314",
+        "package_type": "single",
+        "rating": "4.62254",
+        "review_count": "559",
+        "upc_site": "5000042314"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Chicken Dinner in Gravy",
+      "title_as_listed": "Friskies Meaty Bits Chicken Dinner in Gravy Wet Cat Food",
+      "import_key": "purina|site|7708",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000421947",
+      "barcodes": [
+        {
+          "gtin": "0050000421947",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Make mealtime a delicious affair with Friskies Meaty Bits Chicken Dinner in Gravy canned cat food. Each bite features rich gravy, tender chunks, and real chicken to deliver the taste cats love with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-meaty-bits-chicken-dinner-in-gravy-wet-cat-food.png.webp?itok=0nBXulcn",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-meaty-bits-chicken-dinner-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7708",
+        "bazaarvoice_id": "50000-42194",
+        "package_type": "single",
+        "rating": "4.71557",
+        "review_count": "777",
+        "upc_site": "5000042194"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Gourmet Grill in Gravy",
+      "title_as_listed": "Friskies Meaty Bits Gourmet Grill in Gravy Wet Cat Food",
+      "import_key": "purina|site|7709",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000420544",
+      "barcodes": [
+        {
+          "gtin": "0050000420544",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Give your cat tender, delicious goodness with Friskies Meaty Bits Gourmet Grill wet adult cat food. Bite-sized chunks offer a decadent texture, and every serving features real poultry with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-meaty-bits-gourmet-grill-in-gravy-wet-cat-food.png.webp?itok=CB9qjPDr",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-meaty-bits-gourmet-grill-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7709",
+        "bazaarvoice_id": "50000-42054",
+        "package_type": "single",
+        "rating": "4.65928",
+        "review_count": "361",
+        "upc_site": "5000042054"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Farm Favorites"
+      ],
+      "name": "Paté With Chicken & Carrots",
+      "title_as_listed": "Friskies Farm Favorites Paté With Chicken & Carrots Wet Cat Food",
+      "import_key": "purina|site|7711",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000501335",
+      "barcodes": [
+        {
+          "gtin": "0050000501335",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Made with natural, farm-raised chicken and accents of carrots, this palate-pleasing paté is a meal your cat will crave, because it’s yummy-licious!",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/0005000050133PUMAIN_1.png.webp?itok=nAIIviGl",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-farm-favorites-pate-chicken-carrots-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7711",
+        "bazaarvoice_id": "50000-50133",
+        "package_type": "single",
+        "rating": "4.58908",
+        "review_count": "348",
+        "upc_site": "5000050133"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Farm Favorites"
+      ],
+      "name": "Paté With Salmon & Spinach",
+      "title_as_listed": "Friskies Farm Favorites Paté With Salmon & Spinach Wet Cat Food",
+      "import_key": "purina|site|7712",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000501359",
+      "barcodes": [
+        {
+          "gtin": "0050000501359",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Made with natural, farm-raised chicken, scrumptious salmon and accents of spinach, this moist and tasty paté is wholesomely delicious!",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/0005000050135PUMAIN.png.webp?itok=MzEcgB2N",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-farm-favorites-pate-salmon-spinach-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7712",
+        "bazaarvoice_id": "50000-50135",
+        "package_type": "single",
+        "rating": "4.66187",
+        "review_count": "278",
+        "upc_site": "5000050135"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Farm Favorites Meaty Bits With Turkey & Carrots In Gravy",
+      "title_as_listed": "Friskies Farm Favorites Meaty Bits With Turkey & Carrots In Gravy Wet Cat Food",
+      "import_key": "purina|site|7713",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000501397",
+      "barcodes": [
+        {
+          "gtin": "0050000501397",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Made with natural, farm-raised chicken, tantalizing turkey and accents of carrots, these bite-size meaty chunks in gravy fill the bowl with yumminess.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/0005000050139PUMAIN.png.webp?itok=Zcu4HHfR",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-farm-favorites-meaty-bits-turkey-carrots-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7713",
+        "bazaarvoice_id": "50000-50139",
+        "package_type": "single",
+        "rating": "4.51497",
+        "review_count": "167",
+        "upc_site": "5000050139"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Farm Favorites Meaty Bits With Whitefish & Spinach In Gravy",
+      "title_as_listed": "Friskies Farm Favorites Meaty Bits With Whitefish & Spinach In Gravy Wet Cat Food",
+      "import_key": "purina|site|7714",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000501373",
+      "barcodes": [
+        {
+          "gtin": "0050000501373",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Made with natural, farm-raised chicken, delicious whitefish and accents of spinach, these bite-size meaty chunks in gravy are a super-savory way to serve up goodness.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/0005000050137PUMAIN.png.webp?itok=wG7aA07z",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-farm-favorites-meaty-bits-whitefish-spinach-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7714",
+        "bazaarvoice_id": "50000-50137",
+        "package_type": "single",
+        "rating": "4.41558",
+        "review_count": "77",
+        "upc_site": "5000050137"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Ocean Favorites"
+      ],
+      "name": "Paté With Salmon, Brown Rice & Peas",
+      "title_as_listed": "Friskies Ocean Favorites Paté With Salmon, Brown Rice & Peas Wet Cat Food",
+      "import_key": "purina|site|7716",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000503667",
+      "barcodes": [
+        {
+          "gtin": "0050000503667",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "With natural salmon goodness in every bite – open a can and give your cat a taste of life on the open ocean!",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/000500003667_PUMAIN_0.png.webp?itok=b_BcOYee",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/ocean-favorites-salmon-pate",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7716",
+        "bazaarvoice_id": "50000-50366",
+        "package_type": "single",
+        "rating": "4.63725",
+        "review_count": "102",
+        "upc_site": "5000050366"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Ocean Favorites"
+      ],
+      "name": "Paté With Tuna, Brown Rice & Peas",
+      "title_as_listed": "Friskies Ocean Favorites Paté With Tuna, Brown Rice & Peas Wet Cat Food",
+      "import_key": "purina|site|7717",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000503636",
+      "barcodes": [
+        {
+          "gtin": "0050000503636",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "This savory paté made with real, natural tuna will have your cat dreaming of living nine lives on the seven seas.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/0005000050363_PUMAIN.png.webp?itok=XPoq-Vym",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/ocean-favorites-tuna-pate",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7717",
+        "bazaarvoice_id": "50000-50363",
+        "package_type": "single",
+        "rating": "4.58571",
+        "review_count": "70",
+        "upc_site": "5000050363"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Ocean Favorites Meaty Bits With Tuna, Crab & Brown Rice In Sauce",
+      "title_as_listed": "Friskies Ocean Favorites Meaty Bits With Tuna, Crab & Brown Rice In Sauce Wet Cat Food",
+      "import_key": "purina|site|7718",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000503612",
+      "barcodes": [
+        {
+          "gtin": "0050000503612",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Cat ignoring you? Crab their attention with a can of this Ocean Favorites, made with natural tuna! And crab!",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/0005000050361_PUMAIN.png.webp?itok=wcPpcVHJ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/ocean-favorites-tuna-crab-sauce",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7718",
+        "bazaarvoice_id": "50000-50361",
+        "package_type": "single",
+        "rating": "4.70513",
+        "review_count": "78",
+        "upc_site": "5000050361"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Ocean Favorites Meaty Bits With Salmon, Shrimp & Brown Rice In Sauce",
+      "title_as_listed": "Friskies Ocean Favorites Meaty Bits With Salmon, Shrimp & Brown Rice In Sauce Wet Cat Food",
+      "import_key": "purina|site|7719",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000503681",
+      "barcodes": [
+        {
+          "gtin": "0050000503681",
+          "pack_label": "5.4 oz can"
+        }
+      ],
+      "description": "With real, natural salmon, shrimp and brown rice, this is an Ocean Favorites your cat is shore to love.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/0005000050368_PUMAIN.png.webp?itok=3r5t19Np",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-ocean-favorites-salmon-shrimp-pate-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7719",
+        "bazaarvoice_id": "50000-50368",
+        "package_type": "single",
+        "rating": "4.56522",
+        "review_count": "92",
+        "upc_site": "5000050368"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Wild Favorites"
+      ],
+      "name": "Mini Bites With Wild Caught Cod & Kale In Sauce",
+      "title_as_listed": "Friskies Wild Favorites Mini Bites With Wild Caught Cod & Kale In Sauce Wet Cat Food",
+      "import_key": "purina|site|7720",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000543274",
+      "barcodes": [
+        {
+          "gtin": "0050000543274",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Go from mild to wild at mealtime with natural, wild-caught cod, plus real kale you can see! It’s a mealtime combination that’s sure to be your cat’s newest favorite!",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/PUMain_friskies-wild-favs-cod-kale-wet-cat-food.png.webp?itok=_0CRNnAM",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/wild-favorites-mini-bites-cod-kale",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7720",
+        "bazaarvoice_id": "50000-54327",
+        "package_type": "single",
+        "rating": "4.71264",
+        "review_count": "87",
+        "upc_site": "5000054327"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Wild Favorites"
+      ],
+      "name": "Mini Bites With Wild Caught Tuna & Sweet Potato In Sauce",
+      "title_as_listed": "Friskies Wild Favorites Mini Bites With Wild Caught Tuna & Sweet Potato In Sauce Wet Cat Food",
+      "import_key": "purina|site|7721",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000543311",
+      "barcodes": [
+        {
+          "gtin": "0050000543311",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Give your cat the catch of the day – a meal made with natural, wild-caught tuna and real sweet potato! It’s a meal so exciting, it may even be the catch of the month!",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/pumain_friskies-wild-favs-tuna-sweet-potato-wet-cat-food.png.webp?itok=L3YbwrBs",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/wild-favorites-mini-bites-tuna-sweet-potato",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7721",
+        "bazaarvoice_id": "50000-54331",
+        "package_type": "single",
+        "rating": "4.51136",
+        "review_count": "88",
+        "upc_site": "5000054331"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "With Beef in Gravy",
+      "title_as_listed": "Friskies Prime Filets With Beef in Gravy Wet Cat Food",
+      "import_key": "purina|site|7489",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000215201",
+      "barcodes": [
+        {
+          "gtin": "0050000215201",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Serve your cat real beef with Friskies Prime Filets With Beef in Gravy wet cat food with no artificial colors or preservatives. Shredded chunks deliver a sensational texture, and a rich gravy adds extra flavor and moisture to each bite.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-prime-filets-with-beef-in-gravy-wet-cat-food.png.webp?itok=x5wHVvCQ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-prime-filets-beef-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7489",
+        "bazaarvoice_id": "50000-21520",
+        "package_type": "single",
+        "rating": "4.68122",
+        "review_count": "229",
+        "upc_site": "5000021520"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Chicken & Tuna Dinner in Gravy",
+      "title_as_listed": "Friskies Prime Filets Chicken & Tuna Dinner in Gravy Wet Cat Food",
+      "import_key": "purina|site|7491",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000100446",
+      "barcodes": [
+        {
+          "gtin": "0050000100446",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Shredded chunks with real chicken and tuna cooked in savory juices keeps your cat’s tummy happy and coming back for more.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-prime-filets-chicken-and-tuna-dinner-in-gravy-wet-cat-food.png.webp?itok=uknisOU0",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-prime-filets-chicken-tuna-dinner-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7491",
+        "bazaarvoice_id": "50000-10044",
+        "package_type": "single",
+        "rating": "4.75596",
+        "review_count": "713",
+        "upc_site": "5000010044"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "With Ocean Whitefish & Tuna in Sauce",
+      "title_as_listed": "Friskies Prime Filets With Ocean Whitefish & Tuna in Sauce Wet Cat Food",
+      "import_key": "purina|site|7492",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000170166",
+      "barcodes": [
+        {
+          "gtin": "0050000170166",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Send your cat’s taste buds into overdrive with the tempting gravy and nutritionally sound recipe of Friskies Prime Filets With Ocean Whitefish & Tuna in Sauce high-protein cat food with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-prime-filets-with-ocean-whitefish-and-tuna-in-sauce-wet-cat-food.png.webp?itok=F2wKFPBi",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-prime-filets-ocean-whitefish-tuna-in-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7492",
+        "bazaarvoice_id": "50000-17016",
+        "package_type": "single",
+        "rating": "4.78889",
+        "review_count": "810",
+        "upc_site": "5000017016"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "With Salmon & Beef in Sauce",
+      "title_as_listed": "Friskies Prime Filets With Salmon & Beef in Sauce Wet Cat Food",
+      "import_key": "purina|site|7493",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000100422",
+      "barcodes": [
+        {
+          "gtin": "0050000100422",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Thrill your cat by serving two of her favorite foods with Friskies Prime Filets With Salmon & Beef in Sauce high-protein cat food. Cats can’t get enough of the taste of real beef and salmon without artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-prime-filets-with-salmon-and-beef-in-sauce-wet-cat-food.png.webp?itok=7Ewkt8Z4",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-prime-filets-salmon-beef-in-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7493",
+        "bazaarvoice_id": "50000-10042",
+        "package_type": "single",
+        "rating": "4.74849",
+        "review_count": "664",
+        "upc_site": "5000010042"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Turkey Dinner in Gravy",
+      "title_as_listed": "Friskies Prime Filets Turkey Dinner in Gravy Wet Cat Food",
+      "import_key": "purina|site|7494",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000225224",
+      "barcodes": [
+        {
+          "gtin": "0050000225224",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Entice your cat to her bowl with the shredded chunks that include real turkey in Friskies Prime Filets Turkey Dinner in Gravy cat food. 100% complete and balanced cat food for adult cats with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-prime-filets-turkey-dinner-in-gravy-wet-cat-food.png.webp?itok=s1P07Wqw",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-prime-filets-turkey-dinner-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7494",
+        "bazaarvoice_id": "50000-22522",
+        "package_type": "single",
+        "rating": "4.75",
+        "review_count": "836",
+        "upc_site": "5000022522"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "With Chicken In Gravy",
+      "title_as_listed": "Friskies Shreds With Chicken In Gravy Wet Cat Food",
+      "import_key": "purina|site|7495",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:shreds"
+      ],
+      "gtin": "0050000571987",
+      "barcodes": [
+        {
+          "gtin": "0050000571987",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Provide high-quality nutrition for adult cats with Friskies Shreds With Chicken in Gravy wet cat food with no artificial colors or preservatives. Shredded bites with chicken in gravy for cats tempt her to her dish.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-with-chicken-in-gravy-wet-cat-food.png.webp?itok=EsNsMrzd",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-chicken-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7495",
+        "bazaarvoice_id": "50000-57198",
+        "package_type": "single",
+        "rating": "4.7715",
+        "review_count": "779",
+        "upc_site": "5000057198"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "With Ocean Whitefish & Tuna In Sauce",
+      "title_as_listed": "Friskies Shreds With Ocean Whitefish & Tuna In Sauce Wet Cat Food",
+      "import_key": "purina|site|7497",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce",
+        "texture:shreds"
+      ],
+      "gtin": "0050000103683",
+      "barcodes": [
+        {
+          "gtin": "0050000103683",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Serve up real seafood with Friskies Shreds With Ocean Whitefish & Tuna in Sauce cat food wet recipe in your cat’s dish with no artificial colors or preservatives. A savory sauce adds extra moisture to every tender, yummy bite.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-with-ocean-whitefish-and-tuna-in-sauce-wet-cat-food.png.webp?itok=FTPmmGPx",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-ocean-whitefish-tuna-in-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7497",
+        "bazaarvoice_id": "50000-10368",
+        "package_type": "single",
+        "rating": "4.76125",
+        "review_count": "800",
+        "upc_site": "5000010368"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "With Whitefish & Sardines In Sauce",
+      "title_as_listed": "Friskies Shreds With Whitefish & Sardines In Sauce Wet Cat Food",
+      "import_key": "purina|site|7498",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce",
+        "texture:shreds"
+      ],
+      "gtin": "0050000579907",
+      "barcodes": [
+        {
+          "gtin": "0050000579907",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Delight your cat with mouthwatering Friskies Shreds With Whitefish & Sardines in Sauce cat food wet formula, with high-quality nutrition for adult cats and no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-with-whitefish-and-sardines-in-sauce-wet-cat-food.png.webp?itok=gO63MGrJ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-whitefish-sardines-in-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7498",
+        "bazaarvoice_id": "50000-57990",
+        "package_type": "single",
+        "rating": "4.80566",
+        "review_count": "530",
+        "upc_site": "5000057990"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "With Salmon In Sauce",
+      "title_as_listed": "Friskies Shreds With Salmon In Sauce Wet Cat Food",
+      "import_key": "purina|site|7499",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce",
+        "texture:shreds"
+      ],
+      "gtin": "0050000572014",
+      "barcodes": [
+        {
+          "gtin": "0050000572014",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Make mealtime exciting with the tender texture and seafood flavor found in Friskies Shreds With Salmon in Sauce cat food wet formula. Thin, shredded Friskies cat food pieces are easy for cats to nibble.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-with-salmon-in-sauce-wet-cat-food.png.webp?itok=wj6WFYY_",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-salmon-in-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7499",
+        "bazaarvoice_id": "50000-57201",
+        "package_type": "single",
+        "rating": "4.80443",
+        "review_count": "542",
+        "upc_site": "5000057201"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "Turkey & Cheese Dinner In Gravy",
+      "title_as_listed": "Friskies Shreds Turkey & Cheese Dinner In Gravy Wet Cat Food",
+      "import_key": "purina|site|7500",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:shreds"
+      ],
+      "gtin": "0050000412204",
+      "barcodes": [
+        {
+          "gtin": "0050000412204",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Serve her an indulgent meal with this Friskies Shreds Turkey & Cheese Dinner in Gravy cat food. Shreds with real turkey deliver the poultry goodness she craves with the balanced Friskies cat food nutrition you demand.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-turkey-and-cheese-dinner-in-gravy-wet-cat-food.png.webp?itok=ix1T4RRg",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-turkey-cheese-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7500",
+        "bazaarvoice_id": "50000-41220",
+        "package_type": "single",
+        "rating": "4.71161",
+        "review_count": "1120",
+        "upc_site": "5000041220"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "With Turkey & Giblets In Gravy",
+      "title_as_listed": "Friskies Shreds With Turkey & Giblets In Gravy Wet Cat Food",
+      "import_key": "purina|site|7501",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:shreds"
+      ],
+      "gtin": "0050000579921",
+      "barcodes": [
+        {
+          "gtin": "0050000579921",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Choose a tasty cat food delivering high-quality nutrition for adult cats with Friskies Shreds With Turkey & Giblets in Gravy wet cat food. Cats can enjoy the shredded turkey taste.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-with-turkey-and-giblets-in-gravy-wet-cat-food.png.webp?itok=BiLFDcap",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-turkey-giblets-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7501",
+        "bazaarvoice_id": "50000-57992",
+        "package_type": "single",
+        "rating": "4.68672",
+        "review_count": "482",
+        "upc_site": "5000057992"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "With Beef In Gravy",
+      "title_as_listed": "Friskies Shreds With Beef In Gravy Wet Cat Food",
+      "import_key": "purina|site|7502",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:shreds"
+      ],
+      "gtin": "0050000103645",
+      "barcodes": [
+        {
+          "gtin": "0050000103645",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Give your cat something to purr about with Friskies Shreds With Beef in Gravy wet food for cats. Made with succulent, high-quality beef, each shredded bite makes it easy for small mouths to handle with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-with-beef-in-gravy-wet-cat-food.png.webp?itok=qZJbgi2r",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-beef-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7502",
+        "bazaarvoice_id": "50000-10364",
+        "package_type": "single",
+        "rating": "4.65301",
+        "review_count": "732",
+        "upc_site": "5000010364"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Tasty Treasures"
+      ],
+      "name": "Wet Tasty Treasures With Chicken in Gravy (With Liver)",
+      "title_as_listed": "Purina Friskies Wet Cat Food Tasty Treasures With Chicken in Gravy (With Liver)",
+      "import_key": "purina|site|7511",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000577965",
+      "barcodes": [
+        {
+          "gtin": "0050000577965",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Cater to your cat’s love of savory gravy flavor with Purina Friskies Tasty Treasures With Chicken and Liver in Gravy cat food, containing 100 percent complete and balanced nutrition for adult cats.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000577965_a1c1_copy.png.webp?itok=Sm3weOBb",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-tasty-treasures-chicken-liver-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7511",
+        "bazaarvoice_id": "50000-57796",
+        "package_type": "single",
+        "rating": "4.76231",
+        "review_count": "589",
+        "upc_site": "5000057796"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Tasty Treasures"
+      ],
+      "name": "Wet Tasty Treasures With Ocean Fish and Tuna in Sauce (Scallop Flavor)",
+      "title_as_listed": "Purina Friskies Wet Cat Food Tasty Treasures With Ocean Fish and Tuna in Sauce (Scallop Flavor)",
+      "import_key": "purina|site|7512",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000577972",
+      "barcodes": [
+        {
+          "gtin": "0050000577972",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Serve your seafood-craving feline a meal that's high in protein and filled with flavor with Purina Friskies Tasty Treasures With Ocean Fish and Tuna in Sauce and Scallop Flavor moist cat food.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000577972_a1c1_copy.png.webp?itok=7MdHMMA5",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-tasty-treasures-fish-tuna-scallop-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7512",
+        "bazaarvoice_id": "50000-57797",
+        "package_type": "single",
+        "rating": "4.7814",
+        "review_count": "828",
+        "upc_site": "5000057797"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Tasty Treasures"
+      ],
+      "name": "Wet Tasty Treasures With Chicken and Tuna in Gravy (Scallop Flavor)",
+      "title_as_listed": "Purina Friskies Wet Cat Food Tasty Treasures With Chicken and Tuna in Gravy (Scallop Flavor)",
+      "import_key": "purina|site|7514",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000577958",
+      "barcodes": [
+        {
+          "gtin": "0050000577958",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Fill your feline’s dish with the flavors and textures she loves most in a high-protein recipe with Purina Friskies Tasty Treasures With Chicken and Tuna in Gravy and Scallop Flavor moist cat food.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000577958_a1c1_copy.png.webp?itok=A2uXl11_",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-tasty-treasures-chicken-tuna-scallop-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7514",
+        "bazaarvoice_id": "50000-57795",
+        "package_type": "single",
+        "rating": "4.7265",
+        "review_count": "468",
+        "upc_site": "5000057795"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Tasty Treasures"
+      ],
+      "name": "Wet Tasty Treasures With Turkey and Liver in Gravy",
+      "title_as_listed": "Purina Friskies Wet Cat Food Tasty Treasures With Turkey and Liver in Gravy",
+      "import_key": "purina|site|7515",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000577989",
+      "barcodes": [
+        {
+          "gtin": "0050000577989",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Offer the 100 percent complete and balanced nutrition your adult cat deserves with Purina Friskies Tasty Treasures With Turkey and Liver in Gravy cat food, made with tender chunks for a texture she loves.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000582334_a1c1_copy.png.webp?itok=nXUgSQNd",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-tasty-treasures-turkey-liver-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7515",
+        "bazaarvoice_id": "50000-57798",
+        "package_type": "single",
+        "rating": "4.74873",
+        "review_count": "589",
+        "upc_site": "5000057798"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Indoor"
+      ],
+      "name": "Pate Chicken Dinner With Garden Greens",
+      "title_as_listed": "Purina Friskies Indoor Cat Food Pate Chicken Dinner With Garden Greens",
+      "import_key": "purina|site|7516",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000574001",
+      "barcodes": [
+        {
+          "gtin": "0050000574001",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Take care of your cat's nutritional needs while pleasing her palate with the combination of real chicken and rice in Purina Friskies Indoor Pate Chicken Dinner With Garden Greens moist cat food.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000574001_a1c1_copy.png.webp?itok=Z9aR8YEa",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-indoor-pate-chicken-dinner-with-garden-greens-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7516",
+        "bazaarvoice_id": "50000-57400",
+        "package_type": "single",
+        "rating": "4.71933",
+        "review_count": "481",
+        "upc_site": "5000057400"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Indoor"
+      ],
+      "name": "Chunky Chicken and Turkey Casserole With Garden Greens in Gravy 24/5.5 oz",
+      "title_as_listed": "Purina Friskies Indoor Cat Food Chunky Chicken and Turkey Casserole With Garden Greens in Gravy 24/5.5 oz",
+      "import_key": "purina|site|7517",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:chunks"
+      ],
+      "gtin": "0050000573950",
+      "barcodes": [
+        {
+          "gtin": "0050000573950",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Provide 100 percent complete and balanced nutrition with a texture cats crave when you fill her dish with Purina Friskies Indoor Chunky Chicken and Turkey Casserole With Garden Greens in Gravy wet cat food.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000573950_a1c1_copy.png.webp?itok=NtXfPiyC",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-indoor-chunky-chicken-turkey-casserole-with-garden-greens-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7517",
+        "bazaarvoice_id": "50000-57395",
+        "package_type": "single",
+        "rating": "4.68148",
+        "review_count": "540",
+        "upc_site": "5000057395"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Indoor"
+      ],
+      "name": "Flaked Ocean Whitefish Dinner With Garden Greens in Sauce",
+      "title_as_listed": "Purina Friskies Indoor Cat Food Flaked Ocean Whitefish Dinner With Garden Greens in Sauce",
+      "import_key": "purina|site|7518",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce",
+        "texture:flaked"
+      ],
+      "gtin": "0050000574124",
+      "barcodes": [
+        {
+          "gtin": "0050000574124",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Let the flavors of Purina Friskies Flaked Ocean Whitefish Dinner With Garden Greens in Sauce adult wet cat food call to your cat. A rich gravy and tender flakes give her more to savor in each bite.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000574124_a1c1_copy.png.webp?itok=fScFsu2f",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-indoor-flaked-ocean-whitefish-dinner-with-garden-greens-in-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7518",
+        "bazaarvoice_id": "50000-57412",
+        "package_type": "single",
+        "rating": "4.74843",
+        "review_count": "477",
+        "upc_site": "5000057412"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Indoor Meaty Bits Homestyle Turkey Dinner With Garden Greens in Gravy",
+      "title_as_listed": "Purina Friskies Indoor Cat Food Meaty Bits Homestyle Turkey Dinner With Garden Greens in Gravy",
+      "import_key": "purina|site|7519",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000574070",
+      "barcodes": [
+        {
+          "gtin": "0050000574070",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Let her sink her teeth into this Purina Friskies Indoor Homestyle Turkey Dinner With Garden Greens in Gravy wet adult cat food. Real bites with turkey and tempting gravy give her taste buds a workout.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000574070_a1c1_copy.png.webp?itok=GwFSFsEk",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-indoor-meaty-bits-homestyle-turkey-dinner-garden-greens-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7519",
+        "bazaarvoice_id": "50000-57407",
+        "package_type": "single",
+        "rating": "4.71571",
+        "review_count": "401",
+        "upc_site": "5000057407"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Indoor Meaty Bits Saucy Seafood Bake With Garden Greens in Sauce",
+      "title_as_listed": "Purina Friskies Indoor Cat Food Meaty Bits Saucy Seafood Bake With Garden Greens in Sauce",
+      "import_key": "purina|site|7520",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000574100",
+      "barcodes": [
+        {
+          "gtin": "0050000574100",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Give your darling cat real seafood with Purina Friskies Indoor Saucy Seafood Bake With Garden Greens in Sauce adult cat food. Moist, bite-sized chunks deliver a tender, tempting, soft cat food texture.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000574100_a1c1_copy_0.png.webp?itok=1SCy2Fbh",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-indoor-meaty-bits-saucy-seafood-bake-with-garden-greens-in-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7520",
+        "bazaarvoice_id": "50000-57410",
+        "package_type": "single",
+        "rating": "4.71301",
+        "review_count": "561",
+        "upc_site": "5000057410"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Wet Chunky With Beef in Savory Gravy",
+      "title_as_listed": "Purina Friskies Extra Gravy Wet Cat Food Chunky With Beef in Savory Gravy",
+      "import_key": "purina|site|7521",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:chunks"
+      ],
+      "gtin": "0050000293315",
+      "barcodes": [
+        {
+          "gtin": "0050000293315",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Please your cat's palate with this Purina Friskies Extra Gravy With Beef in Savory Gravy Chunky moist cat food. Savory gravy and beef flavor encourage her to lick her bowl clean.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000293315_a1c1_copy.png.webp?itok=ygVDNlZB",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-extra-gravy-chunky-beef-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7521",
+        "bazaarvoice_id": "50000-29331",
+        "package_type": "single",
+        "rating": "4.59302",
+        "review_count": "430",
+        "upc_site": "5000029331"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Wet Chunky Chicken in Savory Gravy",
+      "title_as_listed": "Purina Friskies Extra Gravy Wet Cat Food Chunky Chicken in Savory Gravy",
+      "import_key": "purina|site|7522",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:chunks"
+      ],
+      "gtin": "0050000293292",
+      "barcodes": [
+        {
+          "gtin": "0050000293292",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Delight your cat with Purina Friskies Extra Gravy Chunky With Chicken in Savory Gravy wet cat food at every meal. Tender chunks and rich gravy for cats give her something to purr about at mealtime with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000293292_a1c1_copy.png.webp?itok=HYIVrAe4",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-extra-gravy-chunky-chicken-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7522",
+        "bazaarvoice_id": "50000-29329",
+        "package_type": "single",
+        "rating": "4.71353",
+        "review_count": "754",
+        "upc_site": "5000029329"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Wet Chunky With Salmon in Savory Gravy",
+      "title_as_listed": "Purina Friskies Extra Gravy Wet Cat Food Chunky With Salmon in Savory Gravy",
+      "import_key": "purina|site|7523",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:chunks"
+      ],
+      "gtin": "0050000293339",
+      "barcodes": [
+        {
+          "gtin": "0050000293339",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Offer up a delicious, nutritious meal with Purina Friskies Extra Gravy With Salmon in Savory Gravy Chunky moist cat food with no artificial colors or preservatives. Rich gravy and a tender texture tempt her to her dish at feeding time.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000293339_a1c1_copy.png.webp?itok=9cUpTeZT",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-extra-gravy-chunky-salmon-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7523",
+        "bazaarvoice_id": "50000-29333",
+        "package_type": "single",
+        "rating": "4.74068",
+        "review_count": "644",
+        "upc_site": "5000029333"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Wet Chunky With Turkey in Savory Gravy",
+      "title_as_listed": "Purina Friskies Extra Gravy Wet Cat Food Chunky With Turkey in Savory Gravy",
+      "import_key": "purina|site|7524",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:chunks"
+      ],
+      "gtin": "0050000293353",
+      "barcodes": [
+        {
+          "gtin": "0050000293353",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Offer your cat the tempting texture of Purina Friskies Extra Gravy Chunky With Turkey in Savory Gravy wet cat food with no artificial colors or preservatives, and watch her nibble to her heart's content.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000293353_a1c1_copy.png.webp?itok=lBEGxadf",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-extra-gravy-chunky-turkey-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7524",
+        "bazaarvoice_id": "50000-29335",
+        "package_type": "single",
+        "rating": "4.69895",
+        "review_count": "475",
+        "upc_site": "5000029335"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Paté With Chicken In Savory Gravy",
+      "title_as_listed": "Friskies Extra Gravy Paté With Chicken In Savory Gravy Wet Cat Food",
+      "import_key": "purina|site|7525",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:pate"
+      ],
+      "gtin": "0050000168767",
+      "barcodes": [
+        {
+          "gtin": "0050000168767",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Dish up Purina Friskies Extra Gravy Cat Food Paté With Chicken in Savory Gravy at mealtime and give your cat the taste of real chicken and extra gravy in every irresistible bite with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-03/friskies-extra-gravy-pate-with-chicken-in-savory-gravy-wet-cat-food.png.webp?itok=An2SzI1L",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-extra-gravy-pate-chicken-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7525",
+        "bazaarvoice_id": "50000-16876",
+        "package_type": "single",
+        "rating": "4.71481",
+        "review_count": "547",
+        "upc_site": "5000016876"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Paté With Salmon In Savory Gravy",
+      "title_as_listed": "Friskies Extra Gravy Paté With Salmon In Savory Gravy Wet Cat Food",
+      "import_key": "purina|site|7526",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:pate"
+      ],
+      "gtin": "0050000168743",
+      "barcodes": [
+        {
+          "gtin": "0050000168743",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Tempt your cat to her dish with the combination of smooth texture and flavorful gravy in Purina Friskies Extra Gravy Paté in Savory Gravy adult cat food, which mixes nutritious with delicious with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-03/friskies-extra-gravy-pate-with-salmon-in-savory-gravy-wet-cat-food.png.webp?itok=t-ctbzOb",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-extra-gravy-pate-salmon-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7526",
+        "bazaarvoice_id": "50000-16874",
+        "package_type": "single",
+        "rating": "4.65094",
+        "review_count": "212",
+        "upc_site": "5000016874"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Paté With Tuna In Savory Gravy",
+      "title_as_listed": "Friskies Extra Gravy Paté With Tuna In Savory Gravy Wet Cat Food",
+      "import_key": "purina|site|7527",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:pate"
+      ],
+      "gtin": "0050000168781",
+      "barcodes": [
+        {
+          "gtin": "0050000168781",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Invite your cat to nibble this Purina Friskies Extra Gravy Paté With Tuna in Savory Gravy cat food to her heart's content, giving her the fuel she needs and the purr-worthy tastes she craves with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-03/friskies-extra-gravy-pate-with-tuna-in-savory-gravy-wet-cat-food.png.webp?itok=Pd-e1VxJ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-extra-gravy-pate-tuna-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7527",
+        "bazaarvoice_id": "50000-16878",
+        "package_type": "single",
+        "rating": "4.73475",
+        "review_count": "377",
+        "upc_site": "5000016878"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Paté With Turkey In Savory Gravy",
+      "title_as_listed": "Friskies Extra Gravy Paté With Turkey In Savory Gravy Wet Cat Food",
+      "import_key": "purina|site|7528",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:pate"
+      ],
+      "gtin": "0050000168712",
+      "barcodes": [
+        {
+          "gtin": "0050000168712",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Invite your cat to dig to the bottom of the bowl when you serve her Purina Friskies Extra Gravy Paté With Turkey in Savory Gravy wet cat food. Share her delight as she discovers delicious flavors without artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-03/friskies-extra-gravy-pate-with-turkey-in-savory-gravy-wet-cat-food.png.webp?itok=VHTc0D-M",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-extra-gravy-pate-turkey-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7528",
+        "bazaarvoice_id": "50000-16871",
+        "package_type": "single",
+        "rating": "4.63636",
+        "review_count": "88",
+        "upc_site": "5000016871"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies"
+      ],
+      "name": "Poultry 32 Ct Variety Pack with No Artificial Preservatives",
+      "title_as_listed": "Friskies Poultry Wet Cat Food 32 Ct Variety Pack with No Artificial Preservatives",
+      "import_key": "purina|site|8124",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000454242",
+      "barcodes": [
+        {
+          "gtin": "0050000454242",
+          "pack_label": "32-count pack"
+        }
+      ],
+      "description": "Stock up on all your cat's favorite entrées with this Friskies Poultry in Gravy Wet Cat Food Variety Pack. Each recipe features real chicken or turkey with tender textures that are easy to chew.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/00050000454242_a1c1.png.webp?itok=ju4MMZDZ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-poultry-variety-pack-32-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8124",
+        "bazaarvoice_id": "50000-45424",
+        "package_type": "variety_pack",
+        "rating": "4.71181",
+        "review_count": "288",
+        "upc_site": "5000045424"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no line matched: placed on the brand",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Poultry Paté Favorites 32 Ct Variety Pack",
+      "title_as_listed": "Friskies Poultry Paté Favorites Wet Cat Food 32 Ct Variety Pack",
+      "import_key": "purina|site|8125",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000292578",
+      "barcodes": [
+        {
+          "gtin": "0050000292578",
+          "pack_label": "32-count pack"
+        }
+      ],
+      "description": "Serve more of your cat’s favorites with this turkey and chicken pate cat food variety pack. These wet cat food recipes include high-quality ingredients and no artificial colors or preservatives for delicious meals you can feel good about serving her.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000292578_a1c1.png.webp?itok=jqLhlQQL",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-poultry-pate-favorites-variety-pack-32-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8125",
+        "bazaarvoice_id": "50000-29257",
+        "package_type": "variety_pack",
+        "rating": "4.77128",
+        "review_count": "376",
+        "upc_site": "5000029257"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Seafood Paté Favorites 32 Ct Variety Pack",
+      "title_as_listed": "Friskies Seafood Paté Favorites Wet Cat Food 32 Ct Variety Pack",
+      "import_key": "purina|site|8126",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000454358",
+      "barcodes": [
+        {
+          "gtin": "0050000454358",
+          "pack_label": "32-count pack"
+        }
+      ],
+      "description": "Serve more of your cat’s favorite flavors with this wet cat food seafood variety pack. These pate cat food recipes include high-quality ingredients and no artificial colors or preservatives for delicious meals you can feel good about serving her.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000454358_a1c1_0.png.webp?itok=OTUw4Sz4",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-seafood-pate-favorites-variety-pack-32-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8126",
+        "bazaarvoice_id": "50000-45435",
+        "package_type": "variety_pack",
+        "rating": "4.78448",
+        "review_count": "348",
+        "upc_site": "5000045435"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Seafood & Chicken Paté Favorites 40 Ct Variety Pack",
+      "title_as_listed": "Friskies Seafood & Chicken Paté Favorites Wet Cat Food 40 Ct Variety Pack",
+      "import_key": "purina|site|8127",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000170852",
+      "barcodes": [
+        {
+          "gtin": "0050000170852",
+          "pack_label": "40-count pack"
+        }
+      ],
+      "description": "Deliver more of your cat’s favorite flavors to her dish with this seafood and chicken canned cat food recipe variety pack. These pate cat food recipes include high-quality ingredients and no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000170852_a1c1.png.webp?itok=Rphjw0Yd",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-seafood-chicken-pate-favorites-variety-pack-40-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8127",
+        "bazaarvoice_id": "50000-17085",
+        "package_type": "variety_pack",
+        "rating": "4.73923",
+        "review_count": "418",
+        "upc_site": "5000017085"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Surfin’ & Turfin’ Prime Filets Favorites 40 Ct Variety Pack",
+      "title_as_listed": "Friskies Surfin’ & Turfin’ Prime Filets Favorites Wet Cat Food 40 Ct Variety Pack",
+      "import_key": "purina|site|8128",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000170845",
+      "barcodes": [
+        {
+          "gtin": "0050000170845",
+          "pack_label": "40-count pack"
+        }
+      ],
+      "description": "Mix things up at mealtime with this Friskies Surfin’ & Turfin’ Prime Filets canned cat food variety pack. Each recipe delivers 100% complete and balanced nutrition for adult cats with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-surfin-and-turfin-prime-filets-favorites-wet-cat-food-40-count-variety-pack.png.webp?itok=S5Nw70z3",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-surfin-turfin-prime-filets-favorites-variety-pack-40-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8128",
+        "bazaarvoice_id": "50000-17084",
+        "package_type": "variety_pack",
+        "rating": "4.73913",
+        "review_count": "23",
+        "upc_site": "5000017084"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Wet 40 ct Variety Pack, Oceans of Delight Flaked and Prime Filets",
+      "title_as_listed": "Purina Friskies Wet Cat Food 40 ct Variety Pack, Oceans of Delight Flaked and Prime Filets",
+      "import_key": "purina|site|8129",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:flaked"
+      ],
+      "gtin": "0050000964604",
+      "barcodes": [
+        {
+          "gtin": "0050000964604",
+          "pack_label": "40-count pack"
+        }
+      ],
+      "description": "Keep your curious cat guessing what's on the menu with the Purina Friskies Oceans of Delight moist cat food variety pack that contains four recipes made with real fish or poultry.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-10/1_fr_oceansofdelight_40ctvp_00050000964604_hero_vanity.png.webp?itok=bow3n6w5",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-oceans-of-delight-variety-pack-40-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8129",
+        "bazaarvoice_id": "50000-96460",
+        "package_type": "variety_pack",
+        "rating": "4.85441",
+        "review_count": "261",
+        "upc_site": "5000096460"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Wet Gravy 40ct Variety Pack, TurChicken Extra Gravy Chunky, Meaty Bits and Prime Filets",
+      "title_as_listed": "Purina Friskies Wet Cat Food Gravy 40ct Variety Pack, TurChicken Extra Gravy Chunky, Meaty Bits and Prime Filets",
+      "import_key": "purina|site|8130",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:chunks"
+      ],
+      "gtin": "0050000964611",
+      "barcodes": [
+        {
+          "gtin": "0050000964611",
+          "pack_label": "40-count pack"
+        }
+      ],
+      "description": "Nourish your cat with the four recipes in the Purina Friskies TurChicken adult wet cat food variety pack. Featuring real turkey or chicken, each recipe in this 40-count pack includes a savory gravy.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-10/1_fr_turchicken_40ctvp_00050000964611_hero_vanity.png.webp?itok=DTcox1ZQ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-turchicken-variety-pack-40-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8130",
+        "bazaarvoice_id": "50000-96461",
+        "package_type": "variety_pack",
+        "rating": "4.84091",
+        "review_count": "44",
+        "upc_site": "5000096461"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Ocean Favorites"
+      ],
+      "name": "Wet 24 Ct Variety Pack",
+      "title_as_listed": "Friskies Ocean Favorites Wet Cat Food 24 Ct Variety Pack",
+      "import_key": "purina|site|8152",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000504480",
+      "barcodes": [
+        {
+          "gtin": "0050000504480",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "Four different yummy varieties, each made with natural salmon or tuna. It's the pack for the cat who wants it all! (Which is all cats, right?)",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/00050000504480_PUMAIN.png.webp?itok=iVk4oXg4",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-ocean-favorites-variety-pack-24-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8152",
+        "bazaarvoice_id": "50000-50448",
+        "package_type": "variety_pack",
+        "rating": "4.81818",
+        "review_count": "66",
+        "upc_site": "5000050448"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Farm Favorites"
+      ],
+      "name": "Paté 24 Ct Variety Pack",
+      "title_as_listed": "Friskies Farm Favorites Paté Wet Cat Food 24 Ct Variety Pack",
+      "import_key": "purina|site|8153",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000502547",
+      "barcodes": [
+        {
+          "gtin": "0050000502547",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "Would your cat like natural, farm-raised chicken in every bite? With this variety pack, they're in cluck!",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/00050000502547_PUMAIN.png.webp?itok=9UpgCSpL",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-farm-favorites-pate-variety-pack-24-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8153",
+        "bazaarvoice_id": "50000-50254",
+        "package_type": "variety_pack",
+        "rating": "4.72581",
+        "review_count": "62",
+        "upc_site": "5000050254"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Wet 24 Ct Variety Pack",
+      "title_as_listed": "Friskies Meaty Bits Wet Cat Food 24 Ct Variety Pack",
+      "import_key": "purina|site|8154",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000198115",
+      "barcodes": [
+        {
+          "gtin": "0050000198115",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "Give your cat scrumptious choices at mealtime with this Friskies Meaty Bits wet cat food variety pack with no artificial colors or preservatives. Beef and poultry flavors bring yum to her dish, and bite-sized chunks tempt your cat.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-meaty-bits-wet-cat-food-24-count-variety-pack_0.png.webp?itok=6dJILkmD",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-meaty-bits-variety-pack-24-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8154",
+        "bazaarvoice_id": "50000-19811",
+        "package_type": "variety_pack",
+        "rating": "4.5",
+        "review_count": "2",
+        "upc_site": "5000019811"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Wet 12 Ct Variety Pack",
+      "title_as_listed": "Friskies Meaty Bits Wet Cat Food 12 Ct Variety Pack",
+      "import_key": "purina|site|8155",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000295074",
+      "barcodes": [
+        {
+          "gtin": "0050000295074",
+          "pack_label": "12-count pack"
+        }
+      ],
+      "description": "Give your cat scrumptious choices at mealtime with this Friskies Meaty Bits wet cat food variety pack with no artificial colors or preservatives. Beef and poultry flavors bring yum to her dish, and bite-sized chunks tempt your cat.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-meaty-bits-wet-cat-food-12-count-variety-pack.png.webp?itok=-Ug0pqJo",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-meaty-bits-variety-pack-12-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8155",
+        "bazaarvoice_id": "50000-29507",
+        "package_type": "variety_pack",
+        "rating": "4.79848",
+        "review_count": "660",
+        "upc_site": "5000029507"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Pate Variety Pack 60 Count",
+      "title_as_listed": "Friskies Pate Variety Pack 60 Count Wet Cat Food",
+      "import_key": "purina|site|8156",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000172627",
+      "barcodes": [
+        {
+          "gtin": "0050000172627",
+          "pack_label": "60-count pack"
+        }
+      ],
+      "description": "Make mealtime fun for your cat with the six exciting recipes in this Purina Friskies Pate and Glaz’d and Infuz’d moist cat food variety pack. This 60-count soft cat food assortment is chock-full of yummy recipes cats love. The medley of enticing textures delivers the tastes of poultry or seafood to keep your feline satisfied, whether they’re in the mood for delicious silky smooth pate cat food, or Glaz’d and Infuz’d gravy infused, super chunky meaty bites. This wet cat food pack is made with premium protein to support your cat's strong muscles while they run, pounce, and play. Ideal for multi-cat homes or for stocking up for your favorite feline, each complete adult cat food includes 100 percent balanced nutrition while supporting cat hydration. Surprise them with Friskies Pate Liver and Chicken Dinner, With Ocean Whitefish and Tuna, Turkey and Giblets, Mixed Grill, Mariner’s Catch, or Glaz’d and Infuz’d With Chicken canned cat food. With so many recipes for your cat to try, mealtime just became a taste adventure.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-03/00050000525294_a1c1.png.webp?itok=KgrAnz_l",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-pate-variety-pack-60-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8156",
+        "bazaarvoice_id": "50000-52529",
+        "package_type": "variety_pack",
+        "rating": "4.65203",
+        "review_count": "5239",
+        "upc_site": "5000017262"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté 48 Ct Variety Pack",
+      "title_as_listed": "Friskies Paté Wet Cat Food 48 Ct Variety Pack",
+      "import_key": "purina|site|8157",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000461738",
+      "barcodes": [
+        {
+          "gtin": "0050000461738",
+          "pack_label": "48-count pack"
+        }
+      ],
+      "description": "Oh, the purrfectly pleasing texture of paté, in a variety of yummy flavors! This 48-count Friskies pack includes 12 each of Salmon Dinner, Ocean Whitefish & Tuna Dinner, Mixed Grill, and Turkey & Giblets Dinner.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/1_PVMAIN_15.png.webp?itok=6GpBsWJ_",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pate-variety-pack-48-can",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8157",
+        "bazaarvoice_id": "50000-46173",
+        "package_type": "variety_pack",
+        "rating": "4.875",
+        "review_count": "8",
+        "upc_site": "5000046173"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté 24 Ct Variety Pack",
+      "title_as_listed": "Friskies Paté Wet Cat Food 24 Ct Variety Pack",
+      "import_key": "purina|site|8158",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000420346",
+      "barcodes": [
+        {
+          "gtin": "0050000420346",
+          "pack_label": "23-count pack"
+        }
+      ],
+      "description": "Serve more of your cat’s favorite flavors with this Ocean Whitefish and Tuna Dinner, Mixed Grill and Turkey and Giblets Dinner variety pack. These canned cat food recipes include high-quality ingredients and no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000420346_a1c1.png.webp?itok=LliP9EKX",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pate-variety-pack-24-can",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8158",
+        "bazaarvoice_id": "50000-29489",
+        "package_type": "variety_pack",
+        "rating": "4.78055",
+        "review_count": "401",
+        "upc_site": "5000042034"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté 12 Ct Variety Pack",
+      "title_as_listed": "Friskies Paté Wet Cat Food 12 Ct Variety Pack",
+      "import_key": "purina|site|8159",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000294893",
+      "barcodes": [
+        {
+          "gtin": "0050000294893",
+          "pack_label": "12-count pack"
+        }
+      ],
+      "description": "Oh, the purrfectly pleasing texture of paté, in a variety of yummy flavors! This 12-count Friskies pack includes four each of Salmon Dinner, Mixed Grill, and Turkey & Giblets Dinner.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-01/1_friskies-wet-cat-food-pate-variety-pack-salmon-mixed-grill-turkey-giblets-dinner-png.png.webp?itok=YMZvyU8b",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-pate-variety-pack-12-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8159",
+        "bazaarvoice_id": "50000-29489",
+        "package_type": "variety_pack",
+        "rating": "4.78055",
+        "review_count": "401",
+        "upc_site": "5000029489"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Wet 48 Ct Variety Pack",
+      "title_as_listed": "Friskies Prime Filets Wet Cat Food 48 Ct Variety Pack",
+      "import_key": "purina|site|8108",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000576760",
+      "barcodes": [
+        {
+          "gtin": "0050000576760",
+          "pack_label": "48-count pack"
+        }
+      ],
+      "description": "It’s prime time! Prime Filets, that is. The choice selection in this 48-count variety pack includes 12 cans each of Prime Filets With Beef In Gravy, Prime Filets With Chicken In Gravy, Prime Filets With Ocean Whitefish & Tuna In Sauce, and Prime Filets Turkey Dinner In Gravy.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/01PVMAIN_2.png.webp?itok=dC1v9y2D",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-prime-filets-variety-pack-48-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8108",
+        "bazaarvoice_id": "50000-57676",
+        "package_type": "variety_pack",
+        "rating": "4.73409",
+        "review_count": "2027",
+        "upc_site": "5000057676"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "Wet 24 Ct Variety Pack",
+      "title_as_listed": "Friskies Shreds Wet Cat Food 24 Ct Variety Pack",
+      "import_key": "purina|site|8109",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:shreds"
+      ],
+      "gtin": "0050000579198",
+      "barcodes": [
+        {
+          "gtin": "0050000579198",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "Pique your cat’s interest at mealtime with the tasty recipes in the Friskies Shreds wet canned cat food variety pack and provide high-quality nutrition for adult cats with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-wet-cat-food-24-count-variety-pack.png.webp?itok=qQ2ZNhAZ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-variety-pack-24-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8109",
+        "bazaarvoice_id": "50000-57919",
+        "package_type": "variety_pack",
+        "rating": "4.74118",
+        "review_count": "170",
+        "upc_site": "5000057919"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "Wet 32 Ct Variety Pack",
+      "title_as_listed": "Friskies Shreds Wet Cat Food 32 Ct Variety Pack",
+      "import_key": "purina|site|8110",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:shreds"
+      ],
+      "gtin": "0050000584963",
+      "barcodes": [
+        {
+          "gtin": "0050000584963",
+          "pack_label": "32-count pack"
+        }
+      ],
+      "description": "Get your cat’s mouthwatering with this Friskies Shreds adult wet food for cats variety pack. Moist, tender shreds with real meat, poultry or seafood deliver deliciously tempting mealtime options with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-wet-cat-food-32-count-variety-pack.png.webp?itok=NUk9Lcbw",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-variety-pack-32-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8110",
+        "bazaarvoice_id": "50000-58496",
+        "package_type": "variety_pack",
+        "rating": "4.79365",
+        "review_count": "63",
+        "upc_site": "5000058496"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "Wet 40 Ct Variety Pack",
+      "title_as_listed": "Friskies Shreds Wet Cat Food 40 Ct Variety Pack",
+      "import_key": "purina|site|8111",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:shreds"
+      ],
+      "gtin": "0050000172276",
+      "barcodes": [
+        {
+          "gtin": "0050000172276",
+          "pack_label": "40-count pack"
+        }
+      ],
+      "description": "Offer tender shreds with beef, poultry or fish to your cat with the Friskies Shreds adult wet cat food variety pack. Purina shreds cat food recipes contains essential vitamins and minerals with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-05/friskies-shreds-wet-cat-food-40-count-variety-pack.png.webp?itok=YkaXJLRC",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-variety-pack-40-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8111",
+        "bazaarvoice_id": "50000-57919",
+        "package_type": "variety_pack",
+        "rating": "4.74118",
+        "review_count": "170",
+        "upc_site": "5000017227"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Tasty Treasures Prime Filets 12 Ct Variety Pack",
+      "title_as_listed": "Friskies Tasty Treasures Prime Filets Wet Cat Food 12 Ct Variety Pack",
+      "import_key": "purina|site|8115",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000579631",
+      "barcodes": [
+        {
+          "gtin": "0050000579631",
+          "pack_label": "12-count pack"
+        }
+      ],
+      "description": "Surprise your cat with a treasure trove of flavors with the Tasty Treasures Prime Filets variety pack! This 12-count Friskies pack has four each of With Ocean Fish & Tuna In Sauce And Scallop Flavor, With Chicken In Gravy With Liver, and With Turkey In Gravy With Liver.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/00050000579631_a1c1_vanity_2.png.webp?itok=6FMBo8In",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-tasty-treasures-variety-pack-12-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8115",
+        "bazaarvoice_id": "50000-57963",
+        "package_type": "variety_pack",
+        "rating": "4.83172",
+        "review_count": "826",
+        "upc_site": "5000057963"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Meaty Prime Filets Favorites 24 Ct Variety Pack",
+      "title_as_listed": "Friskies Meaty Prime Filets Favorites Wet Cat Food 24 Ct Variety Pack",
+      "import_key": "purina|site|8116",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000578009",
+      "barcodes": [
+        {
+          "gtin": "0050000578009",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Please even choosy cats with the three different flavors in the Friskies Prime Filets Favorites adult cat food variety pack. A tasty gravy for cats makes the chunks with beef, chicken or turkey a favorite.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-meaty-prime-filets-favorites-wet-cat-food-24-count-variety-pack.png.webp?itok=WPsJw91y",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-meaty-prime-filets-favorites-variety-pack-24-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8116",
+        "bazaarvoice_id": "50000-57800",
+        "package_type": "variety_pack",
+        "rating": "4.72938",
+        "review_count": "2025",
+        "upc_site": "5000057800"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Tasty Treasures Prime Filets 24 Ct Variety Pack",
+      "title_as_listed": "Friskies Tasty Treasures Prime Filets Wet Cat Food 24 Ct Variety Pack",
+      "import_key": "purina|site|8118",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000294510",
+      "barcodes": [
+        {
+          "gtin": "0050000294510",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "Surprise your cat with a treasure trove of flavors with the Tasty Treasures Prime Filets variety pack! This 24-count Friskies pack has six each of With Chicken & Tuna In Sauce And Scallop Flavor, With Ocean Fish & Tuna In Sauce And Scallop Flavor, With Chicken In Gravy With Liver, and With Turkey In Gravy With Liver.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/00050000294510_a1c1_24_cans_vanity.png.webp?itok=edVSce1r",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-tasty-treasures-variety-pack-24-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8118",
+        "bazaarvoice_id": "50000-57963",
+        "package_type": "variety_pack",
+        "rating": "4.83172",
+        "review_count": "826",
+        "upc_site": "5000057963"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Indoor"
+      ],
+      "name": "24ct VP - (Chicken and Turkey Casserole, Saucy Seafood Bake, Homestyle Turkey Dinner)",
+      "title_as_listed": "Purina Friskies Indoor Cat Food 24ct VP - (Chicken and Turkey Casserole, Saucy Seafood Bake, Homestyle Turkey Dinner)",
+      "import_key": "purina|site|8119",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000171712",
+      "barcodes": [
+        {
+          "gtin": "0050000171712",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "Deliver real poultry or seafood to your cat's dish with this Purina Friskies Indoor wet adult cat food variety pack. Each recipe is specially formulated to meet the unique needs of indoor cats with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000171712_a1c1_vanity_1.png.webp?itok=NRoNnfUL",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-indoor-variety-pack-24-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8119",
+        "bazaarvoice_id": "50000-17171",
+        "package_type": "variety_pack",
+        "rating": "4.84",
+        "review_count": "200",
+        "upc_site": "5000017171"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no texture or medium tag",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "Wet Chunky 24ct Variety Pack (With Chicken, Turkey, Salmon, Beef)",
+      "title_as_listed": "Purina Friskies Extra Gravy Wet Cat Food Chunky 24ct Variety Pack (With Chicken, Turkey, Salmon, Beef)",
+      "import_key": "purina|site|8120",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "texture:chunks"
+      ],
+      "gtin": "0050000171729",
+      "barcodes": [
+        {
+          "gtin": "0050000171729",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "Deliver the variety your adventure-loving cat craves when you feed her the four mouthwatering recipes in this Purina Friskies Extra Gravy Chunky wet cat food variety pack.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000171729_a1c1_vanity.png.webp?itok=7idA4IFS",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-extra-gravy-chunky-variety-pack-24-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8120",
+        "bazaarvoice_id": "50000-17172",
+        "package_type": "variety_pack",
+        "rating": "4.80503",
+        "review_count": "318",
+        "upc_site": "5000017172"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Surfin' & Turfin'"
+      ],
+      "name": "Paté Favorites 32 Ct Variety Pack",
+      "title_as_listed": "Friskies Surfin' & Turfin' Paté Favorites Wet Cat Food 32 Ct Variety Pack",
+      "import_key": "purina|site|8121",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000292585",
+      "barcodes": [
+        {
+          "gtin": "0050000292585",
+          "pack_label": "32-count pack"
+        }
+      ],
+      "description": "Deliver more of your cat’s favorite flavors to her dish with this Friskies canned cat food pate variety pack. These pate cat food recipes include high-quality ingredients for delicious meals with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/00050000292585_a1c1.png.webp?itok=381mz2S6",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-surfin-turfin-pate-variety-pack-32-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8121",
+        "bazaarvoice_id": "50000-29258",
+        "package_type": "variety_pack",
+        "rating": "4.86765",
+        "review_count": "68",
+        "upc_site": "5000029258"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "Chicken Lovers Prime Filets & Shreds 32 Ct Variety Pack",
+      "title_as_listed": "Friskies Shreds Chicken Lovers Prime Filets & Shreds Wet Cat Food 32 Ct Variety Pack",
+      "import_key": "purina|site|8122",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:shreds"
+      ],
+      "gtin": "0050000294534",
+      "barcodes": [
+        {
+          "gtin": "0050000294534",
+          "pack_label": "32-count pack"
+        }
+      ],
+      "description": "Yield to your cat's cravings with this Friskies Chicken Lovers Wet Cat Food Variety Pack. It offers a satisfying mix of choices to keep mealtime fresh and exciting with no artificial colors or flavors.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-09/frsk_chknlvrs_32ctvp_00050000294534_hero_vanity.jpg.webp?itok=aJNkbRie",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-variety-pack-chicken-lovers-32-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8122",
+        "bazaarvoice_id": "50000-29453",
+        "package_type": "variety_pack",
+        "rating": "4.81919",
+        "review_count": "271",
+        "upc_site": "5000029453"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Fish-a-Licious"
+      ],
+      "name": "Fish a Licious 32ct Variety Pack",
+      "title_as_listed": "Purina Friskies Fish a Licious Wet Cat Food 32ct Variety Pack",
+      "import_key": "purina|site|8123",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000294527",
+      "barcodes": [
+        {
+          "gtin": "0050000294527",
+          "pack_label": "32-count pack"
+        }
+      ],
+      "description": "Please your cat’s palate with Purina Friskies Tasty Treasures With Liver, Turkey and Chicken Pate cat food, a high-in-protein formula with 100 percent complete and balanced nutrition for adult cats.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-10/1_frsk_fishalicious_32ctvp_00050000294527_hero_vanity.png.webp?itok=RisvtBI1",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-fish-a-licious-variety-pack-32-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "8123",
+        "bazaarvoice_id": "50000-29452",
+        "package_type": "variety_pack",
+        "rating": "4.78102",
+        "review_count": "137",
+        "upc_site": "5000029452"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Seafood Prime Filets Favorites 24 Ct Variety Pack",
+      "title_as_listed": "Friskies Seafood Prime Filets Favorites Wet Cat Food 24 Ct Variety Pack",
+      "import_key": "purina|site|10009",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000577996",
+      "barcodes": [
+        {
+          "gtin": "0050000577996",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "Bring excitement to meals with this Friskies Prime Filets Seafood Favorites adult canned cat food variety pack with no artificial colors or preservatives. Shredded chunks and rich gravy encourage her to lick her bowl clean.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-08/friskies-seafood-prime-filets-favorites-wet-cat-food-24-count-variety-pack.png.webp?itok=8HqgxZKZ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-seafood-prime-filets-favorites-variety-pack-24-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10009",
+        "bazaarvoice_id": "50000-57799",
+        "package_type": "variety_pack",
+        "rating": "4.75",
+        "review_count": "80",
+        "upc_site": "5000057799"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Land & Sea Adventures"
+      ],
+      "name": "With Flavors of Chicken & Ocean Fish",
+      "title_as_listed": "Friskies Land & Sea Adventures With Flavors of Chicken & Ocean Fish Dry Cat Food",
+      "import_key": "purina|site|9595",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": "0050000259373",
+      "barcodes": [
+        {
+          "gtin": "0050000259373",
+          "pack_label": "32 lb bag"
+        }
+      ],
+      "description": "Give your cat an immune, skin, and heart support cat food with a delicious flavor combination in Purina Friskies Land and Sea Adventures Dry Cat Food. Chicken and ocean fish flavors deliver all their favorite tastes in one sensational cat food, and the appealing shapes keep them excited for mealtime. You can feel good about the 4-in-1 support each serving offers with essential vitamins and minerals as well as antioxidants. This cat kibble helps support healthy skin and coat, strong teeth and bones, healthy heart and vision, and immune system health in an irresistible crunchy texture that helps to keep their teeth clean. Friskies crunchy kibble cat food delivers complete and balanced nutrition in a tempting recipe that can follow them from cuddly kitten days to playful adult years, offering consistency in their daily diet. Offer up a meow-worthy helping of this Purina Friskies dry cat food every day and watch as your feline friend gleefully nibbles their way to the bottom of their dish.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/00050000259373_a1n1.png.webp?itok=aaI_Vmtu",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-land-sea-adventures-chicken-ocean-fish-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "9595",
+        "bazaarvoice_id": "50000-25937",
+        "package_type": "single",
+        "rating": "4.7663",
+        "review_count": "368",
+        "upc_site": "5000025937"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Surfin’ & Turfin’ Prime Filets Favorites 48 Ct Variety Pack",
+      "title_as_listed": "Purina Friskies Surfin’ & Turfin’ Prime Filets Favorites Wet Cat Food 48 Ct Variety Pack",
+      "import_key": "purina|site|10083",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000423095",
+      "barcodes": [
+        {
+          "gtin": "0050000423095",
+          "pack_label": "48-count pack"
+        }
+      ],
+      "description": "Mix things up at mealtime with this Friskies Surfin' & Turfin' Prime Filets canned cat food variety pack. Each recipe delivers 100% complete and balanced nutrition for adult cats with no artificial colors or preservatives.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-01/friskies-surfin-turfin-prime-filets-gravy-sauce-favorites-wet-cat-food-variety-pack-48ct_vanity_1000x1000_jpg.jpg.webp?itok=iojO4gYn",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-surfin-turfin-prime-filets-favorites-variety-pack-48-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10083",
+        "bazaarvoice_id": "50000-42309",
+        "package_type": "variety_pack",
+        "rating": "4.75706",
+        "review_count": "3256",
+        "upc_site": "5000042309"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Extra Gravy"
+      ],
+      "name": "TurChicken Meaty Bits Extra Gravy Variety Pack 48 Ct",
+      "title_as_listed": "Purina Friskies TurChicken Meaty Bits Extra Gravy Wet Cat Food Variety Pack 48 Ct",
+      "import_key": "purina|site|10084",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000418787",
+      "barcodes": [
+        {
+          "gtin": "0050000418787",
+          "pack_label": "48-count pack"
+        }
+      ],
+      "description": "Nourish your cat with the four recipes in the Purina Friskies TurChicken adult wet cat food variety pack. Featuring real turkey or chicken, each recipe in this 48-count pack includes a savory gravy.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-01/friskies-turchicken-gravy-wet-cat-food-variety-pack-48ct_vanity_1000x1000_jpg.jpg.webp?itok=V1P1sKyj",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-turchicken-variety-pack-48-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10084",
+        "bazaarvoice_id": "50000-41878",
+        "package_type": "variety_pack",
+        "rating": "4.72835",
+        "review_count": "2875",
+        "upc_site": "5000041878"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Shreds"
+      ],
+      "name": "Wet Variety Pack, Shreds With Beef, Turkey and Cheese Dinner, Chicken and Salmon Dinner, and With Ocean Whitefish and Tuna",
+      "title_as_listed": "Purina Friskies Wet Cat Food Variety Pack, Shreds With Beef, Turkey and Cheese Dinner, Chicken and Salmon Dinner, and With Ocean Whitefish and Tuna",
+      "import_key": "purina|site|10095",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:shreds"
+      ],
+      "gtin": "0050000422258",
+      "barcodes": [
+        {
+          "gtin": "0050000422258",
+          "pack_label": "48-count pack"
+        }
+      ],
+      "description": "Answer your cat's every flavor craving with this Purina Friskies Savory Shreds adult wet cat food variety pack with no artificial colors or preservatives. Each pack contains four equally tempting entrees, including Purina Friskies Shreds Chicken and Salmon Dinner in Gravy, Turkey and Cheese Dinner in Gravy, With Ocean Whitefish and Tuna in Sauce, and With Beef in Gravy. Every Purina Friskies shreds cat food recipe features real meat, poultry or fish with other high-quality ingredients you can both appreciate. The thin, tender Friskies wet cat food Shreds deliver an irresistible soft cat food texture, while the savory gravy and sauce pile on the yum in every bowl. She's sure to love the delightful Purina Friskies cat food tastes, and you can have fun watching her enjoy licking her dish clean at every feeding. Stock up on her favorite flavor combinations and give her meal options as delicious as they are nutritious with this Purina Friskies adult wet cat food variety pack.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-01/fr4079_1.JPG.webp?itok=oLhO1M9X",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-shreds-variety-pack-48-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10095",
+        "bazaarvoice_id": "50000-42225",
+        "package_type": "variety_pack",
+        "rating": "4.72869",
+        "review_count": "3907",
+        "upc_site": "5000042225"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Classic Paté"
+      ],
+      "name": "Paté Variety Pack Seafood and Chicken Paté Favorites 48ct VP",
+      "title_as_listed": "Purina Friskies Paté Wet Cat Food Variety Pack Seafood and Chicken Paté Favorites 48ct VP",
+      "import_key": "purina|site|10096",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": "0050000418053",
+      "barcodes": [
+        {
+          "gtin": "0050000418053",
+          "pack_label": "48-count pack"
+        }
+      ],
+      "description": "Serve more of your cat's favorite flavors with this Purina Friskies Paté Seafood and Chicken Favorites wet canned cat food variety pack. Each soft cat food recipe features a smooth paté texture that she can happily nibble at mealtime. Savory Friskies paté cat food flavors combine to create delicious options she can't resist, and the enticing aroma captures her attention every time you open one of these cat food cans. These paté cat food entrees are made with high-quality ingredients with no artificial colors or preservatives, so you can feel good about what you’re serving her. Your cat gets essential vitamins, minerals, and healthy hydration to support her overall health and wellness so she can pounce and play her way through each day. These canned cat food paté recipes include real chicken and seafood in each recipe, giving your feline friend delicious meals she loves in every serving. Show your cat you know what she likes with this Purina Friskies wet paté cat food variety pack.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-01/friskies-seafood-chicken-pate-dinner-favorites-variety-pack-48ct_vanity_1000x1000_jpg.jpg.webp?itok=d0X21phE",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-seafood-chicken-pate-favorites-variety-pack-48-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10096",
+        "bazaarvoice_id": "50000-41805",
+        "package_type": "variety_pack",
+        "rating": "4.63178",
+        "review_count": "4538",
+        "upc_site": "5000041805"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Prime Filets"
+      ],
+      "name": "Wet Variety Pack, Oceans of Delight Flaked and Prime Filets",
+      "title_as_listed": "Purina Friskies Wet Cat Food Variety Pack, Oceans of Delight Flaked and Prime Filets",
+      "import_key": "purina|site|10097",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:flaked"
+      ],
+      "gtin": "0050000418978",
+      "barcodes": [
+        {
+          "gtin": "0050000418978",
+          "pack_label": "48-count pack"
+        }
+      ],
+      "description": "Keep your curious cat guessing what's on the menu with the Purina Friskies Oceans of Delight moist cat food variety pack that contains four recipes made with real fish or poultry.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-01/friski_2_0.JPG.webp?itok=32SXaBXS",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-oceans-delight-variety-pack-48-can-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10097",
+        "bazaarvoice_id": "50000-41897",
+        "package_type": "variety_pack",
+        "rating": "4.76597",
+        "review_count": "2504",
+        "upc_site": "5000041897"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Party Pack'd"
+      ],
+      "name": "Party Pack’d with Flavors of Chicken, Liver and Turkey Crunchy",
+      "title_as_listed": "Purina Friskies Party Pack’d with Flavors of Chicken, Liver and Turkey Crunchy Dry Cat Food",
+      "import_key": "purina|site|11228",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0050000618958",
+          "pack_label": "3 lb bag"
+        },
+        {
+          "gtin": "0050000619832",
+          "pack_label": "15 lb bag"
+        }
+      ],
+      "description": "Get the party started when you feed your favorite feline Purina Friskies Party Pack’d dry adult cat food. Savory flavors of chicken, liver, and turkey combine to create an irresistible taste even the pickiest cat will love. Packed with a celebration of flavor and texture in each bite, this delicious dry cat food is pack’d with Party Mix star pieces of dry kibble for an irresistible crunch and added variety with each meal. Watch your cat come running when you open the bag and listen to them purr with contented satisfaction while they nibble away, enjoying every bite of Friskies Party Pack’d dry cat kibble. Made with exceptional ingredients, Purina Friskies dry cat food is protein packed to fuel playtime, with a recipe that helps support immune health. This complete adult cat food delivers balanced nutrition while offering 38 essential nutrients to support happy, healthy cats. Keep the party going in the cat food bowl with a delicious food that combines outstanding flavor and crave-worthy crunch with Purina Friskies Party Pack’d Dry Cat Food.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-02/00050000618958_a1n1.png.webp?itok=AGJcDLMy",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-party-packd-chicken-liver-turkey-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11228",
+        "bazaarvoice_id": "50000-61895",
+        "package_type": "single",
+        "rating": "4.79301",
+        "review_count": "372",
+        "upc_site": "5000061895"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Lil' Soups"
+      ],
+      "name": "Complement 18 Ct Variety Pack",
+      "title_as_listed": "Friskies Lil' Soups Cat Food Complement 18 Ct Variety Pack",
+      "import_key": "purina|site|10136",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000172979",
+      "barcodes": [
+        {
+          "gtin": "0050000172979",
+          "pack_label": "18-count pack"
+        }
+      ],
+      "description": "Dote on your darling cat when you offer her recipes from this Purina Friskies Grain Free Wet Cat Food Complement Variety Pack, Lil' Soups With Sockeye Salmon and Tuna in a Broth for cats. 2 delectable cat food topper recipes make it easy to satisfy her taste buds. With real seafood in every cup, these Friskies wet cat food complements bring delicious goodness to her dish. She's sure to love the tender texture and enticing aroma found in every serving, and you can feel good about serving her cat snacks that are free from fillers and by-products. A velvety cat food broth rounds out each cat complement variety, bringing added flavor and moisture to every whisker-licking bite. These treats for cats feature a rich aroma that calls out to her every time you open a cup, letting her know something amazing is coming her way. To complement your cat's complete and balanced diet, serve Lil' Soups between mealtimes or with a meal to reward your special feline friend.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-03/friskies-lil-soups-18-count-variety-pack-package.jpg.webp?itok=4gTT8yLf",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-lil-soups-variety-pack-18-count-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10136",
+        "bazaarvoice_id": "50000-17297",
+        "package_type": "variety_pack",
+        "rating": "4.60645",
+        "review_count": "155",
+        "upc_site": "5000017297"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Fully Load'd"
+      ],
+      "name": "Fully Load’d Chicken, Carrots, Tomatoes & Spinach in Gravy",
+      "title_as_listed": "Friskies Fully Load’d Chicken, Carrots, Tomatoes & Spinach in Gravy Wet Cat Food",
+      "import_key": "purina|site|10378",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000239726",
+      "barcodes": [
+        {
+          "gtin": "0050000239726",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Get your cat amp’d up for mealtime with mouthwatering ingredients in Purina Friskies Fully Load’d With Chicken, Carrots, Tomatoes and Spinach Wet Cat Food in cat gravy. Made with high-quality protein, this recipe delivers the purrfect flavor combination of poultry and veggies for a complete adult cat food. This cat food wet recipe features super chunky, hearty morsels load’d with veggies and coated in savory gravy for a taste cats can’t resist. Watch as the rich aroma of Friskies wet food for cats piques their curiosity every time you open a can and pour it into their bowl. Let her delight in the savory taste and texture that supports healthy cat hydration in each bite. With 100 percent balanced nutrition for adult cats in every serving, this Purina Friskies Fully Load’d recipe makes it easy to offer her high-quality meals that also meet her nutritional needs. Fill her dish with this next-level adult cat food at mealtime or pair it with their favorite Friskies dry food for a meal combination that will get her excited for every serving.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-12/friskies-fully-loadd-chicken-carrots-tomatoes-spinach-in-gravy-wet-cat-food.png.webp?itok=hkEWUGSF",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-fully-loadd-chicken-carrots-tomatoes-spinach-in-gravy-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10378",
+        "bazaarvoice_id": "50000-23972",
+        "package_type": "single",
+        "rating": "4.66935",
+        "review_count": "248",
+        "upc_site": "5000023972"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Fully Load'd"
+      ],
+      "name": "Fully Load’d Salmon, Wild Rice, Carrots & Spinach in Sauce",
+      "title_as_listed": "Friskies Fully Load’d Salmon, Wild Rice, Carrots & Spinach in Sauce Wet Cat Food",
+      "import_key": "purina|site|10379",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000241200",
+      "barcodes": [
+        {
+          "gtin": "0050000241200",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Get your cat amp’d up for mealtime with mouthwatering ingredients in Purina Friskies Fully Load’d With Salmon, Wild Rice, Carrots and Spinach in cat gravy. Made with high-quality protein, this recipe delivers the purrfect flavor combination of seafood, rice, and vegetables for a complete adult cat food. This cat food wet recipe features super chunky, hearty morsels load’d with rice and veggies, all coated in savory gravy for a taste cats can’t resist. Watch as the rich aroma of Friskies wet food for cats piques their curiosity every time you open a can and pour it into their bowl. Let her delight in the savory taste and texture that supports healthy cat hydration in each bite. With 100 percent balanced nutrition for adult cats in every serving, this Purina Friskies Fully Load’d recipe makes it easy to offer her high-quality meals that also meet her nutritional needs. Fill her dish with this next-level adult cat food at mealtime or pair it with their favorite Friskies dry food for a meal combination that will get her excited for every serving.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-12/friskies-fully-loadd-salmon-wild-rice-carrots-spinach-in-sauce-wet-cat-food.png.webp?itok=y-BGzpHV",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-fully-loadd-salmon-wild-rice-carrots-spinach-in-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10379",
+        "bazaarvoice_id": "50000-24120",
+        "package_type": "single",
+        "rating": "4.45176",
+        "review_count": "425",
+        "upc_site": "5000024120"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Fully Load'd"
+      ],
+      "name": "Fully Load’d Tuna, Rice, Spinach & Tomatoes in Sauce",
+      "title_as_listed": "Friskies Fully Load’d Tuna, Rice, Spinach & Tomatoes in Sauce Wet Cat Food",
+      "import_key": "purina|site|10380",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000236091",
+      "barcodes": [
+        {
+          "gtin": "0050000236091",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Get your cat amp’d up for mealtime with mouthwatering ingredients in Purina Friskies Fully Load’d With Tuna, Rice, Spinach and Tomatoes in cat gravy. Made with high-quality protein, this recipe delivers the purrfect flavor combination of seafood, rice, and vegetables for a complete adult cat food. This cat food wet recipe features super chunky, hearty morsels load’d with rice and veggies, all coated in savory gravy for a taste cats can’t resist. Watch as the rich aroma of Friskies wet food for cats piques their curiosity every time you open a can and pour it into their bowl. Let her delight in the savory taste and texture that supports healthy cat hydration in each bite. With 100 percent balanced nutrition for adult cats in every serving, this Purina Friskies Fully Load’d recipe makes it easy to offer her high-quality meals that also meet her nutritional needs. Fill her dish with this next-level adult cat food at mealtime or pair it with their favorite Friskies dry food for a meal combination that will get her excited for every serving.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-12/friskies-fully-loadd-tuna-rice-tomatoes-spinach-in-sauce-wet-cat-food.png.webp?itok=bLMMXR2h",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-fully-loadd-tuna-rice-tomatoes-spinach-in-sauce-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10380",
+        "bazaarvoice_id": "50000-23609",
+        "package_type": "single",
+        "rating": "4.58824",
+        "review_count": "204",
+        "upc_site": "5000023609"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Fully Load'd"
+      ],
+      "name": "Fully Load’d 12 Count Variety Pack With Chicken, Salmon, or Tuna",
+      "title_as_listed": "Friskies Fully Load’d Wet Cat Food 12 Count Variety Pack With Chicken, Salmon, or Tuna",
+      "import_key": "purina|site|10381",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000568864",
+      "barcodes": [
+        {
+          "gtin": "0050000568864",
+          "pack_label": "12-count pack"
+        }
+      ],
+      "description": "Get your cat amp’d up for mealtime with a variety of flavors they can’t resist in Purina Friskies Fully Load’d Wet Cat Food Variety Pack featuring wet food for cats With Chicken, Carrots, Tomatoes and Spinach; With Salmon, Wild Rice, Carrots and Spinach; and With Tuna, Rice, Spinach and Tomatoes—all in savory cat gravy. Made with high-quality protein, each recipe delivers the purrfect flavor combinations of poultry or seafood and vegetables for a complete adult cat food. This cat food wet recipe features super chunky, hearty morsels load’d with extras like veggies or rice, all coated in savory gravy for a taste cats can’t resist. Watch as the rich aroma of Friskies wet food for cats piques their curiosity every time you open a can and pour it into their bowl. Let her delight in the savory tastes and textures that support healthy cat hydration in each bite. With 100 percent balanced nutrition for adult cats in every serving, each Purina Friskies Fully Load’d recipe makes it easy to offer her high-quality meals that also meet her nutritional needs. Fill her dish with this next-level adult cat food at mealtime or pair it with their favorite Friskies dry food for a meal combination that will get her excited for every serving.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-12/friskies-fully-loadd-chicken-salmon-tuna-wet-cat-food-12-can-variety-pack.png.webp?itok=sVshQAxG",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-fully-loadd-12-count-chicken-salmon-tuna-wet-cat-food-variety-pack",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10381",
+        "bazaarvoice_id": "50000-56886",
+        "package_type": "variety_pack",
+        "rating": "4.58799",
+        "review_count": "716",
+        "upc_site": "5000056886"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Glaz'd & Infuz'd"
+      ],
+      "name": "Glaz’d & Infuz’d With Gravy Glaz’d Chicken",
+      "title_as_listed": "Friskies Glaz’d & Infuz’d With Gravy Glaz’d Chicken Wet Cat Food",
+      "import_key": "purina|site|10382",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000351428",
+      "barcodes": [
+        {
+          "gtin": "0050000351428",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Amp up mealtime with a flavor your cat can’t resist with Purina Friskies Glaz’d and Infuz’d With Chicken in cat gravy. Made with high-quality protein, this cat food wet recipe delivers the delicious taste of chicken in super chunky, hearty morsels coated in a rich gravy glaze that sticks to every bite for an explosion of flavor and a taste cats love. Watch as the rich aroma of Friskies gravy wet cat food piques their curiosity every time you open a can and pour it into their bowl. Let them delight in the savory tastes and textures that support healthy cat hydration in each bite. With 100 percent balanced nutrition for adult cats in every serving, each Purina Friskies Glaz’d and Infuz’d recipe makes it easy to offer them high-quality meals that also meet their nutritional needs. Fill their dish with this next-level adult cat food at mealtime or pair it with their favorite Friskies dry food for a meal combination that will get them excited for every serving.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-12/friskies-glazd-infuzd-chicken-with-gravy-wet-cat-food.png.webp?itok=xFvDjWhk",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-glazd-infuzd-with-gravy-chicken-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10382",
+        "bazaarvoice_id": "50000-35142",
+        "package_type": "single",
+        "rating": "4.54281",
+        "review_count": "549",
+        "upc_site": "5000035142"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Glaz'd & Infuz'd"
+      ],
+      "name": "Glaz’d & Infuz’d With Gravy Glaz’d Crab",
+      "title_as_listed": "Friskies Glaz’d & Infuz’d With Gravy Glaz’d Crab Wet Cat Food",
+      "import_key": "purina|site|10383",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000348053",
+      "barcodes": [
+        {
+          "gtin": "0050000348053",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Amp up mealtime with a flavor your cat can’t resist with Purina Friskies Glaz’d and Infuz’d With Crab in cat gravy. Made with high-quality protein, this wet cat food seafood recipe delivers the delicious taste of crab in super chunky, hearty morsels coated in a rich gravy glaze that sticks to every bite for an explosion of flavor and a taste cats love. Watch as the rich aroma of Friskies gravy wet cat food piques their curiosity every time you open a can and pour it into their bowl. Let them delight in the savory tastes and textures that support healthy cat hydration in each bite. With 100 percent balanced nutrition for adult cats in every serving, each Purina Friskies Glaz’d and Infuz’d recipe makes it easy to offer them high-quality meals that also meet their nutritional needs. Fill their dish with this next-level adult cat food at mealtime or pair it with their favorite Friskies dry food for a meal combination that will get them excited for every serving.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-12/friskies-glazd-infuzd-crab-with-gravy-wet-cat-food.png.webp?itok=XFgHetGs",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-glazd-infuzd-with-gravy-crab-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10383",
+        "bazaarvoice_id": "50000-34805",
+        "package_type": "single",
+        "rating": "4.67949",
+        "review_count": "234",
+        "upc_site": "5000034805"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Glaz'd & Infuz'd"
+      ],
+      "name": "Glaz’d & Infuz’d With Gravy Glaz’d Shrimp",
+      "title_as_listed": "Friskies Glaz’d & Infuz’d With Gravy Glaz’d Shrimp Wet Cat Food",
+      "import_key": "purina|site|10384",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000342143",
+      "barcodes": [
+        {
+          "gtin": "0050000342143",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Amp up mealtime with a flavor your cat can’t resist with Purina Friskies Glaz’d and Infuz’d With Shrimp in cat gravy. Made with high-quality protein, this wet cat food seafood recipe delivers the delicious taste of shrimp in super chunky, hearty morsels coated in a rich gravy glaze that sticks to every bite for an explosion of flavor and a taste cats love. Watch as the rich aroma of Friskies gravy wet cat food piques their curiosity every time you open a can and pour it into their bowl. Let them delight in the savory tastes and textures that support healthy cat hydration in each bite. With 100 percent balanced nutrition for adult cats in every serving, each Purina Friskies Glaz’d and Infuz’d recipe makes it easy to offer them high-quality meals that also meet their nutritional needs. Fill their dish with this next-level adult cat food at mealtime or pair it with their favorite Friskies dry food for a meal combination that will get them excited for every serving.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-12/friskies-glazd-infuzd-shrimp-with-gravy-wet-cat-food.png.webp?itok=QNWJd33e",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-glazd-infuzd-with-gravy-shrimp-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10384",
+        "bazaarvoice_id": "50000-34214",
+        "package_type": "single",
+        "rating": "4.66545",
+        "review_count": "275",
+        "upc_site": "5000034214"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Glaz'd & Infuz'd"
+      ],
+      "name": "Glaz’d & Infuz’d 12 Count Variety Pack With Chicken, Crab or Shrimp",
+      "title_as_listed": "Friskies Glaz’d & Infuz’d Wet Cat Food 12 Count Variety Pack With Chicken, Crab or Shrimp",
+      "import_key": "purina|site|10385",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": "0050000581757",
+      "barcodes": [
+        {
+          "gtin": "0050000581757",
+          "pack_label": "12-count pack"
+        }
+      ],
+      "description": "Amp up mealtime with a variety of flavors your cat can’t resist in Purina Friskies Glaz’d and Infuz’d Wet Cat Food Variety Pack in cat gravy. This variety pack features chicken, crab, or shrimp wet cat food with a rich gravy glaze that sticks to every bite. Made with high-quality protein, each recipe delivers the purrfect flavor combinations of poultry or seafood for a complete adult cat food. This cat food wet recipe features super chunky, hearty morsels coated in savory gravy for an explosion of flavor and a taste cats love. Watch as the rich aroma of Friskies wet food for cats piques their curiosity every time you open a can and pour it into their bowl. Let them delight in the savory tastes and textures that support healthy cat hydration in each bite. With 100 percent balanced nutrition for adult cats in every serving, each Purina Friskies Glaz’d and Infuz’d recipe makes it easy to offer them high-quality meals that also meet their nutritional needs. Fill their dish with this next-level adult cat food at mealtime or pair it with their favorite Friskies dry food for a meal combination that will get them excited for every serving.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-12/friskies-glazd-infuzd-chicken-crab-shrimp-12-can-variety-pack-4-cans.png.webp?itok=29cWBL5t",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-glazd-infuzd-with-gravy-12-count-chicken-crab-shrimp-wet-cat-food-variety-pack",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10385",
+        "bazaarvoice_id": "50000-58175",
+        "package_type": "variety_pack",
+        "rating": "4.65413",
+        "review_count": "957",
+        "upc_site": "5000058175"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "Chicken Dinner in Gravy - 13.5oz",
+      "title_as_listed": "Friskies Meaty Bits Chicken Dinner in Gravy Wet Cat Food - 13.5oz",
+      "import_key": "purina|site|10308",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy"
+      ],
+      "gtin": "0050000550302",
+      "barcodes": [
+        {
+          "gtin": "0050000550302",
+          "pack_label": "13.5 oz can"
+        }
+      ],
+      "description": "Quench your curious cat's cravings for savory goodness when you serve Purina Friskies Meaty Bits Chicken Dinner in Gravy cat food. Real high-quality protein delivers the delicious chicken flavor that your cat adores, and the tender, bite-sized chunks offer a pleasing texture she's sure to purr for. A decadent gravy balances out this wet food with canned cat food gravy and adds extra hydration, giving your cat a mouthwatering reason to lick her dish clean at mealtime. Now in a larger size that’s perfect for multi-cat homes, simply open a can and let the rich aroma capture their interest, and watch them become excited for mealtime. She'll adore the yummy classic Friskies Meaty Bits wet cat food flavor, and you can appreciate the 100 percent complete and balanced nutrition for adult cats in every serving. Make this Purina Friskies Meaty Bits wet food for cats a part of your cat companion's daily mealtime routine and show her you pay attention to her unique taste preferences.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-09/friskies-meaty-bits-chicken-dinner-wet-cat-food.png.webp?itok=swpn6vBx",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-meaty-bits-chicken-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10308",
+        "bazaarvoice_id": "50000-55030",
+        "package_type": "single",
+        "rating": "4.76765",
+        "review_count": "439",
+        "upc_site": "5000055030"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "With Ocean Fish in Sauce - 13.5oz",
+      "title_as_listed": "Friskies Meaty Bits With Ocean Fish in Sauce Wet Cat Food - 13.5oz",
+      "import_key": "purina|site|10310",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:sauce"
+      ],
+      "gtin": "0050000549078",
+      "barcodes": [
+        {
+          "gtin": "0050000549078",
+          "pack_label": "13.5 oz can"
+        }
+      ],
+      "description": "Quench your curious cat's cravings for savory goodness when you serve Purina Friskies Meaty Bits With Ocean Fish in Gravy cat food. High-quality protein delivers the delicious chicken flavor that your cat adores, and the tender, bite-sized chunks offer a pleasing texture she's sure to purr for. A decadent gravy balances out this delectable wet food with canned cat food gravy and adds extra hydration, giving your cat a mouthwatering reason to lick her dish clean at mealtime. Now in a larger size that’s perfect for multi-cat homes, simply open a can and let the rich aroma capture their interest, and watch them become excited for mealtime. She'll adore the yummy classic Friskies Meaty Bits wet cat food flavor, and you can appreciate the 100 percent complete and balanced nutrition for adult cats in every serving. Make this Purina Friskies Meaty Bits wet food for cats a part of your cat companion's daily mealtime routine and show her you pay attention to her unique taste preferences.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-09/friskies-meaty-bits-ocean-fish-wet-cat-food.png.webp?itok=dWox8jsL",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-meaty-bits-ocean-fish-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10310",
+        "bazaarvoice_id": "50000-54907",
+        "package_type": "single",
+        "rating": "4.74324",
+        "review_count": "222",
+        "upc_site": "5000054907"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Friskies",
+        "Meaty Bits"
+      ],
+      "name": "With Ocean Fish in Sauce & Chicken Dinner in Gravy 12ct Variety Pack",
+      "title_as_listed": "Friskies Meaty Bits With Ocean Fish in Sauce & Chicken Dinner in Gravy Wet Cat Food 12ct Variety Pack",
+      "import_key": "purina|site|10311",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:gravy",
+        "medium:sauce"
+      ],
+      "gtin": "0050000611621",
+      "barcodes": [
+        {
+          "gtin": "0050000611621",
+          "pack_label": "12-count pack"
+        }
+      ],
+      "description": "Quench your curious cat's cravings for savory goodness and variety when you serve Purina Friskies Meaty Bits With Ocean Fish and Chicken Dinner in Gravy cat food Variety Pack. Real high-quality protein delivers the delicious flavors that your cat adores, and the tender, bite-sized chunks offer a pleasing texture she's sure to purr for. A decadent gravy balances out this wet food with canned cat food gravy and adds extra hydration, giving your cat a mouthwatering reason to lick her dish clean at mealtime. Now in a larger size that’s perfect for multi-cat homes, simply open a can and let the rich aroma capture their interest, and watch them become excited for mealtime. She'll adore the yummy classic Friskies Meaty Bits wet cat food flavor, and you can appreciate the 100 percent complete and balanced nutrition for adult cats in every serving. Make this Purina Friskies Meaty Bits wet food for cats a part of your cat companion's daily mealtime routine and show her you pay attention to her unique taste preferences.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-09/friskies-meaty-bits-wet-cat-food-variety-pack_0.png.webp?itok=0VlGiEOD",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/friskies-meaty-bits-variety-pack-12-cans-ocean-fish-chicken-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10311",
+        "bazaarvoice_id": "50000-61162",
+        "package_type": "variety_pack",
+        "rating": "5",
+        "review_count": "4",
+        "upc_site": "5000061162"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    }
+  ]
+}

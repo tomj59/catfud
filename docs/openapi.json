@@ -1071,6 +1071,76 @@
                 }
             }
         },
+        "/img/{key}": {
+            "get": {
+                "operationId": "imageProxy.show",
+                "description": "The key is a hash of the picture's original address, as returned in `image_url`. The first request for a key that\nhas not been copied yet downloads it from the original site; every later request is served from our storage.\nReturns 404 when the original could not be fetched.",
+                "summary": "Product picture by key",
+                "tags": [
+                    "ImageProxy"
+                ],
+                "parameters": [
+                    {
+                        "name": "key",
+                        "in": "path",
+                        "required": true,
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "content": {
+                            "application/octet-stream": {
+                                "schema": {
+                                    "type": "string",
+                                    "format": "binary"
+                                }
+                            }
+                        },
+                        "headers": {
+                            "Transfer-Encoding": {
+                                "required": true,
+                                "schema": {
+                                    "type": "string",
+                                    "enum": [
+                                        "chunked"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "304": {
+                        "description": "",
+                        "headers": {
+                            "Cache-Control": {
+                                "schema": {
+                                    "type": "string",
+                                    "const": "public, max-age=31536000, immutable"
+                                }
+                            },
+                            "ETag": {
+                                "schema": {
+                                    "type": "string"
+                                }
+                            },
+                            "X-Content-Type-Options": {
+                                "schema": {
+                                    "type": "string",
+                                    "const": "nosniff"
+                                }
+                            }
+                        }
+                    },
+                    "404": {
+                        "$ref": "#/components/responses/ModelNotFoundException"
+                    }
+                },
+                "security": []
+            }
+        },
         "/inventory": {
             "get": {
                 "operationId": "inventory.index",
@@ -2206,6 +2276,18 @@
                                 "integer",
                                 "null"
                             ]
+                        }
+                    },
+                    {
+                        "name": "path",
+                        "in": "query",
+                        "description": "Limit to a brand-ladder path written as names, e.g. `Purina > Pro Plan`, and everything beneath it. An unknown path matches nothing.",
+                        "schema": {
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "maxLength": 300
                         }
                     },
                     {
@@ -5575,16 +5657,28 @@
                         "type": "integer"
                     },
                     "disk": {
-                        "type": "string"
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     },
                     "path": {
-                        "type": "string"
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     },
                     "mime": {
-                        "type": "string"
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     },
                     "bytes": {
-                        "type": "integer"
+                        "type": [
+                            "integer",
+                            "null"
+                        ]
                     },
                     "width": {
                         "type": [
@@ -5638,6 +5732,37 @@
                             "null"
                         ],
                         "format": "date-time"
+                    },
+                    "key": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "origin_url": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
+                    },
+                    "status": {
+                        "type": "string"
+                    },
+                    "fetched_at": {
+                        "type": [
+                            "string",
+                            "null"
+                        ],
+                        "format": "date-time"
+                    },
+                    "fail_count": {
+                        "type": "integer"
+                    },
+                    "last_error": {
+                        "type": [
+                            "string",
+                            "null"
+                        ]
                     }
                 },
                 "required": [
@@ -5655,7 +5780,13 @@
                     "attribution",
                     "uploaded_by",
                     "created_at",
-                    "updated_at"
+                    "updated_at",
+                    "key",
+                    "origin_url",
+                    "status",
+                    "fetched_at",
+                    "fail_count",
+                    "last_error"
                 ],
                 "title": "ProductImage"
             },
@@ -6740,8 +6871,8 @@
                     }
                 }
             },
-            "AuthenticationException": {
-                "description": "Unauthenticated",
+            "ModelNotFoundException": {
+                "description": "Not found",
                 "content": {
                     "application/json": {
                         "schema": {
@@ -6759,8 +6890,8 @@
                     }
                 }
             },
-            "ModelNotFoundException": {
-                "description": "Not found",
+            "AuthenticationException": {
+                "description": "Unauthenticated",
                 "content": {
                     "application/json": {
                         "schema": {

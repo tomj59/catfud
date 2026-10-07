@@ -1,0 +1,1046 @@
+{
+  "region": "US",
+  "reviewed": false,
+  "ladder": "purina",
+  "brand": "Pro Plan Veterinary Diets",
+  "products": [
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "Savory Selects Salmon in Gravy",
+      "title_as_listed": "Purina Pro Plan Veterinary Diets EN Gastroenteric Savory Selects Salmon in Gravy Wet Cat Food",
+      "import_key": "purina|site|7190",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical",
+        "medium:gravy"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100109927",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100192417",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets EN Gastroenteric Feline Formulas are energy dense and support the unique nutritional needs of cats with GI conditions. Made with high-quality ingredients, these diets also support urinary health. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/pro-plan-veterinary-diets-en-gastroenteric-savory-selects-salmon-wet-cat-food.png.webp?itok=UJ4lqNbg",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-feline-ss-salmon-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7190",
+        "bazaarvoice_id": "38100-19241",
+        "package_type": "single",
+        "rating": "4.81818",
+        "review_count": "11",
+        "upc_site": "3810019241"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "Savory Selects Chicken in Gravy",
+      "title_as_listed": "Purina Pro Plan Veterinary Diets EN Gastroenteric Savory Selects Chicken in Gravy Wet Cat Food",
+      "import_key": "purina|site|7191",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical",
+        "medium:gravy"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100109903",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100192431",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets EN Gastroenteric Feline Formulas are energy dense and support the unique nutritional needs of cats with GI conditions. Made with high-quality ingredients, these diets also support urinary health. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/pro-plan-veterinary-diets-en-gastroenteric-savory-selects-chicken-wet-cat-food.png.webp?itok=xAH9fD7B",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-feline-ss-chicken-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7191",
+        "bazaarvoice_id": "38100-19243",
+        "package_type": "single",
+        "rating": "4.47619",
+        "review_count": "21",
+        "upc_site": "3810019243"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "HA Hydrolyzed"
+      ],
+      "name": "Formula Dry Cat Food",
+      "title_as_listed": "Pro Plan Veterinary Diets HA Hydrolyzed Formula Dry Cat Food",
+      "import_key": "purina|site|7194",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100145413",
+          "pack_label": "4 lb bag"
+        },
+        {
+          "gtin": "0038100145642",
+          "pack_label": "8 lb bag"
+        }
+      ],
+      "description": "Serve your faithful feline companion a delicious cat kibble meal that will go easy on their system with Purina Pro Plan Veterinary Diets HA Dry Hydrolyzed Protein Cat Food. Each serving of this Purina Pro Plan dry cat food contains hydrolyzed protein, which is protein that has been broken down into small components to be less likely to cause an adverse food reaction in certain cats. A highly digestible, sensitive stomach cat food, this formula is made with high-quality ingredients and plenty of antioxidants to support the immune system. This sensitive stomach Purina Pro Plan dry cat food also helps promote a urinary environment that’s unfavorable to the development of both struvite and calcium oxalate crystals. The science behind Purina Pro Plan Veterinary Diets cat food represents a collaboration among Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-07/pro-plan-veterinary-diets-ha-hydrolyzed-dry-cat-food.png.webp?itok=Psvmg_VR",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-ha-feline-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7194",
+        "bazaarvoice_id": "38100-14541",
+        "package_type": "single",
+        "rating": "4.36471",
+        "review_count": "85",
+        "upc_site": "3810014541"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "Formula Wet Cat Food",
+      "title_as_listed": "Purina Pro Plan Veterinary Diets EN Gastroenteric Formula Wet Cat Food",
+      "import_key": "purina|site|7195",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100109866",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100136350",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets EN Gastroenteric Feline Formulas are energy dense and support the unique nutritional needs of cats with GI conditions. Made with high-quality ingredients, these diets also support urinary health. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/pro-plan-veterinary-diets-en-gastroenteric-wet-cat-food_1.png.webp?itok=tB8bHXvK",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-feline-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7195",
+        "bazaarvoice_id": "38100-13635",
+        "package_type": "single",
+        "rating": "4.66038",
+        "review_count": "53",
+        "upc_site": "3810013635"
+      },
+      "_flags": [
+        "no texture or medium tag",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "Naturals Feline Formula",
+      "title_as_listed": "Purina Pro Plan Veterinary Diets EN Gastroenteric Naturals Feline Formula",
+      "import_key": "purina|site|7197",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100173218",
+          "pack_label": "6 lb bag"
+        },
+        {
+          "gtin": "0038100173065",
+          "pack_label": "10 lb bag"
+        }
+      ],
+      "description": "Cats with GI conditions have unique needs, and it is essential to feed them with the proper nutrition to help them thrive, like Purina Pro Plan Veterinary Diets EN Gastroenteric Naturals Feline Formula Natural Cat Kibble With Added Vitamins, Minerals, and Nutrients. This Purina Pro Plan cat food is made with a high protein level to meet the unique needs of cats with GI conditions. Each serving is made with high-quality ingredients and formulated without corn, wheat, or artificial colors and flavors. This Purina Pro Plan cat food delivers St/Ox defense, helping to promote a urinary environment unfavorable to the development of both struvite and calcium oxalate crystals, plus moderate fat to provide energy. Each serving includes a select prebiotic fiber to support GI microbiome balance and digestive health. The science behind Purina Pro Plan therapeutic diet cat kibble represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2024-06/ppvd_cat_dry_en_ntrls_1_1000x1000.jpg.webp?itok=6pPzWWjh",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-naturals-feline-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7197",
+        "bazaarvoice_id": "38100-17321",
+        "package_type": "single",
+        "rating": "4.60811",
+        "review_count": "74",
+        "upc_site": "3810017321"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "Formula Dry Cat Food",
+      "title_as_listed": "Pro Plan Veterinary Diets EN Gastroenteric Formula Dry Cat Food",
+      "import_key": "purina|site|7201",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100122704",
+          "pack_label": "6 lb bag"
+        },
+        {
+          "gtin": "0038100138378",
+          "pack_label": "10 lb bag"
+        },
+        {
+          "gtin": "0038100103185",
+          "pack_label": "16 lb bag"
+        }
+      ],
+      "description": "Talk to your veterinarian about finding the proper nutrition that supports cats with GI conditions, and ask about Purina Pro Plan Veterinary Diets EN Gastroenteric Feline Formula Cat Kibble. Each serving of this gastrointestinal cat food is highly digestible, promoting optimal nutrient absorption, and is antioxidant-rich to support immune health. This high-protein cat food recipe also delivers a St/Ox defense to promote a urinary environment unfavorable to the development of both struvite and calcium oxidative crystals. Made with high-quality nutrition, this Purina Pro Plan cat food is energy-dense to provide essential sustenance in smaller meals and includes b-complex vitamin and omega-3 fatty acids from fish oil. The science behind these therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-07/purina-pro-plan-veterinary-diets-en-gastroenteric-feline-formula-10lb-cat-food-bag.png.webp?itok=fI74Q96k",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-feline-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7201",
+        "bazaarvoice_id": "38100-12270",
+        "package_type": "single",
+        "rating": "4.57018",
+        "review_count": "114",
+        "upc_site": "3810012270"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "Naturals Formula",
+      "title_as_listed": "Pro Plan Veterinary Diets EN Gastroenteric Naturals Formula Wet Cat Food",
+      "import_key": "purina|site|7202",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": "0038100173041",
+      "barcodes": [
+        {
+          "gtin": "0038100173041",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets EN Gastroenteric Naturals With Added Vitamins & Minerals Feline Formulas are made with a high level of protein and low level of carbohydrates to meet the unique needs of cats with GI conditions. They’re made with high-quality ingredients and formulated without corn, wheat, or artificial colors and flavors. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-07/pro-plan-veterinary-diets-en-gastroenteric-naturals-wet-cat-food.png.webp?itok=hi4s9SQL",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-naturals-feline-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7202",
+        "bazaarvoice_id": "38100-17304",
+        "package_type": "single",
+        "rating": "4.41176",
+        "review_count": "17",
+        "upc_site": "3810017304"
+      },
+      "_flags": [
+        "no texture or medium tag",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "EN Savory Selects Gastroenteric Turkey in Gravy",
+      "title_as_listed": "Pro Plan Veterinary Diets EN Savory Selects Gastroenteric Turkey in Gravy Wet Cat Food",
+      "import_key": "purina|site|10155",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical",
+        "medium:gravy"
+      ],
+      "gtin": "0038100104168",
+      "barcodes": [
+        {
+          "gtin": "0038100104168",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "If your cat requires digestive support cat food, ask your vet about serving her Purina Pro Plan Veterinary Diets EN Savory Selects Gastroenteric With Turkey in Gravy Wet Cat Food. Made with high-quality ingredients, Purina Pro Plan Veterinary Diets EN Savory Selects Gastroenteric With Turkey In Gravy wet cat food helps support the unique nutritional needs of cats with GI conditions. Each serving of this wet food for cats is highly digestible to promote optimal nutrient absorption and provides her with added B-complex vitamins and omega-3 fatty acids from fish oil. This adult cat food also offers a St/Ox Defense, which means it promotes a urinary environment that is unfavorable to the development of both struvite and calcium oxalate crystals. Serve your cat this great-tasting with turkey cat food in gravy recipe to ensure she gets adequate nutrient intake along with a select prebiotic fiber to support GI microbiome balance and cat digestive support.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-03/pro-plan-veterinary-diets-en-turkey-wet-cat-food-can.png.webp?itok=WBmKWVty",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-gastroenteric-savory-selects-turkey-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10155",
+        "bazaarvoice_id": "38100-10416",
+        "package_type": "single",
+        "rating": "4.66667",
+        "review_count": "3",
+        "upc_site": "3810010416"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "NF Kidney Function"
+      ],
+      "name": "Early Care Adult",
+      "title_as_listed": "Pro Plan Veterinary Diets NF Kidney Function Early Care Adult Wet Cat Food",
+      "import_key": "purina|site|11298",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical",
+        "life_stage:adult"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100110053",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100179562",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Talk to your veterinarian to see if Purina Pro Plan Veterinary Diets NF Kidney Function Early Care Feline Formula Adult Wet Pate Cat Food could benefit your cat. This adult wet cat food features a specialized formula that offers kidney support for cats. The specialized adult cat food is made with a moderate amount of premium protein with controlled phosphorus to support the kidneys. Also included in every serving of this wet cat food formula are omega-3 fatty acids, a source of EPA and DHA, plus antioxidants. Your cat will love that this wet cat food pate is great tasting, giving them a mealtime they can look forward to. The science behind Purina therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians. Support your cat’s kidney care; talk to your veterinarian about Purina Pro Plan Veterinary Diets NF Kidney Function Early Care Feline Formula Adult Wet Pate Cat Food today.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/pro-plan-veterinary-diets-nf-kidney-care-early-care-wet-cat-food.png.webp?itok=JxbQsLkQ",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-nf-kidney-function-early-care-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11298",
+        "bazaarvoice_id": "38100-11005",
+        "package_type": "single",
+        "rating": "4.01429",
+        "review_count": "70",
+        "upc_site": "3810011005"
+      },
+      "_flags": [
+        "no texture or medium tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "UR Urinary St/Ox"
+      ],
+      "name": "UR Savory Selects Urinary St/Ox Chicken Recipe in Sauce",
+      "title_as_listed": "Pro Plan Veterinary Diets UR Savory Selects Urinary St/Ox Chicken Recipe in Sauce Wet Cat Food",
+      "import_key": "purina|site|11309",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical",
+        "medium:sauce"
+      ],
+      "gtin": "0038100103703",
+      "barcodes": [
+        {
+          "gtin": "0038100103703",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Talk to your veterinarian to see if Purina Pro Plan Veterinary Diets UR Urinary St/Ox Chicken in Sauce Feline Formula Wet Cat Food can help your cat. This specialized cat food is made with premium select ingredients in a sauce cats love. The cat food is formulated to help reduce the risk of urinary stone formation in cats and can promote a urinary environment that’s unfavorable to the development of calcium oxalate crystals. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/purina-pro-plan-veterinary-diets-ur-savory-selects-urinary-chicken-wet-cat-food.png.webp?itok=jRSwvo9z",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-ur-urinary-st-ox-savory-selects-chicken-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11309",
+        "bazaarvoice_id": "38100-10370",
+        "package_type": "single",
+        "rating": "0",
+        "review_count": "0",
+        "site_status": [
+          "New Product"
+        ],
+        "upc_site": "3810010370"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "UR Urinary St/Ox"
+      ],
+      "name": "UR Savory Selects Urinary St/Ox Variety Pack, Chicken Recipe and Salmon Recipe",
+      "title_as_listed": "Pro Plan Veterinary Diets UR Savory Selects Urinary St/Ox Wet Cat Food Variety Pack, Chicken Recipe and Salmon Recipe",
+      "import_key": "purina|site|11310",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": "0038100103727",
+      "barcodes": [
+        {
+          "gtin": "0038100103727",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "Talk to your veterinarian to see if Purina Pro Plan Veterinary Diets UR Savory Selects Urinary St/Ox Feline Formula Wet Cat Food Variety Pack can help your cat. This specialized cat food is made with premium select ingredients including real salmon or real chicken in sauce for a taste and texture cat’s love. The cat food variety pack is formulated to help reduce the risk of urinary stone formation in cats and can promote a urinary environment that’s unfavorable to the development of calcium oxalate crystals. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/purina-pro-plan-veterinary-diets-ur-savory-selects-urinary-salmon-chicken-wet-cat-food-variety-pack.png.webp?itok=2UfjT2b8",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-ur-urinary-ox-st-savory-selects-cat-food-chicken-salmon-variety-pack-canned",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11310",
+        "bazaarvoice_id": "38100-10372",
+        "package_type": "variety_pack",
+        "rating": "3.66667",
+        "review_count": "3",
+        "site_status": [
+          "New Product"
+        ],
+        "upc_site": "3810010372"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "Savory Selects 24 ct. Variety Pack, Salmon Recipe and Chicken Recipe",
+      "title_as_listed": "Pro Plan Veterinary Diets EN Gastroenteric Savory Selects Wet Cat Food 24 ct. Variety Pack, Salmon Recipe and Chicken Recipe",
+      "import_key": "purina|site|11330",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100110862",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100192455",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets EN Gastroenteric Feline Formulas are energy dense and support the unique nutritional needs of cats with GI conditions. Made with high-quality ingredients, these diets also support urinary health. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-07/purina-pro-plan-veterinary-diets-en-savory-selects-gastroenteric-salmon-chicken-variety-pack-24.png.webp?itok=la7ZBuXA",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-gastroenteric-savory-selects-cat-food-variety-pack-canned-24",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11330",
+        "bazaarvoice_id": "38100-11086",
+        "package_type": "variety_pack",
+        "rating": "4.59091",
+        "review_count": "22",
+        "upc_site": "3810011086"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "UR Urinary St/Ox"
+      ],
+      "name": "UR Savory Selects Urinary St/Ox 12 ct. Variety Pack, Salmon Recipe and Turkey & Giblets Recipe",
+      "title_as_listed": "Pro Plan Veterinary Diets UR Savory Selects Urinary St/Ox Wet Cat Food 12 ct. Variety Pack, Salmon Recipe and Turkey & Giblets Recipe",
+      "import_key": "purina|site|11335",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": "0038100111173",
+      "barcodes": [
+        {
+          "gtin": "0038100111173",
+          "pack_label": "12-count pack"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets UR Urinary St/Ox Feline Formulas are made with high-quality ingredients and formulated to help reduce the risk of urinary stone formation. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-07/purina-pro-plan-veterinary-diets-ur-savory-selects-urinary-salmon-turkey-wet-cat-food-variety-pack-12.png.webp?itok=jJqejCam",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-ur-urinary-st-ox-savory-selects-variety-pack-wet-cat-food-12",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11335",
+        "bazaarvoice_id": "38100-11117",
+        "package_type": "variety_pack",
+        "rating": "0",
+        "review_count": "0",
+        "site_status": [
+          "New Product"
+        ],
+        "upc_site": "3810011117"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "Savory Selects 12 ct. Variety Pack, Salmon Recipe and Chicken Recipe",
+      "title_as_listed": "Pro Plan Veterinary Diets EN Gastroenteric Savory Selects Wet Cat Food 12 ct. Variety Pack, Salmon Recipe and Chicken Recipe",
+      "import_key": "purina|site|11336",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": "0038100111159",
+      "barcodes": [
+        {
+          "gtin": "0038100111159",
+          "pack_label": "3 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets EN Gastroenteric Feline Formulas are energy dense and support the unique nutritional needs of cats with GI conditions. Made with high-quality ingredients, these diets also support urinary health. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-07/purina-pro-plan-veterinary-diets-en-savory-selects-gastroenteric-salmon-chicken-variety-pack-12.png.webp?itok=nxBdD6yh",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-gastroenteric-savory-selects-cat-food-variety-pack-canned-12",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11336",
+        "bazaarvoice_id": "38100-11115",
+        "package_type": "variety_pack",
+        "rating": "0",
+        "review_count": "0",
+        "upc_site": "3810011115"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "UR Urinary St/Ox"
+      ],
+      "name": "Formula Wet Cat Food",
+      "title_as_listed": "Pro Plan Veterinary Diets UR Urinary St/Ox Formula Wet Cat Food",
+      "import_key": "purina|site|11210",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100110107",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100120144",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets UR Urinary St/Ox Feline Formulas are made with high quality ingredients and formulated to help reduce the risk of urinary stone formation. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/pro-plan-veterinary-diets-ur-urinary-st-ox-wet-cat-food.png.webp?itok=-jw_Z65m",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-ur-urinary-stox-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11210",
+        "bazaarvoice_id": "38100-12014",
+        "package_type": "single",
+        "rating": "4.37288",
+        "review_count": "236",
+        "upc_site": "3810012014"
+      },
+      "_flags": [
+        "no texture or medium tag",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "DM Dietetic Management"
+      ],
+      "name": "Formula Wet Cat Food",
+      "title_as_listed": "Pro Plan Veterinary Diets DM Dietetic Management Formula Wet Cat Food",
+      "import_key": "purina|site|11211",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100110022",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100137999",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets DM Dietetic Management Feline Formulas are high protein and low carbohydrate to help support the unique nutritional needs of diabetic cats. They are also formulated to support your cat's urinary health. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/pro-plan-veterinary-diets-dm-dietetic-management-wet-cat-food.png.webp?itok=aY92dZM7",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-dm-dietetic-management-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11211",
+        "bazaarvoice_id": "38100-13799",
+        "package_type": "single",
+        "rating": "4.31844",
+        "review_count": "179",
+        "upc_site": "3810013799"
+      },
+      "_flags": [
+        "no texture or medium tag",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "DM Dietetic Management"
+      ],
+      "name": "Formula Dry Cat Food",
+      "title_as_listed": "Pro Plan Veterinary Diets DM Dietetic Management Formula Dry Cat Food",
+      "import_key": "purina|site|11212",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100190321",
+          "pack_label": "3.5 lb bag"
+        },
+        {
+          "gtin": "0038100016751",
+          "pack_label": "6 lb bag"
+        },
+        {
+          "gtin": "0038100138392",
+          "pack_label": "10 lb bag"
+        }
+      ],
+      "description": "Your faithful feline companion needs the proper nutrition to make sure they stay happy and healthy, which is why certain cats may need Purina Pro Plan Veterinary Diets DM Dietetic Management high protein cat food. This specialized cat food is high in protein and low in carbohydrates to help support healthy glucose levels in cats and help maintain lean body mass and an ideal body condition. This delicious cat kibble formula is also formulated to promote a urinary environment that’s unfavorable to the development of both struvite and calcium oxalate crystals. Give your cat the support she deserves with Purina Pro Plan Veterinary Diets DM Dietetic Management high protein cat food. The science behind our Purina Pro Plan Veterinary Diets cat food represents a collaboration among Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-02/purina-pro-plan-veterinary-diets-dm-dietetic-management-dry-cat-food.png.webp?itok=ZEvZn4uW",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-dm-dietetic-management-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11212",
+        "bazaarvoice_id": "38100-19032",
+        "package_type": "single",
+        "rating": "4.35714",
+        "review_count": "210",
+        "upc_site": "3810019032"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "DM Dietetic Management"
+      ],
+      "name": "Savory Selects Formula",
+      "title_as_listed": "Pro Plan Veterinary Diets DM Dietetic Management Savory Selects Formula Wet Cat Food",
+      "import_key": "purina|site|11213",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100110022",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100150677",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets DM Dietetic Management Savory Selects Feline Formulas are made with high-quality ingredients, with a high protein and low carbohydrate formulation to support the unique nutritional needs of diabetic cats, while supporting a healthy urinary system.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-07/pro-plan-veterinary-diets-dm-dietetic-management-wet-cat-food.png.webp?itok=kuhhTqZK",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-dm-dietetic-management-savory-selects-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11213",
+        "bazaarvoice_id": "38100-15067",
+        "package_type": "single",
+        "rating": "4.31727",
+        "review_count": "249",
+        "upc_site": "3810015067"
+      },
+      "_flags": [
+        "no texture or medium tag",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "UR Urinary St/Ox"
+      ],
+      "name": "UR Savory Selects Urinary St/Ox 24 ct. Variety Pack, Salmon Recipe and Turkey & Giblets Recipe",
+      "title_as_listed": "Pro Plan Veterinary Diets UR Savory Selects Urinary St/Ox Wet Cat Food 24 ct. Variety Pack, Salmon Recipe and Turkey & Giblets Recipe",
+      "import_key": "purina|site|11216",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100110879",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100168603",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets UR Urinary St/Ox Feline Formulas are made with high quality ingredients and formulated to help reduce the risk of urinary stone formation. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-07/purina-pro-plan-veterinary-diets-ur-savory-selects-urinary-salmon-turkey-wet-cat-food-variety-pack-24_0.png.webp?itok=HSY1hw3V",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-ur-urinary-st-ox-savory-selects-variety-pack-wet-cat-food-24",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "11216",
+        "bazaarvoice_id": "38100-16860",
+        "package_type": "variety_pack",
+        "rating": "4.63158",
+        "review_count": "57",
+        "upc_site": "3810016860"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "EN Gastroenteric"
+      ],
+      "name": "EN Savory Selects Gastroenteric Variety Pack 24 Count",
+      "title_as_listed": "Pro Plan Veterinary Diets EN Savory Selects Gastroenteric Wet Cat Food Variety Pack 24 Count",
+      "import_key": "purina|site|10154",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": "0038100104182",
+      "barcodes": [
+        {
+          "gtin": "0038100104182",
+          "pack_label": "24-count pack"
+        }
+      ],
+      "description": "If your cat requires a digestive support cat food, ask your vet about serving her selections from Purina Pro Plan Veterinary Diets EN Savory Selects Gastroenteric With Chicken and With Turkey in Gravy Cat Food Variety Pack. Made with high-quality ingredients, these canned cat food recipes help support the unique nutritional needs of cats with GI conditions. Each serving of these Purina wet cat food formulas is highly digestible for optimal nutrient absorption while providing her with added B-complex vitamins and omega-3 fatty acids from fish oil. These adult cat food recipes also offer a St/Ox defense to promote a urinary environment unfavorable to the development of both struvite and calcium oxalate crystals. Serve your cat these great-tasting with chicken or with turkey cat food in gravy recipes to ensure she gets adequate nutrient intake along with a select prebiotic fiber to support GI microbiome balance and cat digestive support.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-03/pro-plan-veterinary-diets-en-wet-cat-food-turkey-chicken-variety-pack-24-count.png.webp?itok=-MInWRzw",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-en-gastroenteric-chicken-turkey-variety-24-pack-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10154",
+        "bazaarvoice_id": "38100-10418",
+        "package_type": "variety_pack",
+        "rating": "0",
+        "review_count": "0",
+        "upc_site": "3810010418"
+      },
+      "_flags": [
+        "variety pack / bundle: decide how these are treated",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "UR Urinary St/Ox"
+      ],
+      "name": "Dry Cat Food",
+      "title_as_listed": "Purina Pro Plan Veterinary Diets UR Urinary St/Ox Dry Cat Food",
+      "import_key": "purina|site|10295",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "diet:clinical"
+      ],
+      "gtin": "0038100138309",
+      "barcodes": [
+        {
+          "gtin": "0038100138309",
+          "pack_label": "6 lb bag"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets UR Urinary St/Ox Feline Formulas are made with high-quality ingredients and formulated to help reduce the risk of urinary stone formation. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2025-08/ppvd-ur-urinary-st-ox-dry-cat-food.png.webp?itok=wakAcWR6",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-ur-urinary-st-ox-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10295",
+        "bazaarvoice_id": "38100-13830",
+        "package_type": "single",
+        "rating": "4.62785",
+        "review_count": "395",
+        "upc_site": "3810013830"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "UR Urinary St/Ox"
+      ],
+      "name": "Savory Selects Turkey & Giblet in Sauce Formula",
+      "title_as_listed": "Purina Pro Plan Veterinary Diets UR Urinary St/Ox Savory Selects Turkey & Giblet in Sauce Formula Wet Cat Food",
+      "import_key": "purina|site|10296",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical",
+        "medium:sauce"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100110121",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100171405",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets UR Urinary St/Ox Feline Formulas are made with high-quality ingredients and formulated to help reduce the risk of urinary stone formation. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians. Additional flavors are available.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/pro-plan-veterinary-diets-ur-urinary-st-ox-savory-selects-turkey-wet-cat-food.png.webp?itok=vVdgF3JV",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-ur-urinary-st-ox-savory-selects-turkey-giblet-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10296",
+        "bazaarvoice_id": "38100-17140",
+        "package_type": "single",
+        "rating": "3.85714",
+        "review_count": "49",
+        "upc_site": "3810017140"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Purina",
+        "Pro Plan Veterinary Diets",
+        "UR Urinary St/Ox"
+      ],
+      "name": "Savory Selects Salmon in Sauce Formula",
+      "title_as_listed": "Purina Pro Plan Veterinary Diets UR Urinary St/Ox Savory Selects Salmon in Sauce Formula Wet Cat Food",
+      "import_key": "purina|site|10297",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "diet:clinical",
+        "medium:sauce"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0038100110152",
+          "pack_label": "3 oz can"
+        },
+        {
+          "gtin": "0038100171429",
+          "pack_label": "5.5 oz can"
+        }
+      ],
+      "description": "Purina Pro Plan Veterinary Diets UR Urinary St/Ox Feline Formulas are made with high quality ingredients and formulated to help reduce the risk of urinary stone formation. The science behind our therapeutic diets represents a collaboration between Purina nutritionists, researchers and veterinarians. Additional flavors are available.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2026-06/pro-plan-veterinary-diets-ur-urinary-st-ox-savory-selects-salmon-wet-cat-food.png.webp?itok=3phAEl12",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/pro-plan-veterinary-diets-ur-urinary-st-ox-savory-selects-salmon-wet-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "10297",
+        "bazaarvoice_id": "38100-17142",
+        "package_type": "single",
+        "rating": "4.04255",
+        "review_count": "47",
+        "upc_site": "3810017142"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    }
+  ]
+}

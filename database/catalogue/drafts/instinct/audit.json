@@ -1,0 +1,131 @@
+{
+  "dump_products": 185,
+  "combined_listing_parents_skipped": 44,
+  "parents": [
+    "FreshRaw Medallions",
+    "RawBoost+ Whole Grain Kibble for Puppies",
+    "FreshDried Raw Meals for Kittens",
+    "Original Patés for Kittens",
+    "Original Kibble for Kittens",
+    "Limited Ingredient Diet Toppers",
+    "FreshRaw Bites for Puppies",
+    "FreshDried Raw Meals for Puppies",
+    "Ultimate Protein Kibble",
+    "RawBoost+ Kibble for Small Breed Dogs",
+    "RawBoost+ Shakers",
+    "RawBoost+ Whole Grain Kibble",
+    "RawBoost+ Frozen Mixers",
+    "RawBoost+ Mixers",
+    "RawBoost+ Kibble",
+    "FreshDried Raw Meals for Cats",
+    "RawBoost+ Shakers",
+    "RawBoost+ Mixers",
+    "Raw Boost Kibble",
+    "PeakBoost+ Kibble",
+    "Original Wet Food for Small Breed Dogs",
+    "Minced Cups",
+    "Original Patés",
+    "Original Kibble",
+    "Original Wet Food",
+    "Original Kibble",
+    "Limited Ingredient Diet Patés",
+    "Limited Ingredient Diet Kibble",
+    "Limited Ingredient Diet Kibble",
+    "Freshly Crafted Meals",
+    "Flaked Entrées",
+    "Split Cups",
+    "Bone Broth For Dogs",
+    "Bone Broth For Cats",
+    "Healthy Cravings Toppers",
+    "Healthy Cravings Toppers",
+    "FreshRaw Patties",
+    "FreshRaw Meals",
+    "FreshRaw Bites",
+    "FreshDried Patés",
+    "FreshDried Meal Blends",
+    "FreshDried Raw Meals For Dogs",
+    "BeNatural Kibble",
+    "Duos"
+  ],
+  "drafted": 141,
+  "lines": {
+    "FreshRaw": {
+      "products": 15,
+      "sublines": [
+        "Medallions",
+        "Bites",
+        "Patties",
+        "Meals"
+      ]
+    },
+    "Raw Boost": {
+      "products": 36,
+      "sublines": [
+        "Kibble",
+        "Shakers",
+        "Mixers"
+      ]
+    },
+    "FreshDried": {
+      "products": 15,
+      "sublines": [
+        "Raw Meals",
+        "Patés",
+        "Meal Blends"
+      ]
+    },
+    "Original": {
+      "products": 35,
+      "sublines": []
+    },
+    "Limited Ingredient Diet": {
+      "products": 8,
+      "sublines": []
+    },
+    "Ultimate Protein": {
+      "products": 2,
+      "sublines": []
+    },
+    "PeakBoost+": {
+      "products": 3,
+      "sublines": []
+    },
+    "Freshly Crafted Meals": {
+      "products": 4,
+      "sublines": []
+    },
+    "Bone Broth": {
+      "products": 4,
+      "sublines": []
+    },
+    "Healthy Cravings": {
+      "products": 11,
+      "sublines": []
+    },
+    "Duos": {
+      "products": 4,
+      "sublines": []
+    },
+    "Be Natural": {
+      "products": 4,
+      "sublines": []
+    }
+  },
+  "flags": {
+    "puppy stage: not in the life-stage vocabulary": 44,
+    "topper/mixer: decide kind (food vs treat vs supplement)": 34,
+    "Original assumed (title names a format, not the line)": 16,
+    "variety pack: several recipes in one product": 6
+  },
+  "unplaced": [],
+  "species": {
+    "dog": 79,
+    "cat": 62
+  },
+  "with_description": 141,
+  "with_image": 141,
+  "tag_coverage": {
+    "texture_or_medium": 33,
+    "life_stage": 97
+  }
+}

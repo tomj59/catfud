@@ -93,4 +93,21 @@ class ProductApiTest extends TestCase
         $this->getJson('/api/v1/products?kind=bogus')->assertUnprocessable();
         $this->getJson('/api/v1/products?q=%25')->assertOk()->assertJsonCount(0, 'data'); // % is literal, not a wildcard
     }
+
+    public function test_search_can_be_limited_to_a_ladder_path_and_an_unknown_path_matches_nothing(): void
+    {
+        Sanctum::actingAs(User::factory()->moderator()->create());
+        $pro = \App\Models\BrandNode::ensurePath([['name' => 'Purina'], ['name' => 'Pro Plan'], ['name' => 'Complete Essentials']]);
+        $ff = \App\Models\BrandNode::ensurePath([['name' => 'Purina'], ['name' => 'Fancy Feast'], ['name' => 'Classic']]);
+        $mapper = app(\App\Support\BrandTreeMapper::class);
+        $mapper->place($this->product(['gtin' => null, 'brand' => 'Purina', 'name' => 'Chicken & Rice Entrée', 'moderation_status' => 'approved']), $pro);
+        $mapper->place($this->product(['gtin' => null, 'brand' => 'Purina', 'name' => 'Chicken Feast', 'moderation_status' => 'approved']), $ff);
+
+        $this->getJson('/api/v1/products?q=chicken&path='.urlencode('Purina > Pro Plan'))->assertOk()
+            ->assertJsonCount(1, 'data')->assertJsonPath('data.0.name', 'Chicken & Rice Entrée');
+        $this->getJson('/api/v1/products?q=chicken&path='.urlencode('purina>  fancy  feast > classic'))->assertOk()
+            ->assertJsonCount(1, 'data')->assertJsonPath('data.0.name', 'Chicken Feast');
+        $this->getJson('/api/v1/products?q=chicken&path='.urlencode('Purina'))->assertOk()->assertJsonCount(2, 'data');
+        $this->getJson('/api/v1/products?q=chicken&path='.urlencode('Purina > Nope'))->assertOk()->assertJsonCount(0, 'data');
+    }
 }

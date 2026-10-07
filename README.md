@@ -231,3 +231,23 @@ Workflow, one brand at a time: edit the files, set `"reviewed": true`, then `php
 
 ### Rung status
 Enum `App\Enums\NodeStatus`: `active`, `retiring` (still offered), `retired` (gone from the market) and `disabled` (switched off by us). Retired and disabled are hidden from non-staff pickers; a rung inherits a non-active status from its nearest ancestor. Every change records `previous_status` automatically, so a retired rung later disabled still reads "was retired"; the admin node list filters by current status (`status=`) and history (`ever=`). Detail: `status_on`, `status_confidence`, `status_source`, `status_note`, `successor_id`.
+
+### Barcodes in catalogue files
+A product row may carry `gtin` (its main barcode) and `barcodes: [{gtin, pack_label}]` (other packs). Neither is required: a row is identified by
+its `import_key`, and a barcode only identifies a row that has no key. If two rows carry the same code, both products are kept, the first gets
+it, and the import reports the clash (`catalogue:import` prints `conflict:` lines; the validator warns). GTIN-14 case codes cannot be scanned
+as units, so they are stored in the product's `meta.case_gtins`. A barcode the file supplied does not stop later re-imports from refreshing the
+product; an admin edit, a review, or a different barcode does.
+
+### Pictures captured from other storefronts (image mirror)
+
+A catalogue file's `image_url` stays the original address, and that is what exports write back. On import each remote picture is *registered*: it gets a key (a hash of the address, so products that share a picture share one file), the product's `image_url` becomes our own `/api/v1/img/{key}`, and the page it came from is kept as the credit ("Image from example.com", with `source_url`). Nothing is downloaded during the import.
+
+The copy is made once: either on the first request for the key, or in bulk with `php artisan catalogue:mirror-images` (`--limit`, `--retry-failed`, `--refresh`, `--delay` ms between downloads). After that `/api/v1/img/{key}` serves our stored file with long-lived cache headers, so the apps never load from the original CDN. Only real jpeg/png/webp files are kept, up to 5 MB; only public http(s) addresses are fetched (private ranges are refused and the connection is pinned to the vetted address); failed pictures are retried a few times, an hour apart. A picture a person uploads in the admin tool is never replaced by a later import. Pictures from user-submitted products are not mirrored yet.
+
+
+## Adding a product from a scan (web client)
+
+When a scanned barcode is not in the catalogue and a person adds it as new, the product section is blurred and locked until the brand ladder is fully realized: the last rung picked has nothing deeper to choose, or the person taps "This is as specific as it gets". Changing or clearing the ladder locks it again.
+
+Once open, typing in Product name shows a suggest-as-you-type list of products already in the catalogue: this branch of the ladder first (`GET /api/v1/products?path=Purina > Pro Plan&q=…`), and by default only products without a barcode, since the scan found nothing. Two checkboxes widen it (products that already have a barcode, or every brand). Tapping a suggestion and confirming wires the scanned barcode to that product (as another pack if it already has one) instead of creating a duplicate.

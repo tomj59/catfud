@@ -1,0 +1,98 @@
+{
+  "products": 289,
+  "by_root": {
+    "tiki-cat": 232,
+    "tiki-dog": 57
+  },
+  "lines": {
+    "tiki-cat": {
+      "Aloha Friends": [],
+      "Born Carnivore": [],
+      "Mega Packs": [],
+      "Solutions": [
+        "Supplements",
+        "Toppers",
+        "Mousse",
+        "Dry"
+      ],
+      "Stix": [],
+      "Meal Toppers": [
+        "Broths",
+        "Complements"
+      ],
+      "Velvet Mousse": [],
+      "Silver": [],
+      "Gelée": [],
+      "Duets": [],
+      "Baby": [],
+      "After Dark": [],
+      "Luau": [],
+      "Soft & Chewy": [],
+      "Grill": []
+    },
+    "tiki-dog": {
+      "Savory": [],
+      "Puppy": [],
+      "Taste of the World": [],
+      "Petites Grain Free": [],
+      "Protein Boosters": [],
+      "Senior": [],
+      "Petites Whole Foods": [],
+      "Flavor Boosters": [],
+      "Tummy Toppers": [],
+      "Born Carnivore for Dogs": []
+    }
+  },
+  "flags": {
+    "not purchasable / no price on the store": 28,
+    "generic or numbered variety pack listing": 25,
+    "variety pack / multi-recipe pack": 41,
+    "no life stage tag": 152,
+    "name repeated 2x in this line: tell apart by import_key/url": 30,
+    "no SKU on the store": 181,
+    "no line: product sits outside the category tree": 7,
+    "tagged \"new look\" (may duplicate an older listing)": 17,
+    "slug ends in -copy (duplicated listing)": 1,
+    "unmapped line slug tiki-cat-wet-food": 1,
+    "name repeated 3x in this line: tell apart by import_key/url": 6,
+    "name repeated 6x in this line: tell apart by import_key/url": 6
+  },
+  "line_counts": {
+    "tiki-cat": {
+      "Aloha Friends": 25,
+      "Born Carnivore": 29,
+      "(none)": 8,
+      "Mega Packs": 5,
+      "Solutions": 22,
+      "Stix": 13,
+      "Meal Toppers": 10,
+      "Velvet Mousse": 8,
+      "Silver": 15,
+      "Gelée": 8,
+      "Duets": 2,
+      "Baby": 25,
+      "After Dark": 31,
+      "Luau": 16,
+      "Soft & Chewy": 2,
+      "Grill": 13
+    },
+    "tiki-dog": {
+      "Savory": 11,
+      "Puppy": 4,
+      "Taste of the World": 9,
+      "Petites Grain Free": 7,
+      "Protein Boosters": 6,
+      "Senior": 2,
+      "Petites Whole Foods": 5,
+      "Flavor Boosters": 7,
+      "Tummy Toppers": 1,
+      "Born Carnivore for Dogs": 5
+    }
+  },
+  "with_sku": 108,
+  "purchasable": 261,
+  "short_description": 289,
+  "long_description": 9,
+  "with_images": 289,
+  "clean_candidates": 213
+}

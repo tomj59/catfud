@@ -58,7 +58,7 @@ class CatalogueFilesTest extends TestCase
 
     private function importer(): CatalogueImporter
     {
-        return new CatalogueImporter($this->files, new CatalogueValidator($this->files), app(BrandTreeMapper::class));
+        return new CatalogueImporter($this->files, new CatalogueValidator($this->files), app(BrandTreeMapper::class), app(\App\Support\ImageMirror::class));
     }
 
     private function errors(?array $slugs = null): array
@@ -91,7 +91,7 @@ class CatalogueFilesTest extends TestCase
     {
         $this->importer()->importProducts('tasty');
         $again = $this->importer()->importProducts('tasty');
-        $this->assertSame(['created' => 0, 'updated' => 0, 'unchanged' => 2, 'skipped' => 0], $again);
+        $this->assertSame(['created' => 0, 'updated' => 0, 'unchanged' => 2, 'skipped' => 0, 'conflicts' => []], $again);
 
         $this->rewriteProducts(function ($f) {
             $f['products'][0]['tags'] = ['life_stage:adult'];                 // drop the texture tag
@@ -234,5 +234,64 @@ class CatalogueFilesTest extends TestCase
     {
         $r = (new CatalogueValidator(new CatalogueFiles('US')))->check();
         $this->assertSame([], array_values(array_map(fn ($i) => $i['file'].' '.$i['where'].' '.$i['message'], array_filter($r['issues'], fn ($i) => $i['level'] === 'error'))));
+    }
+
+    public function test_barcodes_in_a_file_are_imported_and_are_not_mistaken_for_a_person_having_touched_the_product(): void
+    {
+        $this->rewriteProducts(fn ($f) => [...$f, 'products' => [
+            $this->row('Chicken', ['Acme', 'Tasty', 'Adult'], ['life_stage:adult'], 'k1', ['gtin' => '028000000011', 'barcodes' => [
+                ['gtin' => '028000000011', 'pack_label' => '3 oz can'], ['gtin' => '028000000028', 'pack_label' => '12-pack'], ['gtin' => '10028000000018', 'pack_label' => 'case'],
+            ]]),
+        ]]);
+        $this->importer()->importLadders();
+        $this->assertSame(1, $this->importer()->importProducts('tasty')['created']);
+        $p = Product::where('import_key', 'k1')->first();
+        $this->assertNotNull($p->gtin);
+        $this->assertSame(['12-pack'], $p->barcodes()->pluck('pack_label')->all());
+        $this->assertSame(['10028000000018' => 'case'], $p->meta['case_gtins']);   // a GTIN-14 case code is kept, not thrown away
+
+        // a second import neither skips the product (its barcode came from the file) nor changes anything
+        $r = $this->importer()->importProducts('tasty');
+        $this->assertSame(1, $r['unchanged']);
+        $this->assertSame(0, $r['skipped']);
+    }
+
+    public function test_two_recipes_printed_with_the_same_barcode_stay_two_products_and_the_clash_is_reported(): void
+    {
+        $this->rewriteProducts(fn ($f) => [...$f, 'products' => [
+            $this->row('Chicken', ['Acme', 'Tasty', 'Adult'], [], 'k1', ['gtin' => '028000000011']),
+            $this->row('Salmon', ['Acme', 'Tasty', 'Adult'], [], 'k2', ['gtin' => '028000000011', 'barcodes' => [['gtin' => '028000000028', 'pack_label' => 'can']]]),
+        ]]);
+        $this->assertSame([], $this->errors());                       // a source clash is a warning, not an error
+        $this->importer()->importLadders();
+        $r = $this->importer()->importProducts('tasty');
+
+        $this->assertSame(2, $r['created']);
+        $this->assertSame(2, Product::count());
+        $this->assertCount(1, $r['conflicts']);
+        $this->assertStringContainsString('already belongs to "Chicken"', $r['conflicts'][0]);
+        $this->assertNull(Product::where('import_key', 'k2')->value('gtin'));
+        $this->assertSame(1, Product::where('import_key', 'k2')->first()->barcodes()->count());   // its own, non-clashing pack code still attaches
+    }
+
+    public function test_an_outside_picture_is_registered_with_the_mirror_and_the_file_keeps_the_original_address(): void
+    {
+        $url = 'https://cdn.example.com/shop/files/chicken.png?v=1';
+        $this->rewriteProducts(fn ($f) => [...$f, 'products' => [
+            $this->row('Chicken', ['Acme', 'Tasty', 'Adult'], [], 'k1', ['image_url' => $url, 'source_url' => 'https://www.acme.test/chicken']),
+        ]]);
+        $this->importer()->importLadders();
+        $this->assertSame(1, $this->importer()->importProducts('tasty')['created']);
+
+        $p = Product::where('import_key', 'k1')->first();
+        $this->assertSame('/api/v1/img/'.\App\Support\ImageMirror::keyFor($url), $p->image_url);   // the apps never see the outside address
+        $this->assertSame($url, $p->image->origin_url);
+        $this->assertSame('Image from acme.test', $p->image->attribution);
+        $this->assertSame(1, $this->importer()->importProducts('tasty')['unchanged']);                // re-import changes nothing
+
+        $out = new CatalogueFiles('US', $this->dir.'-export');
+        (new CatalogueExporter($out))->export();
+        $this->assertSame($url, collect($out->read($out->productsPath('tasty'))['products'])->firstWhere('name', 'Chicken')['image_url']);
+        File::deleteDirectory($this->dir.'-export');
     }
 }

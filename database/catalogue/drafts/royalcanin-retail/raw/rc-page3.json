@@ -1,0 +1,935 @@
+{
+	"currentPage": 3,
+	"facets": [
+		{
+			"code": "digital_sub_category",
+			"items": [
+				{
+					"code": "dry_food",
+					"count": 25,
+					"label": "pa.plpFilters.cat.digitalSubCategory.dryFood"
+				},
+				{
+					"code": "wet_food",
+					"count": 28,
+					"label": "pa.plpFilters.cat.digitalSubCategory.wetFood"
+				},
+				{
+					"code": "supplement",
+					"count": 1,
+					"label": "pa.plpFilters.cat.digitalSubCategory.supplement"
+				}
+			],
+			"label": "pa.plpFiltersCategory.digitalSubCategory"
+		},
+		{
+			"code": "lifestage",
+			"items": [
+				{
+					"code": "baby",
+					"count": 4,
+					"label": "pa.plpFilters.cat.lifestage.baby"
+				},
+				{
+					"code": "kitten",
+					"count": 11,
+					"label": "pa.plpFilters.cat.lifestage.kitten"
+				},
+				{
+					"code": "adult",
+					"count": 42,
+					"label": "pa.plpFilters.cat.lifestage.adult"
+				},
+				{
+					"code": "mature",
+					"count": 39,
+					"label": "pa.plpFilters.cat.lifestage.mature"
+				},
+				{
+					"code": "ageing",
+					"count": 3,
+					"label": "pa.plpFilters.cat.lifestage.ageing"
+				}
+			],
+			"label": "pa.plpFiltersCategory.lifestage"
+		},
+		{
+			"code": "breed",
+			"items": [
+				{
+					"code": "maine_coon",
+					"count": 2,
+					"label": "pa.plpFilters.cat.breed.maineCoon"
+				},
+				{
+					"code": "persian",
+					"count": 2,
+					"label": "pa.plpFilters.cat.breed.persian"
+				},
+				{
+					"code": "american_shorthair",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.americanShorthair"
+				},
+				{
+					"code": "bengal",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.bengal"
+				},
+				{
+					"code": "ragdoll",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.ragdoll"
+				},
+				{
+					"code": "siamese",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.siamese"
+				},
+				{
+					"code": "any",
+					"count": 46,
+					"label": "pa.plpFilters.cat.breed.any"
+				}
+			],
+			"label": "pa.plpFiltersCategory.breed"
+		},
+		{
+			"code": "specific_needs",
+			"items": [
+				{
+					"code": "digestive_support",
+					"count": 7,
+					"label": "pa.plpFilters.cat.specificNeeds.digestiveSupport"
+				},
+				{
+					"code": "weight_management",
+					"count": 7,
+					"label": "pa.plpFilters.cat.specificNeeds.weightManagement"
+				},
+				{
+					"code": "skin_and_coat_support",
+					"count": 5,
+					"label": "pa.plpFilters.cat.specificNeeds.skinAndCoatSupport"
+				},
+				{
+					"code": "pregnant",
+					"count": 3,
+					"label": "pa.plpFilters.cat.specificNeeds.pregnant"
+				},
+				{
+					"code": "hairballs",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.hairballs"
+				},
+				{
+					"code": "tendency_to_beg_for_food",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.tendencyToBegForFood"
+				},
+				{
+					"code": "urinary_support",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.urinarySupport"
+				},
+				{
+					"code": "appetite_stimulation",
+					"count": 1,
+					"label": "pa.plpFilters.cat.specificNeeds.appetiteStimulation"
+				},
+				{
+					"code": "oral_dental_hygiene",
+					"count": 1,
+					"label": "pa.plpFilters.cat.specificNeeds.oralDentalHygiene"
+				}
+			],
+			"label": "pa.plpFiltersCategory.specificNeeds"
+		},
+		{
+			"code": "sterilized",
+			"items": [
+				{
+					"code": "false",
+					"count": 52,
+					"label": "pa.plpFilters.cat.sterilized.false"
+				},
+				{
+					"code": "true",
+					"count": 2,
+					"label": "pa.plpFilters.cat.sterilized.true"
+				}
+			],
+			"label": "pa.plpFiltersCategory.sterilized"
+		},
+		{
+			"code": "pack_weight_ranges",
+			"items": [
+				{
+					"code": "up_to_6oz",
+					"count": 30,
+					"label": "pa.plpFilters.cat.packWeightRanges.upTo6oz"
+				},
+				{
+					"code": "from_6_to_16oz",
+					"count": 1,
+					"label": "pa.plpFilters.cat.packWeightRanges.from6To16oz"
+				},
+				{
+					"code": "from_1_to_5lbs",
+					"count": 15,
+					"label": "pa.plpFilters.cat.packWeightRanges.from1To5lbs"
+				},
+				{
+					"code": "from_5_to_11lbs",
+					"count": 21,
+					"label": "pa.plpFilters.cat.packWeightRanges.from5To11lbs"
+				},
+				{
+					"code": "from_11_to_21lbs",
+					"count": 9,
+					"label": "pa.plpFilters.cat.packWeightRanges.from11To21lbs"
+				}
+			],
+			"label": "pa.plpFiltersCategory.packWeightRanges"
+		}
+	],
+	"products": [
+		{
+			"analyticsData": {
+				"mainItemCode": "1478",
+				"name": "2022 - FCN - Wet - Cat - WEIGHT CARE loaf in sauce - Zone North America - HANDYCAN - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Weight Care Loaf in Sauce ",
+				"titleUrl": "WEIGHT CARE loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1478,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053828,
+			"image": "https://marspetcareaprimocdn.petcare.global/e8f5c851-3f62-4d18-8662-b20b0023f35b/e8f5c851-3f62-4d18-8662-b20b0023f35b_DownloadAsJpg.jpg",
+			"imageAlt": "Weight Care Loaf in Sauce ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1478,
+			"name": "2022 - FCN - Wet - Cat - WEIGHT CARE loaf in sauce - Zone North America - HANDYCAN - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$70.45",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111410412",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Weight Care Loaf in Sauce ",
+			"titleUrl": "WEIGHT CARE loaf in sauce",
+			"variation": "2",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1430",
+				"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE Thin slices in gravy - Zone North America - HANDYCAN - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Digestive Care Thin Slices In Gravy Canned Cat Food",
+				"titleUrl": "DIGESTIVE CARE Thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1430,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1189454,
+			"image": "https://cdn.royalcanin-weshare-online.io/PECCSpABRYZmsWpc9C-8/v39/00030111401656-cf-gs1",
+			"imageAlt": "Digestive Care Thin Slices In Gravy Canned Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1430,
+			"name": "2022 - FCN - Wet - Cat - DIGESTIVE CARE Thin slices in gravy - Zone North America - HANDYCAN - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$70.45",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111401656",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Digestive Care Thin Slices In Gravy Canned Cat Food",
+			"titleUrl": "DIGESTIVE CARE Thin slices in gravy",
+			"variation": "2",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "8093",
+				"name": "2025 - SUP - Powder - Cat - PROBIOTICS FOR DIGESTIVE & IMMUNE HEALTH - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "supplement",
+				"range": "sup",
+				"specie": "cat",
+				"subCategory": "supplement",
+				"technology": "powder",
+				"title": "Probiotics for Cats Digestive and Immune Health Powder Supplement",
+				"titleUrl": "PROBIOTICS FOR DIGESTIVE & IMMUNE HEALTH"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 8093,
+			"category": "pa.productGrid.productCategorySupplementForCat",
+			"family": "food",
+			"id": 1248992,
+			"image": "https://marspetcareaprimocdn.petcare.global/5bed45df-f464-4589-9fcf-b2490008020a/5bed45df-f464-4589-9fcf-b2490008020a_DownloadAsJpg.jpg",
+			"imageAlt": "Probiotics for Cats Digestive and Immune Health Powder Supplement",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"baby",
+				"kitten",
+				"mature",
+				"ageing"
+			],
+			"mainItem": 8093,
+			"name": "2025 - SUP - Powder - Cat - PROBIOTICS FOR DIGESTIVE & IMMUNE HEALTH - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$9.49",
+			"productCategory": "supplement",
+			"range": "sup",
+			"sku": "030111600875",
+			"species": [
+				"cat"
+			],
+			"subCategory": "supplement",
+			"technology": "powder",
+			"territory": "",
+			"title": "Probiotics for Cats Digestive and Immune Health Powder Supplement",
+			"titleUrl": "PROBIOTICS FOR DIGESTIVE & IMMUNE HEALTH",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1433",
+				"name": "2022 - FCN - Wet - Cat - WEIGHT CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Weight Care Thin Slices in Gravy ",
+				"titleUrl": "WEIGHT CARE Thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1433,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053832,
+			"image": "https://marspetcareaprimocdn.petcare.global/c7c69bc0-80f1-4fd7-a803-b1ef000edd58/c7c69bc0-80f1-4fd7-a803-b1ef000edd58_DownloadAsJpg.jpg",
+			"imageAlt": "Weight Care Thin Slices in Gravy ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1433,
+			"name": "2022 - FCN - Wet - Cat - WEIGHT CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$54.49",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "10030111604450",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Weight Care Thin Slices in Gravy ",
+			"titleUrl": "WEIGHT CARE Thin slices in gravy",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1202",
+				"name": "2022 - FCN - Wet - Cat - HAIR&SKIN CARE loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Hair & Skin Care Loaf In Sauce Canned Cat Food",
+				"titleUrl": "HAIR&SKIN CARE loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1202,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053782,
+			"image": "https://cdn.royalcanin-weshare-online.io/jFZHTYcBBKJuub5qYvnz/v101/00030111410986d-cf-gs1",
+			"imageAlt": "Hair & Skin Care Loaf In Sauce Canned Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1202,
+			"name": "2022 - FCN - Wet - Cat - HAIR&SKIN CARE loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$54.49",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111410986",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Hair & Skin Care Loaf In Sauce Canned Cat Food",
+			"titleUrl": "HAIR&SKIN CARE loaf in sauce",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2549",
+				"name": "2016 - FHN - Dry - Cat - INDOOR LONG HAIR - Zone North America - US - USA - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Indoor Long Hair Dry Cat Food",
+				"titleUrl": "Indoor Long Hair USA only"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2549,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336782,
+			"image": "https://cdn.royalcanin-weshare-online.io/bj87vYcBRYZmsWpc6Pib/v19/center-front-hero-image-2549-030111630117-cat-01-jpg",
+			"imageAlt": "Indoor Long Hair Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult"
+			],
+			"mainItem": 2549,
+			"name": "2016 - FHN - Dry - Cat - INDOOR LONG HAIR - Zone North America - US - USA - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$35.14",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111630131",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Indoor Long Hair Dry Cat Food",
+			"titleUrl": "Indoor Long Hair USA only",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1202",
+				"name": "2022 - FCN - Wet - Cat - HAIR&SKIN CARE loaf in sauce - Zone North America - HANDYCANS - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Hair & Skin Care Loaf In Sauce Canned Cat Food",
+				"titleUrl": "HAIR&SKIN CARE loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1202,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053778,
+			"image": "https://cdn.royalcanin-weshare-online.io/jlZLTYcBBKJuub5ql_nu/v109/00030111410399b-cf-gs1",
+			"imageAlt": "Hair & Skin Care Loaf In Sauce Canned Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1202,
+			"name": "2022 - FCN - Wet - Cat - HAIR&SKIN CARE loaf in sauce - Zone North America - HANDYCANS - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$70.45",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111410399",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Hair & Skin Care Loaf In Sauce Canned Cat Food",
+			"titleUrl": "HAIR&SKIN CARE loaf in sauce",
+			"variation": "2",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4083",
+				"name": "2017 - FHNW - WET - Cat - Instinctive 7+ Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Instinctive 7+ Thin Slices In Gravy Canned Cat Food",
+				"titleUrl": "Instinctive 7+ Thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4083,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 338335,
+			"image": "https://cdn.royalcanin-weshare-online.io/Tz86vYcBRYZmsWpcTfif/v43/center-front-hero-image-1562-030111915498-cat-01-jpg",
+			"imageAlt": "Instinctive 7+ Thin Slices In Gravy Canned Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"mature"
+			],
+			"mainItem": 4083,
+			"name": "2017 - FHNW - WET - Cat - Instinctive 7+ Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$52.21",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111715494",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Instinctive 7+ Thin Slices In Gravy Canned Cat Food",
+			"titleUrl": "Instinctive 7+ Thin slices in gravy",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1200",
+				"name": "2022 - FHNW - Wet - Cat - KITTEN loaf in sauce - Zone North America - HANDYCAN - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Kitten Loaf in Sauce Canned Cat Food ",
+				"titleUrl": "KITTEN loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1200,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1046567,
+			"image": "https://cdn.royalcanin-weshare-online.io/euc_TYcBaPOZra8qyvwr/v62/00030111410115b-cf-gs1",
+			"imageAlt": "Kitten Loaf in Sauce Canned Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"kitten"
+			],
+			"mainItem": 1200,
+			"name": "2022 - FHNW - Wet - Cat - KITTEN loaf in sauce - Zone North America - HANDYCAN - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$70.45",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111410115",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "birth_and_growth",
+			"title": "Kitten Loaf in Sauce Canned Cat Food ",
+			"titleUrl": "KITTEN loaf in sauce",
+			"variation": "2",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2531",
+				"name": "2025 - FHN - Dry - Cat - FUSSY - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Fussy Adult Dry Cat Food",
+				"titleUrl": "FUSSY"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2531,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1306903,
+			"image": "https://marspetcareaprimocdn.petcare.global/e154ffef-6672-4df0-a3ce-b2b8009a8e33/e154ffef-6672-4df0-a3ce-b2b8009a8e33_DownloadAsJpg.jpg",
+			"imageAlt": "Fussy Adult Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2531,
+			"name": "2025 - FHN - Dry - Cat - FUSSY - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$35.14",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111201362",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Fussy Adult Dry Cat Food",
+			"titleUrl": "FUSSY",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1478",
+				"name": "2022 - FCN - Wet - Cat - WEIGHT CARE loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Weight Care Loaf in Sauce",
+				"titleUrl": "WEIGHT CARE loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1478,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053824,
+			"image": "https://cdn.royalcanin-weshare-online.io/jVZITYcBBKJuub5qqfnT/v62/00030111411082e-cf-gs1",
+			"imageAlt": "Weight Care Loaf in Sauce",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1478,
+			"name": "2022 - FCN - Wet - Cat - WEIGHT CARE loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$54.49",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111411082",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Weight Care Loaf in Sauce",
+			"titleUrl": "WEIGHT CARE loaf in sauce",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1588",
+				"name": "2022 - FCN - Wet - Cat - URINARY CARE  Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Urinary Care Thin Slices In Gravy Canned Cat Food",
+				"titleUrl": "URINARY CARE  Thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1588,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1053816,
+			"image": "https://marspetcareaprimocdn.petcare.global/4a282358-a893-45e7-8f9b-b1ef000ed8e7/4a282358-a893-45e7-8f9b-b1ef000ed8e7_DownloadAsJpg.jpg",
+			"imageAlt": "Urinary Care Thin Slices In Gravy Canned Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1588,
+			"name": "2022 - FCN - Wet - Cat - URINARY CARE  Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$54.49",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111416650",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Urinary Care Thin Slices In Gravy Canned Cat Food",
+			"titleUrl": "URINARY CARE  Thin slices in gravy",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4146",
+				"name": "2016 - FHNW - Wet - Cat - Adult Instinctive loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Adult Instinctive Loaf in Sauce",
+				"titleUrl": "Adult Instinctive loaf in sauce"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4146,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 338142,
+			"image": "https://marspetcareaprimocdn.petcare.global/737ed749-cd6e-4f25-809b-b1ef000ed78c/737ed749-cd6e-4f25-809b-b1ef000ed78c_DownloadAsJpg.jpg",
+			"imageAlt": "Adult Instinctive Loaf in Sauce",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult"
+			],
+			"mainItem": 4146,
+			"name": "2016 - FHNW - Wet - Cat - Adult Instinctive loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$49.93",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111410283",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Adult Instinctive Loaf in Sauce",
+			"titleUrl": "Adult Instinctive loaf in sauce",
+			"variation": "1",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2558",
+				"name": "2016 - FBN - DRY - Cat - Maine Coon KITTEN - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fbn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Maine Coon Kitten Dry Cat Food",
+				"titleUrl": "Maine Coon Kitten"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"maine_coon"
+			],
+			"bvProductId": 2558,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 338921,
+			"image": "https://cdn.royalcanin-weshare-online.io/Qj85vYcBRYZmsWpctvgl/v17/center-front-hero-image-2558-030111502032-cat-01-jpg",
+			"imageAlt": "Maine Coon Kitten Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"kitten"
+			],
+			"mainItem": 2558,
+			"name": "2016 - FBN - DRY - Cat - Maine Coon KITTEN - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$30.39",
+			"productCategory": "mainmeal",
+			"range": "fbn",
+			"sku": "030111502032",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "breed",
+			"title": "Maine Coon Kitten Dry Cat Food",
+			"titleUrl": "Maine Coon Kitten",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		}
+	],
+	"totalPages": 4,
+	"totalProducts": 54
+}

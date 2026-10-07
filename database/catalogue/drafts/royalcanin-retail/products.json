@@ -1,0 +1,2855 @@
+{
+  "region": "US",
+  "reviewed": false,
+  "ladder": "royal-canin",
+  "brand": "Royal Canin",
+  "products": [
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Kitten"
+      ],
+      "name": "Kitten Loaf in Sauce Canned Cat Food",
+      "import_key": "royalcanin|retail|fhn|kitten loaf in sauce|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:kitten",
+        "medium:sauce",
+        "texture:loaf"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0030111410184",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$52.21",
+          "in_stock": true
+        },
+        {
+          "gtin": "0030111410115",
+          "pack_label": "unit (UPC-12) / HANDYCAN",
+          "basis": "feed sku",
+          "price": "$70.45",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/yOeIa4cBaPOZra8qI_zR/v16/00030111410184d-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1046563,
+          1046567
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "kitten"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "birth_and_growth",
+        "feed_title": "Kitten Loaf in Sauce Canned Cat Food",
+        "feed_title_url": "KITTEN loaf in sauce",
+        "internal_names": [
+          "2022 - FHNW - Wet - Cat - KITTEN loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+          "2022 - FHNW - Wet - Cat - KITTEN loaf in sauce - Zone North America - HANDYCAN - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$52.21",
+          "$70.45"
+        ],
+        "in_stock": [
+          true,
+          true
+        ]
+      },
+      "_flags": [
+        "several pack formats (HANDYCAN, STANDARD): sizes not given by the feed"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Breed Nutrition",
+        "Persian"
+      ],
+      "name": "Persian Kitten Dry Cat Food",
+      "import_key": "royalcanin|retail|fbn|persian kitten|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:kitten"
+      ],
+      "gtin": "0030111542731",
+      "barcodes": [
+        {
+          "gtin": "0030111542731",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$30.39",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/qD8-vYcBRYZmsWpc0_i9/v17/center-front-hero-image-2554-030111542731-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336832
+        ],
+        "range": "fbn",
+        "lifestages_feed": [
+          "kitten"
+        ],
+        "breeds_feed": [
+          "persian"
+        ],
+        "territory": "breed",
+        "feed_title": "Persian Kitten Dry Cat Food",
+        "feed_title_url": "Persian Kitten",
+        "internal_names": [
+          "2016 - FBN - Dry - Cat - Persian KITTEN - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$30.39"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Breed Nutrition",
+        "Siamese"
+      ],
+      "name": "Siamese Adult Dry Cat Food",
+      "import_key": "royalcanin|retail|fbn|siamese adult|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111543363",
+      "barcodes": [
+        {
+          "gtin": "0030111543363",
+          "pack_label": "unit (UPC-12) / WITHTOUT INOSITOL",
+          "basis": "feed sku",
+          "price": "$43.69",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/Pz85vYcBRYZmsWpcl_gT/v17/center-front-hero-image-2551-030111543349-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336838
+        ],
+        "range": "fbn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "siamese"
+        ],
+        "territory": "breed",
+        "feed_title": "Siamese Adult Dry Cat Food",
+        "feed_title_url": "Siamese Adult",
+        "internal_names": [
+          "2016 - FBN - DRY - Cat - Siamese ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$43.69"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Mother & Babycat"
+      ],
+      "name": "Mother & Babycat Ultra Soft Mousse in Sauce Canned Cat Food",
+      "import_key": "royalcanin|retail|fhn|mother babycat ultra soft mousse in sauce|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:kitten",
+        "medium:sauce",
+        "texture:mousse"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0030111442192",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$52.21",
+          "in_stock": true
+        },
+        {
+          "gtin": "10030111941081",
+          "pack_label": "case (GTIN-14) / HANDYCAN",
+          "basis": "feed sku",
+          "price": "$70.45",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/sD_PTIcBRYZmsWpcyfVQ/v34/00030111442192h-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1046555,
+          1046559
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult",
+          "baby",
+          "kitten",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "birth_and_growth",
+        "feed_title": "Mother & Babycat Ultra Soft Mousse in Sauce Canned Cat Food",
+        "feed_title_url": "MOTHER & BABYCAT ultra soft mousse in sauce",
+        "internal_names": [
+          "2022 - FHNW - Wet - Cat - MOTHER & BABYCAT ultra soft mousse in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+          "2022 - FHNW - Wet - Cat - MOTHER & BABYCAT ultra soft mousse in sauce - Zone North America - HANDYCAN - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$52.21",
+          "$70.45"
+        ],
+        "in_stock": [
+          true,
+          true
+        ]
+      },
+      "_flags": [
+        "several pack formats (HANDYCAN, STANDARD): sizes not given by the feed"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Dental Care"
+      ],
+      "name": "Dental Care Dry Cat Food",
+      "import_key": "royalcanin|retail|fcn|dental care|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111646071",
+      "barcodes": [
+        {
+          "gtin": "0030111646071",
+          "pack_label": "unit (UPC-12) / CA - MX - US - STANDARD",
+          "basis": "feed sku",
+          "price": "$27.54",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/kFZRTYcBBKJuub5qsvl4/v55/00030111646071f-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053758
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Dental Care Dry Cat Food",
+        "feed_title_url": "DENTAL CARE",
+        "internal_names": [
+          "2022 - FCN - Dry - Cat - DENTAL CARE - Zone North America - CA - MX - US - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$27.54"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Mother & Babycat"
+      ],
+      "name": "Mother & Babycat Dry Cat Food",
+      "import_key": "royalcanin|retail|fhn|mother babycat|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:kitten"
+      ],
+      "gtin": "0030111450036",
+      "barcodes": [
+        {
+          "gtin": "0030111450036",
+          "pack_label": "unit (UPC-12) / ALGAE OIL",
+          "basis": "feed sku",
+          "price": "$28.49",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/ad14fe6a-bb6a-4e5a-af6f-b1ef000eda85/ad14fe6a-bb6a-4e5a-af6f-b1ef000eda85_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1046415
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult",
+          "baby",
+          "kitten",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "birth_and_growth",
+        "feed_title": "Mother & Babycat Dry Cat Food",
+        "feed_title_url": "Mother & Babycat",
+        "internal_names": [
+          "2022 - FHN - Dry - Cat - Mother & Babycat - Zone North America - ALGAE OIL - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$28.49"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Indoor"
+      ],
+      "name": "Indoor Adult Morsels in Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fhn|indoor adult morsels in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:morsels"
+      ],
+      "gtin": "0030111471789",
+      "barcodes": [
+        {
+          "gtin": "0030111471789",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$49.93",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/31c884d3-14be-42e5-94ee-b2490007a459/31c884d3-14be-42e5-94ee-b2490007a459_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          976434
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Indoor Adult Morsels in Gravy Canned Cat Food",
+        "feed_title_url": "Indoor Adult Morsels in Gravy",
+        "internal_names": [
+          "2020 - FHNW - Wet - Cat - INDOOR ADULT Morsels in Gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$49.93"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Fit & Active"
+      ],
+      "name": "Fit And Active Dry Cat Food",
+      "import_key": "royalcanin|retail|fhn|fit and active|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111431837",
+      "barcodes": [
+        {
+          "gtin": "0030111431837",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$22.79",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/Yz87vYcBRYZmsWpcSfhw/v27/center-front-hero-image-2520-030111431837-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336819
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Fit And Active Dry Cat Food",
+        "feed_title_url": "Fit and Active",
+        "internal_names": [
+          "2016 - FHN - DRY - Cat - Fit and Active - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$22.79"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Breed Nutrition",
+        "Persian"
+      ],
+      "name": "Persian Adult Dry Cat Food",
+      "import_key": "royalcanin|retail|fbn|persian adult|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111843579",
+      "barcodes": [
+        {
+          "gtin": "0030111843579",
+          "pack_label": "unit (UPC-12) / WITHTOUT INOSITOL",
+          "basis": "feed sku",
+          "price": "$43.69",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/KD84vYcBRYZmsWpccPiX/v25/center-front-hero-image-2552-030111843531-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336834
+        ],
+        "range": "fbn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "persian"
+        ],
+        "territory": "breed",
+        "feed_title": "Persian Adult Dry Cat Food",
+        "feed_title_url": "Persian Adult",
+        "internal_names": [
+          "2016 - FBN - DRY - Cat - Persian ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$43.69"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Indoor"
+      ],
+      "name": "Indoor Adult Dry Cat Food",
+      "import_key": "royalcanin|retail|fhn|indoor adult|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111430403",
+      "barcodes": [
+        {
+          "gtin": "0030111430403",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$22.79",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/dj88vYcBRYZmsWpcS_hJ/v15/center-front-hero-image-2529-030111628084-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336775
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Indoor Adult Dry Cat Food",
+        "feed_title_url": "Indoor Adult",
+        "internal_names": [
+          "2016 - FHN - Dry - Cat - Indoor Adult - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$22.79"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Breed Nutrition",
+        "Maine Coon"
+      ],
+      "name": "Maine Coon Adult Dry Cat Food",
+      "import_key": "royalcanin|retail|fbn|maine coon adult|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111543943",
+      "barcodes": [
+        {
+          "gtin": "0030111543943",
+          "pack_label": "unit (UPC-12) / WITHTOUT INOSITOL",
+          "basis": "feed sku",
+          "price": "$43.69",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/ee4ea3de-fd50-49c6-8183-b20b00254d6b/ee4ea3de-fd50-49c6-8183-b20b00254d6b_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336830
+        ],
+        "range": "fbn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "maine_coon"
+        ],
+        "territory": "breed",
+        "feed_title": "Maine Coon Adult Dry Cat Food",
+        "feed_title_url": "Maine Coon ADULT",
+        "internal_names": [
+          "2016 - FBN - DRY - Cat - Maine Coon ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$43.69"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Breed Nutrition",
+        "Ragdoll"
+      ],
+      "name": "Ragdoll Adult Dry Cat Food",
+      "import_key": "royalcanin|retail|fbn|ragdoll adult|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111542977",
+      "barcodes": [
+        {
+          "gtin": "0030111542977",
+          "pack_label": "unit (UPC-12) / WITHTOUT INOSITOL",
+          "basis": "feed sku",
+          "price": "$43.69",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/ST85vYcBRYZmsWpc_fgg/v17/center-front-hero-image-2515-030111542977-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336836
+        ],
+        "range": "fbn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "ragdoll"
+        ],
+        "territory": "breed",
+        "feed_title": "Ragdoll Adult Dry Cat Food",
+        "feed_title_url": "Ragdoll Adult",
+        "internal_names": [
+          "2016 - FBN - DRY - Cat - Ragdoll ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$43.69"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Breed Nutrition",
+        "American Shorthair"
+      ],
+      "name": "American Shorthair Adult Dry Cat Food",
+      "import_key": "royalcanin|retail|fbn|american shorthair adult|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111496317",
+      "barcodes": [
+        {
+          "gtin": "0030111496317",
+          "pack_label": "unit (UPC-12) / WITHTOUT INOSITOL",
+          "basis": "feed sku",
+          "price": "$43.69",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/fT88vYcBRYZmsWpcmPje/v17/center-front-hero-image-4350-030111496317-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          338917
+        ],
+        "range": "fbn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "american_shorthair"
+        ],
+        "territory": "breed",
+        "feed_title": "American Shorthair Adult Dry Cat Food",
+        "feed_title_url": "American Shorthair Adult",
+        "internal_names": [
+          "2016 - FBN - DRY - Cat - American Shorthair ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$43.69"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Kitten"
+      ],
+      "name": "Kitten Thin Slices in Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fhn|kitten thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:kitten",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": "0030111604408",
+      "barcodes": [
+        {
+          "gtin": "0030111604408",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$52.21",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/2db38662-3513-42ea-a57c-b1ef000edd30/2db38662-3513-42ea-a57c-b1ef000edd30_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1046571
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "kitten"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "birth_and_growth",
+        "feed_title": "Kitten Thin Slices in Gravy Canned Cat Food",
+        "feed_title_url": "KITTEN thin slices in gravy",
+        "internal_names": [
+          "2022 - FHNW - Wet - Cat - KITTEN thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$52.21"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Breed Nutrition",
+        "Bengal"
+      ],
+      "name": "Bengal Adult Dry Cat Food",
+      "import_key": "royalcanin|retail|fbn|bengal adult|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111549808",
+      "barcodes": [
+        {
+          "gtin": "0030111549808",
+          "pack_label": "unit (UPC-12) / WITHTOUT INOSITOL",
+          "basis": "feed sku",
+          "price": "$43.69",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/cz88vYcBRYZmsWpcJPhp/v17/center-front-hero-image-4370-030111549808-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336828
+        ],
+        "range": "fbn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "bengal"
+        ],
+        "territory": "breed",
+        "feed_title": "Bengal Adult Dry Cat Food",
+        "feed_title_url": "Bengal Adult",
+        "internal_names": [
+          "2016 - FBN - DRY - Cat - Bengal ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$43.69"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Kitten"
+      ],
+      "name": "Kitten Spayed/Neutered Dry Cat Food",
+      "import_key": "royalcanin|retail|fhn|kitten spayed neutered|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:kitten"
+      ],
+      "gtin": "0030111541420",
+      "barcodes": [
+        {
+          "gtin": "0030111541420",
+          "pack_label": "unit (UPC-12) / ALGAE OIL",
+          "basis": "feed sku",
+          "price": "$24.69",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/b63ea689-0b54-4522-8916-b1ef000edcff/b63ea689-0b54-4522-8916-b1ef000edcff_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1046423
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "kitten"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "birth_and_growth",
+        "feed_title": "Kitten Spayed/Neutered Dry Cat Food",
+        "feed_title_url": "Kitten Spayed / Neutered",
+        "internal_names": [
+          "2022 - FHN - Dry - Cat - Kitten Spayed / Neutered - Zone North America - ALGAE OIL - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$24.69"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Urinary Care"
+      ],
+      "name": "Urinary Care Dry Cat Food",
+      "import_key": "royalcanin|retail|fcn|urinary care|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111546449",
+      "barcodes": [
+        {
+          "gtin": "0030111546449",
+          "pack_label": "unit (UPC-12) / US - STANDARD",
+          "basis": "feed sku",
+          "price": "$27.54",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/klZXTYcBBKJuub5qYPmM/v75/00030111546470b-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053810
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Urinary Care Dry Cat Food",
+        "feed_title_url": "URINARY CARE",
+        "internal_names": [
+          "2022 - FCN - Dry - Cat - URINARY CARE - Zone North America - US - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$27.54"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Weight Care"
+      ],
+      "name": "Weight Care Adult Dry Cat Food",
+      "import_key": "royalcanin|retail|fcn|weight care|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111546265",
+      "barcodes": [
+        {
+          "gtin": "0030111546265",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$27.54",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/fOd3TYcBaPOZra8qUPya/v64/00030111442703f-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053820
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Weight Care Adult Dry Cat Food",
+        "feed_title_url": "WEIGHT CARE",
+        "internal_names": [
+          "2022 - FCN - Dry - Cat - WEIGHT CARE - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$27.54"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Digestive Care"
+      ],
+      "name": "Digestive Care Dry Cat Food",
+      "import_key": "royalcanin|retail|fcn|digestive care|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111444202",
+      "barcodes": [
+        {
+          "gtin": "0030111444202",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$27.54",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/k1ZnTYcBBKJuub5qbflm/v47/00030111444233e-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053762
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Digestive Care Dry Cat Food",
+        "feed_title_url": "DIGESTIVE CARE",
+        "internal_names": [
+          "2022 - FCN - Dry - Cat - DIGESTIVE CARE - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$27.54"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Spayed/Neutered"
+      ],
+      "name": "Spayed & Neutered Thin Slices in Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fhn|spayed neutered thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": "0030111471574",
+      "barcodes": [
+        {
+          "gtin": "0030111471574",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$49.93",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/Bj82vYcBRYZmsWpcx_j9/v27/center-front-hero-image-1622-030111947154-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          352527
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Spayed & Neutered Thin Slices in Gravy Canned Cat Food",
+        "feed_title_url": "Spayed / Neutered thin slices in gravy",
+        "internal_names": [
+          "2017 - FHNW - WET - Cat - Spayed / Neutered thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$49.93"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Appetite Control Care"
+      ],
+      "name": "Appetite Control Care Thin Slices in Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fcn|appetite control care thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "10030111935530",
+          "pack_label": "case (GTIN-14) / STANDARD",
+          "basis": "feed sku",
+          "price": "$54.49",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/hlb-TIcBBKJuub5q9_k0/v20/00030111435538b-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1051482
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Appetite Control Care Thin Slices in Gravy Canned Cat Food",
+        "feed_title_url": "APPETITE CONTROL CARE Thin slices in gravy",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - APPETITE CONTROL CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$54.49"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Hairball Care"
+      ],
+      "name": "Hairball Care Dry Cat Food",
+      "import_key": "royalcanin|retail|fcn|hairball care|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111443342",
+      "barcodes": [
+        {
+          "gtin": "0030111443342",
+          "pack_label": "unit (UPC-12) / CU - MX - US - STANDARD",
+          "basis": "feed sku",
+          "price": "$27.54",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/3082266d-26ff-4b2a-a300-b1ef000edd80/3082266d-26ff-4b2a-a300-b1ef000edd80_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053804
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Hairball Care Dry Cat Food",
+        "feed_title_url": "HAIRBALL CARE",
+        "internal_names": [
+          "2022 - FCN - Dry - Cat - HAIRBALL CARE - Zone North America - CU - MX - US - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$27.54"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Appetite Control Care"
+      ],
+      "name": "Appetite Control Care Dry Cat Food",
+      "import_key": "royalcanin|retail|fcn|appetite control care|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111553140",
+      "barcodes": [
+        {
+          "gtin": "0030111553140",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$40.84",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/mlbYTYcBBKJuub5qUfmQ/v75/00030111541567e-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1047678
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Appetite Control Care Dry Cat Food",
+        "feed_title_url": "APPETITE CONTROL CARE",
+        "internal_names": [
+          "2022 - FCN - Dry - Cat - APPETITE CONTROL CARE - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$40.84"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Kitten"
+      ],
+      "name": "Kitten Dry Cat Food",
+      "import_key": "royalcanin|retail|fhn|kitten|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:kitten"
+      ],
+      "gtin": "0030111542571",
+      "barcodes": [
+        {
+          "gtin": "0030111542571",
+          "pack_label": "unit (UPC-12) / ALGAE OIL",
+          "basis": "feed sku",
+          "price": "$28.49",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/2dd98ecb-c8c2-45b0-bc05-b1ef000eda2b/2dd98ecb-c8c2-45b0-bc05-b1ef000eda2b_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1046419
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "kitten"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "birth_and_growth",
+        "feed_title": "Kitten Dry Cat Food",
+        "feed_title_url": "Kitten",
+        "internal_names": [
+          "2022 - FHN - Dry - Cat - Kitten - Zone North America - ALGAE OIL - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$28.49"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Sensitive Digestion"
+      ],
+      "name": "Sensitive Digestion Dry Cat Food",
+      "import_key": "royalcanin|retail|fhn|sensitive digestion|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111623034",
+      "barcodes": [
+        {
+          "gtin": "0030111623034",
+          "pack_label": "unit (UPC-12) / DIB",
+          "basis": "feed sku",
+          "price": "$23.74",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/xFaJem8BBKJuub5qBWIv/v70/2019-c-sensitivedigestion-spt-fhn-packshot-b2",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          976579
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Sensitive Digestion Dry Cat Food",
+        "feed_title_url": "SENSITIVE DIGESTION",
+        "internal_names": [
+          "2016 - FHN - Dry - Cat - SENSITIVE DIGESTION - Zone North America - DIB - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$23.74"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Hair & Skin Care"
+      ],
+      "name": "Hair & Skin Care Dry Cat Food",
+      "import_key": "royalcanin|retail|fcn|hair skin care|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111524065",
+      "barcodes": [
+        {
+          "gtin": "0030111524065",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$27.54",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/e-d0TYcBaPOZra8qxvzI/v54/00030111524065-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053774
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Hair & Skin Care Dry Cat Food",
+        "feed_title_url": "HAIR&SKIN CARE",
+        "internal_names": [
+          "2022 - FCN - Dry - Cat - HAIR&SKIN CARE - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$27.54"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Weight Care"
+      ],
+      "name": "Feline Weight Care Thin Slices In Gravy",
+      "import_key": "royalcanin|retail|fcn|weight care thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "10030111401110",
+          "pack_label": "case (GTIN-14) / HANDYCAN",
+          "basis": "feed sku",
+          "price": "$70.45",
+          "in_stock": true
+        },
+        {
+          "gtin": "10030111604450",
+          "pack_label": "case (GTIN-14) / STANDARD",
+          "basis": "feed sku",
+          "price": "$54.49",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/RkCYSpABRYZmsWpcjy8B/v42/00030111401113-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1195327,
+          1053832
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Feline Weight Care Thin Slices In Gravy",
+        "feed_title_url": "WEIGHT CARE Thin slices in gravy",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - WEIGHT CARE Thin slices in gravy - Zone North America - HANDYCAN - Perfect Product Page Master",
+          "2022 - FCN - Wet - Cat - WEIGHT CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$70.45",
+          "$54.49"
+        ],
+        "in_stock": [
+          true,
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title",
+        "several pack formats (HANDYCAN, STANDARD): sizes not given by the feed"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Weight Care"
+      ],
+      "name": "Weight Care Loaf in Sauce",
+      "import_key": "royalcanin|retail|fcn|weight care loaf in sauce|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:sauce",
+        "texture:loaf"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0030111410412",
+          "pack_label": "unit (UPC-12) / HANDYCAN",
+          "basis": "feed sku",
+          "price": "$70.45",
+          "in_stock": true
+        },
+        {
+          "gtin": "0030111411082",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$54.49",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/e8f5c851-3f62-4d18-8662-b20b0023f35b/e8f5c851-3f62-4d18-8662-b20b0023f35b_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053828,
+          1053824
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Weight Care Loaf in Sauce",
+        "feed_title_url": "WEIGHT CARE loaf in sauce",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - WEIGHT CARE loaf in sauce - Zone North America - HANDYCAN - Perfect Product Page Master",
+          "2022 - FCN - Wet - Cat - WEIGHT CARE loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$70.45",
+          "$54.49"
+        ],
+        "in_stock": [
+          true,
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title",
+        "several pack formats (HANDYCAN, STANDARD): sizes not given by the feed"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Digestive Care"
+      ],
+      "name": "Digestive Care Thin Slices In Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fcn|digestive care thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0030111401656",
+          "pack_label": "unit (UPC-12) / HANDYCAN",
+          "basis": "feed sku",
+          "price": "$70.45",
+          "in_stock": true
+        },
+        {
+          "gtin": "0030111471550",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$54.49",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/PECCSpABRYZmsWpc9C-8/v39/00030111401656-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1189454,
+          1053766
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Digestive Care Thin Slices In Gravy Canned Cat Food",
+        "feed_title_url": "DIGESTIVE CARE Thin slices in gravy",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - DIGESTIVE CARE Thin slices in gravy - Zone North America - HANDYCAN - Perfect Product Page Master",
+          "2022 - FCN - Wet - Cat - DIGESTIVE CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$70.45",
+          "$54.49"
+        ],
+        "in_stock": [
+          true,
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title",
+        "several pack formats (HANDYCAN, STANDARD): sizes not given by the feed"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Supplements",
+        "Probiotics"
+      ],
+      "name": "Probiotics for Cats Digestive and Immune Health Powder Supplement",
+      "import_key": "royalcanin|retail|sup|probiotics for digestive immune health|powder",
+      "species": "cat",
+      "kind": "food",
+      "form": "powder",
+      "tags": [
+        "life_stage:all"
+      ],
+      "gtin": "0030111600875",
+      "barcodes": [
+        {
+          "gtin": "0030111600875",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$9.49",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/5bed45df-f464-4589-9fcf-b2490008020a/5bed45df-f464-4589-9fcf-b2490008020a_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1248992
+        ],
+        "range": "sup",
+        "lifestages_feed": [
+          "adult",
+          "baby",
+          "kitten",
+          "mature",
+          "ageing"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Probiotics for Cats Digestive and Immune Health Powder Supplement",
+        "feed_title_url": "PROBIOTICS FOR DIGESTIVE & IMMUNE HEALTH",
+        "internal_names": [
+          "2025 - SUP - Powder - Cat - PROBIOTICS FOR DIGESTIVE & IMMUNE HEALTH - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$9.49"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "supplement (powder): decide food vs treat vs excluded"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Hair & Skin Care"
+      ],
+      "name": "Hair & Skin Care Loaf In Sauce Canned Cat Food",
+      "import_key": "royalcanin|retail|fcn|hair skin care loaf in sauce|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:sauce",
+        "texture:loaf"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0030111410986",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$54.49",
+          "in_stock": true
+        },
+        {
+          "gtin": "0030111410399",
+          "pack_label": "unit (UPC-12) / HANDYCANS",
+          "basis": "feed sku",
+          "price": "$70.45",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/jFZHTYcBBKJuub5qYvnz/v101/00030111410986d-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053782,
+          1053778
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Hair & Skin Care Loaf In Sauce Canned Cat Food",
+        "feed_title_url": "HAIR&SKIN CARE loaf in sauce",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - HAIR&SKIN CARE loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+          "2022 - FCN - Wet - Cat - HAIR&SKIN CARE loaf in sauce - Zone North America - HANDYCANS - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$54.49",
+          "$70.45"
+        ],
+        "in_stock": [
+          true,
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title",
+        "several pack formats (HANDYCANS, STANDARD): sizes not given by the feed"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Indoor"
+      ],
+      "name": "Indoor Long Hair Dry Cat Food",
+      "import_key": "royalcanin|retail|fhn|indoor long hair|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111630131",
+      "barcodes": [
+        {
+          "gtin": "0030111630131",
+          "pack_label": "unit (UPC-12) / US - USA",
+          "basis": "feed sku",
+          "price": "$35.14",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/bj87vYcBRYZmsWpc6Pib/v19/center-front-hero-image-2549-030111630117-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336782
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Indoor Long Hair Dry Cat Food",
+        "feed_title_url": "Indoor Long Hair",
+        "internal_names": [
+          "2016 - FHN - Dry - Cat - INDOOR LONG HAIR - Zone North America - US - USA - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$35.14"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Instinctive"
+      ],
+      "name": "Instinctive 7+ Thin Slices In Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fhn|instinctive 7+ thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult-7plus",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": "0030111715494",
+      "barcodes": [
+        {
+          "gtin": "0030111715494",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$52.21",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/Tz86vYcBRYZmsWpcTfif/v43/center-front-hero-image-1562-030111915498-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          338335
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Instinctive 7+ Thin Slices In Gravy Canned Cat Food",
+        "feed_title_url": "Instinctive 7+ Thin slices in gravy",
+        "internal_names": [
+          "2017 - FHNW - WET - Cat - Instinctive 7+ Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$52.21"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Fussy"
+      ],
+      "name": "Fussy Adult Dry Cat Food",
+      "import_key": "royalcanin|retail|fhn|fussy|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult"
+      ],
+      "gtin": "0030111201362",
+      "barcodes": [
+        {
+          "gtin": "0030111201362",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$35.14",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/e154ffef-6672-4df0-a3ce-b2b8009a8e33/e154ffef-6672-4df0-a3ce-b2b8009a8e33_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1306903
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Fussy Adult Dry Cat Food",
+        "feed_title_url": "FUSSY",
+        "internal_names": [
+          "2025 - FHN - Dry - Cat - FUSSY - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$35.14"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Urinary Care"
+      ],
+      "name": "Urinary Care Thin Slices In Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fcn|urinary care thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": "0030111416650",
+      "barcodes": [
+        {
+          "gtin": "0030111416650",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$54.49",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/4a282358-a893-45e7-8f9b-b1ef000ed8e7/4a282358-a893-45e7-8f9b-b1ef000ed8e7_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053816
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Urinary Care Thin Slices In Gravy Canned Cat Food",
+        "feed_title_url": "URINARY CARE Thin slices in gravy",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - URINARY CARE  Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$54.49"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Instinctive"
+      ],
+      "name": "Adult Instinctive Loaf in Sauce",
+      "import_key": "royalcanin|retail|fhn|adult instinctive loaf in sauce|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:sauce",
+        "texture:loaf"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0030111410283",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$49.93",
+          "in_stock": true
+        },
+        {
+          "gtin": "0030111410214",
+          "pack_label": "unit (UPC-12) / HANDYCANS",
+          "basis": "feed sku",
+          "price": "0",
+          "in_stock": false
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/737ed749-cd6e-4f25-809b-b1ef000ed78c/737ed749-cd6e-4f25-809b-b1ef000ed78c_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          338142,
+          976392
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Adult Instinctive Loaf in Sauce",
+        "feed_title_url": "Adult Instinctive loaf in sauce",
+        "internal_names": [
+          "2016 - FHNW - Wet - Cat - Adult Instinctive loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+          "2016 - FHNW - Wet - Cat - Adult Instinctive loaf in sauce - Zone North America - HANDYCANS - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$49.93",
+          "0"
+        ],
+        "in_stock": [
+          true,
+          false
+        ]
+      },
+      "_flags": [
+        "several pack formats (HANDYCANS, STANDARD): sizes not given by the feed"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Breed Nutrition",
+        "Maine Coon"
+      ],
+      "name": "Maine Coon Kitten Dry Cat Food",
+      "import_key": "royalcanin|retail|fbn|maine coon kitten|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:kitten"
+      ],
+      "gtin": "0030111502032",
+      "barcodes": [
+        {
+          "gtin": "0030111502032",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$30.39",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/Qj85vYcBRYZmsWpctvgl/v17/center-front-hero-image-2558-030111502032-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          338921
+        ],
+        "range": "fbn",
+        "lifestages_feed": [
+          "kitten"
+        ],
+        "breeds_feed": [
+          "maine_coon"
+        ],
+        "territory": "breed",
+        "feed_title": "Maine Coon Kitten Dry Cat Food",
+        "feed_title_url": "Maine Coon Kitten",
+        "internal_names": [
+          "2016 - FBN - DRY - Cat - Maine Coon KITTEN - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$30.39"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Hairball Care"
+      ],
+      "name": "Hairball Care This Slices In Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fcn|hairball care thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": "0030111750150",
+      "barcodes": [
+        {
+          "gtin": "0030111750150",
+          "pack_label": "unit (UPC-12) / FDA VERSION 2",
+          "basis": "feed sku",
+          "price": "$108.98",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/4ff242f9-65af-49e3-9b77-b24900070651/4ff242f9-65af-49e3-9b77-b24900070651_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053806
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Hairball Care This Slices In Gravy Canned Cat Food",
+        "feed_title_url": "HAIRBALL CARE Thin slices in gravy",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - HAIRBALL CARE Thin slices in gravy - Zone North America - FDA VERSION 2 - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$108.98"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title",
+        "typo in feed title (\"This Slices\")"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Indoor"
+      ],
+      "name": "Indoor 7+ Dry Cat Food",
+      "import_key": "royalcanin|retail|fhn|indoor 7+|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:adult-7plus"
+      ],
+      "gtin": "0030111630322",
+      "barcodes": [
+        {
+          "gtin": "0030111630322",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$22.79",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/Mz85vYcBRYZmsWpcA_gL/v43/center-front-hero-image-2548-030111630315-cat-01-jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          336771
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Indoor 7+ Dry Cat Food",
+        "feed_title_url": "Indoor 7+",
+        "internal_names": [
+          "2016 - FHN - DRY - Cat - Indoor 7+ - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$22.79"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Hair & Skin Care"
+      ],
+      "name": "Hair & Skin Care Thin Slices in Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fcn|hair skin care thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "10030111604429",
+          "pack_label": "case (GTIN-14) / STANDARD",
+          "basis": "feed sku",
+          "price": "$54.49",
+          "in_stock": true
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/b2005e09-f1da-4d81-a667-b1ef000edd44/b2005e09-f1da-4d81-a667-b1ef000edd44_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053786
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Hair & Skin Care Thin Slices in Gravy Canned Cat Food",
+        "feed_title_url": "HAIR&SKIN CARE Thin slices in gravy",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - HAIR&SKIN CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$54.49"
+        ],
+        "in_stock": [
+          true
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Digestive Care"
+      ],
+      "name": "Digestive Care Loaf In Sauce",
+      "import_key": "royalcanin|retail|fcn|digestive care loaf in sauce|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:sauce",
+        "texture:loaf"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0030111411556",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$0.00",
+          "in_stock": false
+        },
+        {
+          "gtin": "10030111941128",
+          "pack_label": "case (GTIN-14) / HANDYCANS",
+          "basis": "feed sku",
+          "price": "0",
+          "in_stock": false
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/uD8pTYcBRYZmsWpcc_Um/v66/00030111411556d-cf-gs1",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1047684,
+          1047690
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Digestive Care Loaf In Sauce",
+        "feed_title_url": "DIGESTIVE CARE loaf in sauce",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - DIGESTIVE CARE loaf in sauce - Zone North America - STANDARD - Perfect Product Page Master",
+          "2022 - FCN - Wet - Cat - DIGESTIVE CARE loaf in sauce - Zone North America - HANDYCANS - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$0.00",
+          "0"
+        ],
+        "in_stock": [
+          false,
+          false
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title",
+        "several pack formats (HANDYCANS, STANDARD): sizes not given by the feed"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Care Nutrition",
+        "Digestive Care"
+      ],
+      "name": "Digestive Care Chunks In Gravy Pouch",
+      "import_key": "royalcanin|retail|fcn|digestive care chunks in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:chunks"
+      ],
+      "gtin": "0030111955852",
+      "barcodes": [
+        {
+          "gtin": "0030111955852",
+          "pack_label": "unit (UPC-12) / IMPORT FROM BRK",
+          "basis": "feed sku",
+          "price": "$108.98",
+          "in_stock": false
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://cdn.royalcanin-weshare-online.io/_VYhoIcBBKJuub5qRvrl/v24/00030111155856-cf",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1053770
+        ],
+        "range": "fcn",
+        "lifestages_feed": [
+          "adult",
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Digestive Care Chunks In Gravy Pouch",
+        "feed_title_url": "DIGESTIVE CARE Chunks in gravy",
+        "internal_names": [
+          "2022 - FCN - Wet - Cat - DIGESTIVE CARE Chunks in gravy - Zone North America - IMPORT FROM BRK - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$108.98"
+        ],
+        "in_stock": [
+          false
+        ]
+      },
+      "_flags": [
+        "life stage inferred from the feed (adult + mature), not named in the title"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Instinctive"
+      ],
+      "name": "Adult Instinctive Thin Slices in Gravy",
+      "import_key": "royalcanin|retail|fhn|adult instinctive thin slices in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult",
+        "medium:gravy",
+        "texture:sliced"
+      ],
+      "gtin": "0030111174666",
+      "barcodes": [
+        {
+          "gtin": "0030111174666",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "0",
+          "in_stock": false
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/faa2e5b7-47d4-4f6e-b04e-b1ef000edd6d/faa2e5b7-47d4-4f6e-b04e-b1ef000edd6d_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          338136
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "adult"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Adult Instinctive Thin Slices in Gravy",
+        "feed_title_url": "Adult Instinctive thin slices in gravy",
+        "internal_names": [
+          "2017 - FHNW - WET - Cat - Adult Instinctive thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "0"
+        ],
+        "in_stock": [
+          false
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Aging 11+"
+      ],
+      "name": "Aging 11+ Loaf in Sauce Wet Cat Food",
+      "import_key": "royalcanin|retail|fhn|aging 11+ ultra soft mousse in sauce|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:senior",
+        "medium:sauce",
+        "texture:mousse"
+      ],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "10030111949643",
+          "pack_label": "case (GTIN-14) / STANDARD",
+          "basis": "feed sku",
+          "price": "$70.45",
+          "in_stock": false
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/384105a5-42af-4898-aac1-b3ae016ca6c5/384105a5-42af-4898-aac1-b3ae016ca6c5_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1363108
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "ageing"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Aging 11+ Loaf in Sauce Wet Cat Food",
+        "feed_title_url": "AGING 11+ ULTRA SOFT MOUSSE IN SAUCE",
+        "internal_names": [
+          "2025 - FHN - Wet - Cat - AGING 11+ ULTRA SOFT MOUSSE IN SAUCE - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$70.45"
+        ],
+        "in_stock": [
+          false
+        ]
+      },
+      "_flags": [
+        "feed title and internal title disagree on texture (loaf vs mousse)"
+      ]
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Indoor"
+      ],
+      "name": "Indoor 7+ Morsels In Gravy Canned Cat Food",
+      "import_key": "royalcanin|retail|fhn|indoor 7+ morsels in gravy|wet",
+      "species": "cat",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:adult-7plus",
+        "medium:gravy",
+        "texture:morsels"
+      ],
+      "gtin": "0030111471819",
+      "barcodes": [
+        {
+          "gtin": "0030111471819",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$0.00",
+          "in_stock": false
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/f4cc050e-ca1c-44b0-8727-b1ef000edb1f/f4cc050e-ca1c-44b0-8727-b1ef000edb1f_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          976444
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "mature"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Indoor 7+ Morsels In Gravy Canned Cat Food",
+        "feed_title_url": "Indoor 7+ Morsels in Gravy",
+        "internal_names": [
+          "2020 - FHNW - Wet - Cat - INDOOR 7+ Morsels in Gravy - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$0.00"
+        ],
+        "in_stock": [
+          false
+        ]
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Royal Canin",
+        "Feline Health Nutrition",
+        "Aging 11+"
+      ],
+      "name": "Royal Canin Feline Health Nutrition Aging 11+",
+      "import_key": "royalcanin|retail|fhn|aging 11+|dry",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:senior"
+      ],
+      "gtin": "0030111215062",
+      "barcodes": [
+        {
+          "gtin": "0030111215062",
+          "pack_label": "unit (UPC-12) / STANDARD",
+          "basis": "feed sku",
+          "price": "$35.14",
+          "in_stock": false
+        }
+      ],
+      "description": null,
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://marspetcareaprimocdn.petcare.global/4f0f0956-9b45-445b-a3a1-b3ae016ca062/4f0f0956-9b45-445b-a3a1-b3ae016ca062_DownloadAsJpg.jpg",
+      "source": "royalcanin.com products/facets feed (retail pillar)",
+      "source_url": null,
+      "audit_status": "unreviewed",
+      "meta": {
+        "rc_ids": [
+          1363104
+        ],
+        "range": "fhn",
+        "lifestages_feed": [
+          "ageing"
+        ],
+        "breeds_feed": [
+          "any"
+        ],
+        "territory": "",
+        "feed_title": "Royal Canin Feline Health Nutrition Aging 11+",
+        "feed_title_url": "AGING 11+",
+        "internal_names": [
+          "2025 - FHN - Dry - Cat - AGING 11+ - Zone North America - STANDARD - Perfect Product Page Master"
+        ],
+        "price_snapshot": [
+          "$35.14"
+        ],
+        "in_stock": [
+          false
+        ]
+      },
+      "_flags": []
+    }
+  ]
+}

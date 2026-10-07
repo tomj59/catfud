@@ -238,9 +238,28 @@ final class CatalogueValidator
         }
         foreach ($ids as $id) {
             if (isset($seen[$id])) {
-                $this->add('error', $file, $where, "Duplicate {$id} (also {$seen[$id]}).");
+                // A repeated import_key is two rows fighting for one product. A repeated barcode on rows that each have their own
+                // import_key is a source conflict: both products are kept, only the first gets the code.
+                if (str_starts_with($id, 'gtin:') && ! empty($p['import_key'])) {
+                    $this->add('warning', $file, $where, "Barcode {$id} is also on {$seen[$id]}; only the first product will get it.");
+                } else {
+                    $this->add('error', $file, $where, "Duplicate {$id} (also {$seen[$id]}).");
+                }
             }
-            $seen[$id] = "{$file} {$where}";
+            $seen[$id] ??= "{$file} {$where}";
+        }
+        foreach ($p['barcodes'] ?? [] as $b) {
+            $code = Gtin::normalize((string) ($b['gtin'] ?? ''));
+            $raw = preg_replace('/[\s\-]/', '', (string) ($b['gtin'] ?? ''));
+            if ($code === null && preg_match('/^[1-9]\d{13}$/', (string) $raw) && Gtin::hasValidCheckDigit($raw)) {
+                $this->add('warning', $file, $where, "Case-level GTIN-14 {$raw}: kept in the product's meta, not stored as a scannable barcode.");
+            } elseif ($code === null) {
+                $this->add('error', $file, $where, 'barcodes: "'.($b['gtin'] ?? '').'" is not a valid 8/12/13/14-digit barcode.');
+            } elseif ($code !== Gtin::normalize((string) $gtin) && isset($seen['gtin:'.$code]) && ($seen['gtin:'.$code] !== "{$file} {$where}")) {
+                $this->add('warning', $file, $where, "Pack barcode {$code} is also on {$seen['gtin:'.$code]}; it will not be attached twice.");
+            } else {
+                $seen['gtin:'.$code] ??= "{$file} {$where}";
+            }
         }
 
         if (isset($p['kind']) && ! in_array($p['kind'], ProductKind::values(), true)) {

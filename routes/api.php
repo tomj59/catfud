@@ -8,6 +8,7 @@ use App\Http\Controllers\Api\Admin\ProductModerationController;
 use App\Http\Controllers\Api\Admin\RequestQueueController;
 use App\Http\Controllers\Api\AdvisoryController;
 use App\Http\Controllers\Api\AuthController;
+use App\Http\Controllers\Api\ImageProxyController;
 use App\Http\Controllers\Api\InventoryController;
 use App\Http\Controllers\Api\MealOfferController;
 use App\Http\Controllers\Api\PetController;
@@ -25,6 +26,9 @@ Route::prefix('v1')->group(function () {
     // Public
     Route::post('/register', [AuthController::class, 'register'])->middleware('throttle:10,1');
     Route::post('/login', [AuthController::class, 'login'])->middleware('throttle:10,1');
+
+    // Our own copy of catalogue pictures, by key. Public so <img> tags work without a token.
+    Route::get('/img/{key}', [ImageProxyController::class, 'show'])->where('key', '[a-f0-9]{32}')->middleware('throttle:300,1');
 
     // Authenticated (Sanctum bearer token)
     Route::middleware(['auth:sanctum', SetRegion::class])->group(function () {

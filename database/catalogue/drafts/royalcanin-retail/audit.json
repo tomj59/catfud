@@ -1,0 +1,49 @@
+{
+  "feed_rows": 54,
+  "recipes_after_grouping": 46,
+  "pages": 4,
+  "lines": {
+    "Feline Health Nutrition": {
+      "Kitten": 4,
+      "Mother & Babycat": 2,
+      "Indoor": 5,
+      "Fit & Active": 1,
+      "Spayed/Neutered": 1,
+      "Sensitive Digestion": 1,
+      "Instinctive": 3,
+      "Fussy": 1,
+      "Aging 11+": 2
+    },
+    "Feline Breed Nutrition": {
+      "Persian": 2,
+      "Siamese": 1,
+      "Maine Coon": 2,
+      "Ragdoll": 1,
+      "American Shorthair": 1,
+      "Bengal": 1
+    },
+    "Feline Care Nutrition": {
+      "Dental Care": 1,
+      "Urinary Care": 2,
+      "Weight Care": 3,
+      "Digestive Care": 4,
+      "Appetite Control Care": 2,
+      "Hairball Care": 2,
+      "Hair & Skin Care": 3
+    },
+    "Supplements": {
+      "Probiotics": 1
+    }
+  },
+  "flags": {
+    "several pack formats (HANDYCAN, STANDARD): sizes not given by the feed": 5,
+    "life stage inferred from the feed (adult + mature), not named in the title": 22,
+    "supplement (powder): decide food vs treat vs excluded": 1,
+    "several pack formats (HANDYCANS, STANDARD): sizes not given by the feed": 3,
+    "typo in feed title (\"This Slices\")": 1,
+    "feed title and internal title disagree on texture (loaf vs mousse)": 1
+  },
+  "zero_or_missing_price_rows": 5,
+  "out_of_stock_rows": 8,
+  "case_gtin14_rows": 7
+}

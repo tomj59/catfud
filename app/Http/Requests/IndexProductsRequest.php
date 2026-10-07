@@ -30,6 +30,8 @@ class IndexProductsRequest extends FormRequest
             'per_page' => ['nullable', 'integer', 'min:1', 'max:50'],
             /** Limit to a brand-tree node and everything beneath it. */
             'node' => ['nullable', 'integer'],
+            /** Limit to a brand-ladder path written as names, e.g. `Purina > Pro Plan`, and everything beneath it. An unknown path matches nothing. */
+            'path' => ['nullable', 'string', 'max:300'],
             /** Include these facet tags (`group:slug`). Different groups AND together; tags in one group are alternatives. */
             'tag' => ['nullable', 'array', 'max:20'],
             'tag.*' => ['string', 'max:60'],

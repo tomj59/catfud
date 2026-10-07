@@ -41,7 +41,7 @@ class CatalogueImport extends Command
             return self::FAILURE;
         }
 
-        $importer = new CatalogueImporter($files, new CatalogueValidator($files), app(\App\Support\BrandTreeMapper::class));
+        $importer = new CatalogueImporter($files, new CatalogueValidator($files), app(\App\Support\BrandTreeMapper::class), app(\App\Support\ImageMirror::class));
         try {
             if ($this->option('ladders')) {
                 $r = $importer->importLadders($slug ? [(string) $slug] : null, (bool) $this->option('overwrite'), $allow, $dry);
@@ -56,6 +56,9 @@ class CatalogueImport extends Command
             foreach ($slugs as $s) {
                 $r = $importer->importProducts($s, $allow, $dry);
                 $this->info(($dry ? '[dry run] ' : '')."{$s}: {$r['created']} created, {$r['updated']} updated, {$r['unchanged']} unchanged, {$r['skipped']} skipped (already audited)");
+                foreach ($r['conflicts'] as $c) {
+                    $this->warn('  conflict: '.$c);
+                }
             }
         } catch (Throwable $e) {
             $this->error($e->getMessage());

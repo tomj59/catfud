@@ -31,8 +31,9 @@ class ImageStore
             'disk' => $disk, 'path' => $path, 'mime' => $file->getMimeType(), 'bytes' => $file->getSize(), 'width' => $w, 'height' => $h,
             'source' => $meta['source'], 'source_url' => $meta['source_url'] ?? null, 'licence' => $meta['licence'] ?? null,
             'attribution' => $meta['attribution'] ?? null, 'uploaded_by' => $by->id,
+            'key' => null, 'origin_url' => null, 'status' => 'ready', 'fetched_at' => null, 'fail_count' => 0, 'last_error' => null,
         ]);
-        if ($old && $old->path !== $path) {
+        if ($old && $old->path && $old->path !== $path && ! ProductImage::where('disk', $old->disk)->where('path', $old->path)->exists()) {
             Storage::disk($old->disk)->delete($old->path);
         }
         $this->touch($product, $image->url(), $by);
@@ -46,8 +47,10 @@ class ImageStore
         if (! $image) {
             return false;
         }
-        Storage::disk($image->disk)->delete($image->path);
         $image->delete();
+        if ($image->path && ! ProductImage::where('disk', $image->disk)->where('path', $image->path)->exists()) {
+            Storage::disk($image->disk)->delete($image->path);
+        }
         $this->touch($product, null, $by);
 
         return true;

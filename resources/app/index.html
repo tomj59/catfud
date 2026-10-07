@@ -86,6 +86,12 @@
   .lp-row.faded .lp-tile:not(.sel) { opacity:.35; }
   .lp-more { display:block; margin:6px auto 0; background:none; border:0; color:var(--muted); font-size:13px; letter-spacing:.8px; text-transform:uppercase; }
   .lp-now { font-size:14px; margin:6px 0; } .lp-now strong { font-weight:700; }
+  .gate { position:relative; }
+  .gate.locked > .gate-body { filter:blur(4px); opacity:.5; pointer-events:none; user-select:none; }
+  .gate-note { display:none; position:absolute; left:0; right:0; top:28px; text-align:center; font-weight:600; z-index:2; padding:0 16px; }
+  .gate.locked > .gate-note { display:block; }
+  .lp-next { margin:8px 0 2px; }
+  .sayt { margin:4px 0 8px; } .sayt .pick { padding:8px 0; }
   .lp-new { display:flex; gap:6px; margin-top:6px; } .lp-new input { flex:1; }
 </style>
 </head>
@@ -390,10 +396,13 @@
     if (!choiceCache[ck]) choiceCache[ck] = api('/brand-choices?path=' + encodeURIComponent(key) + (sp ? '&species=' + encodeURIComponent(sp) : '')).then(function (r) { return r.ok ? r.data : { choices: [], can_go_deeper: false }; });
     return choiceCache[ck];
   }
-  function ladderPicker(initial) {
+  // onState(complete) turns the picker into a gate: "complete" means the ladder is fully realized, i.e. the last rung picked has
+  // nothing deeper to choose, or the person tapped "this is as specific as it gets". Anything that changes the path re-opens the gate.
+  function ladderPicker(initial, onState) {
     choiceCache = {};  // fresh per picker, so a line added a minute ago shows up
     var chain = String(initial || '').split('>').map(function (x) { return x.trim(); }).filter(Boolean);
-    var root = h('div', { class: 'lp' }), showAll = false, adding = null;
+    var root = h('div', { class: 'lp' }), showAll = false, adding = null, confirmedKey = null;
+    root.complete = false;
     Object.defineProperty(root, 'value', { get: function () { return chain.join(' > '); }, set: function (v) { chain = String(v || '').split('>').map(function (x) { return x.trim(); }).filter(Boolean); draw(); } });
     function tile(c, selected, onTap) {
       var b = h('button', { type: 'button', class: 'lp-tile' + (selected ? ' sel' : ''), title: c.name, 'aria-pressed': selected ? 'true' : 'false', onClick: onTap },
@@ -401,9 +410,10 @@
       return b;
     }
     async function draw() {
-      var rows = [];
+      var rows = [], lastData = null;
       for (var level = 0; level <= chain.length; level++) {
         var data = await loadChoices(chain.slice(0, level));
+        lastData = data;
         if (level > 0 && !data.can_go_deeper) break;
         var picked = chain[level], list = data.choices.slice();
         if (picked && !list.some(function (c) { return c.name.toLowerCase() === picked.toLowerCase(); })) list.unshift({ name: picked, logo: null, requested: !isStaff() });
@@ -437,6 +447,14 @@
         }
         root.append(box);
       });
+      var leaf = chain.length > 0 && !!lastData && (!lastData.can_go_deeper || !lastData.choices.length);
+      var key = chain.join('>').toLowerCase();
+      root.complete = chain.length > 0 && adding === null && (leaf || confirmedKey === key);
+      if (onState && chain.length && adding === null && !root.complete) {
+        root.append(h('div', { class: 'lp-next' }, h('button', { type: 'button', class: 'primary sm', onClick: function () { confirmedKey = key; draw(); } },
+          'This is as specific as it gets: ' + chain[chain.length - 1]), h('span', { class: 'small muted', style: 'margin-left:8px' }, 'or keep narrowing it down above')));
+      }
+      if (onState) onState(root.complete);
     }
     draw();
     return root;
@@ -864,34 +882,88 @@
 
     function addProductForm(gtin, upca, prefillName) {
       var pet = currentPet(), err = h('div', { class: 'err' });
+      var gate = h('div', { class: 'gate locked' }), body = null;   // body is built once the fields exist; the picker only calls back later
+      var lastKey = null, suggest = function () {};
       var f = {
-        path: ladderPicker(''), name: h('input', { value: prefillName || '' }), kind: h('select', null, h('option', { value: 'food' }, 'Food'), h('option', { value: 'treat' }, 'Treat')),
+        path: ladderPicker('', function (complete) {
+          gate.classList.toggle('locked', !complete); if (body) { body.inert = !complete; body.setAttribute('aria-hidden', complete ? 'false' : 'true'); }
+          var k = complete ? f.path.value : null;
+          if (k !== lastKey) { lastKey = k; suggest(); }   // a different branch means a different set of look-alikes
+        }),
+        name: h('input', { value: prefillName || '', autocomplete: 'off', autocapitalize: 'words' }), kind: h('select', null, h('option', { value: 'food' }, 'Food'), h('option', { value: 'treat' }, 'Treat')),
         form: h('select', null, [['wet', 'Wet'], ['dry', 'Dry'], ['freeze-dried', 'Freeze-dried']].map(function (o) { return h('option', { value: o[0], selected: (state.form === 'dry' ? 'dry' : 'wet') === o[0] }, o[1]); })), species: h('input', { value: pet ? pet.species : 'cat' }),
         ingredients: h('textarea', { rows: 2 }),
         n_protein: h('input', { inputmode: 'decimal' }), n_fat: h('input', { inputmode: 'decimal' }), n_fiber: h('input', { inputmode: 'decimal' }), n_moisture: h('input', { inputmode: 'decimal' }), n_kcal: h('input', { inputmode: 'decimal' })
       };
       var tags = tagPicker([], [['life_stage', 'Life stage'], ['texture', 'Texture'], ['medium', 'Served in']]);
       function field(label, el) { return [h('label', null, label), el]; }
-      return h('div', { class: 'card' },
-        h('h3', null, 'Not in the catalogue yet'),
-        h('p', { class: 'muted small' }, 'Barcode ' + (upca || gtin) + '. Add it so it is found next time. Copy values exactly as printed on the package.'),
-        field('Brand ladder', f.path), isStaff() ? null : h('p', { class: 'small muted' }, 'Pick from the list. If your brand or line is not there, tap “Can’t find it?” and type what the package says; we will check it and add it. You can use this product straight away, and it stays private to you until it is reviewed.'),
-        field('Product name', f.name), field('Food or treat', f.kind), field('Form', f.form), tags.el, field('Species', f.species),
+
+      // Last chance to avoid a duplicate: as the name is typed, show products already in the catalogue (this branch first, and
+      // by default only ones without a barcode, since the scan found nothing). One tap, then a confirm tap, wires the scanned
+      // barcode to the product instead of creating a new one.
+      var sayNote = h('p', { class: 'small muted' }), sayList = h('div', { class: 'sayt' }), sayMsg = h('div'), sseq = 0, stimer = null;
+      var pack = h('input', { placeholder: 'Pack label, e.g. 24-can case (optional)' }), packRow = h('div', { hidden: true }, h('label', null, 'This barcode is for another pack of that product'), pack);
+      var wiredBox = h('input', { type: 'checkbox', style: 'width:auto' }), wholeBox = h('input', { type: 'checkbox', style: 'width:auto' });
+      var includeWired = false, wholeCatalogue = false;
+      wiredBox.addEventListener('change', function () { includeWired = wiredBox.checked; packRow.hidden = !includeWired || !gtin; suggest(); });
+      wholeBox.addEventListener('change', function () { wholeCatalogue = wholeBox.checked; suggest(); });
+      suggest = async function () {
+        var mine = ++sseq; clear(sayList); clear(sayMsg);
+        if (!f.path.complete) return;
+        var words = f.name.value.split(/\s+/).filter(function (w) { return /[a-z0-9]/i.test(w); }).join(' ');
+        if (words.length < 2) { sayNote.textContent = 'Start typing the name. Anything already in the catalogue shows up here, so we do not make a duplicate.'; return; }
+        var qs = ['per_page=6', 'q=' + encodeURIComponent(words)];
+        if (!includeWired) qs.push('barcode=missing');
+        if (!wholeCatalogue) qs.push('path=' + encodeURIComponent(f.path.value));
+        var r = await api('/products?' + qs.join('&'));
+        if (mine !== sseq) return;   // a newer keystroke already replaced this search
+        if (!r.ok) { sayNote.textContent = ''; sayList.append(h('div', { class: 'err' }, errText(r))); return; }
+        var rows = r.data.data;
+        sayNote.textContent = rows.length === 0 ? 'Nothing like that in ' + (wholeCatalogue ? 'the catalogue' : 'this part of the catalogue') + (includeWired ? '' : ' without a barcode') + '. Carry on and add it as new.'
+          : (r.data.meta.total > rows.length ? 'Top ' + rows.length + ' of ' + r.data.meta.total + '. Is it one of these? Keep typing to narrow it.' : 'Is it one of these?');
+        rows.forEach(function (p) {
+          var label = !gtin ? 'Open' : p.gtin ? 'Add pack' : 'This one', btn = h('button', { type: 'button', class: 'sm primary' }, label), revert = null;
+          btn.addEventListener('click', function () {
+            if (!gtin) { clear(result); result.append(productCard({ product: p, advisories: [] })); return; }
+            if (btn.dataset.arm) { clearTimeout(revert); attach(gtin, p, sayMsg, p.gtin ? pack.value.trim() : ''); return; }
+            btn.dataset.arm = '1'; btn.textContent = 'Tap to confirm';
+            revert = setTimeout(function () { delete btn.dataset.arm; btn.textContent = label; }, 4000);
+          });
+          sayList.append(h('div', { class: 'pick' }, h('div', { class: 'grow' }, h('div', null, p.name),
+            h('div', { class: 'small muted' }, (p.path_text || p.brand) + (p.form ? ' · ' + p.form : '') + (p.gtin ? ' · has a barcode' : '') + (!p.gtin && p.barcodes && p.barcodes.length ? ' · ' + p.barcodes.length + ' pack barcode' + (p.barcodes.length > 1 ? 's' : '') + ' on file' : '')), tagPills(p)), btn));
+        });
+      };
+      f.name.addEventListener('input', function () { clearTimeout(stimer); stimer = setTimeout(suggest, 200); });
+
+      body = h('div', { class: 'gate-body' },
+        field('Product name', f.name), sayNote, sayList, sayMsg, packRow,
+        h('label', { style: 'display:flex;gap:8px;align-items:center;font-weight:400' }, wiredBox, 'Also show products that already have a barcode (another pack size)'),
+        h('label', { style: 'display:flex;gap:8px;align-items:center;font-weight:400' }, wholeBox, 'Search every brand, not just the one picked above'),
+        field('Food or treat', f.kind), field('Form', f.form), tags.el, field('Species', f.species),
         field('Ingredients (optional)', f.ingredients),
         h('h3', { style: 'margin-top:14px' }, 'Label values (optional)'),
         field('Crude protein, min %', f.n_protein), field('Crude fat, min %', f.n_fat), field('Crude fiber, max %', f.n_fiber), field('Moisture, max %', f.n_moisture), field('Calories per unit, as printed', f.n_kcal),
         err,
         h('div', { class: 'row', style: 'margin-top:12px' }, h('button', { class: 'primary', onClick: async function () {
+          if (!f.path.complete) { err.textContent = 'Finish picking the brand ladder first.'; return; }
           var nutrition = {};
           [['crude_protein_min_pct', f.n_protein], ['crude_fat_min_pct', f.n_fat], ['crude_fiber_max_pct', f.n_fiber], ['moisture_max_pct', f.n_moisture], ['kcal_per_unit', f.n_kcal]].forEach(function (x) { if (x[1].value.trim()) nutrition[x[0]] = x[1].value.trim(); });
-          var body = { gtin: gtin, path: f.path.value.trim(), tags: tags.keys(), name: f.name.value, kind: f.kind.value, species: f.species.value.trim().toLowerCase() || 'cat' };
-          body.form = f.form.value;
-          if (f.ingredients.value.trim()) body.ingredients = f.ingredients.value.trim();
-          if (Object.keys(nutrition).length) body.nutrition = nutrition;
-          var r = await api('/products', { method: 'POST', body: body });
+          var payload = { gtin: gtin, path: f.path.value.trim(), tags: tags.keys(), name: f.name.value, kind: f.kind.value, species: f.species.value.trim().toLowerCase() || 'cat' };
+          payload.form = f.form.value;
+          if (f.ingredients.value.trim()) payload.ingredients = f.ingredients.value.trim();
+          if (Object.keys(nutrition).length) payload.nutrition = nutrition;
+          var r = await api('/products', { method: 'POST', body: payload });
           if (r.status === 201 || r.status === 409) { clear(result); result.append(productCard({ product: r.data.product, advisories: [] })); return; }
           err.textContent = errText(r);
         } }, 'Save product')));
+      body.inert = true; body.setAttribute('aria-hidden', 'true');
+      put(gate, h('div', { class: 'gate-note' }, 'Finish the brand ladder above first'), body);
+
+      return h('div', { class: 'card' },
+        h('h3', null, 'Not in the catalogue yet'),
+        h('p', { class: 'muted small' }, 'Barcode ' + (upca || gtin) + '. Add it so it is found next time. Copy values exactly as printed on the package.'),
+        field('Brand ladder', f.path), isStaff() ? null : h('p', { class: 'small muted' }, 'Pick from the list. If your brand or line is not there, tap “Can’t find it?” and type what the package says; we will check it and add it. You can use this product straight away, and it stays private to you until it is reviewed.'),
+        gate);
     }
 
     put(root, h('h2', null, 'Scan a barcode'),

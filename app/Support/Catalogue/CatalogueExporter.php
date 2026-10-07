@@ -124,7 +124,7 @@ final class CatalogueExporter
             'species' => $p->species, 'kind' => $p->kind?->value, 'form' => $p->form, 'texture' => $p->texture,
             'tags' => $p->tags->map(fn ($t) => $t->group.':'.$t->slug)->sort()->values()->all(),
             'description' => $p->description, 'ingredients' => $p->ingredients, 'nutrition' => $p->nutrition,
-            'image_url' => $p->image_url, 'source_url' => $p->source_url, 'source' => $p->source,
+            'image_url' => $p->image?->origin_url ?? ($p->image ? null : $p->image_url), 'source_url' => $p->source_url, 'source' => $p->source,
             'audit_status' => $p->audit_status?->value, 'audit_notes' => $p->audit_notes,
             'last_verified_at' => $p->last_verified_at?->toDateString(),
             'barcodes' => $p->barcodes->map(fn ($b) => array_filter(['gtin' => $b->gtin, 'pack_label' => $b->pack_label]))->all(),

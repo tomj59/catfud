@@ -1,0 +1,80 @@
+{
+  "region": "US",
+  "reviewed": false,
+  "ladder": {
+    "name": "Tiki Dog",
+    "kind": "brand",
+    "children": [
+      {
+        "name": "Savory",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      },
+      {
+        "name": "Puppy",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      },
+      {
+        "name": "Taste of the World",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      },
+      {
+        "name": "Petites Grain Free",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      },
+      {
+        "name": "Protein Boosters",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      },
+      {
+        "name": "Senior",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      },
+      {
+        "name": "Petites Whole Foods",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      },
+      {
+        "name": "Flavor Boosters",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      },
+      {
+        "name": "Tummy Toppers",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      },
+      {
+        "name": "Born Carnivore for Dogs",
+        "kind": "line",
+        "species": [
+          "dog"
+        ]
+      }
+    ]
+  }
+}

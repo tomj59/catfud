@@ -1,0 +1,218 @@
+{
+  "pages": 47,
+  "listed": 461,
+  "unique_nid": 461,
+  "drafted": 461,
+  "unplaced_brand": [],
+  "by_brand": {
+    "pro-plan": 117,
+    "purina-one": 33,
+    "fancy-feast": 169,
+    "friskies": 109,
+    "cat-chow": 9,
+    "pro-plan-veterinary-diets": 23,
+    "kit-kaboodle": 1
+  },
+  "by_line": {
+    "pro-plan": {
+      "AdvantEDGE": 2,
+      "LiveClear": 7,
+      "Hairball": 4,
+      "Urinary Tract Health": 11,
+      "Development": 9,
+      "Indoor Balance": 4,
+      "Prime Plus": 6,
+      "Sensitive Skin & Stomach": 10,
+      "Complete Essentials": 42,
+      "Healthy Metabolism": 1,
+      "Senior 11+": 2,
+      "Indoor + Hairball": 3,
+      "Weight Management": 8,
+      "(brand level)": 2,
+      "All Life Stages": 6
+    },
+    "purina-one": {
+      "Grain Free": 5,
+      "True Instinct": 7,
+      "Indoor+Hairball": 1,
+      "+Plus": 10,
+      "Ideal Weight": 3,
+      "Tender Selects": 2,
+      "Healthy Kitten": 1,
+      "Indoor Advantage": 1,
+      "Urinary Tract": 1,
+      "LiveClear": 2
+    },
+    "fancy-feast": {
+      "Classic": 68,
+      "Delights with Cheddar": 5,
+      "Savory Centers": 5,
+      "Gravy Lovers": 15,
+      "Medleys": 36,
+      "Gourmet Naturals": 14,
+      "Dry": 5,
+      "(brand level)": 2,
+      "Petites": 8,
+      "Gems": 10,
+      "Feastivities": 1
+    },
+    "friskies": {
+      "Seafood Sensations": 1,
+      "Classic Paté": 18,
+      "Surfin' & Turfin'": 2,
+      "Shreds": 13,
+      "Prime Filets": 15,
+      "Tender & Crunchy": 1,
+      "Gravy Sensations": 1,
+      "Indoor": 5,
+      "Gravy Swirl'd": 1,
+      "Wild Favorites": 4,
+      "Meaty Bits": 14,
+      "Farm Favorites": 3,
+      "Ocean Favorites": 3,
+      "Tasty Treasures": 4,
+      "Extra Gravy": 11,
+      "(brand level)": 1,
+      "Fish-a-Licious": 1,
+      "Land & Sea Adventures": 1,
+      "Party Pack'd": 1,
+      "Lil' Soups": 1,
+      "Fully Load'd": 4,
+      "Glaz'd & Infuz'd": 4
+    },
+    "cat-chow": {
+      "Naturals": 2,
+      "Kitten Chow": 2,
+      "Healthy Aging": 1,
+      "Complete": 2,
+      "Gentle": 1,
+      "Indoor": 1
+    },
+    "pro-plan-veterinary-diets": {
+      "EN Gastroenteric": 10,
+      "HA Hydrolyzed": 1,
+      "NF Kidney Function": 1,
+      "UR Urinary St/Ox": 8,
+      "DM Dietetic Management": 3
+    },
+    "kit-kaboodle": {
+      "(brand level)": 1
+    }
+  },
+  "flags": {
+    "paté inferred from \"Classic\" (Pro Plan Classic is its paté texture)": 32,
+    "no life stage tag": 382,
+    "no texture or medium tag": 33,
+    "variety pack / bundle": 114,
+    "no line matched": 5,
+    "pack sizes mix cans and bags (site data)": 5,
+    "site marks this Discontinued": 2,
+    "no pack sizes listed": 1
+  },
+  "form": {
+    "dry": 70,
+    "wet": 391
+  },
+  "variety_packs": 114,
+  "with_gtin": 372,
+  "with_any_barcode": 460,
+  "barcodes_total": 624,
+  "barcodes_shared_between_products": {
+    "0038100026972": [
+      "7621",
+      "7651"
+    ],
+    "0017800018852": [
+      "7120",
+      "7776"
+    ],
+    "0017800018876": [
+      "7120",
+      "7776"
+    ],
+    "0017800151337": [
+      "7565",
+      "10081"
+    ],
+    "0017800151313": [
+      "7565",
+      "10081"
+    ],
+    "0017800151306": [
+      "7565",
+      "10081"
+    ],
+    "0038100110022": [
+      "11211",
+      "11213"
+    ]
+  },
+  "with_description": 454,
+  "with_image": 461,
+  "with_ingredients": 0,
+  "with_nutrition": 0,
+  "life_stage_tagged": 79,
+  "texture_or_medium_tagged_wet": 304,
+  "wet": 391,
+  "duplicate_name_groups_on_same_path": 1,
+  "rungs_added": [
+    "Pro Plan Veterinary Diets",
+    "Pro Plan Veterinary Diets > DM Dietetic Management",
+    "Pro Plan Veterinary Diets > EN Gastroenteric",
+    "Pro Plan Veterinary Diets > HA Hydrolyzed",
+    "Pro Plan Veterinary Diets > NF Kidney Function",
+    "Pro Plan Veterinary Diets > UR Urinary St/Ox",
+    "Pro Plan > AdvantEDGE",
+    "Pro Plan > All Life Stages",
+    "Pro Plan > Development",
+    "Pro Plan > Hairball",
+    "Pro Plan > Indoor + Hairball",
+    "Pro Plan > LiveClear",
+    "Pro Plan > Senior 11+",
+    "Pro Plan > Sensitive Skin & Stomach",
+    "Fancy Feast > Dry",
+    "Fancy Feast > Feastivities",
+    "Fancy Feast > Gems",
+    "Friskies > Classic Paté",
+    "Friskies > Extra Gravy",
+    "Friskies > Farm Favorites",
+    "Friskies > Fish-a-Licious",
+    "Friskies > Fully Load'd",
+    "Friskies > Glaz'd & Infuz'd",
+    "Friskies > Gravy Sensations",
+    "Friskies > Gravy Swirl'd",
+    "Friskies > Indoor",
+    "Friskies > Land & Sea Adventures",
+    "Friskies > Lil' Soups",
+    "Friskies > Meaty Bits",
+    "Friskies > Ocean Favorites",
+    "Friskies > Party Pack'd",
+    "Friskies > Prime Filets",
+    "Friskies > Seafood Sensations",
+    "Friskies > Shreds",
+    "Friskies > Surfin' & Turfin'",
+    "Friskies > Tasty Treasures",
+    "Friskies > Tender & Crunchy",
+    "Friskies > Wild Favorites",
+    "Purina ONE > +Plus",
+    "Purina ONE > Healthy Kitten",
+    "Purina ONE > Indoor Advantage",
+    "Purina ONE > LiveClear",
+    "Purina ONE > Tender Selects",
+    "Cat Chow > Complete",
+    "Cat Chow > Gentle",
+    "Cat Chow > Healthy Aging",
+    "Cat Chow > Indoor",
+    "Cat Chow > Kitten Chow",
+    "Cat Chow > Naturals",
+    "Kit & Kaboodle"
+  ],
+  "brand_level_products": [
+    "Pro Plan Wet Kitten Food Starter Kit",
+    "Purina Pro Plan Adult 7+ Indoor Chicken & Rice Formula Dry Cat Food",
+    "Fancy Feast Poultry & Beef Wet Cat Food Variety Pack - 45 Cans",
+    "Fancy Feast Poultry & Beef Paté Wet Cat Food Variety Pack – 24 Cans",
+    "Friskies Poultry Wet Cat Food 32 Ct Variety Pack with No Artificial Preservatives",
+    "Kit & Kaboodle Original Dry Cat Food"
+  ]
+}

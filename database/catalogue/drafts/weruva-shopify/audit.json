@@ -1,0 +1,125 @@
+{
+  "dump_products": 449,
+  "excluded_nonfood": 11,
+  "drafted": 438,
+  "lines": {
+    "B.F.F.": {
+      "products": 97,
+      "sublines": [
+        "Toodzies",
+        "Kitten!",
+        "PLAY Paté!",
+        "OMG Gravy!",
+        "Minced!"
+      ]
+    },
+    "Awesome Functions": {
+      "products": 19,
+      "sublines": [
+        "Everything",
+        "Bouncy",
+        "Shiny",
+        "Belly"
+      ]
+    },
+    "Cats in the Kitchen": {
+      "products": 41,
+      "sublines": [
+        "Pantry Pours",
+        "Kitten",
+        "Original",
+        "Paté"
+      ]
+    },
+    "Dogs in the Kitchen": {
+      "products": 20,
+      "sublines": [
+        "Pantry Pours"
+      ]
+    },
+    "Classic Cat": {
+      "products": 79,
+      "sublines": [
+        "Senior",
+        "Paté",
+        "Stew!"
+      ]
+    },
+    "Soulistic": {
+      "products": 43,
+      "sublines": []
+    },
+    "Classic Dog": {
+      "products": 32,
+      "sublines": [
+        "Puppy"
+      ]
+    },
+    "Wx": {
+      "products": 13,
+      "sublines": []
+    },
+    "TruLuxe": {
+      "products": 13,
+      "sublines": []
+    },
+    "Paris Hilton": {
+      "products": 25,
+      "sublines": []
+    },
+    "Cat Person": {
+      "products": 33,
+      "sublines": [
+        "Shreds in Broth"
+      ]
+    },
+    "B.F.F. Fido": {
+      "products": 11,
+      "sublines": []
+    },
+    "Meals 'n More": {
+      "products": 10,
+      "sublines": []
+    }
+  },
+  "unplaced": [
+    "Weruva Puddy Pops Lickable Cat Treat Variety Pack",
+    "Cappy's Pumpkin Patch Up Variety Pack"
+  ],
+  "with_any_barcode": 418,
+  "with_single_gtin": 215,
+  "multi_barcode": 203,
+  "species": {
+    "cat": 340,
+    "dog": 98
+  },
+  "flags": {
+    "no life stage tag": 169,
+    "variety pack: several recipes in one product": 99,
+    "no barcode derivable": 20,
+    "barcode missing for some sizes": 48,
+    "image name holds a code that is not a valid GTIN": 10,
+    "species not derivable": 12,
+    "barcode size not readable from file name": 42,
+    "no line could be derived": 2,
+    "product_type Supplement (supplemental-feeding / topper): decide food vs treat vs excluded": 18
+  },
+  "description_empty": 0,
+  "ingredients": 0,
+  "nutrition": 0,
+  "dup_names_in_same_path": 7,
+  "duplicate_gtins": [
+    "0810028246201",
+    "0810028248908",
+    "0810028247406",
+    "0810028244641",
+    "0810028247086",
+    "0850023243522",
+    "0813778014816",
+    "0810028247901",
+    "0810028246027",
+    "0810028248670",
+    "0878408001086",
+    "0878408002380"
+  ]
+}

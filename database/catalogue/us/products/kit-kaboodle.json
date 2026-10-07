@@ -1,0 +1,66 @@
+{
+  "region": "US",
+  "reviewed": false,
+  "ladder": "purina",
+  "brand": "Kit & Kaboodle",
+  "products": [
+    {
+      "path": [
+        "Purina",
+        "Kit & Kaboodle"
+      ],
+      "name": "Original Dry Cat Food",
+      "title_as_listed": "Kit & Kaboodle Original Dry Cat Food",
+      "import_key": "purina|site|7433",
+      "species": "cat",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "barcodes": [
+        {
+          "gtin": "0017800150392",
+          "pack_label": "3 lb bag"
+        },
+        {
+          "gtin": "0017800162746",
+          "pack_label": "11 lb bag"
+        },
+        {
+          "gtin": "0017800140980",
+          "pack_label": "13 lb bag"
+        },
+        {
+          "gtin": "0017800143424",
+          "pack_label": "22 lb bag"
+        },
+        {
+          "gtin": "0017800157575",
+          "pack_label": "30 lb bag"
+        },
+        {
+          "gtin": "0017800182348",
+          "pack_label": "32 lb bag"
+        }
+      ],
+      "description": "Offer your cat vitamins, minerals and more to support her overall health by serving Purina Kit and Kaboodle Original cat kibble. A blend of three delicious flavors — poultry, liver and ocean fish — offers an adult cat food taste she’s sure to love.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://www.purina.com/sites/default/files/styles/product_large/public/products/2023-08/kit-and-kaboodle-original-dry-cat-food-package.png.webp?itok=11491oby",
+      "source": "purina.com (site search export)",
+      "source_url": "https://www.purina.com/cats/shop/kit-kaboodle-original-dry-cat-food",
+      "audit_status": "unreviewed",
+      "meta": {
+        "nid": "7433",
+        "bazaarvoice_id": "17800-16274",
+        "package_type": "single",
+        "rating": "3.06028",
+        "review_count": "282",
+        "upc_site": "1780016274"
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    }
+  ]
+}

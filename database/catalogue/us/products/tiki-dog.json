@@ -1,0 +1,2629 @@
+{
+  "region": "US",
+  "reviewed": false,
+  "ladder": "tiki-dog",
+  "brand": "Tiki Dog",
+  "products": [
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Variety Pack",
+      "import_key": "tikipets|woo|savory-variety-pack",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Tiki Dog® Savory Whole Foods is packed with protein, with real shredded chicken hand packed with egg, duck, salmon or beef in a savory broth. It’s simple, high-quality nutrition dogs can’t resist. Meaty & Protein Rich 14% Protein Guaranteed Complete and Balanced for Adult Dogs Non-GMO Ingredients Grain & Potato Free",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2025/03/11396_FRONT.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/savory-variety-pack/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29726,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": [
+          "new look"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "generic or numbered variety pack listing",
+        "variety pack / multi-recipe pack",
+        "tagged \"new look\" (may duplicate an older listing)",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Pâté: Variety Pack",
+      "import_key": "tikipets|woo|tiki-dog-pate-variety-pack-3-oz-cups-10-count",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": null,
+      "description": "Irresistible Flavors Your Dog Will Love. Tiki Dog® Savory Pâté is crafted from high-quality protein and organ meat, providing your dog with the protein they crave. Nutrient-dense organ meat delivers delectable palatability and an extra boost of protein, all in a smooth, finely minced and easy-to-eat pate that your dog will love. 14% Protein Guaranteed For Smaller Dogs Meaty & Protein-Rich Complete & Balanced No Corn, Wheat or Soy. No Artificial Flavors Non-GMO Ingredients",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2025/01/tdsavorypatevpMainImage.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/tiki-dog-pate-variety-pack-3-oz-cups-10-count/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29543,
+        "sku": "11608",
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 1,
+        "wc_tags": null
+      },
+      "_flags": [
+        "variety pack / multi-recipe pack",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Pâté: Chicken, Lamb & Lamb Liver Recipe",
+      "import_key": "tikipets|woo|tiki-dog-pate-chicken-lamb-lamb-liver-3-oz-cups-4ct",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": null,
+      "description": "Irresistible Flavors Your Dog Will Love. Tiki Dog® Savory Pâté is made from real protein & organ meat, providing your dog with the protein they crave. 14% Protein Guaranteed For Smaller Dogs Meaty & Protein-Rich Complete & Balanced No Corn, Wheat or Soy No Artificial Flavors Non-GMO Ingredients",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2025/01/tdpatechickenlambMainImage.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/tiki-dog-pate-chicken-lamb-lamb-liver-3-oz-cups-4ct/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29542,
+        "sku": "11627",
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 7,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Pâté: Chicken, Duck & Duck Liver Recipe",
+      "import_key": "tikipets|woo|tiki-dog-pate-chicken-duck-duck-liver-3-oz-cups-4ct",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": null,
+      "description": "Soft pâté crafted from real chicken, duck, and organ meat for a delicious, protein-rich meal. Convenient serving cups make feeding quick and easy. 14% Protein Guaranteed For Smaller Dogs Meaty & Protein-Rich Complete & Balanced No Corn, Wheat or Soy. No Artificial Flavors Non-GMO Ingredients",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2025/01/tdpatechickenduckMainImage.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/tiki-dog-pate-chicken-duck-duck-liver-3-oz-cups-4ct/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29541,
+        "sku": "11626",
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 7,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Pâté: Chicken, Beef & Beef Liver Recipe",
+      "import_key": "tikipets|woo|tiki-dog-pate-chicken-beef-beef-liver-3-oz-cups-4ct",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": null,
+      "description": "Soft pâté crafted from real chicken, beef, and organ meat for a delicious, protein-rich meal. Convenient serving cups make feeding quick and easy. 14% Protein Guaranteed For Smaller Dogs Meaty & Protein-Rich Complete & Balanced No Corn, Wheat or Soy. No Artificial Flavors Non-GMO Ingredients",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2025/01/tdpatechickenbeefMainImage.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/tiki-dog-pate-chicken-beef-beef-liver-3-oz-cups-4ct/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29540,
+        "sku": "11625",
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 7,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Pâté: Chicken & Chicken Liver Recipe",
+      "import_key": "tikipets|woo|tiki-dog-pate-chicken-chicken-liver-3-oz-cups-4ct",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "texture:pate"
+      ],
+      "gtin": null,
+      "description": "Soft pâté crafted from real chicken & organ meat for a delicious, protein-rich meal. Convenient serving cups make feeding quick and easy. 14% Protein Guaranteed For Smaller Dogs Meaty & Protein-Rich Complete & Balanced No Corn, Wheat or Soy. No Artificial Flavors Non-GMO Ingredients",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2025/01/tdpatechickenMainImage.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/tiki-dog-pate-chicken-chicken-liver-3-oz-cups-4ct/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29539,
+        "sku": "11624",
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 7,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Puppy"
+      ],
+      "name": "Whole Foods Chicken & Chicken Liver Recipe in Broth",
+      "import_key": "tikipets|woo|tiki-dog-baby-whole-foods-chicken-chicken-liver-3-oz-cups-4ct",
+      "species": "dog",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:kitten",
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "Crafted with high quality chicken and organ meat, providing essential nutrients plus DHA to support brain and immune system development. Nutrient Dense Organ Meat For Puppies 5 Weeks + With DHA to Support Brain Development Non-GMO Ingredients Grain & Potato Free",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2025/01/tikidogbabywholefoodschxmain-image-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-dry-food/puppy/tiki-dog-baby-whole-foods-chicken-chicken-liver-3-oz-cups-4ct/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29538,
+        "sku": "11622",
+        "url_path": [
+          "tiki-dog",
+          "dog-dry-food",
+          "puppy"
+        ],
+        "categories": [
+          "Puppy",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 7,
+        "wc_tags": null
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Puppy"
+      ],
+      "name": "Whole Foods: Beef & Beef Liver Recipe in Broth",
+      "import_key": "tikipets|woo|tiki-dog-baby-whole-foods-beef-beef-liver-3-oz-cups-4ct",
+      "species": "dog",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:kitten",
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "Crafted with high quality beef and organ meat, providing essential nutrients and DHA to support brain and immune system development. With DHA to Support Brain Development For Puppies 5 Weeks + Nutrient Dense Organ Meat Non-GMO Ingredients Grain & Potato Free",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2025/01/tikidogbabywholefoodsbeefmain-image-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-dry-food/puppy/tiki-dog-baby-whole-foods-beef-beef-liver-3-oz-cups-4ct/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29537,
+        "sku": "11623",
+        "url_path": [
+          "tiki-dog",
+          "dog-dry-food",
+          "puppy"
+        ],
+        "categories": [
+          "Puppy",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 7,
+        "wc_tags": null
+      },
+      "_flags": []
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Taste of the World"
+      ],
+      "name": "Variety Pack Cans",
+      "import_key": "tikipets|woo|variety-pack-10",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Indulgent, ready-to-serve, restaurant-inspired meals with whole, recognizable ingredients. Made with real ingredients Grain Free Complete and balanced for all life stages Recipe in Broth",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2019/02/TOTWcanVPproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/taste-of-the-world/variety-pack-10/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29161,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "taste-of-the-world"
+        ],
+        "categories": [
+          "Taste of the World",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 1,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "generic or numbered variety pack listing",
+        "variety pack / multi-recipe pack",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Taste of the World"
+      ],
+      "name": "Taste of France Multipack Cups",
+      "import_key": "tikipets|woo|taste-of-france-multipack",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Indulgent, ready-to-serve, restaurant-inspired meals with whole, recognizable ingredients. Restaurant-inspired meal to indulge your dog with global flavors. Features whole, recognizable, non-GMO ingredients. Rich in protein from real beef and beef liver. Includes potato, carrots and whole peas.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2019/02/TOTWfrancemultipackproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/taste-of-the-world/taste-of-france-multipack/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29160,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "taste-of-the-world"
+        ],
+        "categories": [
+          "Taste of the World",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 1,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Grain Free"
+      ],
+      "name": "Variety Pack Cans",
+      "import_key": "tikipets|woo|variety-pack-9",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Tiki Dog® Petites Grain Free Wet Dog Food is a hearty meal with tender, shredded chicken and nutritious vegetables in a savory broth. Pure bliss with every bite. Real, high-quality chicken, duck, salmon and beef Nutrient-dense organ meats With sweet potato Grain free with no white potatoes, corn, rice or wheat Hand-packed Complete and balanced for small dogs of all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/TDPetitesVPimage-gallery.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/aloha-petites-wet-food/variety-pack-9/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29159,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "aloha-petites-wet-food"
+        ],
+        "categories": [
+          "Petites Grain Free",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Canned dog food",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition",
+          "Wet dog food"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "generic or numbered variety pack listing",
+        "variety pack / multi-recipe pack",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Grain Free"
+      ],
+      "name": "Variety Pack Pouches",
+      "import_key": "tikipets|woo|variety-pack-8",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Tiki Dog® Petites Grain Free Wet Dog Food is a hearty meal with tender, shredded chicken and nutritious vegetables in a savory broth. Pure bliss with every bite. Real, high-quality chicken and beef Nutrient-dense organ meats With sweet potato Grain free with no white potatoes, corn, rice or wheat Complete and balanced for small dogs of all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/10855_FRONT-1-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/aloha-petites-wet-food/variety-pack-8/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29112,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "aloha-petites-wet-food"
+        ],
+        "categories": [
+          "Petites Grain Free",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Canned dog food",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition",
+          "Wet dog food"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "generic or numbered variety pack listing",
+        "variety pack / multi-recipe pack",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Grain Free"
+      ],
+      "name": "Variety Pack Cups",
+      "import_key": "tikipets|woo|variety-pack-7",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Tiki Dog® Petites Grain Free Wet Dog Food is a hearty meal with tender, shredded chicken and nutritious vegetables in a savory broth. Pure bliss with every bite. Real, high-quality chicken, duck, salmon and beef Nutrient-dense organ meats Grain free with no white potatoes, corn, rice or wheat Hand-packed Complete and balanced for small dogs of all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/TDPetitesVPproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/aloha-petites-wet-food/variety-pack-7/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29085,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "aloha-petites-wet-food"
+        ],
+        "categories": [
+          "Petites Grain Free",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Canned dog food",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition",
+          "Wet dog food"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "generic or numbered variety pack listing",
+        "variety pack / multi-recipe pack",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Protein Boosters"
+      ],
+      "name": "Variety Pack",
+      "import_key": "tikipets|woo|variety-pack-6",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [],
+      "gtin": null,
+      "description": "The perfect topper to add to dry diets! This wet, complement adds a boost of protein and hydration to mealtime. Made with real chicken. Extra protein and moisture helps dogs feel full long after meals. No grains or fillers. Soft, chunky chicken gives dogs the texture variety they lack when fed a dry diet alone.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/ProteinBoostersproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/protein-boosters/variety-pack-6/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29077,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "protein-boosters"
+        ],
+        "categories": [
+          "Protein Booster",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "generic or numbered variety pack listing",
+        "variety pack / multi-recipe pack",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Senior"
+      ],
+      "name": "Chicken, Lamb & Pumpkin Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-lamb-pumpkin-recipe-in-broth",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:senior",
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "This delicious mousse is made with high-quality chicken and lamb to maintain muscle mass, antioxidant nutrients to support healthy immune system and a gentle fiber source from pumpkin. Easy-to-eat, silky-smooth texture is supplemented with vitamins A & E for an ideal diet in their golden years. Vitamins A & E for immune system support With pumpkin, a gentle source of fiber Smooth, hydrating mousse is easy to eat",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/TDSeniorChxLambproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/senior-dog/chicken-lamb-pumpkin-recipe-in-broth/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29013,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "senior-dog"
+        ],
+        "categories": [
+          "Tiki Dog",
+          "Senior"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Puppy"
+      ],
+      "name": "Beef, Beef Liver & Pumpkin Recipe in Broth",
+      "import_key": "tikipets|woo|beef-beef-liver-pumpkin-recipe-in-broth",
+      "species": "dog",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:kitten",
+        "medium:broth",
+        "texture:mousse"
+      ],
+      "gtin": null,
+      "description": "Ease your puppy’s transition to solid food with this easy-to-eat mousse. The soft texture features delicious beef and beef liver to support muscle growth, DHA to support healthy brain development and digestible pumpkin for puppies of any age. High-quality protein from real beef supports muscle growth Highly flavorful beef liver encourages baby puppies to eat and get the nutrients they need DHA supports healthy eye and brain development Smooth texture helps tiny mouths to transition from mother’s milk The complete and balanced nutrition a new dog needs to support healthy development",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/TDPuppyBeefproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-dry-food/puppy/beef-beef-liver-pumpkin-recipe-in-broth/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 29005,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-dry-food",
+          "puppy"
+        ],
+        "categories": [
+          "Puppy",
+          "Tiki Dog"
+        ],
+        "key_ingredients": [
+          "Chicken",
+          "Pumpkin"
+        ],
+        "claims": [
+          "Grain-Free",
+          "High Protein"
+        ],
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Protein Boosters"
+      ],
+      "name": "Chicken and Lamb Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-and-lamb-recipe-in-broth",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "The perfect topper to add to dry diets! This wet, complement adds a boost of protein and hydration to mealtime. Made with real chicken and lamb. Extra protein and moisture helps dogs feel full long after meals. No grains or fillers. Soft, chunky chicken and lamb gives dogs the texture variety they lack when fed a dry diet alone.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/Proteinboosterschxlambproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/protein-boosters/chicken-and-lamb-recipe-in-broth/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 28980,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "protein-boosters"
+        ],
+        "categories": [
+          "Tiki Dog",
+          "Protein Booster"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Protein Boosters"
+      ],
+      "name": "Chicken and Duck Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-and-duck-recipe-in-broth",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "The perfect topper to add to dry diets! This wet, complement adds a boost of protein and hydration to mealtime. Made with real chicken and duck. Extra protein and moisture helps dogs feel full long after meals. No grains or fillers. Soft, chunky chicken and duck gives dogs the texture variety they lack when fed a dry diet alone.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/Proteinboosterschxduckproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/protein-boosters/chicken-and-duck-recipe-in-broth/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 28976,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "protein-boosters"
+        ],
+        "categories": [
+          "Protein Booster",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Protein Boosters"
+      ],
+      "name": "Chicken and Beef Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-and-beef-recipe-in-broth",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "The perfect topper to add to dry diets! This wet, complement adds a boost of protein and hydration to mealtime. Made with real chicken and beef. Extra protein and moisture helps dogs feel full long after meals. No grains or fillers. Soft, chunky chicken and beef gives dogs the texture variety they lack when fed a dry diet alone.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/Proteinboosterschxbeefproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/protein-boosters/chicken-and-beef-recipe-in-broth/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 28972,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "protein-boosters"
+        ],
+        "categories": [
+          "Protein Booster",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Protein Boosters"
+      ],
+      "name": "Chicken and Egg Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-and-egg-recipe-in-broth",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "The perfect topper to add to dry diets! This wet, complement adds a boost of protein and hydration to mealtime. Made with real chicken and egg. Extra protein and moisture helps dogs feel full long after meals. No grains or fillers. Soft, chunky chicken gives dogs the texture variety they lack when fed a dry diet alone.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/ProteinBoostersChxEggproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/protein-boosters/chicken-and-egg-recipe-in-broth/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 28968,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "protein-boosters"
+        ],
+        "categories": [
+          "Protein Booster",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Protein Boosters"
+      ],
+      "name": "Chicken Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-recipe-in-broth",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "The perfect topper to add to dry diets! This wet, complement adds a boost of protein and hydration to mealtime. Made with real chicken. Extra protein and moisture helps dogs feel full long after meals. No grains or fillers. Soft, chunky chicken gives dogs the texture variety they lack when fed a dry diet alone.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2024/03/ProteinBoosterChickenproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/protein-boosters/chicken-recipe-in-broth/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 28964,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "protein-boosters"
+        ],
+        "categories": [
+          "Protein Booster",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Taste of the World"
+      ],
+      "name": "Peking Duck with Duck",
+      "import_key": "tikipets|woo|asian-peking-duck",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:all"
+      ],
+      "gtin": null,
+      "description": "Your dog’s takeout is ready! Tiki Dog® Taste of Asia Peking Duck Recipe is a globally inspired, restaurant-worthy recipe, featuring whole, recognizable ingredients – like real shredded duck, chicken, rice noodle, and cabbage. It looks good enough to be on YOUR menu! Restaurant-inspired meal to indulge your dog with global flavors. Features whole, recognizable, non-GMO ingredients. Rich in protein from real shredded duck and chicken. Includes real cabbage",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2020/07/TOTWAsiaPekingDuckproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/taste-of-the-world/asian-peking-duck/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 20596,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "taste-of-the-world"
+        ],
+        "categories": [
+          "Taste of the World",
+          "Tiki Dog"
+        ],
+        "key_ingredients": [
+          "Chicken",
+          "Duck"
+        ],
+        "claims": null,
+        "special_needs": null,
+        "images": 4,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Whole Foods"
+      ],
+      "name": "Variety Pack",
+      "import_key": "tikipets|woo|whole-foods-variety-pack",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "With Tiki Dog® Whole Foods, seeing is believing. Pop the top and take a look at real, whole foods you know and recognize: shredded chicken, healthy whole grain brown rice, egg, and sweet potatoes. All of these delicious, non-GMO ingredients are hand-packed in a luscious lobster consommé. It looks like it belongs in YOUR bowl! Features whole, recognizable, non-GMO ingredients. Rich in protein from real shredded chicken. Includes whole grain brown rice and sweet potato. High-moisture consommé for irresistible flavor and supplemental hydration.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2019/03/TDPetitesWholeFoodsVPproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/whole-foods/whole-foods-variety-pack/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18973,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "whole-foods"
+        ],
+        "categories": [
+          "Petites Whole Foods",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "generic or numbered variety pack listing",
+        "variety pack / multi-recipe pack",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Whole Foods"
+      ],
+      "name": "Chicken Recipe in Crab Consommé",
+      "import_key": "tikipets|woo|chicken-crab-consomme",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "With Tiki Dog® Whole Foods, seeing is believing. Pop the top and take a look at real, whole foods you know and recognize: shredded chicken, healthy whole grain brown rice, sweet potato and egg. All of these delicious, non-GMO ingredients are hand-packed in a savory crab consommé. It looks like it belongs in YOUR bowl! Features whole, recognizable, non-GMO ingredients. Rich in protein from real shredded chicken and egg. Includes whole grain brown rice and sweet potato. High-moisture crab consommé for irresistible flavor and supplemental hydration.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2019/03/TDPetitesWholeFoodsChxCrabproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/whole-foods/chicken-crab-consomme/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18970,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "whole-foods"
+        ],
+        "categories": [
+          "Petites Whole Foods",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Whole Foods"
+      ],
+      "name": "Chicken & Tuna Recipe in Chicken Consommé",
+      "import_key": "tikipets|woo|chicken-tuna",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "With Tiki Dog® Whole Foods, seeing is believing. Pop the top and take a look at real, whole foods you know and recognize: shredded chicken, flaked tuna , healthy whole grain brown rice, egg, and and carrots . All of these delicious, non-GMO ingredients are hand-packed in a savory consommé. It looks like it belongs in YOUR bowl! Features whole, recognizable, non-GMO ingredients. Rich in protein from real shredded chicken, flaked tuna, and egg. Includes whole grain brown rice, sweet potato and carrots. High-moisture consommé for irresistible flavor and supplemental hydration.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2019/03/TDPetitesWholeFoodsChxTunaproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/whole-foods/chicken-tuna/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18968,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "whole-foods"
+        ],
+        "categories": [
+          "Petites Whole Foods",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Whole Foods"
+      ],
+      "name": "Chicken Recipe in Lobster Consommé",
+      "import_key": "tikipets|woo|chicken-lobster-consomme",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "With Tiki Dog® Whole Foods, seeing is believing. Pop the top and take a look at real, whole foods you know and recognize: shredded chicken, healthy whole grain brown rice, sweet potato and egg. All of these delicious, non-GMO ingredients are hand-packed in a luscious lobster consommé. It looks like it belongs in YOUR bowl! Features whole, recognizable, non-GMO ingredients. Rich in protein from real shredded chicken and egg. Includes whole grain brown rice. High-moisture lobster consommé for irresistible flavor and supplemental hydration.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2019/03/TDPetitesWholeFoodsChxLobsterproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/whole-foods/chicken-lobster-consomme/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18966,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "whole-foods"
+        ],
+        "categories": [
+          "Petites Whole Foods",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Whole Foods"
+      ],
+      "name": "Chicken Recipe in Chicken Consommé",
+      "import_key": "tikipets|woo|chicken-chicken-consomme",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "With Tiki Dog® Whole Foods, seeing is believing. Pop the top and take a look at real, whole foods you know and recognize: shredded chicken, healthy whole grain brown rice, sweet potato and egg. All of these delicious, non-GMO ingredients are hand-packed in a savory chicken consommé. It looks like it belongs in YOUR bowl! Features whole, recognizable, non-GMO ingredients. Rich in protein from real shredded chicken and egg. Includes whole grain brown rice and sweet potato. High-moisture chicken consommé for irresistible flavor and supplemental hydration.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2019/03/TDPetitesWholeFoodsChxproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/whole-foods/chicken-chicken-consomme/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18963,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "whole-foods"
+        ],
+        "categories": [
+          "Petites Whole Foods",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Taste of the World"
+      ],
+      "name": "Variety Pack Cups",
+      "import_key": "tikipets|woo|variety-pack-3",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Indulgent, ready-to-serve, restaurant-inspired meals with whole, recognizable ingredients. Made with real ingredients Grain Free Complete and balanced for all life stages Recipe in Broth",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2019/02/693804113511_PT8.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/taste-of-the-world/variety-pack-3/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18867,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "taste-of-the-world"
+        ],
+        "categories": [
+          "Taste of the World",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "generic or numbered variety pack listing",
+        "variety pack / multi-recipe pack",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Taste of the World"
+      ],
+      "name": "Chicken &  Snow Peas Stir Fry Recipe",
+      "import_key": "tikipets|woo|asian-chicken-stir-fry",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:all"
+      ],
+      "gtin": null,
+      "description": "Your dog’s takeout is ready! Tiki Dog® Taste of Asia Chicken & Snow Peas Stir Fry Recipe is a globally inspired, gluten-free, restaurant-worthy recipe, featuring whole, recognizable ingredients – like real shredded chicken, healthy brown rice, diced carrots, and snow peas. It looks good enough to be on YOUR menu! Restaurant-inspired meal to indulge your dog with global flavors. Features whole, recognizable, non-GMO ingredients. Rich in protein from real shredded chicken. Includes whole grain brown rice, carrots, and snow peas.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2020/07/TOTWAsiaStirfryproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/taste-of-the-world/asian-chicken-stir-fry/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18866,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "taste-of-the-world"
+        ],
+        "categories": [
+          "Taste of the World",
+          "Tiki Dog"
+        ],
+        "key_ingredients": [
+          "Chicken"
+        ],
+        "claims": null,
+        "special_needs": null,
+        "images": 4,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Taste of the World"
+      ],
+      "name": "Chicken & Shrimp Paella Recipe",
+      "import_key": "tikipets|woo|spanish-paella",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:all"
+      ],
+      "gtin": null,
+      "description": "Your dog’s takeout is ready! Tiki Dog® Taste of Spain Chicken & Shrimp Paella Recipe is a globally inspired, restaurant-worthy recipe, featuring whole, recognizable ingredients – like real chicken, brown rice and shrimp in a savory broth. It looks good enough to be on YOUR menu! Restaurant-inspired meal to indulge your dog with global flavors. Features whole, recognizable, non-GMO ingredients. Rich in protein from real chicken and whole shrimp. Includes healthy whole grain brown rice.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2020/07/TOTWSpainproduct-image-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/taste-of-the-world/spanish-paella/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18865,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "taste-of-the-world"
+        ],
+        "categories": [
+          "Taste of the World",
+          "Tiki Dog"
+        ],
+        "key_ingredients": [
+          "Chicken",
+          "Seafood"
+        ],
+        "claims": null,
+        "special_needs": null,
+        "images": 4,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Taste of the World"
+      ],
+      "name": "Beef, Potatoes & Carrots Burgundy Recipe",
+      "import_key": "tikipets|woo|french-beef-burgundy",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:all"
+      ],
+      "gtin": null,
+      "description": "Indulgent, ready-to-serve, restaurant-inspired meals with whole, recognizable ingredients. Restaurant-inspired meal to indulge your dog with global flavors. Features whole, recognizable, non-GMO ingredients. Rich in protein from real beef and beef liver. Includes potato, carrots and whole peas.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2020/07/TOTWFranceproduct-image-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/taste-of-the-world/french-beef-burgundy/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18863,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "taste-of-the-world"
+        ],
+        "categories": [
+          "Taste of the World",
+          "Tiki Dog"
+        ],
+        "key_ingredients": [
+          "Beef"
+        ],
+        "claims": null,
+        "special_needs": null,
+        "images": 4,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Taste of the World"
+      ],
+      "name": "Chicken & Pasta Carbonara Recipe",
+      "import_key": "tikipets|woo|italian-carbonara",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:all"
+      ],
+      "gtin": null,
+      "description": "Your dog’s takeout is ready! Tiki Dog® Taste of Italy Chicken & Pasta Carbonara Recipe in Broth is a globally inspired, restaurant-worthy recipe, featuring whole, recognizable ingredients – like real shredded chicken, pasta and whole peas. It looks good enough to be on YOUR menu! Restaurant-inspired meal to indulge your dog with global flavors. Features whole, recognizable, non-GMO ingredients. Rich in protein from real shredded chicken. Includes whole green peas.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2020/07/TOTWItalyproduct-image-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/taste-of-the-world/italian-carbonara/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18862,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "taste-of-the-world"
+        ],
+        "categories": [
+          "Tiki Dog",
+          "Taste of the World"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 4,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Taste of the World"
+      ],
+      "name": "Lamb, Couscous & Chickpea Recipe",
+      "import_key": "tikipets|woo|mediterranean-influence",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:all"
+      ],
+      "gtin": null,
+      "description": "Your dog’s takeout is ready! Tiki Dog® Taste of Greece Lamb, Couscous & Chickpea Recipe is a globally inspired, restaurant-worthy recipe, featuring whole, recognizable ingredients – like real lamb, chicken, couscous, chickpeas and carrots in a savory broth. It looks good enough to be on YOUR menu! Restaurant-inspired meal to indulge your dog with global flavors. Features whole, recognizable, non-GMO ingredients. Rich in protein from real lamb, lamb liver and chicken. Includes couscous, chickpeas and diced carrots.",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2020/07/TOTWGreeceproduct-image-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/taste-of-the-world/mediterranean-influence/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 18861,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "taste-of-the-world"
+        ],
+        "categories": [
+          "Taste of the World",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 4,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Chicken with Duck Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-duck-3",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "Tiki Dog® Savory Chicken With Duck Recipe in Broth is packed with real chicken and duck in a savory broth. It’s simple, high-quality nutrition dogs can’t resist. Meaty & Protein Rich 14% Protein Guaranteed Complete and Balanced for Adult Dogs Non-GMO Ingredients Grain & Potato Free",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/09/10893_ANGLE-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/chicken-duck-3/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17701,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Chicken with Beef Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-beef-3",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "Tiki Dog® Savory Chicken With Beef Recipe in Broth is packed with real chicken and beef in a savory broth. It’s simple, high-quality nutrition dogs can’t resist. Meaty & Protein Rich 14% Protein Guaranteed Complete & Balanced for Adult Dogs Non-GMO Ingredients Grain & Potato Free",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/09/10895_ANGLE-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/chicken-beef-3/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17700,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Chicken with Egg Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-egg-2",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "Tiki Dog® Savory Chicken With Egg Recipe in Broth is packed with real chicken and egg in a savory broth. It’s simple, high-quality nutrition dogs can’t resist. Meaty & Protein Rich 14% Protein Guaranteed Complete and Balanced for Adult Dogs Non-GMO Ingredients Grain & Potato Free",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/09/10892_ANGLE-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/chicken-egg-2/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17698,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Flavor Boosters"
+      ],
+      "name": "Salmon Recipe Bisque",
+      "import_key": "tikipets|woo|salmon-bisque",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [],
+      "gtin": null,
+      "description": "Flavor Booster Salmon Bisque is a decadent gravy with small chunks of salmon for a luxurious meal topper or treat. Grain free 1st ingredient is salmon Serve over dry food for an added boost of flavor or as an indulgent treat Supplemented with sunflower oil for healthy skin and coat No artificial colors, flavors, or preservatives",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/FlavorBoosters_Salmon_Front.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/flavor-boosters/salmon-bisque/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17688,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "flavor-boosters"
+        ],
+        "categories": [
+          "Flavor Boosters",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Flavor Boosters"
+      ],
+      "name": "Lamb Recipe Bisque",
+      "import_key": "tikipets|woo|lamb-bisque",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [],
+      "gtin": null,
+      "description": "Flavor Booster Lamb Bisque is a decadent gravy with small chunks of salmon for a luxurious meal topper or treat. Grain free 1st ingredient is lamb Serve over dry food for an added boost of flavor or as an indulgent treat Supplemented with sunflower oil for healthy skin and coat No artificial colors, flavors, or preservatives",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/FlavorBoosters_Lamb_Front.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/flavor-boosters/lamb-bisque/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17687,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "flavor-boosters"
+        ],
+        "categories": [
+          "Flavor Boosters",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Chicken Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-6",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "Tiki Dog® Savory Chicken Recipe in Broth is packed with real chicken in a savory broth. It’s simple, high-quality nutrition dogs can’t resist. Meaty & Protein Rich 14% Protein Guaranteed Complete & Balanced for Adult Dogs Non-GMO Ingredients Grain and Potato Free",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/09/10891_ANGLE-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/chicken-6/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17697,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Savory"
+      ],
+      "name": "Chicken with Salmon Recipe in Broth",
+      "import_key": "tikipets|woo|chicken-salmon",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "Tiki Dog® Savory Chicken With Salmon Recipe in Broth is packed with real chicken and salmon in a savory broth. It’s simple, high-quality nutrition dogs can’t resist. Meaty & Protein Rich 14% Protein Guaranteed Complete and Balanced for Adult Dogs Non-GMO Ingredients Grain & Potato Free",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/09/10894_ANGLE-1.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/meaty/chicken-salmon/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17699,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "meaty"
+        ],
+        "categories": [
+          "Savory",
+          "Tiki Dog",
+          "Wet"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Puppy"
+      ],
+      "name": "Chicken with Chicken Liver & Pumpkin Recipe in Broth",
+      "import_key": "tikipets|woo|mousse-puppy",
+      "species": "dog",
+      "kind": "food",
+      "form": "dry",
+      "tags": [
+        "life_stage:kitten",
+        "medium:broth",
+        "texture:mousse"
+      ],
+      "gtin": null,
+      "description": "Ease your puppy’s transition to solid food with this easy-to-eat mousse. The soft texture features delicious chicken and chicken liver to support muscle growth, DHA to support healthy brain development and digestible pumpkin for puppies of any age. High-quality protein from real chicken supports muscle growth Flavorful and nutrient-dense chicken liver for great taste Grain-free carbohydrates from chickpeas, not white potatoes DHA supports healthy brain and eye development",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/06/TDPuppyChxproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-dry-food/puppy/mousse-puppy/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17685,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-dry-food",
+          "puppy"
+        ],
+        "categories": [
+          "Puppy",
+          "Tiki Dog"
+        ],
+        "key_ingredients": [
+          "Chicken",
+          "Pumpkin"
+        ],
+        "claims": [
+          "Grain-Free",
+          "High Protein"
+        ],
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Senior"
+      ],
+      "name": "Chicken, Beef & Pumpkin Recipe in Broth",
+      "import_key": "tikipets|woo|mousse-senior",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [
+        "life_stage:senior",
+        "medium:broth"
+      ],
+      "gtin": null,
+      "description": "This delicious mousse is made with high-quality chicken and beef to maintain muscle mass, antioxidant nutrients to support healthy immune system and a gentle fiber source from pumpkin. Easy-to-eat, silky-smooth texture is supplemented with vitamins A & E for an ideal diet in their golden years. Vitamins A & E for immune system support With pumpkin, a gentle source of fiber Smooth, hydrating mousse is easy to eat",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/06/TDSeniorChxBeefproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/senior-dog/mousse-senior/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17686,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "senior-dog"
+        ],
+        "categories": [
+          "Senior",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Tummy Toppers"
+      ],
+      "name": "Pumpkin Puree & Ginger",
+      "import_key": "tikipets|woo|pumpkin-ginger",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [],
+      "gtin": null,
+      "description": "Tummy Topper is a simple blend of pumpkin and ginger that helps promote healthy digestion and soothe sensitive stomachs. Delicious by itself or as a topper! GMO-free pumpkin puree Convenient single serving pouches With supplemental ginger to ease digestive upset Only 10 kcals per pouch",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/06/TikiDog_TummyTopper_Ginger.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/tummy-toppers-for-dogs/pumpkin-ginger/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17690,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "tummy-toppers-for-dogs"
+        ],
+        "categories": [
+          "Tiki Dog",
+          "Tummy Toppers"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Flavor Boosters"
+      ],
+      "name": "Duck Recipe Bisque",
+      "import_key": "tikipets|woo|duck-bisque",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [],
+      "gtin": null,
+      "description": "Flavor Booster Duck Bisque is a decadent gravy with small chunks of duck for a luxurious meal topper or treat. Grain free 1st ingredient is duck Serve over dry food for an added boost of flavor or as an indulgent treat Supplemented with sunflower oil for healthy skin and coat No artificial colors, flavors, or preservatives",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/FlavorBoosters_Duck_Front.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/flavor-boosters/duck-bisque/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17689,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "flavor-boosters"
+        ],
+        "categories": [
+          "Flavor Boosters",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Born Carnivore for Dogs"
+      ],
+      "name": "Puppy Health: Chicken, Peas & Lentils Recipe",
+      "import_key": "tikipets|woo|tiki-dog-aloha-petites-puppies",
+      "species": "dog",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "description": "Big attitude in a small package. Just like your puppy! Tiki Dog™ Aloha Petites™ for Puppies packs big nutrition into delicious, puppy-size kibble. Our formulas are made using only the finest ingredient and baked to preserve nutrients and ensure flavor. Chicken as the first ingredient High-quality protein from real chicken builds strong muscles Flavorful and nutrient-dense chicken liver for great taste Nutrient-rich superfoods like ground whole flaxseed and salmon oil Grain-free carbohydrates from whole peas and lentils, not white potatoes DHA supports healthy brain and eye development",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/06/TDBabyPuppyHealth.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-dry-food/aloha-petites-dry-dog-food/tiki-dog-aloha-petites-puppies/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 17669,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-dry-food",
+          "aloha-petites-dry-dog-food"
+        ],
+        "categories": [
+          "Born Carnivore for Dogs",
+          "Puppy",
+          "Tiki Dog"
+        ],
+        "key_ingredients": [
+          "Chicken",
+          "Peas"
+        ],
+        "claims": [
+          "Grain-Free",
+          "High Protein"
+        ],
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": null
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Grain Free"
+      ],
+      "name": "Chicken & Chicken Liver Recipe",
+      "import_key": "tikipets|woo|chicken-huli-huli-2",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Whole shredded chicken, flavorful organ meat and nutritious vegetables are hand-packed in a succulent broth. Real, high-quality chicken Nutrient-dense chicken liver Grain free with no white potatoes, corn, rice or wheat Hand-packed Complete and balanced for small dogs of all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/01/TDpetitesGFchickenproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/aloha-petites-wet-food/chicken-huli-huli-2/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4427,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "aloha-petites-wet-food"
+        ],
+        "categories": [
+          "Petites Grain Free",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Canned dog food",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition",
+          "Wet dog food"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Grain Free"
+      ],
+      "name": "Chicken & Beef Liver Recipe",
+      "import_key": "tikipets|woo|chicken-beef-loco-moco-2",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Whole, shredded chicken, flavorful beef heart and liver, and nutritious vegetables are hand-packed in a hearty broth. Real, high-quality chicken and beef liver Nutrient-dense organ meat With sweet potato Grain free with no white potatoes, corn, rice or wheat Hand-packed Complete and balanced for small dogs of all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/01/TDpetitesGFchickenbeefproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/aloha-petites-wet-food/chicken-beef-loco-moco-2/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4432,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "aloha-petites-wet-food"
+        ],
+        "categories": [
+          "Petites Grain Free",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Canned dog food",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition",
+          "Wet dog food"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Grain Free"
+      ],
+      "name": "Chicken & Salmon Recipe",
+      "import_key": "tikipets|woo|chicken-salmon-lomi-lomi-2",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Whole, shredded chicken, flaked salmon and nutritious vegetables are hand-packed in a delicate broth. Real, high-quality chicken and wild-caught Alaskan salmon Nutrient-dense with sweet potato and pumpkin Grain free with no white potatoes, corn, rice or wheat Hand-packed Complete and balanced for small dogs of all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/01/TDPetitesChxSalmonproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/aloha-petites-wet-food/chicken-salmon-lomi-lomi-2/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4433,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "aloha-petites-wet-food"
+        ],
+        "categories": [
+          "Petites Grain Free",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Canned dog food",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition",
+          "Wet dog food"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Petites Grain Free"
+      ],
+      "name": "Chicken & Duck Recipe",
+      "import_key": "tikipets|woo|chicken-duck-maui-2",
+      "species": "dog",
+      "kind": "food",
+      "form": "wet",
+      "tags": [],
+      "gtin": null,
+      "description": "Tiki Dog® Petites Grain Free Wet Dog Food is a hearty meal with tender, shredded chicken and nutritious vegetables in a savory broth. Pure bliss with every bite. Real, high-quality chicken and duck Nutrient-dense chicken liver With sweet potato Grain free with no white potatoes, corn, rice or wheat Hand-packed Complete and balanced for small dogs of all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2018/01/TDPetitesChxDuckproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-wet-food/aloha-petites-wet-food/chicken-duck-maui-2/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4434,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-wet-food",
+          "aloha-petites-wet-food"
+        ],
+        "categories": [
+          "Tiki Dog",
+          "Petites Grain Free"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Canned dog food",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition",
+          "Wet dog food"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Born Carnivore for Dogs"
+      ],
+      "name": "Lamb, Peas & Lentils Recipe",
+      "import_key": "tikipets|woo|grain-free-lamb-luau-2",
+      "species": "dog",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "description": "Tiki Dog® Born Carnivore™ offers customized nutrition just for small dogs. Our crunchy, bite-size kibble is grain-free and low carb, baked to perfection with real, high-quality protein, like chicken and nutrient-rich organ meat. With 26% protein with lamb as the first ingredient, plus nutrient rich organ meat, lamb liver Grain-free carbohydrate sources from whole peas, lentils, pumpkin, and chickpeas, not potatoes Ground whole flaxseed, pumpkin, brewer’s yeast, salmon oil, and organ meat such as lamb liver Gently baked dog food to preserve nutrients and flavor Complete and balanced for all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/TDBornCarnviore-Lamb.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-dry-food/aloha-petites-dry-dog-food/grain-free-lamb-luau-2/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4415,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-dry-food",
+          "aloha-petites-dry-dog-food"
+        ],
+        "categories": [
+          "Born Carnivore for Dogs",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 4,
+        "wc_tags": [
+          "Best dog food",
+          "Best dry dog food",
+          "Best food for small dogs",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Born Carnivore for Dogs"
+      ],
+      "name": "Chicken, Peas & Lentils Recipe",
+      "import_key": "tikipets|woo|grain-free-chicken-luau-2",
+      "species": "dog",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "description": "Tiki Dog® Born Carnivore™ offers customized nutrition just for small dogs. Our crunchy, bite-size kibble is grain-free and low carb, baked to perfection with real, high-quality protein, like chicken and nutrient-rich organ meat. With 27% protein with real Chicken as the first ingredient, plus flavorful chicken liver Nutrient-rich superfoods like ground whole flaxseed, pumpkin and salmon oil Grain-free carbohydrate sources from whole peas and lentils, not potatoes Gently baked to preserve nutrients and flavor Complete and balanced for all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/TDBornCarnviore-Chicken.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-dry-food/aloha-petites-dry-dog-food/grain-free-chicken-luau-2/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4416,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-dry-food",
+          "aloha-petites-dry-dog-food"
+        ],
+        "categories": [
+          "Tiki Dog",
+          "Born Carnivore for Dogs"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 4,
+        "wc_tags": [
+          "Best dog food",
+          "Best dry dog food",
+          "Best food for small dogs",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Born Carnivore for Dogs"
+      ],
+      "name": "Herring, Peas & Lentils Recipe",
+      "import_key": "tikipets|woo|grain-free-fish-luau-2",
+      "species": "dog",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "description": "Never underestimate a small dog – or this small kibble! Real, wholesome ingredients, like fresh herring, chicken liver and whole peas, are packed into a bite-size kibble and baked to perfection, giving dogs the flavor they want and the nutrients they need. 26% protein, with real herring as the first ingredient, plus flavorful chicken liver Nutrient-rich superfoods like ground whole flaxseed, coconut and salmon oil Grain-free carbohydrate sources from whole peas and lentils, not potatoes Gently baked to preserve nutrients and flavor Complete and balanced for all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/TDBornCarnviore-Herring.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-dry-food/aloha-petites-dry-dog-food/grain-free-fish-luau-2/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4417,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-dry-food",
+          "aloha-petites-dry-dog-food"
+        ],
+        "categories": [
+          "Born Carnivore for Dogs",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": [
+          "Best dog food",
+          "Best dry dog food",
+          "Best food for small dogs",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Born Carnivore for Dogs"
+      ],
+      "name": "Duck, Peas & Lentils Recipe",
+      "import_key": "tikipets|woo|grain-free-duck-luau-2",
+      "species": "dog",
+      "kind": "food",
+      "form": "dry",
+      "tags": [],
+      "gtin": null,
+      "description": "Tiki Dog®Born Carnivore™ offers customized nutrition just for small dogs. Our crunchy, bite-size kibble is grain-free and low carb, baked to perfection with real, high-quality protein, like chicken and nutrient-rich organ meat. 26% protein, with real duck as the first ingredient, plus flavorful turkey liver Nutrient-rich superfoods like ground whole flaxseed, sweet potato and brewer’s yeast Grain-free carbohydrate sources from whole peas and lentils Gently baked to preserve nutrients and flavor Complete and balanced for all life stages",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/TDBornCarnviore-Duck.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/dog-dry-food/aloha-petites-dry-dog-food/grain-free-duck-luau-2/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4418,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "dog-dry-food",
+          "aloha-petites-dry-dog-food"
+        ],
+        "categories": [
+          "Born Carnivore for Dogs",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 4,
+        "wc_tags": [
+          "Best dog food",
+          "Best dry dog food",
+          "Best food for small dogs",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Flavor Boosters"
+      ],
+      "name": "Chicken Recipe Bisque",
+      "import_key": "tikipets|woo|chicken-bisque",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [],
+      "gtin": null,
+      "description": "Give your dog’s meal a boost of flavor with this succulent chicken gravy. With chunks of real, tender chicken and savory chicken broth, their dinner bowl will never be cleaner. Serve as a creamy meal topper or treat Real, high-quality chicken and chicken broth No grains, carbohydrates or fillers Sunflower oil, an excellent source of fatty acids and vitamin E Hand-packed",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/FlavorBoosters_Chicken_Front.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/flavor-boosters/chicken-bisque/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4437,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "flavor-boosters"
+        ],
+        "categories": [
+          "Flavor Boosters",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Flavor Boosters"
+      ],
+      "name": "Tuna Recipe Bisque",
+      "import_key": "tikipets|woo|tuna-bisque",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [],
+      "gtin": null,
+      "description": "Give your dog’s meal a boost of flavor with this mouthwatering tuna gravy. With chunks of real tuna and savory tuna broth, their dinner bowl will never be cleaner. Serve as a creamy meal topper or treat Real, high-quality tuna and tuna broth No grains, carbohydrates or fillers Sunflower oil, an excellent source of fatty acids and vitamin E Hand-packed",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/FlavorBoosters_Tuna_Front.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/flavor-boosters/tuna-bisque/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4438,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "flavor-boosters"
+        ],
+        "categories": [
+          "Tiki Dog",
+          "Flavor Boosters"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Flavor Boosters"
+      ],
+      "name": "Beef Recipe Bisque",
+      "import_key": "tikipets|woo|beef-bisque",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [],
+      "gtin": null,
+      "description": "Give your dog’s meal a boost of flavor with this hearty beef gravy. With chunks of real beef and savory beef broth, their dinner bowl will never be cleaner. Serve as a creamy meal topper or treat Real, high-quality beef and beef broth No grains, carbohydrates or fillers Sunflower oil, an excellent source of fatty acids and vitamin E Hand-packed",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/FlavorBoosters_Beef_Front.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/flavor-boosters/beef-bisque/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4439,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "flavor-boosters"
+        ],
+        "categories": [
+          "Flavor Boosters",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 3,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "no life stage tag"
+      ]
+    },
+    {
+      "path": [
+        "Tiki Dog",
+        "Flavor Boosters"
+      ],
+      "name": "Variety Pack",
+      "import_key": "tikipets|woo|flavor-booster-variety-pack",
+      "species": "dog",
+      "kind": "food",
+      "form": null,
+      "tags": [],
+      "gtin": null,
+      "description": "Give your dog’s meal a boost of flavor with this succulent bisque meal topper. With chunks of real, tender beef, chicken, tuna or duck, their dinner bowl will never be cleaner. Serve as a creamy meal topper or treat Real, high-quality protein No grains, carbohydrates or fillers Sunflower oil, an excellent source of fatty acids and vitamin E Hand-packed",
+      "ingredients": null,
+      "nutrition": null,
+      "image_url": "https://tikipets.com/wp-content/uploads/2017/11/TDFlavorBoostersVPproduct-image.png",
+      "source": "tikipets.com (WooCommerce Store API)",
+      "source_url": "https://tikipets.com/product/tiki-dog/tiki-dog-meal-toppers/flavor-boosters/flavor-booster-variety-pack/",
+      "audit_status": "unreviewed",
+      "meta": {
+        "woo_id": 4631,
+        "sku": null,
+        "url_path": [
+          "tiki-dog",
+          "tiki-dog-meal-toppers",
+          "flavor-boosters"
+        ],
+        "categories": [
+          "Flavor Boosters",
+          "Tiki Dog"
+        ],
+        "key_ingredients": null,
+        "claims": null,
+        "special_needs": null,
+        "images": 2,
+        "wc_tags": [
+          "Best dog food",
+          "Best food for small dogs",
+          "Dog food for small dogs",
+          "Grain free dog food",
+          "High protein dog food",
+          "Small dog nutrition"
+        ]
+      },
+      "_flags": [
+        "no SKU on the store",
+        "generic or numbered variety pack listing",
+        "variety pack / multi-recipe pack",
+        "no life stage tag"
+      ]
+    }
+  ]
+}

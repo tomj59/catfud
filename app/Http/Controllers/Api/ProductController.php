@@ -73,6 +73,11 @@ class ProductController extends Controller
         if ($nodeId = $request->query('node')) {
             $query->whereIn('brand_node_id', $this->subtreeIds((int) $nodeId));
         }
+        if ($path = $request->query('path')) {
+            $keys = collect(explode('>', (string) $path))->map(fn ($n) => mb_strtolower(trim(preg_replace('/\s+/', ' ', $n))))->filter()->values();
+            $node = $keys->isEmpty() ? null : BrandNode::where('path_key', mb_strtolower(Region::current()).'|'.$keys->implode('>'))->first();
+            $node ? $query->whereIn('brand_node_id', $this->subtreeIds($node->id)) : $query->whereRaw('1 = 0');
+        }
 
         // Tags: different groups AND together, several tags in one group are alternatives (pate OR mousse).
         $include = [];

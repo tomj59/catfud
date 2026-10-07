@@ -1,0 +1,926 @@
+{
+	"currentPage": 2,
+	"facets": [
+		{
+			"code": "digital_sub_category",
+			"items": [
+				{
+					"code": "dry_food",
+					"count": 25,
+					"label": "pa.plpFilters.cat.digitalSubCategory.dryFood"
+				},
+				{
+					"code": "wet_food",
+					"count": 28,
+					"label": "pa.plpFilters.cat.digitalSubCategory.wetFood"
+				},
+				{
+					"code": "supplement",
+					"count": 1,
+					"label": "pa.plpFilters.cat.digitalSubCategory.supplement"
+				}
+			],
+			"label": "pa.plpFiltersCategory.digitalSubCategory"
+		},
+		{
+			"code": "lifestage",
+			"items": [
+				{
+					"code": "baby",
+					"count": 4,
+					"label": "pa.plpFilters.cat.lifestage.baby"
+				},
+				{
+					"code": "kitten",
+					"count": 11,
+					"label": "pa.plpFilters.cat.lifestage.kitten"
+				},
+				{
+					"code": "adult",
+					"count": 42,
+					"label": "pa.plpFilters.cat.lifestage.adult"
+				},
+				{
+					"code": "mature",
+					"count": 39,
+					"label": "pa.plpFilters.cat.lifestage.mature"
+				},
+				{
+					"code": "ageing",
+					"count": 3,
+					"label": "pa.plpFilters.cat.lifestage.ageing"
+				}
+			],
+			"label": "pa.plpFiltersCategory.lifestage"
+		},
+		{
+			"code": "breed",
+			"items": [
+				{
+					"code": "maine_coon",
+					"count": 2,
+					"label": "pa.plpFilters.cat.breed.maineCoon"
+				},
+				{
+					"code": "persian",
+					"count": 2,
+					"label": "pa.plpFilters.cat.breed.persian"
+				},
+				{
+					"code": "american_shorthair",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.americanShorthair"
+				},
+				{
+					"code": "bengal",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.bengal"
+				},
+				{
+					"code": "ragdoll",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.ragdoll"
+				},
+				{
+					"code": "siamese",
+					"count": 1,
+					"label": "pa.plpFilters.cat.breed.siamese"
+				},
+				{
+					"code": "any",
+					"count": 46,
+					"label": "pa.plpFilters.cat.breed.any"
+				}
+			],
+			"label": "pa.plpFiltersCategory.breed"
+		},
+		{
+			"code": "specific_needs",
+			"items": [
+				{
+					"code": "digestive_support",
+					"count": 7,
+					"label": "pa.plpFilters.cat.specificNeeds.digestiveSupport"
+				},
+				{
+					"code": "weight_management",
+					"count": 7,
+					"label": "pa.plpFilters.cat.specificNeeds.weightManagement"
+				},
+				{
+					"code": "skin_and_coat_support",
+					"count": 5,
+					"label": "pa.plpFilters.cat.specificNeeds.skinAndCoatSupport"
+				},
+				{
+					"code": "pregnant",
+					"count": 3,
+					"label": "pa.plpFilters.cat.specificNeeds.pregnant"
+				},
+				{
+					"code": "hairballs",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.hairballs"
+				},
+				{
+					"code": "tendency_to_beg_for_food",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.tendencyToBegForFood"
+				},
+				{
+					"code": "urinary_support",
+					"count": 2,
+					"label": "pa.plpFilters.cat.specificNeeds.urinarySupport"
+				},
+				{
+					"code": "appetite_stimulation",
+					"count": 1,
+					"label": "pa.plpFilters.cat.specificNeeds.appetiteStimulation"
+				},
+				{
+					"code": "oral_dental_hygiene",
+					"count": 1,
+					"label": "pa.plpFilters.cat.specificNeeds.oralDentalHygiene"
+				}
+			],
+			"label": "pa.plpFiltersCategory.specificNeeds"
+		},
+		{
+			"code": "sterilized",
+			"items": [
+				{
+					"code": "false",
+					"count": 52,
+					"label": "pa.plpFilters.cat.sterilized.false"
+				},
+				{
+					"code": "true",
+					"count": 2,
+					"label": "pa.plpFilters.cat.sterilized.true"
+				}
+			],
+			"label": "pa.plpFiltersCategory.sterilized"
+		},
+		{
+			"code": "pack_weight_ranges",
+			"items": [
+				{
+					"code": "up_to_6oz",
+					"count": 30,
+					"label": "pa.plpFilters.cat.packWeightRanges.upTo6oz"
+				},
+				{
+					"code": "from_6_to_16oz",
+					"count": 1,
+					"label": "pa.plpFilters.cat.packWeightRanges.from6To16oz"
+				},
+				{
+					"code": "from_1_to_5lbs",
+					"count": 15,
+					"label": "pa.plpFilters.cat.packWeightRanges.from1To5lbs"
+				},
+				{
+					"code": "from_5_to_11lbs",
+					"count": 21,
+					"label": "pa.plpFilters.cat.packWeightRanges.from5To11lbs"
+				},
+				{
+					"code": "from_11_to_21lbs",
+					"count": 9,
+					"label": "pa.plpFilters.cat.packWeightRanges.from11To21lbs"
+				}
+			],
+			"label": "pa.plpFiltersCategory.packWeightRanges"
+		}
+	],
+	"products": [
+		{
+			"analyticsData": {
+				"mainItemCode": "1462",
+				"name": "2022 - FHNW - Wet - Cat - KITTEN thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Kitten Thin Slices in Gravy Canned Cat Food ",
+				"titleUrl": "KITTEN thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1462,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1046571,
+			"image": "https://marspetcareaprimocdn.petcare.global/2db38662-3513-42ea-a57c-b1ef000edd30/2db38662-3513-42ea-a57c-b1ef000edd30_DownloadAsJpg.jpg",
+			"imageAlt": "Kitten Thin Slices in Gravy Canned Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"kitten"
+			],
+			"mainItem": 1462,
+			"name": "2022 - FHNW - Wet - Cat - KITTEN thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$52.21",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111604408",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "birth_and_growth",
+			"title": "Kitten Thin Slices in Gravy Canned Cat Food ",
+			"titleUrl": "KITTEN thin slices in gravy",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4370",
+				"name": "2016 - FBN - DRY - Cat - Bengal ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fbn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Bengal Adult Dry Cat Food",
+				"titleUrl": "Bengal Adult"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"bengal"
+			],
+			"bvProductId": 4370,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 336828,
+			"image": "https://cdn.royalcanin-weshare-online.io/cz88vYcBRYZmsWpcJPhp/v17/center-front-hero-image-4370-030111549808-cat-01-jpg",
+			"imageAlt": "Bengal Adult Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 4370,
+			"name": "2016 - FBN - DRY - Cat - Bengal ADULT - Zone North America - WITHTOUT INOSITOL - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$43.69",
+			"productCategory": "mainmeal",
+			"range": "fbn",
+			"sku": "030111549808",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "breed",
+			"title": "Bengal Adult Dry Cat Food",
+			"titleUrl": "Bengal Adult",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2562",
+				"name": "2022 - FHN - Dry - Cat - Kitten Spayed / Neutered - Zone North America - ALGAE OIL - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Kitten Spayed/Neutered Dry Cat Food",
+				"titleUrl": "Kitten Spayed / Neutered"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2562,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1046423,
+			"image": "https://marspetcareaprimocdn.petcare.global/b63ea689-0b54-4522-8916-b1ef000edcff/b63ea689-0b54-4522-8916-b1ef000edcff_DownloadAsJpg.jpg",
+			"imageAlt": "Kitten Spayed/Neutered Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"kitten"
+			],
+			"mainItem": 2562,
+			"name": "2022 - FHN - Dry - Cat - Kitten Spayed / Neutered - Zone North America - ALGAE OIL - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$24.69",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111541420",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "birth_and_growth",
+			"title": "Kitten Spayed/Neutered Dry Cat Food",
+			"titleUrl": "Kitten Spayed / Neutered",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1800",
+				"name": "2022 - FCN - Dry - Cat - URINARY CARE - Zone North America - US - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Urinary Care Dry Cat Food ",
+				"titleUrl": "URINARY CARE"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1800,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1053810,
+			"image": "https://cdn.royalcanin-weshare-online.io/klZXTYcBBKJuub5qYPmM/v75/00030111546470b-cf-gs1",
+			"imageAlt": "Urinary Care Dry Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1800,
+			"name": "2022 - FCN - Dry - Cat - URINARY CARE - Zone North America - US - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$27.54",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111546449",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Urinary Care Dry Cat Food ",
+			"titleUrl": "URINARY CARE",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2524",
+				"name": "2022 - FCN - Dry - Cat - WEIGHT CARE - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Weight Care Adult Dry Cat Food ",
+				"titleUrl": "WEIGHT CARE"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2524,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1053820,
+			"image": "https://cdn.royalcanin-weshare-online.io/fOd3TYcBaPOZra8qUPya/v64/00030111442703f-cf-gs1",
+			"imageAlt": "Weight Care Adult Dry Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2524,
+			"name": "2022 - FCN - Dry - Cat - WEIGHT CARE - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$27.54",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111546265",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Weight Care Adult Dry Cat Food ",
+			"titleUrl": "WEIGHT CARE",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2555",
+				"name": "2022 - FCN - Dry - Cat - DIGESTIVE CARE - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Digestive Care Dry Cat Food",
+				"titleUrl": "DIGESTIVE CARE"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2555,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1053762,
+			"image": "https://cdn.royalcanin-weshare-online.io/k1ZnTYcBBKJuub5qbflm/v47/00030111444233e-cf-gs1",
+			"imageAlt": "Digestive Care Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2555,
+			"name": "2022 - FCN - Dry - Cat - DIGESTIVE CARE - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$27.54",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111444202",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Digestive Care Dry Cat Food",
+			"titleUrl": "DIGESTIVE CARE",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "4095",
+				"name": "2017 - FHNW - WET - Cat - Spayed / Neutered thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Spayed & Neutered Thin Slices in Gravy Canned Cat Food",
+				"titleUrl": "Spayed / Neutered thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 4095,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 352527,
+			"image": "https://cdn.royalcanin-weshare-online.io/Bj82vYcBRYZmsWpcx_j9/v27/center-front-hero-image-1622-030111947154-cat-01-jpg",
+			"imageAlt": "Spayed & Neutered Thin Slices in Gravy Canned Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 4095,
+			"name": "2017 - FHNW - WET - Cat - Spayed / Neutered thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$49.93",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111471574",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Spayed & Neutered Thin Slices in Gravy Canned Cat Food",
+			"titleUrl": "Spayed / Neutered thin slices in gravy",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1469",
+				"name": "2022 - FCN - Wet - Cat - APPETITE CONTROL CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Appetite Control Care Thin Slices in Gravy Canned Cat Food ",
+				"titleUrl": "APPETITE CONTROL CARE Thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1469,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1051482,
+			"image": "https://cdn.royalcanin-weshare-online.io/hlb-TIcBBKJuub5q9_k0/v20/00030111435538b-cf-gs1",
+			"imageAlt": "Appetite Control Care Thin Slices in Gravy Canned Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1469,
+			"name": "2022 - FCN - Wet - Cat - APPETITE CONTROL CARE Thin slices in gravy - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$54.49",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "10030111935530",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Appetite Control Care Thin Slices in Gravy Canned Cat Food ",
+			"titleUrl": "APPETITE CONTROL CARE Thin slices in gravy",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2534",
+				"name": "2022 - FCN - Dry - Cat - HAIRBALL CARE - Zone North America - CU - MX - US - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Hairball Care Dry Cat Food",
+				"titleUrl": "HAIRBALL CARE"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2534,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1053804,
+			"image": "https://marspetcareaprimocdn.petcare.global/3082266d-26ff-4b2a-a300-b1ef000edd80/3082266d-26ff-4b2a-a300-b1ef000edd80_DownloadAsJpg.jpg",
+			"imageAlt": "Hairball Care Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2534,
+			"name": "2022 - FCN - Dry - Cat - HAIRBALL CARE - Zone North America - CU - MX - US - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$27.54",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111443342",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Hairball Care Dry Cat Food",
+			"titleUrl": "HAIRBALL CARE",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2563",
+				"name": "2022 - FCN - Dry - Cat - APPETITE CONTROL CARE - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Appetite Control Care Dry Cat Food ",
+				"titleUrl": "APPETITE CONTROL CARE"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2563,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1047678,
+			"image": "https://cdn.royalcanin-weshare-online.io/mlbYTYcBBKJuub5qUfmQ/v75/00030111541567e-cf-gs1",
+			"imageAlt": "Appetite Control Care Dry Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2563,
+			"name": "2022 - FCN - Dry - Cat - APPETITE CONTROL CARE - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$40.84",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111553140",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Appetite Control Care Dry Cat Food ",
+			"titleUrl": "APPETITE CONTROL CARE",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2522",
+				"name": "2022 - FHN - Dry - Cat - Kitten - Zone North America - ALGAE OIL - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Kitten Dry Cat Food",
+				"titleUrl": "Kitten"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2522,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1046419,
+			"image": "https://marspetcareaprimocdn.petcare.global/2dd98ecb-c8c2-45b0-bc05-b1ef000eda2b/2dd98ecb-c8c2-45b0-bc05-b1ef000eda2b_DownloadAsJpg.jpg",
+			"imageAlt": "Kitten Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"kitten"
+			],
+			"mainItem": 2522,
+			"name": "2022 - FHN - Dry - Cat - Kitten - Zone North America - ALGAE OIL - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$28.49",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111542571",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "birth_and_growth",
+			"title": "Kitten Dry Cat Food",
+			"titleUrl": "Kitten",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2521",
+				"name": "2016 - FHN - Dry - Cat - SENSITIVE DIGESTION - Zone North America - DIB - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fhn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Sensitive Digestion Dry Cat Food",
+				"titleUrl": "SENSITIVE DIGESTION"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2521,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 976579,
+			"image": "https://cdn.royalcanin-weshare-online.io/xFaJem8BBKJuub5qBWIv/v70/2019-c-sensitivedigestion-spt-fhn-packshot-b2",
+			"imageAlt": "Sensitive Digestion Dry Cat Food",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2521,
+			"name": "2016 - FHN - Dry - Cat - SENSITIVE DIGESTION - Zone North America - DIB - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$23.74",
+			"productCategory": "mainmeal",
+			"range": "fhn",
+			"sku": "030111623034",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Sensitive Digestion Dry Cat Food",
+			"titleUrl": "SENSITIVE DIGESTION",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "2526",
+				"name": "2022 - FCN - Dry - Cat - HAIR&SKIN CARE - Zone North America - STANDARD - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "dry_food",
+				"technology": "dry",
+				"title": "Hair & Skin Care Dry Cat Food ",
+				"titleUrl": "HAIR&SKIN CARE"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 2526,
+			"category": "pa.productGrid.productCategoryDryFoodForCat",
+			"family": "food",
+			"id": 1053774,
+			"image": "https://cdn.royalcanin-weshare-online.io/e-d0TYcBaPOZra8qxvzI/v54/00030111524065-cf-gs1",
+			"imageAlt": "Hair & Skin Care Dry Cat Food ",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 2526,
+			"name": "2022 - FCN - Dry - Cat - HAIR&SKIN CARE - Zone North America - STANDARD - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$27.54",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "030111524065",
+			"species": [
+				"cat"
+			],
+			"subCategory": "dry_food",
+			"technology": "dry",
+			"territory": "",
+			"title": "Hair & Skin Care Dry Cat Food ",
+			"titleUrl": "HAIR&SKIN CARE",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		},
+		{
+			"analyticsData": {
+				"mainItemCode": "1433",
+				"name": "2022 - FCN - Wet - Cat - WEIGHT CARE Thin slices in gravy - Zone North America - HANDYCAN - Perfect Product Page Master",
+				"pillar": "sptretail",
+				"productCategory": "mainmeal",
+				"range": "fcn",
+				"specie": "cat",
+				"subCategory": "wet_food",
+				"technology": "wet",
+				"title": "Feline Weight Care Thin Slices In Gravy",
+				"titleUrl": "WEIGHT CARE Thin slices in gravy"
+			},
+			"badges": [
+
+			],
+			"brand": {
+				"code": "royal_canin",
+				"label": "Royal Canin"
+			},
+			"breeds": [
+				"any"
+			],
+			"bvProductId": 1433,
+			"category": "pa.productGrid.productCategoryWetFoodForCat",
+			"family": "food",
+			"id": 1195327,
+			"image": "https://cdn.royalcanin-weshare-online.io/RkCYSpABRYZmsWpcjy8B/v42/00030111401113-cf-gs1",
+			"imageAlt": "Feline Weight Care Thin Slices In Gravy",
+			"inStock": true,
+			"isD2CProduct": true,
+			"lifestages": [
+				"adult",
+				"mature"
+			],
+			"mainItem": 1433,
+			"name": "2022 - FCN - Wet - Cat - WEIGHT CARE Thin slices in gravy - Zone North America - HANDYCAN - Perfect Product Page Master",
+			"pillar": "sptretail",
+			"price": "$70.45",
+			"productCategory": "mainmeal",
+			"range": "fcn",
+			"sku": "10030111401110",
+			"species": [
+				"cat"
+			],
+			"subCategory": "wet_food",
+			"technology": "wet",
+			"territory": "",
+			"title": "Feline Weight Care Thin Slices In Gravy",
+			"titleUrl": "WEIGHT CARE Thin slices in gravy",
+			"variation": "2",
+			"viewProductLabel": "pa.productCard.viewProduct"
+		}
+	],
+	"totalPages": 4,
+	"totalProducts": 54
+}

@@ -10,6 +10,7 @@ use App\Models\Scopes\VisibleScope;
 use App\Models\Tag;
 use App\Support\BrandTreeMapper;
 use App\Support\Gtin;
+use App\Support\ImageMirror;
 use App\Support\Region;
 use Illuminate\Support\Facades\DB;
 use RuntimeException;
@@ -21,7 +22,7 @@ use RuntimeException;
  */
 final class CatalogueImporter
 {
-    public function __construct(private CatalogueFiles $files, private CatalogueValidator $validator, private BrandTreeMapper $mapper) {}
+    public function __construct(private CatalogueFiles $files, private CatalogueValidator $validator, private BrandTreeMapper $mapper, private ImageMirror $images) {}
 
     /**
      * @param  list<string>|null  $ladderSlugs  null = every ladder file
@@ -55,7 +56,7 @@ final class CatalogueImporter
     }
 
     /**
-     * @return array{created:int, updated:int, unchanged:int, skipped:int}
+     * @return array{created:int, updated:int, unchanged:int, skipped:int, conflicts:list<string>}
      */
     public function importProducts(string $slug, bool $allowUnreviewed = false, bool $dry = false): array
     {
@@ -68,7 +69,7 @@ final class CatalogueImporter
         $this->requireReviewed("products/{$slug}.json", $file, $allowUnreviewed);
         $this->importLadders([(string) ($file['ladder'] ?? '')], false, $allowUnreviewed, $dry);   // its ladder must exist first
 
-        $out = ['created' => 0, 'updated' => 0, 'unchanged' => 0, 'skipped' => 0];
+        $out = ['created' => 0, 'updated' => 0, 'unchanged' => 0, 'skipped' => 0, 'conflicts' => []];
         DB::transaction(function () use ($file, $dry, &$out) {
             foreach ($file['products'] ?? [] as $row) {
                 $this->product($row, $dry, $out);
@@ -162,7 +163,7 @@ final class CatalogueImporter
 
     /**
      * @param  array<string,mixed>  $row
-     * @param  array{created:int, updated:int, unchanged:int, skipped:int}  $out
+     * @param  array{created:int, updated:int, unchanged:int, skipped:int, conflicts:list<string>}  $out
      */
     private function product(array $row, bool $dry, array &$out): void
     {
@@ -173,11 +174,27 @@ final class CatalogueImporter
             throw new RuntimeException('Path not in the ladder: '.implode(' > ', $row['path']).' (run catalogue:check)');
         }
 
-        $existing = Product::withoutGlobalScope(VisibleScope::class)->when($gtin, fn ($q) => $q->where('gtin', $gtin))->when(! $gtin, fn ($q) => $q->where('import_key', $importKey))->first()
-            ?? ($importKey ? Product::withoutGlobalScope(VisibleScope::class)->where('import_key', $importKey)->first() : null);
+        // A row is identified by its import_key when it has one; the barcode only identifies rows that have no key. Two recipes
+        // that a source printed with the same code therefore stay two products (the second one's code is reported, not assigned).
+        $scope = fn () => Product::withoutGlobalScope(VisibleScope::class);
+        $existing = $importKey ? $scope()->where('import_key', $importKey)->first() : null;
+        $existing ??= (! $importKey && $gtin) ? $scope()->where('gtin', $gtin)->first() : null;
+        $label = $row['name'].' ('.($importKey ?? $gtin).')';
+        $clashed = null;
+        if ($gtin) {
+            $owner = $scope()->where('gtin', $gtin)->where('gtin_scope', 0)->first();
+            $owner ??= ($pack = ProductBarcode::where('gtin', $gtin)->first()) && (! $existing || $pack->product_id !== $existing->id) ? $pack->product : null;
+            if ($owner && (! $existing || $owner->id !== $existing->id)) {
+                $out['conflicts'][] = "{$label}: barcode {$gtin} already belongs to \"{$owner->name}\"; left unassigned.";
+                $clashed = $gtin;
+                $gtin = null;
+            }
+        }
 
-        // Once a person has attached a barcode, edited or reviewed a seeded product, the file no longer owns it.
-        if ($existing && ! $existing->isUntouched() && $existing->import_key === $importKey) {
+        // The file stops owning a product once a person has edited or reviewed it, or attached a different barcode. A barcode the
+        // file itself supplied does not count as a person touching it.
+        if ($existing && $importKey && $existing->import_key === $importKey
+            && ($existing->last_edited_by !== null || $existing->audit_status !== AuditStatus::Unreviewed || ($existing->gtin !== null && $existing->gtin !== ($gtin ?? $existing->gtin)))) {
             $out['skipped']++;
 
             return;
@@ -188,14 +205,34 @@ final class CatalogueImporter
             return;
         }
 
+        // Case / inner-pack GTIN-14s are not scannable unit codes; they live on the product (meta.case_gtins), not in the barcode table.
+        $cases = [];
+        foreach ($row['barcodes'] ?? [] as $b) {
+            $raw = (string) preg_replace('/[\s\-]/', '', (string) ($b['gtin'] ?? ''));
+            if (! Gtin::normalize($raw) && preg_match('/^[1-9]\d{13}$/', $raw) && Gtin::hasValidCheckDigit($raw)) {
+                $cases[$raw] = $b['pack_label'] ?? null;
+            }
+        }
+        $meta = $row['meta'] ?? null;
+        if ($cases) {
+            $meta = [...($meta ?? []), 'case_gtins' => $cases];
+        }
+
         $attributes = [
             'name' => $row['name'], 'title_as_listed' => $row['title_as_listed'] ?? null, 'species' => $row['species'] ?? 'cat',
             'kind' => $row['kind'] ?? 'food', 'form' => $row['form'] ?? null, 'texture' => $row['texture'] ?? null,
             'description' => $row['description'] ?? null, 'ingredients' => $row['ingredients'] ?? null, 'nutrition' => $row['nutrition'] ?? null,
-            'image_url' => $row['image_url'] ?? null, 'source_url' => $row['source_url'] ?? null, 'source' => $row['source'] ?? 'catalogue',
-            'import_key' => $importKey, 'meta' => $row['meta'] ?? null, 'audit_notes' => $row['audit_notes'] ?? null,
+            'source_url' => $row['source_url'] ?? null, 'source' => $row['source'] ?? 'catalogue',
+            'import_key' => $importKey, 'meta' => $meta, 'audit_notes' => $row['audit_notes'] ?? null,
             'last_verified_at' => $row['last_verified_at'] ?? null,
         ];
+        // An outside picture is registered with the image mirror (which keys it and sets image_url to our own copy); anything
+        // else in image_url is stored as given.
+        $image = $row['image_url'] ?? null;
+        $mirrored = ImageMirror::isRemote($image);
+        if (! $mirrored) {
+            $attributes['image_url'] = $image;
+        }
         $changed = ! $existing;
         if ($existing) {
             $existing->update($gtin ? [...$attributes, 'gtin' => $gtin] : $attributes);
@@ -208,12 +245,26 @@ final class CatalogueImporter
 
         $this->mapper->cachePlacement($product, $node);
         $changed = $changed || $product->wasChanged();
+        if ($mirrored) {
+            $changed = $this->images->register($product, $image, $row['source_url'] ?? null) || $changed;
+        }
         $changed = $this->setTags($product, $row['tags'] ?? []) || $changed;
         foreach ($row['barcodes'] ?? [] as $b) {
             $code = Gtin::normalize((string) ($b['gtin'] ?? ''));
-            if ($code && $code !== $product->gtin) {
-                $changed = ProductBarcode::firstOrCreate(['gtin' => $code], ['product_id' => $product->id, 'pack_label' => $b['pack_label'] ?? null])->wasRecentlyCreated || $changed;
+            if (! $code || $code === $product->gtin || $code === $clashed) {
+                continue;
             }
+            $holder = Product::withoutGlobalScope(VisibleScope::class)->where('gtin', $code)->where('id', '!=', $product->id)->first();
+            if ($holder) {
+                $out['conflicts'][] = "{$label}: barcode {$code} already belongs to \"{$holder->name}\"; not attached.";
+
+                continue;
+            }
+            $bc = ProductBarcode::firstOrCreate(['gtin' => $code], ['product_id' => $product->id, 'pack_label' => $b['pack_label'] ?? null]);
+            if ($bc->product_id !== $product->id) {
+                $out['conflicts'][] = "{$label}: barcode {$code} is already a pack barcode of another product; not attached.";
+            }
+            $changed = $bc->wasRecentlyCreated || $changed;
         }
         $out[$existing ? ($changed ? 'updated' : 'unchanged') : 'created']++;
     }
